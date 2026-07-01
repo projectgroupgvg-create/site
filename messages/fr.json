@@ -1,0 +1,307 @@
+{
+  "Metadata": {
+    "title": "Gangan & Partners — Cabinet d'avocats",
+    "description": "Cabinet d'avocats Gangan & Partners (Kyiv) — défense dans les procédures pénales, enquêtes transnationales, fraude crypto, AML et cybercriminalité."
+  },
+  "Nav": {
+    "sub": "Cabinet d'avocats",
+    "practices": "Domaines",
+    "consult": "Consultation",
+    "blog": "Blog",
+    "team": "Équipe",
+    "about": "À propos",
+    "contacts": "Contact",
+    "cta": "Prendre rendez-vous"
+  },
+  "Hero": {
+    "eyebrow": "Cabinet d'avocats · Kyiv",
+    "titlePre": "Défense dans les affaires",
+    "titleEm": "complexes",
+    "titlePost": "",
+    "sub": "Procédures pénales, enquêtes transnationales, fraude crypto et cybercriminalité — une expertise là où les enjeux sont les plus élevés.",
+    "btn1": "Obtenir une consultation",
+    "btn2": "Nos domaines",
+    "scroll": "Défiler"
+  },
+  "Practices": {
+    "lbl": "Domaines",
+    "title": "Domaines de droit",
+    "sub": "Une assistance juridique spécialisée dans les domaines du droit les plus complexes et les plus technologiques.",
+    "cardLink": "En savoir plus",
+    "backLink": "Retour",
+    "servicesTitle": "Nos services",
+    "moreTitle": "Autres domaines",
+    "ctaTitle": "Discuter de votre situation",
+    "ctaBtn": "Prendre rendez-vous",
+    "list": [
+      {
+        "num": "01",
+        "title": "Procédures pénales",
+        "desc": "Défense des suspects et prévenus à toutes les étapes de la procédure pénale, de l'enquête préliminaire à l'appel.",
+        "intro": [
+          "Gangan & Partners assure une défense complète dans les procédures pénales — depuis l'arrestation ou la convocation pour interrogatoire jusqu'à l'entrée en vigueur définitive du jugement.",
+          "Notre équipe possède une expérience significative dans les affaires liées à la criminalité économique, à la corruption, aux abus de pouvoir et à la criminalité organisée."
+        ],
+        "services": [
+          "Représentation pendant l'enquête préliminaire",
+          "Contestation des avis de soupçon et des actes d'accusation",
+          "Requêtes de modification des mesures préventives",
+          "Défense devant les juridictions de première instance",
+          "Procédures d'appel et de cassation",
+          "Acquittements et classements pour motifs de réhabilitation"
+        ]
+      },
+      {
+        "num": "02",
+        "title": "Enquêtes transnationales",
+        "desc": "Affaires comportant un élément international : extradition, entraide judiciaire internationale, enquêtes sur les crimes financiers.",
+        "intro": [
+          "Le caractère international des crimes financiers exige un avocat qui comprend non seulement le droit ukrainien, mais aussi les mécanismes de coopération internationale : MLAT, Interpol, directives de l'UE."
+        ],
+        "services": [
+          "Représentation dans les procédures d'extradition",
+          "Contestation des demandes d'entraide judiciaire internationale",
+          "Coordination avec des avocats et juridictions étrangers",
+          "Protection des actifs contre les saisies internationales",
+          "Procédures FATF et sanctions financières"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Fraude crypto et blockchain",
+        "desc": "Récupération d'actifs bloqués sur des plateformes d'échange. Enquêtes sur les fraudes DeFi, rug pulls et abus liés aux NFT.",
+        "intro": [
+          "La fraude crypto est l'une des catégories de criminalité qui connaît la croissance la plus rapide. Notre équipe combine expertise juridique et technique pour protéger efficacement vos intérêts."
+        ],
+        "services": [
+          "Ouverture de procédures pénales pour fraude",
+          "Traçage des fonds sur la blockchain",
+          "Coordination avec les plateformes d'échange pour le gel des actifs",
+          "Défense dans les affaires de rug pull et d'abus liés aux NFT",
+          "Protocoles DeFi : récupération de fonds"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Blanchiment de capitaux / AML",
+        "desc": "Défense dans les affaires de blanchiment de capitaux. Audits de conformité, liaison avec le FATF et les régulateurs.",
+        "intro": [
+          "Les procédures AML en Ukraine deviennent de plus en plus complexes. Nous défendons particuliers et entreprises dans des affaires engagées par le NABU, le service de surveillance financière de l'État et les régulateurs étrangers."
+        ],
+        "services": [
+          "Défense dans les procédures pénales en vertu de l'art. 209 du Code pénal ukrainien",
+          "Audits de conformité AML pour les entreprises",
+          "Liaison avec le FATF et Moneyval",
+          "Levée de sanctions et déblocage de comptes"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Cybercriminalité",
+        "desc": "Défense dans les affaires d'accès non autorisé, de piratage, de phishing et d'enquêtes cyber.",
+        "intro": [
+          "La cybercriminalité couvre un large éventail de comportements — de l'accès non autorisé aux systèmes informatiques aux attaques de grande envergure contre des infrastructures critiques."
+        ],
+        "services": [
+          "Défense dans les affaires relevant des art. 361-363 du Code pénal ukrainien",
+          "Contestation des preuves numériques",
+          "Représentation des victimes de cybercriminalité",
+          "Liaison avec la cyberpolice",
+          "Affaires de phishing et d'ingénierie sociale"
+        ]
+      },
+      {
+        "num": "06",
+        "title": "Enquêtes blockchain",
+        "desc": "Traçage des transactions on-chain, identification des portefeuilles, constitution d'un dossier de preuves à partir de données on-chain.",
+        "intro": [
+          "L'analyse on-chain permet de suivre les mouvements de fonds même à travers des mixeurs et des portefeuilles anonymes. Nous utilisons les principales plateformes d'analyse pour constituer un dossier de preuves solide."
+        ],
+        "services": [
+          "Traçage des transactions (Bitcoin, Ethereum, TRON)",
+          "Identification des titulaires de portefeuilles",
+          "Préparation de rapports blockchain pour les tribunaux",
+          "Liaison avec Chainalysis et d'autres plateformes"
+        ]
+      }
+    ]
+  },
+  "AI": {
+    "lbl": "Consultation IA",
+    "title": "Obtenez une réponse maintenant",
+    "sub": "Notre assistant IA vous fournit une première orientation juridique pour votre situation. Pour une analyse détaillée de votre dossier, réservez une consultation payante avec un avocat.",
+    "chatLabel": "Gangan AI — Assistant juridique",
+    "greeting": "Bonjour. Je suis l'assistant juridique de Gangan & Partners. Décrivez votre situation — je vous fournirai une première orientation juridique.",
+    "placeholder": "Décrivez votre situation...",
+    "send": "Envoyer",
+    "sending": "...",
+    "error": "Erreur de connexion. Veuillez nous contacter directement.",
+    "payTitle": "Tarifs des consultations",
+    "tiers": [
+      { "price": "Gratuit", "label": "Chat IA" },
+      { "price": "15 €", "label": "30 min en ligne" },
+      { "price": "45 €", "label": "60 min + rapport" },
+      { "price": "100 €", "label": "Analyse complète" }
+    ],
+    "topics": [
+      "Soupçon d'infraction",
+      "Crypto bloqué",
+      "Accusation AML",
+      "Cybercriminalité"
+    ],
+    "topicPrompts": [
+      "On m'a notifié un soupçon d'infraction",
+      "Mes actifs crypto ont été bloqués sur une plateforme d'échange",
+      "On m'a accusé d'une violation AML",
+      "J'ai été victime de cybercriminalité"
+    ]
+  },
+  "Blog": {
+    "lbl": "Blog",
+    "title": "Analyses et commentaires",
+    "sub": "Analyses juridiques, revues de jurisprudence et commentaires de l'équipe Gangan & Partners.",
+    "viewAll": "Tous les articles",
+    "filterAll": "Tous",
+    "readMore": "Lire",
+    "backToBlog": "Retour au blog",
+    "noPosts": "Aucun article dans cette catégorie pour le moment.",
+    "categories": [
+      { "slug": "regulatory", "label": "Droit réglementaire" },
+      { "slug": "blockchain", "label": "Blockchain" },
+      { "slug": "criminal", "label": "Droit pénal" },
+      { "slug": "cyber", "label": "Cyberdroit" }
+    ],
+    "fallbackPosts": [
+      {
+        "slug": "fatf-vymohy-2025",
+        "category": "regulatory",
+        "mono": "AML",
+        "date": "Juin 2025",
+        "title": "Nouvelles exigences du FATF pour les entreprises crypto : ce qui a changé en 2025",
+        "excerpt": "Analyse des dernières recommandations du FATF et de leur impact sur les prestataires de services crypto ukrainiens.",
+        "body": [
+          "En 2025, le FATF a mis à jour ses recommandations pour les prestataires de services sur actifs virtuels (VASP). Les changements concernent les procédures d'identification des clients, la Travel Rule et les obligations de déclaration aux régulateurs.",
+          "Pour les entreprises crypto ukrainiennes, cela signifie des exigences de conformité renforcées et la nécessité de revoir les politiques internes AML/CFT.",
+          "Gangan & Partners accompagne les entreprises dans leur adaptation aux nouvelles exigences — de l'audit des procédures internes à la représentation auprès des régulateurs."
+        ]
+      },
+      {
+        "slug": "defi-shakhraystvo-povernennya-koshtiv",
+        "category": "blockchain",
+        "mono": "DeFi",
+        "date": "Mai 2025",
+        "title": "Fraude DeFi : mécanismes de récupération de fonds par voie judiciaire",
+        "excerpt": "Un aperçu pratique des outils de protection juridique pour les victimes de protocoles de finance décentralisée.",
+        "body": [
+          "La popularité croissante des protocoles DeFi s'accompagne d'une augmentation des schémas de fraude — rug pulls, faux pools de liquidité, smart contracts de phishing.",
+          "Contrairement à la fraude traditionnelle, l'analyse on-chain joue un rôle clé dans les affaires DeFi : le traçage des transactions permet d'identifier les portefeuilles des fraudeurs même après le retrait des fonds via des mixeurs.",
+          "Dans cet article, nous présentons un plan d'action étape par étape pour les victimes — de la conservation des preuves au dépôt de plainte auprès de la cyberpolice et à la mobilisation des plateformes d'échange pour geler les actifs."
+        ]
+      },
+      {
+        "slug": "st-209-praktyka-zahystu",
+        "category": "criminal",
+        "mono": "CP",
+        "date": "Avril 2025",
+        "title": "Art. 209 du Code pénal : pratique de la défense dans les affaires de blanchiment",
+        "excerpt": "Revue des décisions clés de la Cour suprême et des stratégies de défense en 2024–2025.",
+        "body": [
+          "L'article 209 du Code pénal ukrainien (légalisation de revenus d'origine criminelle) reste l'une des dispositions les plus difficiles à qualifier.",
+          "Dans cet article, nous analysons les décisions clés de la Cour suprême de ces deux dernières années ainsi que les stratégies de défense pratiques qui ont fait leurs preuves dans les affaires de nos clients."
+        ]
+      },
+      {
+        "slug": "kiberpolitsiya-fishyng-2025",
+        "category": "cyber",
+        "mono": "CYB",
+        "date": "Mars 2025",
+        "title": "Attaques de phishing contre les entreprises : que faire dans les 48 premières heures",
+        "excerpt": "Un plan d'action pour les entreprises après la découverte d'une attaque de phishing ou d'une compromission de la messagerie professionnelle.",
+        "body": [
+          "Les 48 premières heures après la découverte d'un incident cyber déterminent s'il sera possible de préserver les preuves et de minimiser les pertes.",
+          "Nous présentons un plan étape par étape : isolement des systèmes compromis, conservation des preuves, et notification à la cyberpolice et aux banques partenaires."
+        ]
+      }
+    ]
+  },
+  "Team": {
+    "lbl": "Équipe",
+    "title": "Les avocats de Gangan & Partners",
+    "sub": "Une équipe d'avocats et d'analystes expérimentés en droit pénal, financier et blockchain.",
+    "members": [
+      {
+        "name": "Oleksandr Gangan",
+        "role": "Associé gérant · Droit pénal",
+        "bio": "Dirige le cabinet et coordonne la défense dans les procédures pénales les plus médiatisées. Plus de 15 ans d'expérience en droit pénal."
+      },
+      {
+        "name": "Maria Kovalenko",
+        "role": "Associée · AML et conformité",
+        "bio": "Spécialisée dans les affaires de blanchiment de capitaux et la réalisation d'audits de conformité pour les entreprises financières et crypto."
+      },
+      {
+        "name": "Dmytro Savchuk",
+        "role": "Counsel · Enquêtes transnationales",
+        "bio": "Gère les affaires comportant un élément international : extradition, demandes MLAT, coordination avec des juridictions étrangères."
+      },
+      {
+        "name": "Anna Lytvyn",
+        "role": "Collaboratrice · Enquêtes blockchain",
+        "bio": "Allie formation juridique et expertise technique dans l'analyse des transactions blockchain et le traçage des actifs crypto."
+      },
+      {
+        "name": "Ihor Petrenko",
+        "role": "Collaborateur · Cyberdroit",
+        "bio": "Traite les affaires de cybercriminalité, la protection des preuves numériques et la liaison avec la cyberpolice."
+      }
+    ]
+  },
+  "About": {
+    "lbl": "À propos",
+    "title": "À propos du cabinet",
+    "sub": "Gangan & Partners est une équipe spécialisée dans la défense dans les catégories d'affaires les plus complexes et les plus technologiques.",
+    "historyTitle": "Notre histoire",
+    "history": [
+      "Gangan & Partners a été fondé par une équipe d'avocats qui a identifié le besoin croissant de défense dans les affaires à la croisée du droit pénal et des technologies émergentes.",
+      "Aujourd'hui, nous sommes une équipe d'avocats, d'analystes et de spécialistes techniques travaillant sur des affaires alliant droit pénal classique et défis modernes : cryptomonnaies, blockchain, cybercriminalité."
+    ],
+    "missionTitle": "Mission",
+    "mission": "Assurer le plus haut niveau de défense juridique là où les enjeux sont les plus élevés et où la complexité de l'affaire exige à la fois une expertise juridique et technique.",
+    "valuesTitle": "Nos principes",
+    "values": [
+      { "title": "Expertise", "desc": "Spécialisation approfondie dans des domaines du droit pointus et technologiquement complexes." },
+      { "title": "Confidentialité", "desc": "Secret professionnel et protection totale des informations des clients." },
+      { "title": "Réactivité", "desc": "Réponse aux demandes dans les 2 heures pendant les heures ouvrables." },
+      { "title": "Transparence", "desc": "Tarification claire et stratégie de défense définie dès la première consultation." }
+    ],
+    "statsTitle": "Chiffres clés",
+    "stats": [
+      { "value": "150+", "label": "Affaires traitées" },
+      { "value": "15", "label": "Années d'expérience de l'équipe" },
+      { "value": "6", "label": "Domaines de pratique" },
+      { "value": "24/7", "label": "Disponibilité pour les urgences" }
+    ]
+  },
+  "Contact": {
+    "lbl": "Contact",
+    "title": "Contactez-nous",
+    "sub": "Nous répondons aux demandes dans les 2 heures pendant les heures ouvrables.",
+    "addrLabel": "Adresse",
+    "addrValue": "1 Stolychne Shose, bureau P-4, Kyiv, 01013, Ukraine",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "phoneValue": "+38 (050) 000-00-00",
+    "formTitle": "Envoyer une demande",
+    "formName": "Votre nom",
+    "formPhone": "Téléphone ou Telegram",
+    "formEmail": "Email (facultatif)",
+    "formMessage": "Décrivez brièvement votre situation",
+    "formSubmit": "Envoyer la demande"
+  },
+  "Footer": {
+    "rights": "Tous droits réservés.",
+    "practices": "Domaines",
+    "consult": "Consultation",
+    "contacts": "Contact"
+  }
+}

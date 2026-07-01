@@ -1,0 +1,307 @@
+{
+  "Metadata": {
+    "title": "Gangan & Partners — Law Firm",
+    "description": "Gangan & Partners law firm (Kyiv) — defense in criminal proceedings, transnational investigations, crypto fraud, AML and cybercrime cases."
+  },
+  "Nav": {
+    "sub": "Law Firm",
+    "practices": "Practices",
+    "consult": "Consultation",
+    "blog": "Blog",
+    "team": "Team",
+    "about": "About",
+    "contacts": "Contacts",
+    "cta": "Book a Call"
+  },
+  "Hero": {
+    "eyebrow": "Law Firm · Kyiv",
+    "titlePre": "Defense in",
+    "titleEm": "complex",
+    "titlePost": "cases",
+    "sub": "Criminal proceedings, transnational investigations, crypto fraud and cybercrime — experience where the stakes are highest.",
+    "btn1": "Get a Consultation",
+    "btn2": "Our Practices",
+    "scroll": "Scroll"
+  },
+  "Practices": {
+    "lbl": "Practices",
+    "title": "Areas of Law",
+    "sub": "Specialized legal assistance in the most complex and technologically demanding areas of law.",
+    "cardLink": "Learn more",
+    "backLink": "Back",
+    "servicesTitle": "Our Services",
+    "moreTitle": "Other Practices",
+    "ctaTitle": "Discuss your situation",
+    "ctaBtn": "Book a Consultation",
+    "list": [
+      {
+        "num": "01",
+        "title": "Criminal Defense",
+        "desc": "Defending suspects and defendants at every stage of criminal proceedings — from pre-trial investigation to appeal.",
+        "intro": [
+          "Gangan & Partners provides full-cycle defense in criminal proceedings — from the moment of detention or summons for questioning through to a final, legally binding verdict.",
+          "Our team has significant experience in cases involving economic crimes, corruption, abuse of office, and organized crime."
+        ],
+        "services": [
+          "Representation during pre-trial investigation",
+          "Challenging suspicion notices and indictments",
+          "Motions to change preventive measures",
+          "Defense in courts of first instance",
+          "Appellate and cassation proceedings",
+          "Acquittals and case closures on rehabilitating grounds"
+        ]
+      },
+      {
+        "num": "02",
+        "title": "Transnational Investigations",
+        "desc": "Cases with an international element: extradition, mutual legal assistance, investigation of financial crimes.",
+        "intro": [
+          "The international nature of financial crimes requires a lawyer who understands not only Ukrainian law, but also the mechanisms of international cooperation: MLAT, Interpol, EU directives."
+        ],
+        "services": [
+          "Representation in extradition proceedings",
+          "Challenging mutual legal assistance requests",
+          "Coordination with foreign counsel and jurisdictions",
+          "Protecting assets from international seizure",
+          "FATF proceedings and financial sanctions"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Crypto Fraud & Blockchain",
+        "desc": "Recovering assets frozen on exchanges. Investigating DeFi fraud, rug pulls and NFT abuse.",
+        "intro": [
+          "Crypto fraud is one of the fastest-growing categories of crime. Our team combines legal and technical expertise to effectively protect your interests."
+        ],
+        "services": [
+          "Initiating criminal proceedings for fraud",
+          "Tracing funds on the blockchain",
+          "Liaising with crypto exchanges to freeze assets",
+          "Defense in rug pull and NFT abuse cases",
+          "DeFi protocols: fund recovery"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Money Laundering / AML",
+        "desc": "Defense in money laundering cases. Compliance audits, liaison with FATF and regulators.",
+        "intro": [
+          "AML proceedings in Ukraine are becoming increasingly complex. We provide defense for individuals and businesses in cases initiated by NABU, the State Financial Monitoring Service, and foreign regulators."
+        ],
+        "services": [
+          "Defense in criminal proceedings under Art. 209 of the Criminal Code of Ukraine",
+          "AML compliance audits for businesses",
+          "Liaison with FATF and Moneyval",
+          "Lifting sanctions and unblocking accounts"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Cybercrime",
+        "desc": "Defense in cases of unauthorized access, hacking, phishing and cyber investigations.",
+        "intro": [
+          "Cybercrime covers a broad range of conduct — from unauthorized access to computer systems to large-scale attacks on critical infrastructure."
+        ],
+        "services": [
+          "Defense in cases under Art. 361-363 of the Criminal Code of Ukraine",
+          "Challenging digital evidence",
+          "Representing victims of cybercrime",
+          "Liaison with the Cyber Police",
+          "Phishing and social engineering cases"
+        ]
+      },
+      {
+        "num": "06",
+        "title": "Blockchain Investigations",
+        "desc": "Tracing on-chain transactions, identifying wallets, building an evidentiary record from on-chain data.",
+        "intro": [
+          "On-chain analysis allows fund movements to be traced even through mixers and anonymous wallets. We use leading analytics platforms to build the evidentiary record."
+        ],
+        "services": [
+          "Transaction tracing (Bitcoin, Ethereum, TRON)",
+          "Identifying wallet owners",
+          "Preparing blockchain reports for court",
+          "Liaison with Chainalysis and other platforms"
+        ]
+      }
+    ]
+  },
+  "AI": {
+    "lbl": "AI Consultation",
+    "title": "Get an answer now",
+    "sub": "Our AI assistant provides an initial legal orientation for your situation. For a detailed case analysis, book a paid consultation with a lawyer.",
+    "chatLabel": "Gangan AI — Legal Assistant",
+    "greeting": "Hello. I'm the legal assistant of Gangan & Partners. Describe your situation — I'll provide an initial legal orientation.",
+    "placeholder": "Describe your situation...",
+    "send": "Send",
+    "sending": "...",
+    "error": "Connection error. Please contact us directly.",
+    "payTitle": "Consultation Rates",
+    "tiers": [
+      { "price": "Free", "label": "AI chat" },
+      { "price": "$15", "label": "30 min online" },
+      { "price": "$45", "label": "60 min + report" },
+      { "price": "$100", "label": "Full analysis" }
+    ],
+    "topics": [
+      "Suspicion of a crime",
+      "Crypto frozen",
+      "AML accusation",
+      "Cybercrime"
+    ],
+    "topicPrompts": [
+      "I was notified of suspicion of a crime",
+      "My crypto assets were frozen on an exchange",
+      "I was accused of an AML violation",
+      "I became a victim of cybercrime"
+    ]
+  },
+  "Blog": {
+    "lbl": "Blog",
+    "title": "Analysis & Commentary",
+    "sub": "Legal analysis, case-law reviews and commentary from the Gangan & Partners team.",
+    "viewAll": "All articles",
+    "filterAll": "All",
+    "readMore": "Read",
+    "backToBlog": "Back to blog",
+    "noPosts": "No articles in this category yet.",
+    "categories": [
+      { "slug": "regulatory", "label": "Regulatory Law" },
+      { "slug": "blockchain", "label": "Blockchain" },
+      { "slug": "criminal", "label": "Criminal Law" },
+      { "slug": "cyber", "label": "Cyber Law" }
+    ],
+    "fallbackPosts": [
+      {
+        "slug": "fatf-vymohy-2025",
+        "category": "regulatory",
+        "mono": "AML",
+        "date": "June 2025",
+        "title": "New FATF Requirements for Crypto Businesses: What Changed in 2025",
+        "excerpt": "An analysis of the latest FATF recommendations and their impact on Ukrainian crypto-service providers.",
+        "body": [
+          "In 2025, FATF updated its recommendations for virtual asset service providers (VASPs). The changes affect customer identification procedures, the Travel Rule, and reporting to regulators.",
+          "For Ukrainian crypto companies, this means tighter compliance requirements and a need to review internal AML/CFT policies.",
+          "Gangan & Partners supports businesses in adapting to the new requirements — from auditing internal procedures to representation in dealings with regulators."
+        ]
+      },
+      {
+        "slug": "defi-shakhraystvo-povernennya-koshtiv",
+        "category": "blockchain",
+        "mono": "DeFi",
+        "date": "May 2025",
+        "title": "DeFi Fraud: Mechanisms for Recovering Funds Through Litigation",
+        "excerpt": "A practical overview of legal protection tools for victims of decentralized finance protocols.",
+        "body": [
+          "The growing popularity of DeFi protocols has been accompanied by a rise in fraud schemes — rug pulls, fake liquidity pools, phishing smart contracts.",
+          "Unlike traditional fraud, on-chain analytics plays a key role in DeFi cases: transaction tracing makes it possible to identify perpetrators' wallets even after funds are withdrawn through mixers.",
+          "In this article we cover a step-by-step action plan for victims — from preserving evidence to filing a report with the Cyber Police and engaging exchanges to freeze assets."
+        ]
+      },
+      {
+        "slug": "st-209-praktyka-zahystu",
+        "category": "criminal",
+        "mono": "CC",
+        "date": "April 2025",
+        "title": "Art. 209 of the Criminal Code: Defense Practice in Money Laundering Cases",
+        "excerpt": "A review of key Supreme Court rulings and defense strategies in 2024–2025.",
+        "body": [
+          "Article 209 of the Criminal Code of Ukraine (legalization of criminally obtained income) remains one of the most difficult provisions to qualify.",
+          "In this article we analyze key Supreme Court rulings from the past two years and practical defense strategies that have proven effective in our clients' cases."
+        ]
+      },
+      {
+        "slug": "kiberpolitsiya-fishyng-2025",
+        "category": "cyber",
+        "mono": "CYB",
+        "date": "March 2025",
+        "title": "Phishing Attacks on Business: What to Do in the First 48 Hours",
+        "excerpt": "An action plan for companies after discovering a phishing attack or corporate email compromise.",
+        "body": [
+          "The first 48 hours after a cyber incident is discovered determine whether you'll be able to preserve evidence and minimize losses.",
+          "We cover a step-by-step plan: isolating compromised systems, preserving evidence, and notifying the Cyber Police and partner banks."
+        ]
+      }
+    ]
+  },
+  "Team": {
+    "lbl": "Team",
+    "title": "Gangan & Partners Lawyers",
+    "sub": "A team of attorneys and analysts experienced in criminal, financial and blockchain law.",
+    "members": [
+      {
+        "name": "Oleksandr Gangan",
+        "role": "Managing Partner · Criminal Practice",
+        "bio": "Leads the firm and coordinates defense in the most high-profile criminal proceedings. Over 15 years of practice in criminal law."
+      },
+      {
+        "name": "Maria Kovalenko",
+        "role": "Partner · AML & Compliance",
+        "bio": "Specializes in money laundering cases and conducts compliance audits for financial and crypto businesses."
+      },
+      {
+        "name": "Dmytro Savchuk",
+        "role": "Counsel · Transnational Investigations",
+        "bio": "Handles cases with an international element: extradition, MLAT requests, coordination with foreign jurisdictions."
+      },
+      {
+        "name": "Anna Lytvyn",
+        "role": "Associate · Blockchain Investigations",
+        "bio": "Combines a legal background with technical expertise in blockchain transaction analysis and crypto-asset tracing."
+      },
+      {
+        "name": "Ihor Petrenko",
+        "role": "Associate · Cyber Law",
+        "bio": "Handles cybercrime cases, digital evidence protection, and liaison with the Cyber Police."
+      }
+    ]
+  },
+  "About": {
+    "lbl": "About",
+    "title": "About the Firm",
+    "sub": "Gangan & Partners is a team specializing in defense in the most complex and technologically demanding categories of cases.",
+    "historyTitle": "Our Story",
+    "history": [
+      "Gangan & Partners was founded by a team of lawyers who recognized the growing need for defense in cases at the intersection of criminal law and emerging technology.",
+      "Today we are a team of attorneys, analysts and technical specialists working on cases that combine classic criminal law with modern challenges: cryptocurrency, blockchain, cybercrime."
+    ],
+    "missionTitle": "Mission",
+    "mission": "To provide the highest level of legal defense where the stakes are highest, and where case complexity demands both legal and technical expertise.",
+    "valuesTitle": "Our Principles",
+    "values": [
+      { "title": "Expertise", "desc": "Deep specialization in narrow, technologically complex areas of law." },
+      { "title": "Confidentiality", "desc": "Attorney-client privilege and full protection of client information." },
+      { "title": "Speed", "desc": "Response to inquiries within 2 hours during business hours." },
+      { "title": "Transparency", "desc": "Clear pricing and defense strategy from the first consultation." }
+    ],
+    "statsTitle": "By the Numbers",
+    "stats": [
+      { "value": "150+", "label": "Cases handled" },
+      { "value": "15", "label": "Years of team experience" },
+      { "value": "6", "label": "Practice areas" },
+      { "value": "24/7", "label": "Availability for urgent cases" }
+    ]
+  },
+  "Contact": {
+    "lbl": "Contacts",
+    "title": "Get in Touch",
+    "sub": "We respond to inquiries within 2 hours during business hours.",
+    "addrLabel": "Address",
+    "addrValue": "1 Stolychne Shose, Office P-4, Kyiv, 01013, Ukraine",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "phoneValue": "+38 (050) 000-00-00",
+    "formTitle": "Send an Inquiry",
+    "formName": "Your name",
+    "formPhone": "Phone or Telegram",
+    "formEmail": "Email (optional)",
+    "formMessage": "Briefly describe your situation",
+    "formSubmit": "Send Inquiry"
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "practices": "Practices",
+    "consult": "Consultation",
+    "contacts": "Contacts"
+  }
+}

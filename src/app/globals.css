@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #e2e2e2;
+  --bg2: #d8d8d8;
+  --bg3: #eaeaea;
+  --bgc: #e6e6e6;
+  --ink: #181818;
+  --ink2: #2a2a2a;
+  --ink3: #787878;
+  --s1: #9a9a9a;
+  --s2: #c8c8c8;
+  --s3: #5a5a5a;
+  --wh: #f5f5f5;
+  --b: rgba(0, 0, 0, 0.09);
+  --bs: rgba(0, 0, 0, 0.16);
+
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .border-hair {
+    border-width: 0.5px;
+  }
+  .divider {
+    width: 40px;
+    height: 0.5px;
+    background: var(--s3);
+    opacity: 0.6;
+  }
+}
+
+@keyframes dots {
+  0% {
+    content: '.';
+  }
+  33% {
+    content: '..';
+  }
+  66% {
+    content: '...';
+  }
+  100% {
+    content: '.';
+  }
+}
+
+.ldots::after {
+  content: '...';
+  animation: dots 1.2s infinite;
+}
