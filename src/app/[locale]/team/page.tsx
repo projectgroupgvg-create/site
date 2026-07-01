@@ -44,7 +44,10 @@ export default async function TeamPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('Team');
+  const tContact = await getTranslations('Contact');
   const members = t.raw('members') as Member[];
+  const firmEmail = 'gangan.partners@gmail.com';
+  const firmPhone = tContact('phoneValue');
 
   return (
     <main>
@@ -65,11 +68,11 @@ export default async function TeamPage({
         {members.map((m) => (
           <div
             key={m.name}
-            className="border-hair bg-[var(--bgc)] p-8 transition-colors hover:bg-[var(--wh)]"
+            className="group border-hair bg-[var(--bgc)] p-8 transition-colors hover:bg-[var(--wh)]"
             style={{ borderColor: 'var(--b)' }}
           >
             <div
-              className="mb-5 flex h-16 w-16 items-center justify-center rounded-full border-hair bg-[var(--wh)] font-serif text-lg font-bold text-[var(--ink)]"
+              className="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full border-hair bg-[var(--wh)] font-serif text-xl font-bold text-[var(--ink)] transition-colors group-hover:border-[color:var(--s3)]"
               style={{ borderColor: 'var(--b)' }}
             >
               {initials(m.name)}
@@ -80,7 +83,22 @@ export default async function TeamPage({
             <div className="mb-4 text-[11px] uppercase tracking-[0.08em] text-[var(--s3)]">
               {m.role}
             </div>
-            <p className="text-[12.5px] leading-[1.75] text-[var(--ink3)]">{m.bio}</p>
+            <p className="mb-5 text-[12.5px] leading-[1.75] text-[var(--ink3)]">{m.bio}</p>
+
+            <div className="flex flex-col gap-1.5 border-t-hair pt-4" style={{ borderColor: 'var(--b)' }}>
+              <a
+                href={`mailto:${firmEmail}`}
+                className="flex items-center gap-2 text-[11.5px] text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
+              >
+                <span className="text-[var(--s3)]">✉</span> {firmEmail}
+              </a>
+              <a
+                href={`tel:${firmPhone.replace(/[^+\d]/g, '')}`}
+                className="flex items-center gap-2 text-[11.5px] text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
+              >
+                <span className="text-[var(--s3)]">✆</span> {firmPhone}
+              </a>
+            </div>
           </div>
         ))}
       </div>

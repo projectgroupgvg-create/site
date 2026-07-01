@@ -8,6 +8,7 @@
     "practices": "Domaines",
     "consult": "Consultation",
     "blog": "Blog",
+    "news": "Actualités",
     "team": "Équipe",
     "about": "À propos",
     "contacts": "Contact",
@@ -224,6 +225,69 @@
       }
     ]
   },
+  "News": {
+    "lbl": "Actualités",
+    "title": "Actualités du cabinet",
+    "sub": "Dernières évolutions, affaires et distinctions de Gangan & Partners.",
+    "viewAll": "Toutes les actualités",
+    "filterAll": "Toutes",
+    "readMore": "Lire",
+    "backToNews": "Retour aux actualités",
+    "noNews": "Aucune actualité dans cette catégorie pour le moment.",
+    "types": [
+      { "slug": "firm-news", "label": "Actualités du cabinet" },
+      { "slug": "award", "label": "Distinctions" },
+      { "slug": "deal", "label": "Affaires" }
+    ],
+    "fallbackNews": [
+      {
+        "slug": "gangan-partners-launches-crypto-practice",
+        "newsType": "firm-news",
+        "date": "Juin 2025",
+        "title": "Gangan & Partners lance un département dédié à la fraude crypto",
+        "excerpt": "Face à une demande croissante, l'équipe a créé un département dédié à la fraude crypto et aux enquêtes blockchain.",
+        "body": [
+          "Gangan & Partners annonce la création d'un département dédié à l'investigation de la fraude crypto et au traçage des transactions blockchain.",
+          "Cette décision fait suite à une augmentation significative des demandes de particuliers et d'entreprises touchés par la fraude DeFi, les rug pulls et le blocage de comptes sur des plateformes d'échange.",
+          "Ce nouveau département sera dirigé par une équipe alliant expertise juridique et compétences techniques en analyse de données on-chain."
+        ]
+      },
+      {
+        "slug": "favorable-ruling-crypto-exchange-freeze",
+        "newsType": "deal",
+        "date": "Mai 2025",
+        "title": "Un client récupère l'accès à des actifs bloqués par une plateforme d'échange crypto",
+        "excerpt": "L'équipe de Gangan & Partners a obtenu le déblocage du compte d'un client après trois mois de négociations avec une plateforme internationale.",
+        "body": [
+          "Après trois mois de négociations et de préparation des preuves, l'équipe de Gangan & Partners a obtenu le déblocage du compte crypto d'un client, gelé par une plateforme d'échange internationale en raison d'un soupçon de lien avec un système frauduleux.",
+          "L'affaire a nécessité un travail simultané avec le service de conformité de la plateforme et la préparation de documents attestant de l'origine légale des fonds.",
+          "Les détails de l'affaire ne sont pas divulgués à la demande du client."
+        ]
+      },
+      {
+        "slug": "gangan-partners-recognized-emerging-firm",
+        "newsType": "award",
+        "date": "Avril 2025",
+        "title": "Gangan & Partners reconnu comme cabinet émergent en droit de la blockchain",
+        "excerpt": "Une publication spécialisée a salué l'approche distinctive de l'équipe pour les enquêtes à la croisée du droit pénal et de l'analyse blockchain.",
+        "body": [
+          "Gangan & Partners a reçu une distinction d'une publication spécialisée dans le marché juridique ukrainien, dans la catégorie des équipes émergentes en droit des nouvelles technologies.",
+          "Le jury a souligné dans son commentaire la combinaison unique entre pratique pénale classique et expertise technique en analyse des transactions blockchain."
+        ]
+      },
+      {
+        "slug": "new-partner-blockchain-investigations",
+        "newsType": "firm-news",
+        "date": "Mars 2025",
+        "title": "Un nouvel associé rejoint le département Enquêtes blockchain",
+        "excerpt": "Une expertise en traçage de transactions crypto et en constitution de dossiers de preuves pour les tribunaux renforcera le département crypto du cabinet.",
+        "body": [
+          "Gangan & Partners est heureux d'annoncer l'arrivée d'un nouvel associé spécialisé dans les enquêtes blockchain et la préparation de rapports analytiques pour les procédures judiciaires.",
+          "Ce renfort s'inscrit dans la stratégie du cabinet visant à développer son expertise technique parallèlement à sa pratique pénale classique."
+        ]
+      }
+    ]
+  },
   "Team": {
     "lbl": "Équipe",
     "title": "Les avocats de Gangan & Partners",
@@ -302,6 +366,7 @@
     "rights": "Tous droits réservés.",
     "practices": "Domaines",
     "consult": "Consultation",
+    "news": "Actualités",
     "contacts": "Contact"
   }
 }

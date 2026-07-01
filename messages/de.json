@@ -8,6 +8,7 @@
     "practices": "Praxisbereiche",
     "consult": "Beratung",
     "blog": "Blog",
+    "news": "Neuigkeiten",
     "team": "Team",
     "about": "Über uns",
     "contacts": "Kontakt",
@@ -224,6 +225,69 @@
       }
     ]
   },
+  "News": {
+    "lbl": "Neuigkeiten",
+    "title": "Neuigkeiten der Kanzlei",
+    "sub": "Aktuelle Entwicklungen, Fälle und Auszeichnungen von Gangan & Partners.",
+    "viewAll": "Alle Neuigkeiten",
+    "filterAll": "Alle",
+    "readMore": "Lesen",
+    "backToNews": "Zurück zu Neuigkeiten",
+    "noNews": "In dieser Kategorie gibt es noch keine Neuigkeiten.",
+    "types": [
+      { "slug": "firm-news", "label": "Kanzlei-News" },
+      { "slug": "award", "label": "Auszeichnungen" },
+      { "slug": "deal", "label": "Mandate" }
+    ],
+    "fallbackNews": [
+      {
+        "slug": "gangan-partners-launches-crypto-practice",
+        "newsType": "firm-news",
+        "date": "Juni 2025",
+        "title": "Gangan & Partners startet eigene Praxisgruppe für Krypto-Betrug",
+        "excerpt": "Als Reaktion auf die steigende Nachfrage hat das Team Krypto-Betrug und Blockchain-Ermittlungen zu einem eigenen Praxisbereich ausgegliedert.",
+        "body": [
+          "Gangan & Partners gibt die Einrichtung einer eigenen Praxisgruppe bekannt, die sich auf die Untersuchung von Krypto-Betrug und die Rückverfolgung von Blockchain-Transaktionen spezialisiert.",
+          "Die Entscheidung folgt auf eine deutliche Zunahme von Anfragen von Privatpersonen und Unternehmen, die von DeFi-Betrug, Rug Pulls und eingefrorenen Börsenkonten betroffen sind.",
+          "Die neue Praxisgruppe wird von einem Team geleitet, das juristisches Fachwissen mit technischen Fähigkeiten in der On-Chain-Datenanalyse verbindet."
+        ]
+      },
+      {
+        "slug": "favorable-ruling-crypto-exchange-freeze",
+        "newsType": "deal",
+        "date": "Mai 2025",
+        "title": "Mandant erhält wieder Zugriff auf von einer Krypto-Börse eingefrorene Vermögenswerte",
+        "excerpt": "Das Team von Gangan & Partners erwirkte nach drei Monaten Verhandlungen mit einer internationalen Börse die Freigabe des Kontos eines Mandanten.",
+        "body": [
+          "Nach drei Monaten Verhandlungen und Beweisvorbereitung erwirkte das Team von Gangan & Partners die Freigabe des Krypto-Kontos eines Mandanten, das von einer internationalen Börse wegen des Verdachts einer Verbindung zu einem Betrugssystem eingefroren worden war.",
+          "Der Fall erforderte parallele Arbeit mit der Compliance-Abteilung der Börse sowie die Vorbereitung von Unterlagen zum Nachweis der legalen Herkunft der Gelder.",
+          "Details des Falls werden auf Wunsch des Mandanten nicht veröffentlicht."
+        ]
+      },
+      {
+        "slug": "gangan-partners-recognized-emerging-firm",
+        "newsType": "award",
+        "date": "April 2025",
+        "title": "Gangan & Partners als aufstrebende Kanzlei im Blockchain-Recht ausgezeichnet",
+        "excerpt": "Ein Fachmedium würdigte den einzigartigen Ansatz des Teams bei Ermittlungen an der Schnittstelle von Strafrecht und Blockchain-Analyse.",
+        "body": [
+          "Gangan & Partners wurde von einem Fachmedium, das den ukrainischen Rechtsmarkt beobachtet, in der Kategorie der aufstrebenden Teams im Recht neuer Technologien ausgezeichnet.",
+          "Die Jury hob in ihrer Begründung die einzigartige Kombination aus klassischer Strafrechtspraxis und technischer Expertise in der Analyse von Blockchain-Transaktionen hervor."
+        ]
+      },
+      {
+        "slug": "new-partner-blockchain-investigations",
+        "newsType": "firm-news",
+        "date": "März 2025",
+        "title": "Neuer Partner verstärkt die Praxisgruppe Blockchain-Ermittlungen",
+        "excerpt": "Erfahrung in der Rückverfolgung von Krypto-Transaktionen und der Erstellung gerichtsfester Beweisdokumentation stärkt den Krypto-Bereich der Kanzlei.",
+        "body": [
+          "Gangan & Partners freut sich, einen neuen Partner mit Spezialisierung auf Blockchain-Ermittlungen und die Erstellung analytischer Berichte für Gerichtsverfahren begrüßen zu dürfen.",
+          "Diese Verstärkung entspricht der Strategie der Kanzlei, technische Expertise parallel zur klassischen Strafrechtspraxis auszubauen."
+        ]
+      }
+    ]
+  },
   "Team": {
     "lbl": "Team",
     "title": "Anwälte von Gangan & Partners",
@@ -302,6 +366,7 @@
     "rights": "Alle Rechte vorbehalten.",
     "practices": "Praxisbereiche",
     "consult": "Beratung",
+    "news": "Neuigkeiten",
     "contacts": "Kontakt"
   }
 }

@@ -8,6 +8,7 @@
     "practices": "Practices",
     "consult": "Consultation",
     "blog": "Blog",
+    "news": "News",
     "team": "Team",
     "about": "About",
     "contacts": "Contacts",
@@ -224,6 +225,69 @@
       }
     ]
   },
+  "News": {
+    "lbl": "News",
+    "title": "Firm News",
+    "sub": "Recent developments, cases and recognitions of Gangan & Partners.",
+    "viewAll": "All news",
+    "filterAll": "All",
+    "readMore": "Read",
+    "backToNews": "Back to news",
+    "noNews": "No news in this category yet.",
+    "types": [
+      { "slug": "firm-news", "label": "Firm News" },
+      { "slug": "award", "label": "Awards" },
+      { "slug": "deal", "label": "Deals" }
+    ],
+    "fallbackNews": [
+      {
+        "slug": "gangan-partners-launches-crypto-practice",
+        "newsType": "firm-news",
+        "date": "June 2025",
+        "title": "Gangan & Partners Launches Dedicated Crypto Fraud Practice",
+        "excerpt": "In response to growing demand, the team has spun off crypto fraud and blockchain investigations into a dedicated practice area.",
+        "body": [
+          "Gangan & Partners announces the launch of a dedicated practice focused on investigating crypto fraud and tracing blockchain transactions.",
+          "The decision follows a significant increase in inquiries from individuals and businesses affected by DeFi fraud, rug pulls, and frozen exchange accounts.",
+          "The new practice will be led by a team combining legal expertise with technical skills in on-chain data analysis."
+        ]
+      },
+      {
+        "slug": "favorable-ruling-crypto-exchange-freeze",
+        "newsType": "deal",
+        "date": "May 2025",
+        "title": "Client Regains Access to Assets Frozen by a Crypto Exchange",
+        "excerpt": "The Gangan & Partners team secured the unblocking of a client's account after three months of negotiations with an international exchange.",
+        "body": [
+          "After three months of negotiations and evidence preparation, the Gangan & Partners team secured the unblocking of a client's crypto account, which had been frozen by an international exchange over suspected links to a fraud scheme.",
+          "The case required simultaneous work with the exchange's compliance department and preparation of documentation confirming the legitimate origin of the funds.",
+          "Case details are withheld at the client's request."
+        ]
+      },
+      {
+        "slug": "gangan-partners-recognized-emerging-firm",
+        "newsType": "award",
+        "date": "April 2025",
+        "title": "Gangan & Partners Recognized as an Emerging Firm in Blockchain Law",
+        "excerpt": "An industry publication recognized the team for its distinctive approach to investigations at the intersection of criminal law and blockchain analytics.",
+        "body": [
+          "Gangan & Partners received recognition from an industry publication covering the Ukrainian legal market, in the category of emerging teams in the law of new technologies.",
+          "The jury's commentary highlighted the firm's unique combination of classic criminal practice with technical expertise in blockchain transaction analysis."
+        ]
+      },
+      {
+        "slug": "new-partner-blockchain-investigations",
+        "newsType": "firm-news",
+        "date": "March 2025",
+        "title": "New Partner Joins the Blockchain Investigations Practice",
+        "excerpt": "Experience in tracing crypto transactions and building evidentiary records for court will strengthen the firm's crypto practice.",
+        "body": [
+          "Gangan & Partners is pleased to announce a new partner specializing in blockchain investigations and the preparation of analytical reports for court proceedings.",
+          "This addition reflects the firm's strategy of growing technical expertise alongside its classic criminal practice."
+        ]
+      }
+    ]
+  },
   "Team": {
     "lbl": "Team",
     "title": "Gangan & Partners Lawyers",
@@ -302,6 +366,7 @@
     "rights": "All rights reserved.",
     "practices": "Practices",
     "consult": "Consultation",
+    "news": "News",
     "contacts": "Contacts"
   }
 }

@@ -20,6 +20,9 @@ export default function Footer() {
         <Link href="/#ai" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
           {t('consult')}
         </Link>
+        <Link href="/news" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
+          {t('news')}
+        </Link>
         <Link href="/#contacts" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
           {t('contacts')}
         </Link>

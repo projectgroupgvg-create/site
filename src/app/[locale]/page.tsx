@@ -1,7 +1,9 @@
 import { setRequestLocale } from 'next-intl/server';
 import Hero from '@/components/Hero';
+import CredibilityBar from '@/components/CredibilityBar';
 import PracticesGrid from '@/components/PracticesGrid';
 import AIConsultation from '@/components/AIConsultation';
+import NewsPreview from '@/components/NewsPreview';
 import BlogPreview from '@/components/BlogPreview';
 import ContactSection from '@/components/ContactSection';
 import JsonLd from '@/components/JsonLd';
@@ -24,8 +26,10 @@ export default async function HomePage({
     <main>
       <JsonLd data={buildLegalServiceSchema(locale)} />
       <Hero />
+      <CredibilityBar />
       <PracticesGrid />
       <AIConsultation />
+      <NewsPreview />
       <BlogPreview />
       <ContactSection />
     </main>

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { practiceSlugs } from '@/data/practices';
 import { blogFallbackSlugs } from '@/data/blogSlugs';
+import { newsFallbackSlugs } from '@/data/newsSlugs';
 import { siteUrl } from '@/lib/site';
 
 // Builds a locale-prefixed path matching next-intl's `localePrefix: 'as-needed'`
@@ -12,10 +13,11 @@ function localizedPath(locale: string, path: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ['/', '/about', '/team', '/blog'];
+  const staticPaths = ['/', '/about', '/team', '/blog', '/news'];
   const practicePaths = practiceSlugs.map((slug) => `/practices/${slug}`);
   const blogPostPaths = blogFallbackSlugs.map((slug) => `/blog/${slug}`);
-  const allPaths = [...staticPaths, ...practicePaths, ...blogPostPaths];
+  const newsItemPaths = newsFallbackSlugs.map((slug) => `/news/${slug}`);
+  const allPaths = [...staticPaths, ...practicePaths, ...blogPostPaths, ...newsItemPaths];
 
   const entries: MetadataRoute.Sitemap = [];
 
@@ -30,7 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${siteUrl}${localizedPath(locale, path)}`,
         lastModified: new Date(),
         changeFrequency: path === '/' ? 'weekly' : 'monthly',
-        priority: path === '/' ? 1 : path.startsWith('/blog/') || path.startsWith('/practices/') ? 0.7 : 0.5,
+        priority:
+          path === '/'
+            ? 1
+            : path.startsWith('/blog/') || path.startsWith('/practices/') || path.startsWith('/news/')
+              ? 0.7
+              : 0.5,
         alternates: { languages },
       });
     }
