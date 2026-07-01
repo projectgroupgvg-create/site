@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getAllPosts, type FallbackPost } from '@/lib/blog';
 import { routing } from '@/i18n/routing';
+import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -15,7 +16,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Blog' });
-  return { title: `${t('title')} — Gangan & Partners` };
+  const title = t('title');
+  const description = t('sub');
+  return {
+    title,
+    description,
+    alternates: buildAlternates(locale, '/blog'),
+    openGraph: buildOpenGraph({ locale, path: '/blog', title, description }),
+  };
 }
 
 export default async function BlogArchivePage({

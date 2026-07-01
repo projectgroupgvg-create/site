@@ -5,17 +5,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getPostBySlug, type FallbackPost } from '@/lib/blog';
 import { routing } from '@/i18n/routing';
-
-// Slugs of the seed/fallback posts (messages/*.json -> Blog.fallbackPosts).
-// Kept here as a static list so `next build` can prerender them without a
-// JSON import path that would need to reach outside `src/`. Posts added
-// later in Sanity are still served via on-demand rendering for unknown slugs.
-const fallbackSlugs = [
-  'fatf-vymohy-2025',
-  'defi-shakhraystvo-povernennya-koshtiv',
-  'st-209-praktyka-zahystu',
-  'kiberpolitsiya-fishyng-2025',
-];
+import { blogFallbackSlugs as fallbackSlugs } from '@/data/blogSlugs';
+import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
+import JsonLd from '@/components/JsonLd';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -33,7 +26,19 @@ export async function generateMetadata({
   const fallbackPosts = t.raw('fallbackPosts') as FallbackPost[];
   const post = await getPostBySlug(slug, locale, fallbackPosts);
   if (!post) return {};
-  return { title: `${post.title} — Gangan & Partners`, description: post.excerpt };
+  const path = `/blog/${slug}`;
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: buildAlternates(locale, path),
+    openGraph: buildOpenGraph({
+      locale,
+      path,
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+    }),
+  };
 }
 
 export default async function BlogPostPage({
@@ -56,6 +61,22 @@ export default async function BlogPostPage({
 
   return (
     <main>
+      <JsonLd
+        data={buildArticleSchema({
+          locale,
+          path: `/blog/${slug}`,
+          title: post.title,
+          description: post.excerpt,
+          image: post.mainImage,
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(locale, [
+          { name: 'Gangan & Partners', path: '/' },
+          { name: t('title'), path: '/blog' },
+          { name: post.title, path: `/blog/${slug}` },
+        ])}
+      />
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <Link
           href="/blog"

@@ -3,6 +3,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { siteUrl, siteName } from '@/lib/site';
+import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import '../globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
@@ -23,9 +25,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
+  const title = t('title');
+  const description = t('description');
+
   return {
-    title: t('title'),
-    description: t('description'),
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: title,
+      template: `%s — ${siteName}`,
+    },
+    description,
+    alternates: buildAlternates(locale, '/'),
+    openGraph: buildOpenGraph({ locale, path: '/', title, description }),
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 

@@ -42,8 +42,11 @@ export default function AIConsultation() {
           history: messages.slice(-6),
         }),
       });
-      if (!res.ok) throw new Error('bad response');
-      const data = await res.json();
+      // 429 (rate limited) and the "not configured" case both come back with
+      // a normal JSON body containing a user-facing `reply`, so render those
+      // instead of falling through to the generic error message.
+      const data = await res.json().catch(() => null);
+      if (!data?.reply) throw new Error('bad response');
       setMessages((m) => [...m, { role: 'assistant', text: data.reply }]);
     } catch {
       setMessages((m) => [...m, { role: 'assistant', text: t('error') }]);

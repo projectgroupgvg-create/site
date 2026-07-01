@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node scripts/seed-sanity.mjs"
   },
   "dependencies": {
     "next": "^14.2.5",
@@ -16,7 +17,11 @@
     "@sanity/client": "^6.21.3",
     "@sanity/image-url": "^1.0.2",
     "@portabletext/react": "^3.0.18",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "sanity": "^3.62.0",
+    "next-sanity": "^9.8.5",
+    "styled-components": "^6.1.13",
+    "@sanity/vision": "^3.62.0"
   },
   "devDependencies": {
     "typescript": "^5.5.3",

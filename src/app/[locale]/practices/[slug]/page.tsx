@@ -4,6 +4,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { practiceSlugs } from '@/data/practices';
 import { routing } from '@/i18n/routing';
+import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import { buildServiceSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
+import JsonLd from '@/components/JsonLd';
 
 type PracticeContent = {
   num: string;
@@ -29,7 +32,19 @@ export async function generateMetadata({
   if (index === -1) return {};
   const t = await getTranslations({ locale, namespace: 'Practices' });
   const list = t.raw('list') as PracticeContent[];
-  return { title: `${list[index].title} — Gangan & Partners` };
+  const practice = list[index];
+  const path = `/practices/${slug}`;
+  return {
+    title: practice.title,
+    description: practice.desc,
+    alternates: buildAlternates(locale, path),
+    openGraph: buildOpenGraph({
+      locale,
+      path,
+      title: practice.title,
+      description: practice.desc,
+    }),
+  };
 }
 
 export default async function PracticePage({
@@ -53,6 +68,21 @@ export default async function PracticePage({
 
   return (
     <main>
+      <JsonLd
+        data={buildServiceSchema({
+          locale,
+          path: `/practices/${slug}`,
+          name: practice.title,
+          description: practice.desc,
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(locale, [
+          { name: 'Gangan & Partners', path: '/' },
+          { name: t('lbl'), path: '/#practices' },
+          { name: practice.title, path: `/practices/${slug}` },
+        ])}
+      />
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <Link
           href="/#practices"

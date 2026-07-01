@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
+import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 
 type Value = { title: string; desc: string };
 type Stat = { value: string; label: string };
@@ -16,7 +17,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'About' });
-  return { title: `${t('title')} — Gangan & Partners` };
+  const title = t('title');
+  const description = t('sub');
+  return {
+    title,
+    description,
+    alternates: buildAlternates(locale, '/about'),
+    openGraph: buildOpenGraph({ locale, path: '/about', title, description }),
+  };
 }
 
 export default async function AboutPage({
