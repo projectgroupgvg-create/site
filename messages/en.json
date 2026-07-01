@@ -9,6 +9,7 @@
     "consult": "Consultation",
     "blog": "Blog",
     "news": "News",
+    "calculator": "Calculator",
     "team": "Team",
     "about": "About",
     "contacts": "Contacts",
@@ -345,6 +346,28 @@
       { "value": "6", "label": "Practice areas" },
       { "value": "24/7", "label": "Availability for urgent cases" }
     ]
+  },
+  "Calculator": {
+    "lbl": "Tool",
+    "title": "EU Crypto Tax Calculator",
+    "sub": "An estimated crypto tax calculation by jurisdiction. Not tax advice.",
+    "jurisdictionLabel": "Jurisdiction",
+    "operationLabel": "Operation Type",
+    "op_capitalGains": "Sale / Exchange",
+    "op_stakingMining": "Staking / Mining",
+    "op_defi": "DeFi",
+    "amountLabel": "Gain Amount",
+    "heldOverLabel": "Held the asset for more than {months} months",
+    "statusDraft": "Draft legislation — not yet in force",
+    "statusPending": "Official guidance pending",
+    "resultExemptHolding": "Tax-exempt — the asset was held longer than the relief period.",
+    "resultExemptAllowance": "Tax-exempt — the amount is below the exemption threshold.",
+    "resultTaxable": "Estimated calculation at a {rate}% rate. The exact amount depends on other factors in your tax situation.",
+    "resultDescriptiveTitle": "An exact automatic calculation isn't possible",
+    "lastReviewedLabel": "Last reviewed",
+    "sourceLabel": "Source",
+    "disclaimer": "This calculator is for informational purposes only and does not constitute tax or legal advice. Rates and rules may change; we make an effort to keep this data current but do not guarantee it fully reflects the latest legislative changes. Consult a tax lawyer before making any filing or payment decisions.",
+    "ctaConsult": "Discuss with a lawyer"
   },
   "Contact": {
     "lbl": "Contacts",

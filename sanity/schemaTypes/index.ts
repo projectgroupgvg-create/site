@@ -3,5 +3,13 @@ import author from './author';
 import category from './category';
 import blockContent from './blockContent';
 import newsItem from './newsItem';
+import taxJurisdiction from './taxJurisdiction';
 
-export const schemaTypes = [post, author, category, blockContent, newsItem];
+export const schemaTypes = [
+  post,
+  author,
+  category,
+  blockContent,
+  newsItem,
+  taxJurisdiction,
+];

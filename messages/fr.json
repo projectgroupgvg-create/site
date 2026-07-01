@@ -9,6 +9,7 @@
     "consult": "Consultation",
     "blog": "Blog",
     "news": "Actualités",
+    "calculator": "Calculateur",
     "team": "Équipe",
     "about": "À propos",
     "contacts": "Contact",
@@ -345,6 +346,28 @@
       { "value": "6", "label": "Domaines de pratique" },
       { "value": "24/7", "label": "Disponibilité pour les urgences" }
     ]
+  },
+  "Calculator": {
+    "lbl": "Outil",
+    "title": "Calculateur de taxe crypto UE",
+    "sub": "Une estimation de l'imposition des cryptoactifs par juridiction. Ne constitue pas un conseil fiscal.",
+    "jurisdictionLabel": "Juridiction",
+    "operationLabel": "Type d'opération",
+    "op_capitalGains": "Vente / Échange",
+    "op_stakingMining": "Staking / Minage",
+    "op_defi": "DeFi",
+    "amountLabel": "Montant du gain",
+    "heldOverLabel": "Actif détenu plus de {months} mois",
+    "statusDraft": "Projet de loi — pas encore en vigueur",
+    "statusPending": "Doctrine officielle en attente",
+    "resultExemptHolding": "Exonéré d'impôt — l'actif a été détenu plus longtemps que la période d'exonération.",
+    "resultExemptAllowance": "Exonéré d'impôt — le montant est inférieur au seuil d'exonération.",
+    "resultTaxable": "Calcul estimatif à un taux de {rate}%. Le montant exact dépend d'autres facteurs de votre situation fiscale.",
+    "resultDescriptiveTitle": "Un calcul automatique exact n'est pas possible",
+    "lastReviewedLabel": "Dernière vérification",
+    "sourceLabel": "Source",
+    "disclaimer": "Ce calculateur est fourni à titre purement informatif et ne constitue pas un conseil fiscal ou juridique. Les taux et règles peuvent évoluer ; nous nous efforçons de maintenir ces données à jour mais ne garantissons pas qu'elles reflètent pleinement les derniers changements législatifs. Consultez un avocat fiscaliste avant toute décision de déclaration ou de paiement.",
+    "ctaConsult": "En discuter avec un avocat"
   },
   "Contact": {
     "lbl": "Contact",

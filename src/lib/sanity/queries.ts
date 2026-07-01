@@ -49,3 +49,10 @@ export const newsBySlugQuery = /* groq */ `
   newsType,
   "mainImage": mainImage.asset->url
 }`;
+
+// taxJurisdiction is NOT locale-forked (one doc per country, not per UI
+// language) — the numeric rates are the single source of truth, while text
+// fields are localized objects ({uk,en,de,fr}) inside the document. See
+// sanity/schemaTypes/taxJurisdiction.ts.
+export const taxJurisdictionsQuery = /* groq */ `
+*[_type == "taxJurisdiction"] | order(countryCode asc)`;

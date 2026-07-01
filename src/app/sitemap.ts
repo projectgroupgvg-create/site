@@ -13,7 +13,7 @@ function localizedPath(locale: string, path: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ['/', '/about', '/team', '/blog', '/news'];
+  const staticPaths = ['/', '/about', '/team', '/blog', '/news', '/calculator'];
   const practicePaths = practiceSlugs.map((slug) => `/practices/${slug}`);
   const blogPostPaths = blogFallbackSlugs.map((slug) => `/blog/${slug}`);
   const newsItemPaths = newsFallbackSlugs.map((slug) => `/news/${slug}`);

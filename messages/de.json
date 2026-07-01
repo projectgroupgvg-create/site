@@ -9,6 +9,7 @@
     "consult": "Beratung",
     "blog": "Blog",
     "news": "Neuigkeiten",
+    "calculator": "Rechner",
     "team": "Team",
     "about": "Über uns",
     "contacts": "Kontakt",
@@ -345,6 +346,28 @@
       { "value": "6", "label": "Praxisbereiche" },
       { "value": "24/7", "label": "Erreichbarkeit für dringende Fälle" }
     ]
+  },
+  "Calculator": {
+    "lbl": "Tool",
+    "title": "EU-Kryptosteuerrechner",
+    "sub": "Eine geschätzte Berechnung der Kryptosteuer nach Rechtsordnung. Keine Steuerberatung.",
+    "jurisdictionLabel": "Rechtsordnung",
+    "operationLabel": "Art der Transaktion",
+    "op_capitalGains": "Verkauf / Tausch",
+    "op_stakingMining": "Staking / Mining",
+    "op_defi": "DeFi",
+    "amountLabel": "Gewinnbetrag",
+    "heldOverLabel": "Vermögenswert länger als {months} Monate gehalten",
+    "statusDraft": "Gesetzentwurf — noch nicht in Kraft",
+    "statusPending": "Offizielle Leitlinie steht aus",
+    "resultExemptHolding": "Steuerfrei — der Vermögenswert wurde länger als die Freistellungsfrist gehalten.",
+    "resultExemptAllowance": "Steuerfrei — der Betrag liegt unter der Freigrenze.",
+    "resultTaxable": "Geschätzte Berechnung zu einem Satz von {rate}%. Der genaue Betrag hängt von weiteren Faktoren Ihrer steuerlichen Situation ab.",
+    "resultDescriptiveTitle": "Eine genaue automatische Berechnung ist nicht möglich",
+    "lastReviewedLabel": "Zuletzt geprüft",
+    "sourceLabel": "Quelle",
+    "disclaimer": "Dieser Rechner dient ausschließlich Informationszwecken und stellt keine Steuer- oder Rechtsberatung dar. Sätze und Regeln können sich ändern; wir bemühen uns, diese Daten aktuell zu halten, garantieren jedoch nicht, dass sie den neuesten Gesetzesänderungen vollständig entsprechen. Konsultieren Sie vor Erklärungs- oder Zahlungsentscheidungen einen Steueranwalt.",
+    "ctaConsult": "Mit einem Anwalt besprechen"
   },
   "Contact": {
     "lbl": "Kontakt",
