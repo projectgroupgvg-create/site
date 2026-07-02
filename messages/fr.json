@@ -425,6 +425,12 @@
     "typeBlog": "Blog",
     "typeNews": "Actualités"
   },
+  "QuickContact": {
+    "toggle": "Contact rapide",
+    "call": "Appeler",
+    "email": "Envoyer un email",
+    "saveContact": "Enregistrer le contact"
+  },
   "Cookies": {
     "message": "Nous utilisons des cookies à des fins d'analyse et pour améliorer le site.",
     "learnMore": "En savoir plus",

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Gangan & Partners;;;;
+FN:Gangan & Partners
+ORG:Gangan & Partners
+TITLE:Адвокатське об'єднання
+TEL;TYPE=WORK,VOICE:+380500000000
+EMAIL;TYPE=WORK:gangan.partners@gmail.com
+ADR;TYPE=WORK:;;Столичне шосе, 1, офіс П-4;Київ;;01013;Україна
+URL:https://sss-gan2.vercel.app
+END:VCARD
