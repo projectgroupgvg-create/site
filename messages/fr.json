@@ -13,7 +13,8 @@
     "team": "Équipe",
     "about": "À propos",
     "contacts": "Contact",
-    "cta": "Prendre rendez-vous"
+    "cta": "Prendre rendez-vous",
+    "search": "Rechercher"
   },
   "Hero": {
     "eyebrow": "Cabinet d'avocats · Kyiv",
@@ -139,6 +140,7 @@
     "sending": "...",
     "error": "Erreur de connexion. Veuillez nous contacter directement.",
     "payTitle": "Tarifs des consultations",
+    "intakeLink": "Ou remplir un formulaire détaillé de dossier",
     "tiers": [
       { "price": "Gratuit", "label": "Chat IA" },
       { "price": "15 €", "label": "30 min en ligne" },
@@ -369,6 +371,27 @@
     "disclaimer": "Ce calculateur est fourni à titre purement informatif et ne constitue pas un conseil fiscal ou juridique. Les taux et règles peuvent évoluer ; nous nous efforçons de maintenir ces données à jour mais ne garantissons pas qu'elles reflètent pleinement les derniers changements législatifs. Consultez un avocat fiscaliste avant toute décision de déclaration ou de paiement.",
     "ctaConsult": "En discuter avec un avocat"
   },
+  "Intake": {
+    "lbl": "Formulaire",
+    "title": "Pré-évaluation de dossier",
+    "sub": "Remplissez un court formulaire — un avocat examinera les détails et vous contactera pour planifier une consultation.",
+    "practiceLabel": "Domaine de pratique",
+    "practicePlaceholder": "Sélectionnez un domaine",
+    "practiceOther": "Autre / pas sûr",
+    "urgencyLabel": "Urgence",
+    "urgency_urgent": "Urgent",
+    "urgency_week": "Dans la semaine",
+    "urgency_flexible": "Pas urgent",
+    "descriptionPlaceholder": "Décrivez brièvement la situation et ce qui s'est passé jusqu'à présent",
+    "namePlaceholder": "Votre nom",
+    "phonePlaceholder": "Téléphone ou Telegram",
+    "submit": "Envoyer le formulaire",
+    "sending": "Envoi en cours...",
+    "error": "Échec de l'envoi. Veuillez réessayer ou nous contacter directement.",
+    "notConfigured": "Ce formulaire n'est pas encore connecté à un service de traitement.",
+    "successTitle": "Merci !",
+    "successBody": "Nous avons bien reçu votre formulaire et vous contacterons dans les 2 heures pendant les heures ouvrables."
+  },
   "Contact": {
     "lbl": "Contact",
     "title": "Contactez-nous",
@@ -384,6 +407,52 @@
     "formEmail": "Email (facultatif)",
     "formMessage": "Décrivez brièvement votre situation",
     "formSubmit": "Envoyer la demande"
+  },
+  "Newsletter": {
+    "title": "Restez informé",
+    "placeholder": "Votre email",
+    "submit": "S'abonner",
+    "success": "Merci ! Vérifiez votre boîte mail pour confirmer.",
+    "error": "Échec de l'inscription. Veuillez réessayer.",
+    "notConfigured": "La newsletter n'est pas encore connectée."
+  },
+  "Search": {
+    "title": "Rechercher",
+    "placeholder": "Rechercher domaines, articles, actualités...",
+    "hint": "Commencez à taper pour trouver des domaines, articles de blog et actualités.",
+    "noResults": "Aucun résultat trouvé.",
+    "typePractice": "Domaine",
+    "typeBlog": "Blog",
+    "typeNews": "Actualités"
+  },
+  "Cookies": {
+    "message": "Nous utilisons des cookies à des fins d'analyse et pour améliorer le site.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "decline": "Refuser les non essentiels"
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : juillet 2026",
+    "placeholderNote": "Ceci est un modèle de politique de confidentialité décrivant la structure technique du site. Il doit être révisé et approuvé par un avocat spécialisé en protection des données avant publication.",
+    "sections": [
+      {
+        "heading": "Données que nous collectons",
+        "body": "Lorsque vous remplissez un formulaire de contact, vous abonnez à notre newsletter ou discutez avec l'assistant IA, nous recevons les données que vous fournissez : nom, coordonnées et contenu du message. Nous ne collectons aucune donnée automatiquement sans votre action explicite, hormis une analyse de fréquentation de base."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Le site peut utiliser des cookies pour l'analyse du trafic et pour mémoriser vos préférences (par exemple la langue choisie). Vous pouvez refuser les cookies non essentiels via la bannière en bas de page."
+      },
+      {
+        "heading": "Services tiers",
+        "body": "Nous utilisons : Sanity.io (stockage du contenu du blog), Anthropic (traitement des requêtes vers l'assistant IA — les messages que vous envoyez dans le chat sont transmis à Anthropic pour générer une réponse), Vercel (hébergement) et, si configuré, Formspree (traitement du formulaire de contact et de la newsletter)."
+      },
+      {
+        "heading": "Vos droits",
+        "body": "Vous avez le droit de demander l'accès, la rectification ou la suppression de vos données personnelles. Contactez-nous à gangan.partners@gmail.com."
+      }
+    ]
   },
   "Footer": {
     "rights": "Tous droits réservés.",

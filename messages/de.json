@@ -13,7 +13,8 @@
     "team": "Team",
     "about": "Über uns",
     "contacts": "Kontakt",
-    "cta": "Termin vereinbaren"
+    "cta": "Termin vereinbaren",
+    "search": "Suche"
   },
   "Hero": {
     "eyebrow": "Anwaltskanzlei · Kyjiw",
@@ -139,6 +140,7 @@
     "sending": "...",
     "error": "Verbindungsfehler. Bitte kontaktieren Sie uns direkt.",
     "payTitle": "Beratungstarife",
+    "intakeLink": "Oder ein ausführliches Fallformular ausfüllen",
     "tiers": [
       { "price": "Kostenlos", "label": "KI-Chat" },
       { "price": "€15", "label": "30 Min. online" },
@@ -369,6 +371,27 @@
     "disclaimer": "Dieser Rechner dient ausschließlich Informationszwecken und stellt keine Steuer- oder Rechtsberatung dar. Sätze und Regeln können sich ändern; wir bemühen uns, diese Daten aktuell zu halten, garantieren jedoch nicht, dass sie den neuesten Gesetzesänderungen vollständig entsprechen. Konsultieren Sie vor Erklärungs- oder Zahlungsentscheidungen einen Steueranwalt.",
     "ctaConsult": "Mit einem Anwalt besprechen"
   },
+  "Intake": {
+    "lbl": "Anfrage",
+    "title": "Vorab-Fallprüfung",
+    "sub": "Füllen Sie ein kurzes Formular aus — ein Anwalt prüft die Details und meldet sich zur Terminvereinbarung.",
+    "practiceLabel": "Praxisbereich",
+    "practicePlaceholder": "Bereich auswählen",
+    "practiceOther": "Sonstiges / nicht sicher",
+    "urgencyLabel": "Dringlichkeit",
+    "urgency_urgent": "Dringend",
+    "urgency_week": "Innerhalb einer Woche",
+    "urgency_flexible": "Nicht dringend",
+    "descriptionPlaceholder": "Beschreiben Sie kurz die Situation und was bisher passiert ist",
+    "namePlaceholder": "Ihr Name",
+    "phonePlaceholder": "Telefon oder Telegram",
+    "submit": "Formular senden",
+    "sending": "Wird gesendet...",
+    "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder direkt kontaktieren.",
+    "notConfigured": "Dieses Formular ist noch nicht an einen Verarbeitungsdienst angebunden.",
+    "successTitle": "Vielen Dank!",
+    "successBody": "Wir haben Ihr Formular erhalten und melden uns innerhalb von 2 Stunden während der Geschäftszeiten."
+  },
   "Contact": {
     "lbl": "Kontakt",
     "title": "Kontaktieren Sie uns",
@@ -384,6 +407,52 @@
     "formEmail": "E-Mail (optional)",
     "formMessage": "Beschreiben Sie kurz Ihre Situation",
     "formSubmit": "Anfrage senden"
+  },
+  "Newsletter": {
+    "title": "Bleiben Sie informiert",
+    "placeholder": "Ihre E-Mail",
+    "submit": "Abonnieren",
+    "success": "Vielen Dank! Bitte bestätigen Sie per E-Mail.",
+    "error": "Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
+    "notConfigured": "Der Newsletter ist noch nicht verbunden."
+  },
+  "Search": {
+    "title": "Suche",
+    "placeholder": "Praxisbereiche, Artikel, Neuigkeiten suchen...",
+    "hint": "Beginnen Sie zu tippen, um Praxisbereiche, Blogbeiträge und Neuigkeiten zu finden.",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "typePractice": "Praxisbereich",
+    "typeBlog": "Blog",
+    "typeNews": "Neuigkeiten"
+  },
+  "Cookies": {
+    "message": "Wir verwenden Cookies für Analysen und zur Verbesserung der Website.",
+    "learnMore": "Mehr erfahren",
+    "accept": "Akzeptieren",
+    "decline": "Nicht notwendige ablehnen"
+  },
+  "Privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: Juli 2026",
+    "placeholderNote": "Dies ist eine Muster-Datenschutzerklärung, die die technische Struktur der Website beschreibt. Sie sollte vor Veröffentlichung von einem Datenschutzanwalt geprüft und freigegeben werden.",
+    "sections": [
+      {
+        "heading": "Welche Daten wir erheben",
+        "body": "Wenn Sie ein Kontaktformular ausfüllen, unseren Newsletter abonnieren oder mit dem KI-Assistenten chatten, erhalten wir die von Ihnen bereitgestellten Daten: Name, Kontaktdaten und Nachrichteninhalt. Wir erheben keine Daten automatisch ohne Ihre ausdrückliche Handlung, abgesehen von grundlegender Besuchsanalyse."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Die Website kann Cookies zur Traffic-Analyse und zum Speichern Ihrer Einstellungen (z. B. gewählte Sprache) verwenden. Sie können nicht notwendige Cookies über das Banner am unteren Seitenrand ablehnen."
+      },
+      {
+        "heading": "Drittanbieter-Dienste",
+        "body": "Wir nutzen: Sanity.io (Speicherung der Blog-Inhalte), Anthropic (Verarbeitung von Anfragen an den KI-Assistenten — Nachrichten, die Sie im Chat senden, werden zur Erstellung einer Antwort an Anthropic übermittelt), Vercel (Hosting) und, falls konfiguriert, Formspree (Verarbeitung von Kontaktformular und Newsletter)."
+      },
+      {
+        "heading": "Ihre Rechte",
+        "body": "Sie haben das Recht, Zugang, Berichtigung oder Löschung Ihrer personenbezogenen Daten zu verlangen. Kontaktieren Sie uns unter gangan.partners@gmail.com."
+      }
+    ]
   },
   "Footer": {
     "rights": "Alle Rechte vorbehalten.",

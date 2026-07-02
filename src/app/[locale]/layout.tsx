@@ -8,6 +8,7 @@ import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import '../globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 
 // Fonts are loaded via a standard Google Fonts <link> (like the original
 // landing page) rather than next/font/google, so the build doesn't require
@@ -74,6 +75,7 @@ export default async function LocaleLayout({
           <Nav />
           {children}
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

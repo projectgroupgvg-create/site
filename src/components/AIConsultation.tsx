@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 type Msg = { role: 'user' | 'assistant'; text: string };
 
@@ -103,6 +104,13 @@ export default function AIConsultation() {
               ))}
             </div>
           </div>
+
+          <Link
+            href="/intake"
+            className="mt-4 inline-block text-[11px] uppercase tracking-[0.1em] text-[var(--ink2)] underline decoration-[color:var(--b)] underline-offset-4 transition-colors hover:text-[var(--ink)]"
+          >
+            {t('intakeLink')} →
+          </Link>
         </div>
 
         <div>

@@ -68,6 +68,16 @@ export default function Nav() {
       </ul>
 
       <div className="flex items-center gap-3">
+        <Link
+          href="/search"
+          aria-label={t('search')}
+          className="flex h-8 w-8 items-center justify-center text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </Link>
         <LanguageSwitcher />
         <Link
           href="/#ai"

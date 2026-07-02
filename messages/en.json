@@ -13,7 +13,8 @@
     "team": "Team",
     "about": "About",
     "contacts": "Contacts",
-    "cta": "Book a Call"
+    "cta": "Book a Call",
+    "search": "Search"
   },
   "Hero": {
     "eyebrow": "Law Firm · Kyiv",
@@ -139,6 +140,7 @@
     "sending": "...",
     "error": "Connection error. Please contact us directly.",
     "payTitle": "Consultation Rates",
+    "intakeLink": "Or fill out a detailed case intake form",
     "tiers": [
       { "price": "Free", "label": "AI chat" },
       { "price": "$15", "label": "30 min online" },
@@ -369,6 +371,27 @@
     "disclaimer": "This calculator is for informational purposes only and does not constitute tax or legal advice. Rates and rules may change; we make an effort to keep this data current but do not guarantee it fully reflects the latest legislative changes. Consult a tax lawyer before making any filing or payment decisions.",
     "ctaConsult": "Discuss with a lawyer"
   },
+  "Intake": {
+    "lbl": "Intake",
+    "title": "Case Pre-Screening",
+    "sub": "Fill out a short form — a lawyer will review the details and reach out to schedule a consultation.",
+    "practiceLabel": "Practice Area",
+    "practicePlaceholder": "Select an area",
+    "practiceOther": "Other / not sure",
+    "urgencyLabel": "Urgency",
+    "urgency_urgent": "Urgent",
+    "urgency_week": "Within a week",
+    "urgency_flexible": "Not urgent",
+    "descriptionPlaceholder": "Briefly describe the situation and what has happened so far",
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Phone or Telegram",
+    "submit": "Submit intake form",
+    "sending": "Sending...",
+    "error": "Couldn't send. Please try again or contact us directly.",
+    "notConfigured": "This form isn't connected to a processing service yet.",
+    "successTitle": "Thank you!",
+    "successBody": "We've received your form and will contact you within 2 hours during business hours."
+  },
   "Contact": {
     "lbl": "Contacts",
     "title": "Get in Touch",
@@ -384,6 +407,52 @@
     "formEmail": "Email (optional)",
     "formMessage": "Briefly describe your situation",
     "formSubmit": "Send Inquiry"
+  },
+  "Newsletter": {
+    "title": "Get the latest first",
+    "placeholder": "Your email",
+    "submit": "Subscribe",
+    "success": "Thank you! Check your inbox to confirm.",
+    "error": "Couldn't subscribe. Please try again.",
+    "notConfigured": "Newsletter isn't connected yet."
+  },
+  "Search": {
+    "title": "Search",
+    "placeholder": "Search practices, articles, news...",
+    "hint": "Start typing to find practices, blog posts and news.",
+    "noResults": "No results found.",
+    "typePractice": "Practice",
+    "typeBlog": "Blog",
+    "typeNews": "News"
+  },
+  "Cookies": {
+    "message": "We use cookies for analytics and to improve the site.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline non-essential"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: July 2026",
+    "placeholderNote": "This is a template privacy policy describing the site's technical structure. It should be reviewed and approved by a data-protection lawyer before publication.",
+    "sections": [
+      {
+        "heading": "Data we collect",
+        "body": "When you fill out a contact form, subscribe to our newsletter, or chat with the AI assistant, we receive the data you provide: name, contact details, and message content. We do not collect data automatically without your explicit action, aside from basic visit analytics."
+      },
+      {
+        "heading": "Cookies",
+        "body": "The site may use cookies for traffic analytics and to remember your preferences (e.g. selected language). You can decline non-essential cookies via the banner at the bottom of the page."
+      },
+      {
+        "heading": "Third-party services",
+        "body": "We use: Sanity.io (blog content storage), Anthropic (processing AI assistant requests — messages you send in the chat are sent to Anthropic to generate a response), Vercel (hosting), and, if configured, Formspree (contact form and newsletter processing)."
+      },
+      {
+        "heading": "Your rights",
+        "body": "You have the right to request access, correction, or deletion of your personal data. Contact us at gangan.partners@gmail.com."
+      }
+    ]
   },
   "Footer": {
     "rights": "All rights reserved.",
