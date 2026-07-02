@@ -19,6 +19,8 @@ const config: Config = {
         s2: 'var(--s2)',
         s3: 'var(--s3)',
         wh: 'var(--wh)',
+        accent: 'var(--accent)',
+        'accent-ink': 'var(--accent-ink)',
       },
       borderColor: {
         DEFAULT: 'var(--b)',
