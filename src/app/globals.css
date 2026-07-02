@@ -17,11 +17,6 @@
   --b: rgba(0, 0, 0, 0.09);
   --bs: rgba(0, 0, 0, 0.16);
 
-  --accent: #a4823a;
-  --accent-ink: #8a6a1f;
-  --accent-soft: rgba(164, 130, 58, 0.08);
-  --accent-line: rgba(164, 130, 58, 0.4);
-
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
