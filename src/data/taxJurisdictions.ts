@@ -12,7 +12,7 @@ export type TaxJurisdiction = {
   countryCode: string;
   flagEmoji: string;
   countryName: LocalizedText;
-  primaryCurrency: 'EUR' | 'PLN' | 'UAH' | 'USD';
+  primaryCurrency: 'EUR' | 'PLN' | 'UAH' | 'USD' | 'CHF';
   status: 'stable' | 'draft' | 'pending';
   statusNote?: LocalizedText;
   lastReviewed: string;
@@ -23,7 +23,7 @@ export type TaxJurisdiction = {
   capitalGainsRate?: number;
   capitalGainsRateNote: LocalizedText;
   capitalGainsAllowance?: number;
-  capitalGainsAllowanceCurrency?: 'EUR' | 'PLN' | 'UAH' | 'USD';
+  capitalGainsAllowanceCurrency?: 'EUR' | 'PLN' | 'UAH' | 'USD' | 'CHF';
   capitalGainsHoldingExemptionMonths?: number;
   capitalGainsNotes: LocalizedText;
 
@@ -31,7 +31,7 @@ export type TaxJurisdiction = {
   stakingMiningRate?: number;
   stakingMiningRateNote: LocalizedText;
   stakingMiningAllowance?: number;
-  stakingMiningAllowanceCurrency?: 'EUR' | 'PLN' | 'UAH' | 'USD';
+  stakingMiningAllowanceCurrency?: 'EUR' | 'PLN' | 'UAH' | 'USD' | 'CHF';
   stakingMiningNotes: LocalizedText;
 
   defiNotes: LocalizedText;
@@ -239,6 +239,159 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
       en: 'DeFi remains a "grey area" — the DGFiP has not published specific guidance. Practitioners generally apply the BNC regime by analogy with staking/mining, but treatment can vary by protocol type (lending, liquidity pools, yield farming). Consultation is essential before filing.',
       de: 'DeFi bleibt eine "Grauzone" — die DGFiP hat keine spezielle Leitlinie veröffentlicht. In der Praxis wird meist analog zu Staking/Mining das BNC-Regime angewandt, die Behandlung kann jedoch je nach Protokolltyp (Lending, Liquiditätspools, Yield Farming) variieren. Vor der Erklärung ist eine Beratung unerlässlich.',
       fr: "La DeFi reste une « zone grise » — la DGFiP n'a publié aucune doctrine spécifique. Les praticiens appliquent généralement le régime BNC par analogie avec le staking/minage, mais le traitement peut varier selon le type de protocole (prêt, pools de liquidité, yield farming). Une consultation est indispensable avant toute déclaration.",
+    },
+  },
+
+  {
+    countryCode: 'CH',
+    flagEmoji: '🇨🇭',
+    countryName: { uk: 'Швейцарія', en: 'Switzerland', de: 'Schweiz', fr: 'Suisse' },
+    primaryCurrency: 'CHF',
+    status: 'stable',
+    lastReviewed: '2026-06-20',
+    sourceLabel: 'Federal Tax Administration (через CoinTracking / Blockpit)',
+    sourceUrl: 'https://cointracking.info/tax-guides/switzerland/guide/',
+
+    capitalGainsCalculable: true,
+    capitalGainsRate: 0,
+    capitalGainsRateNote: {
+      uk: 'Приріст капіталу від продажу крипто повністю звільнений від податку для приватних інвесторів — Швейцарія оподатковує не сам прибуток, а активи (податок на майно).',
+      en: 'Capital gains from selling crypto are fully tax-exempt for private investors — Switzerland taxes the assets themselves (wealth tax), not the gain.',
+      de: 'Kapitalgewinne aus dem Verkauf von Krypto sind für Privatanleger vollständig steuerfrei — die Schweiz besteuert nicht den Gewinn, sondern das Vermögen selbst (Vermögenssteuer).',
+      fr: "Les plus-values sur la vente de crypto sont totalement exonérées d'impôt pour les investisseurs privés — la Suisse taxe les actifs eux-mêmes (impôt sur la fortune), pas le gain.",
+    },
+    capitalGainsNotes: {
+      uk: 'Натомість усі криптоактиви щороку оподатковуються податком на майно (Vermögenssteuer) за їхньою вартістю на кінець року — ставка 0,3–1% залежно від кантону, з неоподатковуваним порогом близько 100 000 CHF на особу. Звільнення діє лише для "приватних" інвесторів — статус "професійного трейдера" (залежить від частоти угод, використання плеча, співвідношення прибутку до доходу) призводить до оподаткування прибутку як доходу від підприємницької діяльності.',
+      en: 'Instead, all crypto holdings are subject to an annual wealth tax (Vermögenssteuer) on their year-end value — 0.3–1% depending on canton, with an exemption threshold of roughly CHF 100,000 per person. The exemption applies only to "private" investors — "professional trader" status (based on trading frequency, use of leverage, and the ratio of gains to income) causes gains to be taxed as business income instead.',
+      de: 'Stattdessen unterliegen alle Krypto-Bestände jährlich der Vermögenssteuer auf den Wert zum Jahresende — 0,3–1% je nach Kanton, mit einem Freibetrag von rund CHF 100.000 pro Person. Die Befreiung gilt nur für "private" Anleger — der Status als "gewerbsmäßiger Händler" (abhängig von Handelshäufigkeit, Hebeleinsatz und dem Verhältnis von Gewinn zu Einkommen) führt dazu, dass Gewinne stattdessen als Geschäftseinkommen besteuert werden.',
+      fr: "En contrepartie, tous les avoirs crypto sont soumis chaque année à l'impôt sur la fortune (Vermögenssteuer) sur leur valeur en fin d'année — 0,3 à 1% selon le canton, avec un seuil d'exonération d'environ 100 000 CHF par personne. L'exonération ne s'applique qu'aux investisseurs « privés » — le statut de « trader professionnel » (fondé sur la fréquence des transactions, l'usage de l'effet de levier et le ratio gains/revenus) entraîne une imposition des gains comme revenu d'activité.",
+    },
+
+    stakingMiningCalculable: false,
+    stakingMiningRateNote: {
+      uk: 'Дохід від стейкінгу та майнінгу оподатковується як дохід від рухомого майна за прогресивною ставкою податку на дохід (федеральний + кантональний + муніципальний), що залежить від кантону та загального доходу платника.',
+      en: 'Staking and mining income is taxed as income from movable assets at the progressive income tax rate (federal + cantonal + municipal), which depends on the canton and the taxpayer\'s total income.',
+      de: 'Einkünfte aus Staking und Mining werden als Einkommen aus beweglichem Vermögen zum progressiven Einkommensteuersatz besteuert (Bund + Kanton + Gemeinde), abhängig vom Kanton und dem Gesamteinkommen der steuerpflichtigen Person.',
+      fr: "Les revenus de staking et de minage sont imposés comme des revenus de capitaux mobiliers au taux progressif de l'impôt sur le revenu (fédéral + cantonal + communal), qui dépend du canton et du revenu total du contribuable.",
+    },
+    stakingMiningNotes: {
+      uk: 'Оцінюється за ринковою вартістю CHF на день отримання нагороди. Через кантональні відмінності (26 кантонів із власними ставками) точний розрахунок неможливий без вказання кантону проживання.',
+      en: 'Valued at the CHF market price on the day the reward is received. Because of cantonal differences (26 cantons with their own rates), an exact calculation isn\'t possible without specifying the canton of residence.',
+      de: 'Bewertung zum CHF-Marktwert am Tag des Zuflusses. Aufgrund kantonaler Unterschiede (26 Kantone mit eigenen Sätzen) ist eine genaue Berechnung ohne Angabe des Wohnkantons nicht möglich.',
+      fr: "Évalué à la valeur de marché en CHF le jour de la réception. En raison des différences cantonales (26 cantons avec leurs propres taux), un calcul exact n'est pas possible sans préciser le canton de résidence.",
+    },
+
+    defiNotes: {
+      uk: 'Федеральна податкова адміністрація не публікувала вичерпних роз\'яснень щодо DeFi. Дохід від лендингу зазвичай трактується за аналогією зі стейкінгом (дохід від рухомого майна). З 2027 року очікується розширена міжнародна звітність по крипто-провайдерах (CARF). Рекомендуємо консультацію з урахуванням кантону.',
+      en: 'The Federal Tax Administration has not published comprehensive DeFi guidance. Lending income is generally treated by analogy with staking (income from movable assets). Expanded international crypto-provider reporting (CARF) is expected from 2027. We recommend consultation that accounts for your canton.',
+      de: 'Die Eidgenössische Steuerverwaltung hat keine umfassende Leitlinie zu DeFi veröffentlicht. Lending-Erträge werden meist analog zum Staking behandelt (Einkommen aus beweglichem Vermögen). Ab 2027 wird eine erweiterte internationale Meldepflicht für Krypto-Anbieter (CARF) erwartet. Wir empfehlen eine Beratung unter Berücksichtigung Ihres Kantons.',
+      fr: "L'Administration fédérale des contributions n'a pas publié de doctrine complète sur la DeFi. Les revenus de prêt sont généralement traités par analogie avec le staking (revenus de capitaux mobiliers). Une déclaration internationale élargie pour les prestataires crypto (CARF) est attendue dès 2027. Nous recommandons une consultation tenant compte de votre canton.",
+    },
+  },
+
+  {
+    countryCode: 'LT',
+    flagEmoji: '🇱🇹',
+    countryName: { uk: 'Литва', en: 'Lithuania', de: 'Litauen', fr: 'Lituanie' },
+    primaryCurrency: 'EUR',
+    status: 'stable',
+    statusNote: {
+      uk: 'З 1 січня 2026 року набула чинності податкова реформа: більшість видів доходу фізосіб, включно з прибутком від продажу крипто, тепер підсумовується і оподатковується за прогресивною шкалою замість колишньої фіксованої ставки 15%.',
+      en: 'A tax reform took effect on 1 January 2026: most types of individual income, including crypto sale gains, are now aggregated and taxed at progressive rates instead of the former flat 15% rate.',
+      de: 'Am 1. Januar 2026 trat eine Steuerreform in Kraft: Die meisten Einkommensarten natürlicher Personen, einschließlich Gewinnen aus dem Verkauf von Krypto, werden nun zusammengerechnet und progressiv besteuert statt zum bisherigen Pauschalsatz von 15%.',
+      fr: "Une réforme fiscale est entrée en vigueur le 1er janvier 2026 : la plupart des types de revenus des particuliers, y compris les gains de cession de crypto, sont désormais agrégés et imposés à des taux progressifs au lieu de l'ancien taux forfaitaire de 15%.",
+    },
+    lastReviewed: '2026-06-20',
+    sourceLabel: 'PwC Lithuania Individual Tax Summary',
+    sourceUrl: 'https://taxsummaries.pwc.com/lithuania/individual/significant-developments',
+
+    capitalGainsCalculable: false,
+    capitalGainsRateNote: {
+      uk: 'З 2026 року прибуток від продажу крипто підсумовується з іншими доходами і оподатковується прогресивно: 20% до ~82 962 EUR на рік, 25% від ~82 963 до ~138 270 EUR, 32% понад цю суму.',
+      en: 'Since 2026, crypto sale gains are aggregated with other income and taxed progressively: 20% up to ~€82,962/year, 25% from ~€82,963 to ~€138,270, 32% above that.',
+      de: 'Seit 2026 werden Gewinne aus dem Verkauf von Krypto mit anderen Einkünften zusammengerechnet und progressiv besteuert: 20% bis ca. 82.962 EUR/Jahr, 25% von ca. 82.963 bis ca. 138.270 EUR, 32% darüber.',
+      fr: "Depuis 2026, les gains de cession de crypto sont agrégés aux autres revenus et imposés progressivement : 20% jusqu'à ~82 962 EUR/an, 25% de ~82 963 à ~138 270 EUR, 32% au-delà.",
+    },
+    capitalGainsAllowance: 2500,
+    capitalGainsAllowanceCurrency: 'EUR',
+    capitalGainsNotes: {
+      uk: 'До реформи діяв неоподатковуваний поріг 2500 EUR на рік для доходу від продажу особистого майна (включно з крипто) — за наявною інформацією поріг продовжує застосовуватись, але це варто перевірити окремо з урахуванням змін 2026 року. Через прогресивність та агрегацію з іншими доходами точний розрахунок вимагає аналізу повної податкової ситуації платника.',
+      en: 'Before the reform, a €2,500/year non-taxable threshold applied to income from selling personal assets (including crypto) — available information suggests the threshold continues to apply, but this should be verified separately given the 2026 changes. Because of progressivity and aggregation with other income, an exact calculation requires analysis of the taxpayer\'s full tax situation.',
+      de: 'Vor der Reform galt ein jährlicher Freibetrag von 2.500 EUR für Einkünfte aus dem Verkauf persönlicher Vermögenswerte (einschließlich Krypto) — verfügbare Informationen deuten darauf hin, dass der Freibetrag weiterhin gilt, dies sollte jedoch angesichts der Änderungen 2026 gesondert geprüft werden. Aufgrund der Progression und der Zusammenrechnung mit anderen Einkünften erfordert eine genaue Berechnung eine Analyse der gesamten steuerlichen Situation.',
+      fr: "Avant la réforme, un seuil non imposable de 2 500 EUR/an s'appliquait aux revenus de cession de biens personnels (y compris crypto) — les informations disponibles suggèrent que ce seuil continue de s'appliquer, mais cela doit être vérifié séparément compte tenu des changements de 2026. En raison de la progressivité et de l'agrégation avec d'autres revenus, un calcul exact nécessite une analyse de la situation fiscale complète du contribuable.",
+    },
+
+    stakingMiningCalculable: false,
+    stakingMiningRateNote: {
+      uk: 'Дохід від майнінгу, що кваліфікується як індивідуальна діяльність, оподатковувався за ставкою 15%; з 2026 року також підпадає під нові прогресивні ставки 20/25/32% у сукупності з іншими доходами.',
+      en: 'Mining income qualifying as individual activity was taxed at 15%; from 2026 it is also subject to the new progressive 20/25/32% rates in aggregate with other income.',
+      de: 'Mining-Einkünfte, die als individuelle Tätigkeit gelten, wurden mit 15% besteuert; ab 2026 unterliegen sie zusammen mit anderen Einkünften ebenfalls den neuen progressiven Sätzen von 20/25/32%.',
+      fr: "Les revenus de minage qualifiés d'activité individuelle étaient imposés à 15% ; depuis 2026, ils sont également soumis aux nouveaux taux progressifs de 20/25/32% en agrégation avec les autres revenus.",
+    },
+    stakingMiningNotes: {
+      uk: 'Класифікація стейкінгу окремо від майнінгу в литовському законодавстві прописана не так чітко — рекомендуємо консультацію для визначення правильної категорії доходу.',
+      en: 'Lithuanian law does not clearly distinguish staking from mining for classification purposes — we recommend consultation to determine the correct income category.',
+      de: 'Das litauische Recht unterscheidet Staking nicht eindeutig von Mining für Klassifikationszwecke — wir empfehlen eine Beratung zur Bestimmung der richtigen Einkommenskategorie.',
+      fr: "Le droit lituanien ne distingue pas clairement le staking du minage à des fins de classification — nous recommandons une consultation pour déterminer la catégorie de revenu correcte.",
+    },
+
+    defiNotes: {
+      uk: 'Офіційних роз\'яснень щодо DeFi литовська податкова інспекція (VMI) не публікувала. Враховуючи щойно запроваджену реформу агрегованого прогресивного оподаткування, ми рекомендуємо консультацію перед будь-якими DeFi-операціями зі значними сумами.',
+      en: 'Lithuania\'s tax inspectorate (VMI) has not published official DeFi guidance. Given the newly introduced aggregated progressive taxation reform, we recommend consultation before any significant DeFi transactions.',
+      de: 'Die litauische Steuerinspektion (VMI) hat keine offizielle Leitlinie zu DeFi veröffentlicht. Angesichts der neu eingeführten Reform der aggregierten progressiven Besteuerung empfehlen wir eine Beratung vor größeren DeFi-Transaktionen.',
+      fr: "L'inspection fiscale lituanienne (VMI) n'a pas publié de doctrine officielle sur la DeFi. Compte tenu de la réforme récemment introduite d'imposition progressive agrégée, nous recommandons une consultation avant toute opération DeFi significative.",
+    },
+  },
+
+  {
+    countryCode: 'US',
+    flagEmoji: '🇺🇸',
+    countryName: { uk: 'США (федеральний рівень)', en: 'USA (federal level)', de: 'USA (Bundesebene)', fr: 'États-Unis (niveau fédéral)' },
+    primaryCurrency: 'USD',
+    status: 'stable',
+    statusNote: {
+      uk: 'Показані лише федеральні (IRS) ставки. Більшість штатів додатково стягують власний податок на дохід/приріст капіталу (від 0% у штатах без податку на дохід до понад 13% у Каліфорнії) — тут не враховано.',
+      en: 'Only federal (IRS) rates are shown. Most states additionally levy their own income/capital gains tax (from 0% in no-income-tax states to over 13% in California) — not accounted for here.',
+      de: 'Es werden nur die föderalen (IRS-)Sätze angezeigt. Die meisten Bundesstaaten erheben zusätzlich eine eigene Einkommens-/Kapitalertragsteuer (von 0% in Staaten ohne Einkommensteuer bis über 13% in Kalifornien) — hier nicht berücksichtigt.',
+      fr: "Seuls les taux fédéraux (IRS) sont indiqués. La plupart des États prélèvent en plus leur propre impôt sur le revenu/les plus-values (de 0% dans les États sans impôt sur le revenu à plus de 13% en Californie) — non pris en compte ici.",
+    },
+    lastReviewed: '2026-06-20',
+    sourceLabel: 'IRS — Digital Assets (irs.gov)',
+    sourceUrl: 'https://www.irs.gov/filing/digital-assets',
+
+    capitalGainsCalculable: false,
+    capitalGainsRateNote: {
+      uk: 'Короткострокові операції (актив утримувався ≤1 року) оподатковуються як звичайний дохід за федеральною прогресивною шкалою 10–37%. Довгострокові (утримання понад 1 рік) — за пільговими ставками приросту капіталу 0%, 15% або 20% залежно від загального доходу. Для високодохідних платників може додатково застосовуватись 3,8% податок на чистий інвестиційний дохід (NIIT).',
+      en: 'Short-term transactions (asset held ≤1 year) are taxed as ordinary income at the federal progressive rate of 10–37%. Long-term (held over 1 year) — at preferential capital gains rates of 0%, 15%, or 20% depending on total income. Higher earners may also owe an additional 3.8% Net Investment Income Tax (NIIT).',
+      de: 'Kurzfristige Transaktionen (Vermögenswert ≤1 Jahr gehalten) werden als ordentliches Einkommen zum progressiven Bundessatz von 10–37% besteuert. Langfristig (über 1 Jahr gehalten) — zu ermäßigten Kapitalertragssätzen von 0%, 15% oder 20%, abhängig vom Gesamteinkommen. Für Besserverdiener kann zusätzlich die 3,8%ige Net Investment Income Tax (NIIT) anfallen.',
+      fr: "Les transactions à court terme (actif détenu ≤1 an) sont imposées comme un revenu ordinaire au taux fédéral progressif de 10 à 37%. À long terme (détention de plus d'un an) — aux taux préférentiels de plus-values de 0%, 15% ou 20% selon le revenu total. Les contribuables à revenus élevés peuvent également devoir la taxe supplémentaire de 3,8% sur le revenu net d'investissement (NIIT).",
+    },
+    capitalGainsNotes: {
+      uk: 'З 2026 року централізовані криптобіржі, що працюють у США, зобов\'язані звітувати про прибутки/збитки до IRS через форму 1099-DA. Точний розрахунок неможливий без знання загального річного доходу та штату проживання.',
+      en: 'As of 2026, centralized crypto exchanges operating in the US are required to report gains/losses to the IRS via Form 1099-DA. An exact calculation isn\'t possible without knowing total annual income and state of residence.',
+      de: 'Ab 2026 müssen zentralisierte Krypto-Börsen, die in den USA tätig sind, Gewinne/Verluste dem IRS über Formular 1099-DA melden. Eine genaue Berechnung ist ohne Kenntnis des gesamten Jahreseinkommens und des Wohnsitzstaats nicht möglich.',
+      fr: "Depuis 2026, les plateformes d'échange crypto centralisées opérant aux États-Unis doivent déclarer les gains/pertes à l'IRS via le formulaire 1099-DA. Un calcul exact n'est pas possible sans connaître le revenu annuel total et l'État de résidence.",
+    },
+
+    stakingMiningCalculable: false,
+    stakingMiningRateNote: {
+      uk: 'Нагороди від стейкінгу та майнінгу оподатковуються як звичайний дохід за ринковою вартістю на момент отримання, за тією ж прогресивною шкалою 10–37%, що й короткострокові операції.',
+      en: 'Staking and mining rewards are taxed as ordinary income at fair market value on receipt, at the same progressive 10–37% scale as short-term transactions.',
+      de: 'Staking- und Mining-Belohnungen werden als ordentliches Einkommen zum Marktwert im Zeitpunkt des Zuflusses besteuert, nach derselben progressiven Skala von 10–37% wie kurzfristige Transaktionen.',
+      fr: "Les récompenses de staking et de minage sont imposées comme un revenu ordinaire à la juste valeur marchande à la réception, selon le même barème progressif de 10 à 37% que les transactions à court terme.",
+    },
+    stakingMiningNotes: {
+      uk: 'Подальший продаж отриманих нагород створює окрему подію приросту капіталу з базою вартості, що дорівнює їхній ринковій вартості на момент отримання.',
+      en: 'Later selling the received rewards creates a separate capital gains event, with a cost basis equal to their market value at the time of receipt.',
+      de: 'Der spätere Verkauf der erhaltenen Belohnungen stellt ein separates Kapitalgewinnereignis dar, mit Anschaffungskosten in Höhe ihres Marktwerts zum Zeitpunkt des Zuflusses.',
+      fr: "La vente ultérieure des récompenses reçues constitue un événement de plus-value distinct, avec une base de coût égale à leur valeur de marché au moment de la réception.",
+    },
+
+    defiNotes: {
+      uk: 'IRS не опублікував вичерпних роз\'яснень щодо DeFi. Серед практиків триває дискусія, чи створює надання ліквідності подію реалізації активу. Через складність і відсутність чіткої позиції IRS консультація обов\'язкова перед значними DeFi-операціями.',
+      en: 'The IRS has not published comprehensive DeFi guidance. There is ongoing debate among practitioners about whether providing liquidity constitutes a taxable disposal event. Given the complexity and lack of a clear IRS position, consultation is essential before significant DeFi transactions.',
+      de: 'Der IRS hat keine umfassende Leitlinie zu DeFi veröffentlicht. Unter Praktikern besteht anhaltende Debatte darüber, ob die Bereitstellung von Liquidität ein steuerpflichtiges Veräußerungsereignis darstellt. Angesichts der Komplexität und der fehlenden klaren IRS-Position ist vor größeren DeFi-Transaktionen eine Beratung unerlässlich.',
+      fr: "L'IRS n'a pas publié de doctrine complète sur la DeFi. Un débat persiste parmi les praticiens quant à savoir si la fourniture de liquidité constitue un événement de cession imposable. Compte tenu de la complexité et de l'absence de position claire de l'IRS, une consultation est indispensable avant toute opération DeFi significative.",
     },
   },
 ];

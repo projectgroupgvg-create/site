@@ -39,7 +39,7 @@ export default defineType({
       name: 'primaryCurrency',
       title: 'Основна валюта країни',
       type: 'string',
-      options: { list: ['EUR', 'PLN', 'UAH', 'USD'] },
+      options: { list: ['EUR', 'PLN', 'UAH', 'USD', 'CHF'] },
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -99,7 +99,7 @@ export default defineType({
       name: 'capitalGainsAllowanceCurrency',
       title: '[Продаж] Валюта порогу',
       type: 'string',
-      options: { list: ['EUR', 'PLN', 'UAH', 'USD'] },
+      options: { list: ['EUR', 'PLN', 'UAH', 'USD', 'CHF'] },
     }),
     defineField({
       name: 'capitalGainsHoldingExemptionMonths',
@@ -132,7 +132,7 @@ export default defineType({
       name: 'stakingMiningAllowanceCurrency',
       title: '[Staking/Mining] Валюта порогу',
       type: 'string',
-      options: { list: ['EUR', 'PLN', 'UAH', 'USD'] },
+      options: { list: ['EUR', 'PLN', 'UAH', 'USD', 'CHF'] },
     }),
     localizedText('stakingMiningNotes', '[Staking/Mining] Додаткові нотатки', 4),
 
