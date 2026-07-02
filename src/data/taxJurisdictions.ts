@@ -12,6 +12,7 @@ export type TaxJurisdiction = {
   countryCode: string;
   flagEmoji: string;
   countryName: LocalizedText;
+  primaryCurrency: 'EUR' | 'PLN' | 'UAH' | 'USD';
   status: 'stable' | 'draft' | 'pending';
   statusNote?: LocalizedText;
   lastReviewed: string;
@@ -41,6 +42,7 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     countryCode: 'UA',
     flagEmoji: '🇺🇦',
     countryName: { uk: 'Україна', en: 'Ukraine', de: 'Ukraine', fr: 'Ukraine' },
+    primaryCurrency: 'UAH',
     status: 'draft',
     statusNote: {
       uk: "Профільний закон ще не набрав чинності. Законопроєкт №10225-д пройшов перше читання (вересень 2025), очікувана дата набрання чинності — 1 січня 2026. До ухвалення закону податкова служба застосовує загальні правила оподаткування інвестиційного доходу.",
@@ -94,6 +96,7 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     countryCode: 'DE',
     flagEmoji: '🇩🇪',
     countryName: { uk: 'Німеччина', en: 'Germany', de: 'Deutschland', fr: 'Allemagne' },
+    primaryCurrency: 'EUR',
     status: 'stable',
     lastReviewed: '2026-06-20',
     sourceLabel: 'BMF-Schreiben vom 6. März 2025 (через Winheller Rechtsanwälte)',
@@ -145,6 +148,7 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     countryCode: 'PL',
     flagEmoji: '🇵🇱',
     countryName: { uk: 'Польща', en: 'Poland', de: 'Polen', fr: 'Pologne' },
+    primaryCurrency: 'PLN',
     status: 'stable',
     lastReviewed: '2026-06-20',
     sourceLabel: 'Ustawa o PIT — формуляр PIT-38 (через Dudkowiak & Putyra)',
@@ -193,6 +197,7 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     countryCode: 'FR',
     flagEmoji: '🇫🇷',
     countryName: { uk: 'Франція', en: 'France', de: 'Frankreich', fr: 'France' },
+    primaryCurrency: 'EUR',
     status: 'stable',
     lastReviewed: '2026-06-20',
     sourceLabel: 'DGFiP — Prélèvement Forfaitaire Unique (через Blockpit / CMS Law)',

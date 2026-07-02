@@ -36,6 +36,13 @@ export default defineType({
     }),
     localizedText('countryName', "Назва країни", 1),
     defineField({
+      name: 'primaryCurrency',
+      title: 'Основна валюта країни',
+      type: 'string',
+      options: { list: ['EUR', 'PLN', 'UAH', 'USD'] },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'status',
       title: 'Статус правового регулювання',
       type: 'string',

@@ -36,10 +36,7 @@ export default function CryptoTaxCalculator({
 
   if (!jurisdiction) return null;
 
-  const currency =
-    operation === 'capitalGains'
-      ? jurisdiction.capitalGainsAllowanceCurrency ?? 'EUR'
-      : jurisdiction.stakingMiningAllowanceCurrency ?? 'EUR';
+  const currency = jurisdiction.primaryCurrency;
 
   const rateNote =
     operation === 'capitalGains'
