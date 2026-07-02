@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { hasCookieConsentDecision } from '@/lib/cookieConsent';
 
 const phoneRaw = '+380500000000';
 const email = 'gangan.partners@gmail.com';
@@ -10,6 +11,17 @@ const telegramHandle = 'gangan_law';
 export default function QuickContactWidget() {
   const t = useTranslations('QuickContact');
   const [open, setOpen] = useState(false);
+  // The cookie banner is full-width and sits at the very bottom (z-[200]) —
+  // nudge this widget up while the banner is still showing so the two never
+  // overlap, then drop back down once a decision has been made.
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  useEffect(() => {
+    const sync = () => setBannerVisible(!hasCookieConsentDecision());
+    sync();
+    window.addEventListener('cookie-consent-changed', sync);
+    return () => window.removeEventListener('cookie-consent-changed', sync);
+  }, []);
 
   const items = [
     { key: 'phone', label: t('call'), href: `tel:${phoneRaw}`, mark: '✆' },
@@ -21,7 +33,11 @@ export default function QuickContactWidget() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-[150] flex flex-col items-end gap-2.5">
+    <div
+      className={`fixed right-6 z-[150] flex flex-col items-end gap-2.5 transition-[bottom] duration-200 ${
+        bannerVisible ? 'bottom-[9rem] sm:bottom-24' : 'bottom-6'
+      }`}
+    >
       {open && (
         <div
           className="flex flex-col gap-1.5 border-hair bg-[var(--wh)] p-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.12)]"

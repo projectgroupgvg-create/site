@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-
-const STORAGE_KEY = 'gp-cookie-consent';
+import { COOKIE_CONSENT_STORAGE_KEY as STORAGE_KEY } from '@/lib/cookieConsent';
 
 export default function CookieConsent() {
   const t = useTranslations('Cookies');
@@ -22,6 +21,7 @@ export default function CookieConsent() {
   function decide(value: 'accepted' | 'declined') {
     window.localStorage.setItem(STORAGE_KEY, value);
     setChoice(value);
+    window.dispatchEvent(new Event('cookie-consent-changed'));
   }
 
   if (!ready || choice !== null) return null;
