@@ -17,7 +17,6 @@
     "search": "Rechercher"
   },
   "Hero": {
-    "eyebrow": "Cabinet d'avocats · Kyiv",
     "titlePre": "Partenaire juridique du",
     "titleEm": "secteur technologique",
     "titlePost": "et des enquêtes transnationales",
@@ -325,6 +324,7 @@
   },
   "About": {
     "lbl": "À propos",
+    "type": "Cabinet d'avocats · Kyiv",
     "title": "À propos du cabinet",
     "sub": "Gangan & Partners est une équipe spécialisée dans la défense dans les catégories d'affaires les plus complexes et les plus technologiques.",
     "historyTitle": "Notre histoire",

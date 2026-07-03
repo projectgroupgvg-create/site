@@ -46,9 +46,12 @@ export default async function AboutPage({
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
           {t('lbl')}
         </div>
-        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+        <h1 className="mb-3 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
           {t('title')}
         </h1>
+        <div className="mb-5 text-[12px] font-medium uppercase tracking-[0.28em] text-[var(--s3)]">
+          {t('type')}
+        </div>
         <div className="divider" />
         <p className="max-w-[520px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
           {t('sub')}

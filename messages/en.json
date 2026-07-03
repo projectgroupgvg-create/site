@@ -17,7 +17,6 @@
     "search": "Search"
   },
   "Hero": {
-    "eyebrow": "Law Firm · Kyiv",
     "titlePre": "Legal partner for",
     "titleEm": "technology",
     "titlePost": "business and cross-border investigations",
@@ -325,6 +324,7 @@
   },
   "About": {
     "lbl": "About",
+    "type": "Law Firm · Kyiv",
     "title": "About the Firm",
     "sub": "Gangan & Partners is a team specializing in defense in the most complex and technologically demanding categories of cases.",
     "historyTitle": "Our Story",

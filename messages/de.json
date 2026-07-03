@@ -17,7 +17,6 @@
     "search": "Suche"
   },
   "Hero": {
-    "eyebrow": "Anwaltskanzlei · Kyjiw",
     "titlePre": "Rechtspartner für",
     "titleEm": "Technologie-",
     "titlePost": "Unternehmen und grenzüberschreitende Ermittlungen",
@@ -325,6 +324,7 @@
   },
   "About": {
     "lbl": "Über uns",
+    "type": "Anwaltskanzlei · Kyjiw",
     "title": "Über die Kanzlei",
     "sub": "Gangan & Partners ist ein Team, das sich auf die Verteidigung in den komplexesten und technologisch anspruchsvollsten Fallkategorien spezialisiert hat.",
     "historyTitle": "Unsere Geschichte",

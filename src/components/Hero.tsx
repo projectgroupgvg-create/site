@@ -28,17 +28,14 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
-            from the reference mark, the descriptor sits under it, larger
-            than before but still clearly secondary to the slogan */}
-        <div className="mb-6 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
+            from the reference mark */}
+        <div className="mb-10 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
           GANGAN &amp; PARTNERS
         </div>
-        <div className="mb-16 text-[13px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
-          {t('eyebrow')}
-        </div>
 
-        {/* the slogan */}
-        <h1 className="mx-auto mb-12 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)]">
+        {/* the slogan — one line on tablet/desktop, allowed to wrap only on
+            narrow phones where a single line genuinely can't fit */}
+        <h1 className="mx-auto mb-12 w-full whitespace-normal font-serif text-[clamp(13px,2.2vw,22px)] font-bold leading-[1.3] tracking-[-0.005em] text-[var(--ink)] sm:whitespace-nowrap">
           {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
         </h1>
 
