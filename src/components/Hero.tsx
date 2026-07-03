@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import HeroSlogan from './HeroSlogan';
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -36,10 +37,8 @@ export default function Hero() {
           {t('eyebrow')}
         </div>
 
-        {/* the slogan */}
-        <h1 className="mx-auto mb-14 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)]">
-          {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
-        </h1>
+        {/* the slogan — fades in on load, fades out as the page scrolls past */}
+        <HeroSlogan pre={t('titlePre')} em={t('titleEm')} post={t('titlePost')} />
 
         <div className="flex flex-wrap justify-center gap-4">
           <a
