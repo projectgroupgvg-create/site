@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Dark marble theme — surfaces are translucent so the fixed marble
-     texture on <body> shows through section bands; cards/inputs (--bgc,
-     --wh) stay opaque for readability. */
-  --bg: rgba(10, 10, 13, 0.6);
-  --bg2: rgba(13, 13, 17, 0.72);
-  --bg3: rgba(16, 16, 21, 0.38);
-  --bgc: #17171c;
-  --ink: #e9e6de;
-  --ink2: #bab8b0;
-  --ink3: #8f8f8d;
+  /* Sunset-on-marble palette — same dark marble texture and imagery,
+     recolored: warm beige ink, gold accents, a burnt-red "sunset" accent
+     reserved for a single emphasis moment (the slogan's italic word). */
+  --bg: rgba(13, 10, 7, 0.6);
+  --bg2: rgba(16, 12, 8, 0.72);
+  --bg3: rgba(19, 15, 10, 0.38);
+  --bgc: #1a1611;
+  --ink: #e4d4ad;
+  --ink2: #bcaa80;
+  --ink3: #8f7c58;
   --s1: #6f6f6d;
   --s2: #3a3a3d;
-  --s3: #a49f97;
-  --wh: #1c1c22;
-  --b: rgba(255, 255, 255, 0.1);
-  --bs: rgba(255, 255, 255, 0.2);
-  --ink-hover: #d7d3c6;
+  --s3: #cba135;
+  --wh: #1c1712;
+  --b: rgba(212, 175, 55, 0.14);
+  --bs: rgba(212, 175, 55, 0.26);
+  --ink-hover: #f0e0bd;
+  --sunset: #c1502e;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -64,13 +65,13 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #86847d 0%,
-      #f4f2ea 22%,
-      #cac7bc 40%,
-      #7d7b74 52%,
-      #efeee6 68%,
-      #9e9c94 85%,
-      #f4f2ea 100%
+      #8a6d23 0%,
+      #f3d47a 22%,
+      #d4af37 40%,
+      #8a6d23 52%,
+      #f6dfa0 68%,
+      #b8912c 85%,
+      #f3d47a 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
