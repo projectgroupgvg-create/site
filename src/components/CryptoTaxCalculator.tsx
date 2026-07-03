@@ -208,7 +208,7 @@ export default function CryptoTaxCalculator({
         <p className="mb-4">{t('disclaimer')}</p>
         <Link
           href="/#ai"
-          className="inline-block rounded-sm bg-[var(--ink)] px-7 py-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+          className="inline-block rounded-sm bg-[var(--ink)] px-7 py-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
         >
           {t('ctaConsult')}
         </Link>

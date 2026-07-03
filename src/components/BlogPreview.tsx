@@ -30,7 +30,7 @@ export default async function BlogPreview() {
               className="relative flex h-40 items-center justify-center border-b-hair bg-[var(--bg3)]"
               style={{ borderColor: 'var(--b)' }}
             >
-              <span className="select-none font-serif text-[44px] font-bold text-[rgba(0,0,0,0.06)]">
+              <span className="select-none font-serif text-[44px] font-bold text-[rgba(255,255,255,0.05)]">
                 {post.mono ?? post.category.slice(0, 3).toUpperCase()}
               </span>
               <span

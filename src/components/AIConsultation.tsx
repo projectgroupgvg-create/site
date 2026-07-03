@@ -164,7 +164,7 @@ export default function AIConsultation() {
                 <button
                   onClick={() => send()}
                   disabled={sending}
-                  className="whitespace-nowrap rounded-r-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[#555] disabled:cursor-wait"
+                  className="whitespace-nowrap rounded-r-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait"
                 >
                   {sending ? t('sending') : t('send')}
                 </button>

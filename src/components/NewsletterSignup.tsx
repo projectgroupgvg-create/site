@@ -44,12 +44,12 @@ export default function NewsletterSignup() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t('placeholder')}
-          className="flex-1 rounded-l-sm border-hair border-r-0 border-[rgba(245,245,245,0.15)] bg-transparent px-3.5 py-2.5 text-[12px] text-[var(--wh)] outline-none placeholder:text-[rgba(245,245,245,0.35)]"
+          className="flex-1 rounded-l-sm border-hair border-r-0 border-[rgba(245,245,245,0.15)] bg-transparent px-3.5 py-2.5 text-[12px] text-[var(--ink)] outline-none placeholder:text-[rgba(245,245,245,0.35)]"
         />
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="whitespace-nowrap rounded-r-sm border-hair border-[rgba(245,245,245,0.15)] bg-[rgba(245,245,245,0.08)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[rgba(245,245,245,0.15)] disabled:cursor-wait"
+          className="whitespace-nowrap rounded-r-sm border-hair border-[rgba(245,245,245,0.15)] bg-[rgba(245,245,245,0.08)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--ink)] transition-colors hover:bg-[rgba(245,245,245,0.15)] disabled:cursor-wait"
         >
           {status === 'sending' ? '...' : t('submit')}
         </button>

@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --bg: #e2e2e2;
-  --bg2: #d8d8d8;
-  --bg3: #eaeaea;
-  --bgc: #e6e6e6;
-  --ink: #181818;
-  --ink2: #2a2a2a;
-  --ink3: #787878;
-  --s1: #9a9a9a;
-  --s2: #c8c8c8;
-  --s3: #5a5a5a;
-  --wh: #f5f5f5;
-  --b: rgba(0, 0, 0, 0.09);
-  --bs: rgba(0, 0, 0, 0.16);
+  /* Dark marble theme — surfaces are translucent so the fixed marble
+     texture on <body> shows through section bands; cards/inputs (--bgc,
+     --wh) stay opaque for readability. */
+  --bg: rgba(10, 10, 13, 0.6);
+  --bg2: rgba(13, 13, 17, 0.72);
+  --bg3: rgba(16, 16, 21, 0.38);
+  --bgc: #17171c;
+  --ink: #e9e6de;
+  --ink2: #bab8b0;
+  --ink3: #8f8f8d;
+  --s1: #6f6f6d;
+  --s2: #3a3a3d;
+  --s3: #a49f97;
+  --wh: #1c1c22;
+  --b: rgba(255, 255, 255, 0.1);
+  --bs: rgba(255, 255, 255, 0.2);
+  --ink-hover: #d7d3c6;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -36,7 +40,12 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background-color: #08080b;
+  background-image: url('/black-marble-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--ink);
   overflow-x: hidden;
 }

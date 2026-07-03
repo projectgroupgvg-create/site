@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import HeroCanvas from './HeroCanvas';
-import HeroVideo from './HeroVideo';
 
 export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg3)] py-28">
-      <HeroCanvas />
-      <HeroVideo />
       <div className="absolute bottom-0 top-0 left-12 hidden w-px bg-[color:var(--b)] sm:block" />
       <div className="absolute bottom-0 top-0 right-12 hidden w-px bg-[color:var(--b)] sm:block" />
 
@@ -17,7 +13,7 @@ export default function Hero() {
           competing with the type */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full border-hair"
-        style={{ borderColor: 'rgba(0,0,0,0.05)' }}
+        style={{ borderColor: 'rgba(255,255,255,0.06)' }}
       />
 
       <div className="relative w-full max-w-[980px] px-6 text-center">
@@ -48,7 +44,7 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#ai"
-            className="rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+            className="rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
           >
             {t('btn1')}
           </a>

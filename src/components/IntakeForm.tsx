@@ -121,7 +121,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333] disabled:cursor-wait"
+        className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait"
       >
         {status === 'sending' ? t('sending') : t('submit')}
       </button>
