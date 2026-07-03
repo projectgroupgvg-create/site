@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import HeroCanvas from './HeroCanvas';
 
 export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg3)] py-28">
+      <HeroCanvas />
       <div className="absolute bottom-0 top-0 left-12 hidden w-px bg-[color:var(--b)] sm:block" />
       <div className="absolute bottom-0 top-0 right-12 hidden w-px bg-[color:var(--b)] sm:block" />
 
