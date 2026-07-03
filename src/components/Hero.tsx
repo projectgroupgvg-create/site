@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
 
         {/* the slogan: the one thing on this screen that's allowed to be big */}
-        <h1 className="mx-auto mb-12 max-w-[900px] font-serif text-[clamp(36px,6.6vw,92px)] font-bold leading-[1.05] tracking-[-0.015em] text-[var(--ink)]">
+        <h1 className="mx-auto mb-12 max-w-[760px] font-serif text-[clamp(28px,4.4vw,60px)] font-bold leading-[1.12] tracking-[-0.01em] text-[var(--ink)]">
           {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
         </h1>
 
