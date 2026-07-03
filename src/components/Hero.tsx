@@ -16,31 +16,32 @@ export default function Hero() {
         style={{ borderColor: 'rgba(255,255,255,0.06)' }}
       />
 
-      {/* big transparent monogram watermark, centered behind everything */}
-      <Image
-        src="/logo-transparent.png"
-        alt=""
-        width={800}
-        height={800}
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 select-none opacity-[0.14] sm:h-[680px] sm:w-[680px]"
-      />
-
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
             from the reference mark, the descriptor sits under it */}
         <div className="mb-6 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
           GANGAN &amp; PARTNERS
         </div>
-        <div className="mb-12 text-[15px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+        <div className="mb-10 text-[15px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
           {t('eyebrow')}
         </div>
 
-        {/* the slogan — one line on tablet/desktop, allowed to wrap only on
-            narrow phones where a single line genuinely can't fit */}
-        <h1 className="mx-auto mb-16 w-full whitespace-normal font-serif text-[clamp(13px,2.2vw,22px)] font-bold leading-[1.3] tracking-[-0.005em] text-[var(--ink)] sm:whitespace-nowrap">
-          {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
-        </h1>
+        {/* the logo doubles as the frame for the slogan — the mark itself
+            carries the motto, like a seal */}
+        <div className="relative mx-auto mb-10 h-[380px] w-[380px] sm:h-[520px] sm:w-[520px]">
+          <Image
+            src="/logo-transparent.png"
+            alt="Gangan & Partners"
+            fill
+            sizes="(min-width: 640px) 520px, 380px"
+            className="pointer-events-none select-none object-contain opacity-60"
+          />
+          <div className="absolute inset-0 flex items-center justify-center px-[21%]">
+            <h1 className="font-serif text-[clamp(13px,2.4vw,19px)] font-bold leading-[1.4] tracking-[-0.005em] text-[var(--ink)]">
+              {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
+            </h1>
+          </div>
+        </div>
 
         <div className="flex flex-wrap justify-center gap-4">
           <a
