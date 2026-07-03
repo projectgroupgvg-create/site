@@ -16,24 +16,29 @@ export default function Hero() {
         style={{ borderColor: 'rgba(255,255,255,0.06)' }}
       />
 
-      <div className="relative w-full max-w-[980px] px-6 text-center">
-        {/* identity: small, quiet, secondary — logo + name share one line */}
-        <div className="mb-16 flex items-center justify-center gap-3">
-          <Image
-            src="/logo.jpg"
-            alt="Gangan & Partners"
-            width={22}
-            height={22}
-            className="h-[22px] w-[22px] flex-shrink-0 rounded-full object-cover"
-            priority
-          />
-          <span className="text-[10px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
-            {t('eyebrow')}
-          </span>
+      {/* big transparent monogram watermark, centered behind everything */}
+      <Image
+        src="/logo-transparent.png"
+        alt=""
+        width={800}
+        height={800}
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 select-none opacity-[0.14] sm:h-[680px] sm:w-[680px]"
+      />
+
+      <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
+        {/* identity: the firm's name gets the chrome/industrial treatment
+            from the reference mark, the descriptor sits under it, larger
+            than before but still clearly secondary to the slogan */}
+        <div className="mb-6 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
+          GANGAN &amp; PARTNERS
+        </div>
+        <div className="mb-16 text-[13px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+          {t('eyebrow')}
         </div>
 
-        {/* the slogan: the one thing on this screen that's allowed to be big */}
-        <h1 className="mx-auto mb-12 max-w-[760px] font-serif text-[clamp(28px,4.4vw,60px)] font-bold leading-[1.12] tracking-[-0.01em] text-[var(--ink)]">
+        {/* the slogan */}
+        <h1 className="mx-auto mb-12 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)]">
           {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
         </h1>
 
@@ -58,7 +63,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[9px] uppercase tracking-[0.3em] text-[var(--s3)]">
+      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[9px] uppercase tracking-[0.3em] text-[var(--s3)]">
         <span
           className="h-[38px] w-px"
           style={{ background: 'linear-gradient(to bottom, var(--s3), transparent)' }}

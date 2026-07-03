@@ -23,6 +23,7 @@
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-michroma: 'Michroma', 'Inter', sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -59,6 +60,23 @@ body {
     height: 0.5px;
     background: var(--s3);
     opacity: 0.6;
+  }
+  .text-metal {
+    background: linear-gradient(
+      115deg,
+      #86847d 0%,
+      #f4f2ea 22%,
+      #cac7bc 40%,
+      #7d7b74 52%,
+      #efeee6 68%,
+      #9e9c94 85%,
+      #f4f2ea 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
   }
 }
 
