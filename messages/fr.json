@@ -17,10 +17,10 @@
     "search": "Rechercher"
   },
   "Hero": {
+    "eyebrow": "Cabinet d'avocats · Kyiv",
     "titlePre": "Partenaire juridique du",
     "titleEm": "secteur technologique",
     "titlePost": "et des enquêtes transnationales",
-    "sub": "Gangan & Partners est un cabinet d'avocats de nouvelle génération : nous conseillons les entreprises crypto et fintech, défendons nos clients dans les procédures pénales et menons des enquêtes transnationales — là où le droit peine encore à rattraper la technologie.",
     "btn1": "Obtenir une consultation",
     "btn2": "Nos domaines",
     "scroll": "Défiler"
@@ -326,7 +326,7 @@
     "lbl": "À propos",
     "type": "Cabinet d'avocats · Kyiv",
     "title": "À propos du cabinet",
-    "sub": "Gangan & Partners est une équipe spécialisée dans la défense dans les catégories d'affaires les plus complexes et les plus technologiques.",
+    "sub": "Gangan & Partners est un cabinet d'avocats de nouvelle génération : nous conseillons les entreprises crypto et fintech, défendons nos clients dans les procédures pénales et menons des enquêtes transnationales — là où le droit peine encore à rattraper la technologie.",
     "historyTitle": "Notre histoire",
     "history": [
       "Gangan & Partners a été fondé par une équipe d'avocats qui a identifié le besoin croissant de défense dans les affaires à la croisée du droit pénal et des technologies émergentes.",

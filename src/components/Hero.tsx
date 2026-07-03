@@ -28,20 +28,19 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
-            from the reference mark */}
-        <div className="mb-10 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
+            from the reference mark, the descriptor sits under it */}
+        <div className="mb-6 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
           GANGAN &amp; PARTNERS
+        </div>
+        <div className="mb-12 text-[15px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+          {t('eyebrow')}
         </div>
 
         {/* the slogan — one line on tablet/desktop, allowed to wrap only on
             narrow phones where a single line genuinely can't fit */}
-        <h1 className="mx-auto mb-12 w-full whitespace-normal font-serif text-[clamp(13px,2.2vw,22px)] font-bold leading-[1.3] tracking-[-0.005em] text-[var(--ink)] sm:whitespace-nowrap">
+        <h1 className="mx-auto mb-16 w-full whitespace-normal font-serif text-[clamp(13px,2.2vw,22px)] font-bold leading-[1.3] tracking-[-0.005em] text-[var(--ink)] sm:whitespace-nowrap">
           {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
         </h1>
-
-        <p className="mx-auto mb-14 max-w-[480px] text-[14.5px] font-light leading-[1.85] text-[var(--ink3)]">
-          {t('sub')}
-        </p>
 
         <div className="flex flex-wrap justify-center gap-4">
           <a

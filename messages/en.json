@@ -17,10 +17,10 @@
     "search": "Search"
   },
   "Hero": {
+    "eyebrow": "Law Firm · Kyiv",
     "titlePre": "Legal partner for",
     "titleEm": "technology",
     "titlePost": "business and cross-border investigations",
-    "sub": "Gangan & Partners is a next-generation law firm: we advise crypto and fintech businesses, defend clients in criminal proceedings, and lead transnational investigations — where the law is still catching up with technology.",
     "btn1": "Get a Consultation",
     "btn2": "Our Practices",
     "scroll": "Scroll"
@@ -326,7 +326,7 @@
     "lbl": "About",
     "type": "Law Firm · Kyiv",
     "title": "About the Firm",
-    "sub": "Gangan & Partners is a team specializing in defense in the most complex and technologically demanding categories of cases.",
+    "sub": "Gangan & Partners is a next-generation law firm: we advise crypto and fintech businesses, defend clients in criminal proceedings, and lead transnational investigations — where the law is still catching up with technology.",
     "historyTitle": "Our Story",
     "history": [
       "Gangan & Partners was founded by a team of lawyers who recognized the growing need for defense in cases at the intersection of criminal law and emerging technology.",

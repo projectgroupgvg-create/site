@@ -17,10 +17,10 @@
     "search": "Suche"
   },
   "Hero": {
+    "eyebrow": "Anwaltskanzlei · Kyjiw",
     "titlePre": "Rechtspartner für",
     "titleEm": "Technologie-",
     "titlePost": "Unternehmen und grenzüberschreitende Ermittlungen",
-    "sub": "Gangan & Partners ist eine Anwaltskanzlei der neuen Generation: Wir beraten Krypto- und Fintech-Unternehmen, vertreten Mandanten in Strafverfahren und führen transnationale Ermittlungen — dort, wo das Recht der Technologie noch hinterherhinkt.",
     "btn1": "Beratung erhalten",
     "btn2": "Unsere Praxisbereiche",
     "scroll": "Scrollen"
@@ -326,7 +326,7 @@
     "lbl": "Über uns",
     "type": "Anwaltskanzlei · Kyjiw",
     "title": "Über die Kanzlei",
-    "sub": "Gangan & Partners ist ein Team, das sich auf die Verteidigung in den komplexesten und technologisch anspruchsvollsten Fallkategorien spezialisiert hat.",
+    "sub": "Gangan & Partners ist eine Anwaltskanzlei der neuen Generation: Wir beraten Krypto- und Fintech-Unternehmen, vertreten Mandanten in Strafverfahren und führen transnationale Ermittlungen — dort, wo das Recht der Technologie noch hinterherhinkt.",
     "historyTitle": "Unsere Geschichte",
     "history": [
       "Gangan & Partners wurde von einem Team von Anwälten gegründet, die den wachsenden Bedarf an Verteidigung in Fällen an der Schnittstelle von Strafrecht und neuen Technologien erkannt haben.",
