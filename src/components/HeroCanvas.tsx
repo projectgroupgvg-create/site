@@ -55,14 +55,14 @@ export default function HeroCanvas() {
         if (p.y < 0 || p.y > height) p.vy *= -1;
       }
 
-      const maxDist = 150;
+      const maxDist = 190;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i];
           const b = particles[j];
           const dist = Math.hypot(a.x - b.x, a.y - b.y);
           if (dist < maxDist) {
-            ctx!.strokeStyle = `rgba(24,24,24,${(1 - dist / maxDist) * 0.08})`;
+            ctx!.strokeStyle = `rgba(24,24,24,${(1 - dist / maxDist) * 0.28})`;
             ctx!.lineWidth = 1;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -72,10 +72,10 @@ export default function HeroCanvas() {
         }
       }
 
-      ctx!.fillStyle = 'rgba(24,24,24,0.16)';
+      ctx!.fillStyle = 'rgba(24,24,24,0.45)';
       for (const p of particles) {
         ctx!.beginPath();
-        ctx!.arc(p.x, p.y, 1.2, 0, Math.PI * 2);
+        ctx!.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
         ctx!.fill();
       }
     }
