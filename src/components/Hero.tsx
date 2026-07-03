@@ -5,42 +5,39 @@ export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg3)]">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg3)] py-28">
       <div className="absolute bottom-0 top-0 left-12 hidden w-px bg-[color:var(--b)] sm:block" />
       <div className="absolute bottom-0 top-0 right-12 hidden w-px bg-[color:var(--b)] sm:block" />
+
+      {/* a single quiet mark in the far corner — texture, not decoration
+          competing with the type */}
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border-hair"
-        style={{ borderColor: 'rgba(0,0,0,0.06)' }}
-      />
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full border-hair border-dashed"
-        style={{ borderColor: 'rgba(0,0,0,0.06)' }}
+        className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full border-hair"
+        style={{ borderColor: 'rgba(0,0,0,0.05)' }}
       />
 
-      <div className="relative max-w-[840px] px-6 text-center">
-        <div className="mb-7 flex items-center justify-center gap-4 text-[9.5px] font-medium uppercase tracking-[0.38em] text-[var(--s3)]">
-          <span className="hidden h-px max-w-[56px] flex-1 bg-[color:var(--bs)] sm:block" />
-          {t('eyebrow')}
-          <span className="hidden h-px max-w-[56px] flex-1 bg-[color:var(--bs)] sm:block" />
+      <div className="relative w-full max-w-[980px] px-6 text-center">
+        {/* identity: small, quiet, secondary — logo + name share one line */}
+        <div className="mb-16 flex items-center justify-center gap-3">
+          <Image
+            src="/logo.jpg"
+            alt="Gangan & Partners"
+            width={22}
+            height={22}
+            className="h-[22px] w-[22px] flex-shrink-0 rounded-full object-cover"
+            priority
+          />
+          <span className="text-[10px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+            {t('eyebrow')}
+          </span>
         </div>
 
-        <Image
-          src="/logo.jpg"
-          alt="Gangan & Partners"
-          width={72}
-          height={72}
-          className="mx-auto mb-8 h-[72px] w-[72px] rounded-full object-cover"
-          style={{ filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.15))' }}
-          priority
-        />
-
-        <h1 className="mb-6 font-serif text-[clamp(34px,4.8vw,64px)] font-bold leading-[1.07] text-[var(--ink)]">
-          {t('titlePre')} <em className="italic text-[#3a3a3a]">{t('titleEm')}</em>
-          <br />
-          {t('titlePost')}
+        {/* the slogan: the one thing on this screen that's allowed to be big */}
+        <h1 className="mx-auto mb-12 max-w-[900px] font-serif text-[clamp(36px,6.6vw,92px)] font-bold leading-[1.05] tracking-[-0.015em] text-[var(--ink)]">
+          {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
         </h1>
 
-        <p className="mx-auto mb-14 max-w-[540px] text-[15px] font-light leading-[1.8] text-[var(--ink3)]">
+        <p className="mx-auto mb-14 max-w-[480px] text-[14.5px] font-light leading-[1.85] text-[var(--ink3)]">
           {t('sub')}
         </p>
 
