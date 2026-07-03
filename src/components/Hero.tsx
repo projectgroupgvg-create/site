@@ -28,16 +28,16 @@ export default function Hero() {
 
         {/* the logo doubles as the frame for the slogan — the mark itself
             carries the motto, like a seal */}
-        <div className="relative mx-auto mb-10 h-[380px] w-[380px] sm:h-[520px] sm:w-[520px]">
+        <div className="relative mx-auto mb-10 h-[440px] w-[440px] sm:h-[620px] sm:w-[620px]">
           <Image
             src="/logo-transparent.png"
             alt="Gangan & Partners"
             fill
-            sizes="(min-width: 640px) 520px, 380px"
-            className="pointer-events-none select-none object-contain opacity-60"
+            sizes="(min-width: 640px) 620px, 440px"
+            className="pointer-events-none select-none object-contain opacity-[0.14]"
           />
-          <div className="absolute inset-0 flex items-center justify-center px-[21%]">
-            <h1 className="font-serif text-[clamp(13px,2.4vw,19px)] font-bold leading-[1.4] tracking-[-0.005em] text-[var(--ink)]">
+          <div className="absolute inset-0 flex items-center justify-center px-[9%]">
+            <h1 className="whitespace-nowrap font-serif text-[clamp(9px,1.7vw,14px)] font-bold leading-none tracking-[-0.005em] text-[var(--ink)]">
               {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
             </h1>
           </div>
