@@ -16,6 +16,16 @@ export default function Hero() {
         style={{ borderColor: 'rgba(255,255,255,0.06)' }}
       />
 
+      {/* big transparent monogram watermark, centered behind everything */}
+      <Image
+        src="/logo-transparent.png"
+        alt=""
+        width={800}
+        height={800}
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 select-none opacity-[0.14] sm:h-[680px] sm:w-[680px]"
+      />
+
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
             from the reference mark, the descriptor sits under it */}
@@ -26,22 +36,10 @@ export default function Hero() {
           {t('eyebrow')}
         </div>
 
-        {/* the logo doubles as the frame for the slogan — the mark itself
-            carries the motto, like a seal */}
-        <div className="relative mx-auto mb-10 h-[440px] w-[440px] sm:h-[620px] sm:w-[620px]">
-          <Image
-            src="/logo-transparent.png"
-            alt="Gangan & Partners"
-            fill
-            sizes="(min-width: 640px) 620px, 440px"
-            className="pointer-events-none select-none object-contain opacity-[0.14]"
-          />
-          <div className="absolute inset-0 flex items-center justify-center px-[9%]">
-            <h1 className="whitespace-nowrap font-serif text-[clamp(9px,1.7vw,14px)] font-bold leading-none tracking-[-0.005em] text-[var(--ink)]">
-              {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
-            </h1>
-          </div>
-        </div>
+        {/* the slogan */}
+        <h1 className="mx-auto mb-14 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)]">
+          {t('titlePre')} <em className="italic font-normal text-[var(--ink3)]">{t('titleEm')}</em> {t('titlePost')}
+        </h1>
 
         <div className="flex flex-wrap justify-center gap-4">
           <a
