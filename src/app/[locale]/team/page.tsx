@@ -64,7 +64,10 @@ export default async function TeamPage({
         </p>
       </div>
 
-      <div className="grid grid-cols-1 border-hair sm:grid-cols-2 lg:grid-cols-3" style={{ borderColor: 'var(--b)' }}>
+      <div
+        className="grid grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2 lg:grid-cols-3"
+        style={{ borderColor: 'var(--b)' }}
+      >
         {members.map((m) => (
           <div
             key={m.name}

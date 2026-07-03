@@ -23,7 +23,10 @@ export default function PracticesGrid() {
         {t('sub')}
       </p>
 
-      <div className="mt-20 grid grid-cols-1 border-hair sm:grid-cols-2 lg:grid-cols-3" style={{ borderColor: 'var(--b)' }}>
+      <div
+        className="mt-20 grid grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2 lg:grid-cols-3"
+        style={{ borderColor: 'var(--b)' }}
+      >
         {list.map((p, i) => (
           <Link
             key={practiceSlugs[i]}

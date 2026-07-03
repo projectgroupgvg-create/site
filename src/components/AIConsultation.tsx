@@ -71,7 +71,7 @@ export default function AIConsultation() {
             {t('sub')}
           </p>
 
-          <div className="mt-10 border-hair p-6" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
+          <div className="mt-10 rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
             <div className="mb-3.5 text-[9px] font-semibold uppercase tracking-[0.28em] text-[var(--s3)]">
               {t('payTitle')}
             </div>
@@ -80,7 +80,7 @@ export default function AIConsultation() {
                 <button
                   key={i}
                   onClick={() => setSelectedTier(i)}
-                  className={`min-w-[90px] flex-1 border-hair px-2 py-3 text-center text-[11px] text-[var(--ink2)] transition-colors ${
+                  className={`min-w-[90px] flex-1 rounded-sm border-hair px-2 py-3 text-center text-[11px] text-[var(--ink2)] transition-colors ${
                     selectedTier === i ? 'bg-[var(--bg2)]' : 'bg-[var(--wh)]'
                   }`}
                   style={{ borderColor: selectedTier === i ? 'var(--ink)' : 'var(--b)' }}
@@ -96,7 +96,7 @@ export default function AIConsultation() {
               {['Visa', 'Mastercard', 'Apple Pay', 'LiqPay', 'SWIFT'].map((p) => (
                 <span
                   key={p}
-                  className="border-hair bg-[var(--wh)] px-2.5 py-1 text-[10px] text-[var(--ink3)]"
+                  className="rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[10px] text-[var(--ink3)]"
                   style={{ borderColor: 'var(--b)' }}
                 >
                   {p}
@@ -114,7 +114,7 @@ export default function AIConsultation() {
         </div>
 
         <div>
-          <div className="border-hair bg-[var(--wh)]" style={{ borderColor: 'var(--b)' }}>
+          <div className="overflow-hidden rounded-lg border-hair bg-[var(--wh)]" style={{ borderColor: 'var(--b)' }}>
             <div className="flex items-center gap-2 border-b-hair px-5 py-4" style={{ borderColor: 'var(--b)' }}>
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--ink)]" />
               <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[var(--ink)]">
@@ -126,7 +126,7 @@ export default function AIConsultation() {
               {messages.map((m, i) => (
                 <div
                   key={i}
-                  className={`max-w-[90%] px-3.5 py-2.5 text-[12.5px] leading-[1.65] ${
+                  className={`max-w-[90%] rounded-sm px-3.5 py-2.5 text-[12.5px] leading-[1.65] ${
                     m.role === 'user'
                       ? 'self-end bg-[var(--ink)] text-[var(--wh)]'
                       : 'self-start border-l-2 bg-[var(--bg2)] text-[var(--ink2)]'
@@ -142,7 +142,7 @@ export default function AIConsultation() {
                 </div>
               ))}
               {sending && (
-                <div className="self-start border-l-2 bg-[var(--bg2)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink2)]" style={{ borderColor: 'var(--s3)' }}>
+                <div className="self-start rounded-sm border-l-2 bg-[var(--bg2)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink2)]" style={{ borderColor: 'var(--s3)' }}>
                   <div className="mb-1 text-[8px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">
                     Gangan AI
                   </div>
@@ -158,13 +158,13 @@ export default function AIConsultation() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && send()}
                   placeholder={t('placeholder')}
-                  className="flex-1 border-hair border-r-0 bg-[var(--bg)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+                  className="flex-1 rounded-l-sm border-hair border-r-0 bg-[var(--bg)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
                   style={{ borderColor: 'var(--b)' }}
                 />
                 <button
                   onClick={() => send()}
                   disabled={sending}
-                  className="whitespace-nowrap bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[#555] disabled:cursor-wait"
+                  className="whitespace-nowrap rounded-r-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[#555] disabled:cursor-wait"
                 >
                   {sending ? t('sending') : t('send')}
                 </button>
@@ -174,7 +174,7 @@ export default function AIConsultation() {
                   <button
                     key={topic}
                     onClick={() => send(topicPrompts[i])}
-                    className="border-hair px-2.5 py-1.5 text-[10px] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+                    className="rounded-sm border-hair px-2.5 py-1.5 text-[10px] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
                     style={{ borderColor: 'var(--b)' }}
                   >
                     {topic}

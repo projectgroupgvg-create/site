@@ -10,12 +10,12 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-0.5 border-hair border-[color:var(--b)] bg-[var(--bg)]/90 p-1">
+    <div className="flex items-center gap-0.5 rounded-sm border-hair border-[color:var(--b)] bg-[var(--bg)]/90 p-1">
       {locales.map((l) => (
         <button
           key={l}
           onClick={() => router.replace(pathname, { locale: l })}
-          className={`px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] transition-colors ${
+          className={`rounded-sm px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] transition-colors ${
             l === locale
               ? 'bg-[var(--ink)] text-[var(--wh)]'
               : 'text-[var(--ink3)] hover:text-[var(--ink)]'

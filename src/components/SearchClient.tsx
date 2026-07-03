@@ -38,7 +38,7 @@ export default function SearchClient({ items }: { items: SearchItem[] }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={t('placeholder')}
-        className="w-full border-hair bg-[var(--wh)] px-5 py-4 text-[16px] text-[var(--ink)] outline-none"
+        className="w-full rounded-sm border-hair bg-[var(--wh)] px-5 py-4 text-[16px] text-[var(--ink)] outline-none"
         style={{ borderColor: 'var(--b)' }}
       />
 
@@ -53,7 +53,7 @@ export default function SearchClient({ items }: { items: SearchItem[] }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="border-hair bg-[var(--bgc)] p-5 transition-colors hover:bg-[var(--wh)]"
+                className="rounded-lg border-hair bg-[var(--bgc)] p-5 transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <div className="mb-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">

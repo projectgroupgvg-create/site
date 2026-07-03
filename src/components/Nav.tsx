@@ -81,7 +81,7 @@ export default function Nav() {
         <LanguageSwitcher />
         <Link
           href="/#ai"
-          className="hidden whitespace-nowrap bg-[var(--ink)] px-5 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-[var(--wh)] transition-colors hover:bg-[#333] sm:inline-block"
+          className="hidden whitespace-nowrap rounded-sm bg-[var(--ink)] px-5 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-[var(--wh)] transition-colors hover:bg-[#333] sm:inline-block"
         >
           {t('cta')}
         </Link>

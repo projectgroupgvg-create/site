@@ -31,7 +31,7 @@ export default function ContactSection() {
             {items.map((item) => (
               <div key={item.label} className="flex items-start gap-5">
                 <div
-                  className="flex h-9 w-9 flex-shrink-0 items-center justify-center border-hair bg-[var(--wh)] text-[13px] text-[var(--s3)]"
+                  className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-sm border-hair bg-[var(--wh)] text-[13px] text-[var(--s3)]"
                   style={{ borderColor: 'var(--b)' }}
                 >
                   {item.icon}
@@ -61,7 +61,7 @@ export default function ContactSection() {
               name="name"
               placeholder={t('formName')}
               required
-              className="border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+              className="rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             />
             <input
@@ -69,14 +69,14 @@ export default function ContactSection() {
               name="phone"
               placeholder={t('formPhone')}
               required
-              className="border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+              className="rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             />
             <input
               type="email"
               name="email"
               placeholder={t('formEmail')}
-              className="border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+              className="rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             />
             <textarea
@@ -84,12 +84,12 @@ export default function ContactSection() {
               placeholder={t('formMessage')}
               rows={4}
               required
-              className="resize-y border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+              className="resize-y rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             />
             <button
               type="submit"
-              className="mt-1 bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+              className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
             >
               {t('formSubmit')}
             </button>

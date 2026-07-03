@@ -41,14 +41,14 @@ export default function CookieConsent() {
         <div className="flex flex-shrink-0 gap-3">
           <button
             onClick={() => decide('declined')}
-            className="border-hair px-5 py-2.5 text-[11px] uppercase tracking-[0.08em] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)]"
+            className="rounded-sm border-hair px-5 py-2.5 text-[11px] uppercase tracking-[0.08em] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)]"
             style={{ borderColor: 'var(--b)' }}
           >
             {t('decline')}
           </button>
           <button
             onClick={() => decide('accepted')}
-            className="bg-[var(--ink)] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+            className="rounded-sm bg-[var(--ink)] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--wh)] transition-colors hover:bg-[#333]"
           >
             {t('accept')}
           </button>

@@ -40,7 +40,7 @@ export default function QuickContactWidget() {
     >
       {open && (
         <div
-          className="flex flex-col gap-1.5 border-hair bg-[var(--wh)] p-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.12)]"
+          className="flex flex-col gap-1.5 rounded-lg border-hair bg-[var(--wh)] p-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.12)]"
           style={{ borderColor: 'var(--b)' }}
         >
           {items.map((item) => (
@@ -53,7 +53,7 @@ export default function QuickContactWidget() {
               className="flex items-center gap-3 px-3 py-2.5 text-[12px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)]"
             >
               <span
-                className="flex h-6 w-6 flex-shrink-0 items-center justify-center border-hair text-[9px] font-semibold text-[var(--s3)]"
+                className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-sm border-hair text-[9px] font-semibold text-[var(--s3)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 {item.mark}

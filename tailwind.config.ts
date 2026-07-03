@@ -32,6 +32,12 @@ const config: Config = {
       borderWidth: {
         hair: '0.5px',
       },
+      borderRadius: {
+        sm: 'var(--radius-sm)',
+        DEFAULT: 'var(--radius-md)',
+        md: 'var(--radius-md)',
+        lg: 'var(--radius-lg)',
+      },
     },
   },
   plugins: [],

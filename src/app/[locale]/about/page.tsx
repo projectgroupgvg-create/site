@@ -65,7 +65,7 @@ export default async function AboutPage({
           </p>
         ))}
 
-        <div className="mt-12 border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
+        <div className="mt-12 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
           <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">
             {t('missionTitle')}
           </h2>
@@ -79,7 +79,7 @@ export default async function AboutPage({
           {values.map((v) => (
             <div
               key={v.title}
-              className="border-hair p-5"
+              className="rounded-lg border-hair p-5"
               style={{ borderColor: 'var(--b)' }}
             >
               <div className="mb-2 font-serif text-[15px] font-semibold text-[var(--ink)]">
@@ -93,7 +93,7 @@ export default async function AboutPage({
         <h2 className="mb-6 mt-14 font-serif text-[22px] font-semibold text-[var(--ink)]">
           {t('statsTitle')}
         </h2>
-        <div className="grid grid-cols-2 gap-5 border-hair p-7 sm:grid-cols-4" style={{ borderColor: 'var(--b)' }}>
+        <div className="grid grid-cols-2 gap-5 rounded-lg border-hair p-7 sm:grid-cols-4" style={{ borderColor: 'var(--b)' }}>
           {stats.map((s) => (
             <div key={s.label}>
               <div className="font-serif text-[28px] font-bold text-[var(--ink)]">{s.value}</div>

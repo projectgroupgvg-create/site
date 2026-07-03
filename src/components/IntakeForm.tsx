@@ -38,7 +38,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
 
   if (status === 'success') {
     return (
-      <div className="border-hair bg-[var(--bgc)] p-8 text-center" style={{ borderColor: 'var(--b)' }}>
+      <div className="rounded-lg border-hair bg-[var(--bgc)] p-8 text-center" style={{ borderColor: 'var(--b)' }}>
         <div className="mb-2 font-serif text-[20px] font-semibold text-[var(--ink)]">{t('successTitle')}</div>
         <p className="text-[13px] text-[var(--ink3)]">{t('successBody')}</p>
       </div>
@@ -54,7 +54,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
         <select
           name="practice"
           required
-          className="w-full border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none"
+          className="w-full rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none"
           style={{ borderColor: 'var(--b)' }}
         >
           <option value="">{t('practicePlaceholder')}</option>
@@ -82,7 +82,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
                 defaultChecked={i === 0}
                 className="peer sr-only"
               />
-              <span className="block cursor-pointer border-hair px-3 py-2.5 text-center text-[11.5px] text-[var(--ink2)] transition-colors peer-checked:bg-[var(--ink)] peer-checked:text-[var(--wh)]" style={{ borderColor: 'var(--b)' }}>
+              <span className="block cursor-pointer rounded-sm border-hair px-3 py-2.5 text-center text-[11.5px] text-[var(--ink2)] transition-colors peer-checked:bg-[var(--ink)] peer-checked:text-[var(--wh)]" style={{ borderColor: 'var(--b)' }}>
                 {t(`urgency_${value}`)}
               </span>
             </label>
@@ -95,7 +95,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
         placeholder={t('descriptionPlaceholder')}
         rows={4}
         required
-        className="resize-y border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+        className="resize-y rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
         style={{ borderColor: 'var(--b)' }}
       />
 
@@ -105,7 +105,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
           name="name"
           placeholder={t('namePlaceholder')}
           required
-          className="border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+          className="rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
           style={{ borderColor: 'var(--b)' }}
         />
         <input
@@ -113,7 +113,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
           name="phone"
           placeholder={t('phonePlaceholder')}
           required
-          className="border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+          className="rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
           style={{ borderColor: 'var(--b)' }}
         />
       </div>
@@ -121,7 +121,7 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-1 bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333] disabled:cursor-wait"
+        className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333] disabled:cursor-wait"
       >
         {status === 'sending' ? t('sending') : t('submit')}
       </button>

@@ -42,7 +42,7 @@ export default async function PrivacyPage({
       </div>
 
       <div className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
-        <p className="mb-10 border-hair bg-[var(--bgc)] p-5 text-[12.5px] leading-[1.75] text-[var(--ink2)]" style={{ borderColor: 'var(--b)' }}>
+        <p className="mb-10 rounded-lg border-hair bg-[var(--bgc)] p-5 text-[12.5px] leading-[1.75] text-[var(--ink2)]" style={{ borderColor: 'var(--b)' }}>
           {t('placeholderNote')}
         </p>
         {sections.map((s) => (

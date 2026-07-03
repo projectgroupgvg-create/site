@@ -79,7 +79,7 @@ export default async function BlogArchivePage({
             <Link
               key={c.slug}
               href={`/blog?category=${c.slug}`}
-              className={`border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+              className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
                 category === c.slug
                   ? 'bg-[var(--ink)] text-[var(--wh)]'
                   : 'text-[var(--ink3)] hover:text-[var(--ink)]'
@@ -101,7 +101,7 @@ export default async function BlogArchivePage({
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
+                className="overflow-hidden rounded-lg border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <div
@@ -112,7 +112,7 @@ export default async function BlogArchivePage({
                     {post.mono ?? post.category.slice(0, 3).toUpperCase()}
                   </span>
                   <span
-                    className="absolute left-3.5 top-3.5 border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
+                    className="absolute left-3.5 top-3.5 rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
                     style={{ borderColor: 'var(--b)' }}
                   >
                     {categoryLabel(post.category)}

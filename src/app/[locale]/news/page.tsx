@@ -64,7 +64,7 @@ export default async function NewsArchivePage({
         <div className="mt-8 flex flex-wrap gap-2">
           <Link
             href="/news"
-            className={`border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+            className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
               !type
                 ? 'bg-[var(--ink)] text-[var(--wh)]'
                 : 'text-[var(--ink3)] hover:text-[var(--ink)]'
@@ -77,7 +77,7 @@ export default async function NewsArchivePage({
             <Link
               key={tItem.slug}
               href={`/news?type=${tItem.slug}`}
-              className={`border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+              className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
                 type === tItem.slug
                   ? 'bg-[var(--ink)] text-[var(--wh)]'
                   : 'text-[var(--ink3)] hover:text-[var(--ink)]'
@@ -99,7 +99,7 @@ export default async function NewsArchivePage({
               <Link
                 key={item.slug}
                 href={`/news/${item.slug}`}
-                className="border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
+                className="overflow-hidden rounded-lg border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <div
@@ -110,7 +110,7 @@ export default async function NewsArchivePage({
                     {item.newsType.slice(0, 3).toUpperCase()}
                   </span>
                   <span
-                    className="absolute left-3.5 top-3.5 border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
+                    className="absolute left-3.5 top-3.5 rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
                     style={{ borderColor: 'var(--b)' }}
                   >
                     {typeLabel(item.newsType)}

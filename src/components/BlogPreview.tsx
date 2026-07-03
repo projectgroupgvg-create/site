@@ -23,7 +23,7 @@ export default async function BlogPreview() {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
+            className="overflow-hidden rounded-lg border-hair bg-[var(--bgc)] transition-colors hover:bg-[var(--wh)]"
             style={{ borderColor: 'var(--b)' }}
           >
             <div
@@ -34,7 +34,7 @@ export default async function BlogPreview() {
                 {post.mono ?? post.category.slice(0, 3).toUpperCase()}
               </span>
               <span
-                className="absolute left-3.5 top-3.5 border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
+                className="absolute left-3.5 top-3.5 rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 {post.category}

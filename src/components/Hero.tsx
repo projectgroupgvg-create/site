@@ -48,13 +48,13 @@ export default function Hero() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#ai"
-            className="bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+            className="rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
           >
             {t('btn1')}
           </a>
           <a
             href="#practices"
-            className="border-hair px-9 py-3.5 text-[11px] tracking-wide text-[var(--ink)] transition-colors hover:text-[var(--s3)]"
+            className="rounded-sm border-hair px-9 py-3.5 text-[11px] tracking-wide text-[var(--ink)] transition-colors hover:text-[var(--s3)]"
             style={{ borderColor: 'var(--bs)' }}
           >
             {t('btn2')}

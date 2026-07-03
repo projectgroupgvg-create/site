@@ -66,7 +66,7 @@ export default function CryptoTaxCalculator({
           <button
             key={j.countryCode}
             onClick={() => setCountryCode(j.countryCode)}
-            className={`flex items-center gap-2 border-hair px-4 py-2.5 text-[12.5px] transition-colors ${
+            className={`flex items-center gap-2 rounded-sm border-hair px-4 py-2.5 text-[12.5px] transition-colors ${
               j.countryCode === countryCode
                 ? 'bg-[var(--ink)] text-[var(--wh)]'
                 : 'bg-[var(--wh)] text-[var(--ink2)] hover:border-[color:var(--s3)]'
@@ -82,7 +82,7 @@ export default function CryptoTaxCalculator({
       {/* Status badge */}
       {jurisdiction.status !== 'stable' && (
         <div
-          className="mb-8 border-hair bg-[var(--bgc)] px-5 py-4 text-[12px] leading-[1.7] text-[var(--ink2)]"
+          className="mb-8 rounded-sm border-hair bg-[var(--bgc)] px-5 py-4 text-[12px] leading-[1.7] text-[var(--ink2)]"
           style={{ borderColor: 'var(--bs)' }}
         >
           <span className="mr-2 font-semibold uppercase tracking-[0.08em] text-[var(--s3)]">
@@ -101,7 +101,7 @@ export default function CryptoTaxCalculator({
           <button
             key={op}
             onClick={() => setOperation(op)}
-            className={`border-hair px-4 py-2.5 text-[12px] uppercase tracking-[0.06em] transition-colors ${
+            className={`rounded-sm border-hair px-4 py-2.5 text-[12px] uppercase tracking-[0.06em] transition-colors ${
               op === operation
                 ? 'bg-[var(--ink)] text-[var(--wh)]'
                 : 'bg-[var(--wh)] text-[var(--ink2)] hover:border-[color:var(--s3)]'
@@ -125,7 +125,7 @@ export default function CryptoTaxCalculator({
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="0"
-              className="w-full border-hair bg-[var(--wh)] px-4 py-3 text-[15px] text-[var(--ink)] outline-none"
+              className="w-full rounded-sm border-hair bg-[var(--wh)] px-4 py-3 text-[15px] text-[var(--ink)] outline-none"
               style={{ borderColor: 'var(--b)' }}
             />
           </div>
@@ -146,7 +146,7 @@ export default function CryptoTaxCalculator({
       )}
 
       {/* Result */}
-      <div className="border-hair bg-[var(--bgc)] p-7" style={{ borderColor: 'var(--b)' }}>
+      <div className="rounded-lg border-hair bg-[var(--bgc)] p-7" style={{ borderColor: 'var(--b)' }}>
         {result?.kind === 'exempt-holding' || result?.kind === 'exempt-allowance' ? (
           <>
             <div className="mb-2 font-serif text-[32px] font-bold text-[var(--ink)]">0 {currency}</div>
@@ -202,13 +202,13 @@ export default function CryptoTaxCalculator({
 
       {/* Disclaimer */}
       <div
-        className="mt-8 border-hair bg-[var(--bg2)] p-6 text-[12px] leading-[1.75] text-[var(--ink3)]"
+        className="mt-8 rounded-lg border-hair bg-[var(--bg2)] p-6 text-[12px] leading-[1.75] text-[var(--ink3)]"
         style={{ borderColor: 'var(--b)' }}
       >
         <p className="mb-4">{t('disclaimer')}</p>
         <Link
           href="/#ai"
-          className="inline-block bg-[var(--ink)] px-7 py-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+          className="inline-block rounded-sm bg-[var(--ink)] px-7 py-3 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
         >
           {t('ctaConsult')}
         </Link>

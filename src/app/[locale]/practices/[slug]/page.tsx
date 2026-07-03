@@ -121,13 +121,13 @@ export default async function PracticePage({
           ))}
         </ul>
 
-        <div className="mt-14 border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
+        <div className="mt-14 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
           <div className="mb-4 font-serif text-[18px] font-semibold text-[var(--ink)]">
             {t('ctaTitle')}
           </div>
           <Link
             href="/#ai"
-            className="inline-block bg-[var(--ink)] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
+            className="inline-block rounded-sm bg-[var(--ink)] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[#333]"
           >
             {t('ctaBtn')}
           </Link>
@@ -141,7 +141,7 @@ export default async function PracticePage({
             <Link
               key={o.slug}
               href={`/practices/${o.slug}`}
-              className="border-hair px-5 py-4 text-[13px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)]"
+              className="rounded-sm border-hair px-5 py-4 text-[13px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)]"
               style={{ borderColor: 'var(--b)' }}
             >
               <span className="mr-2 text-[var(--s3)]">{o.num}</span>

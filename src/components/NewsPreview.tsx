@@ -25,7 +25,10 @@ export default async function NewsPreview() {
       </h2>
       <div className="divider" />
 
-      <div className="mt-12 max-w-[820px] border-hair" style={{ borderColor: 'var(--b)' }}>
+      <div
+        className="mt-12 max-w-[820px] overflow-hidden rounded-lg border-hair"
+        style={{ borderColor: 'var(--b)' }}
+      >
         {news.map((item) => (
           <Link
             key={item.slug}
