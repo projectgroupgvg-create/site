@@ -44,7 +44,7 @@ export default function HeroSlogan({
 
   return (
     <h1
-      className="mx-auto mb-14 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)] transition-opacity duration-[1200ms] ease-out"
+      className="mx-auto mb-14 max-w-[720px] font-serif text-[clamp(24px,3.8vw,50px)] font-bold leading-[1.14] tracking-[-0.01em] text-[var(--ink)] transition-opacity duration-[3000ms] ease-in-out"
       style={{ opacity: visible ? scrollOpacity : 0 }}
     >
       {pre} <em className="italic font-normal text-[var(--ink3)]">{em}</em> {post}
