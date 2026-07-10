@@ -11,16 +11,16 @@
   --bg2: rgba(250, 246, 238, 0.78);
   --bg3: rgba(255, 255, 255, 0.35);
   --bgc: #f6f1e6;
-  --ink: #2a1d12;
-  --ink2: #5c4a35;
-  --ink3: #8a7458;
+  --ink: #3a2318;
+  --ink2: #a2816e;
+  --ink3: #8a7365;
   --s1: #b7b0a3;
   --s2: #ded6c4;
-  --s3: #a2811c;
+  --s3: #9c7f78;
   --wh: #fdfbf7;
-  --b: rgba(169, 130, 40, 0.22);
-  --bs: rgba(169, 130, 40, 0.38);
-  --ink-hover: #4a3722;
+  --b: rgba(162, 129, 110, 0.22);
+  --bs: rgba(162, 129, 110, 0.38);
+  --ink-hover: #241610;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -65,19 +65,19 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #7a5c1e 0%,
-      #e2be7c 22%,
-      #a2811c 40%,
-      #7a5c1e 52%,
-      #e8c988 68%,
-      #8f6d22 85%,
-      #e2be7c 100%
+      #6b6b68 0%,
+      #d8d6ce 22%,
+      #9a9890 40%,
+      #6b6b68 52%,
+      #e0ded6 68%,
+      #838179 85%,
+      #d8d6ce 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
   }
 }
 
