@@ -141,10 +141,22 @@
     "payTitle": "Tarifs des consultations",
     "intakeLink": "Ou remplir un formulaire détaillé de dossier",
     "tiers": [
-      { "price": "Gratuit", "label": "Chat IA" },
-      { "price": "15 €", "label": "30 min en ligne" },
-      { "price": "45 €", "label": "60 min + rapport" },
-      { "price": "100 €", "label": "Analyse complète" }
+      {
+        "price": "Gratuit",
+        "label": "Chat IA"
+      },
+      {
+        "price": "15 €",
+        "label": "30 min en ligne"
+      },
+      {
+        "price": "45 €",
+        "label": "60 min + rapport"
+      },
+      {
+        "price": "100 €",
+        "label": "Analyse complète"
+      }
     ],
     "topics": [
       "Soupçon d'infraction",
@@ -169,10 +181,22 @@
     "backToBlog": "Retour au blog",
     "noPosts": "Aucun article dans cette catégorie pour le moment.",
     "categories": [
-      { "slug": "regulatory", "label": "Droit réglementaire" },
-      { "slug": "blockchain", "label": "Blockchain" },
-      { "slug": "criminal", "label": "Droit pénal" },
-      { "slug": "cyber", "label": "Cyberdroit" }
+      {
+        "slug": "regulatory",
+        "label": "Droit réglementaire"
+      },
+      {
+        "slug": "blockchain",
+        "label": "Blockchain"
+      },
+      {
+        "slug": "criminal",
+        "label": "Droit pénal"
+      },
+      {
+        "slug": "cyber",
+        "label": "Cyberdroit"
+      }
     ],
     "fallbackPosts": [
       {
@@ -237,9 +261,18 @@
     "backToNews": "Retour aux actualités",
     "noNews": "Aucune actualité dans cette catégorie pour le moment.",
     "types": [
-      { "slug": "firm-news", "label": "Actualités du cabinet" },
-      { "slug": "award", "label": "Distinctions" },
-      { "slug": "deal", "label": "Affaires" }
+      {
+        "slug": "firm-news",
+        "label": "Actualités du cabinet"
+      },
+      {
+        "slug": "award",
+        "label": "Distinctions"
+      },
+      {
+        "slug": "deal",
+        "label": "Affaires"
+      }
     ],
     "fallbackNews": [
       {
@@ -298,27 +331,37 @@
       {
         "name": "Oleksandr Gangan",
         "role": "Associé gérant · Droit pénal",
-        "bio": "Dirige le cabinet et coordonne la défense dans les procédures pénales les plus médiatisées. Plus de 15 ans d'expérience en droit pénal."
+        "bio": "Dirige le cabinet et coordonne la défense dans les procédures pénales les plus médiatisées. Plus de 15 ans d'expérience en droit pénal.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Maria Kovalenko",
         "role": "Associée · AML et conformité",
-        "bio": "Spécialisée dans les affaires de blanchiment de capitaux et la réalisation d'audits de conformité pour les entreprises financières et crypto."
+        "bio": "Spécialisée dans les affaires de blanchiment de capitaux et la réalisation d'audits de conformité pour les entreprises financières et crypto.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Dmytro Savchuk",
         "role": "Counsel · Enquêtes transnationales",
-        "bio": "Gère les affaires comportant un élément international : extradition, demandes MLAT, coordination avec des juridictions étrangères."
+        "bio": "Gère les affaires comportant un élément international : extradition, demandes MLAT, coordination avec des juridictions étrangères.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Anna Lytvyn",
         "role": "Collaboratrice · Enquêtes blockchain",
-        "bio": "Allie formation juridique et expertise technique dans l'analyse des transactions blockchain et le traçage des actifs crypto."
+        "bio": "Allie formation juridique et expertise technique dans l'analyse des transactions blockchain et le traçage des actifs crypto.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Ihor Petrenko",
         "role": "Collaborateur · Cyberdroit",
-        "bio": "Traite les affaires de cybercriminalité, la protection des preuves numériques et la liaison avec la cyberpolice."
+        "bio": "Traite les affaires de cybercriminalité, la protection des preuves numériques et la liaison avec la cyberpolice.",
+        "facebook": "#",
+        "linkedin": "#"
       }
     ]
   },
@@ -336,17 +379,41 @@
     "mission": "Assurer le plus haut niveau de défense juridique là où les enjeux sont les plus élevés et où la complexité de l'affaire exige à la fois une expertise juridique et technique.",
     "valuesTitle": "Nos principes",
     "values": [
-      { "title": "Expertise", "desc": "Spécialisation approfondie dans des domaines du droit pointus et technologiquement complexes." },
-      { "title": "Confidentialité", "desc": "Secret professionnel et protection totale des informations des clients." },
-      { "title": "Réactivité", "desc": "Réponse aux demandes dans les 2 heures pendant les heures ouvrables." },
-      { "title": "Transparence", "desc": "Tarification claire et stratégie de défense définie dès la première consultation." }
+      {
+        "title": "Expertise",
+        "desc": "Spécialisation approfondie dans des domaines du droit pointus et technologiquement complexes."
+      },
+      {
+        "title": "Confidentialité",
+        "desc": "Secret professionnel et protection totale des informations des clients."
+      },
+      {
+        "title": "Réactivité",
+        "desc": "Réponse aux demandes dans les 2 heures pendant les heures ouvrables."
+      },
+      {
+        "title": "Transparence",
+        "desc": "Tarification claire et stratégie de défense définie dès la première consultation."
+      }
     ],
     "statsTitle": "Chiffres clés",
     "stats": [
-      { "value": "150+", "label": "Affaires traitées" },
-      { "value": "15", "label": "Années d'expérience de l'équipe" },
-      { "value": "6", "label": "Domaines de pratique" },
-      { "value": "24/7", "label": "Disponibilité pour les urgences" }
+      {
+        "value": "150+",
+        "label": "Affaires traitées"
+      },
+      {
+        "value": "15",
+        "label": "Années d'expérience de l'équipe"
+      },
+      {
+        "value": "6",
+        "label": "Domaines de pratique"
+      },
+      {
+        "value": "24/7",
+        "label": "Disponibilité pour les urgences"
+      }
     ]
   },
   "Calculator": {

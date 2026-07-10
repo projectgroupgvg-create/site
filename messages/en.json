@@ -141,10 +141,22 @@
     "payTitle": "Consultation Rates",
     "intakeLink": "Or fill out a detailed case intake form",
     "tiers": [
-      { "price": "Free", "label": "AI chat" },
-      { "price": "$15", "label": "30 min online" },
-      { "price": "$45", "label": "60 min + report" },
-      { "price": "$100", "label": "Full analysis" }
+      {
+        "price": "Free",
+        "label": "AI chat"
+      },
+      {
+        "price": "$15",
+        "label": "30 min online"
+      },
+      {
+        "price": "$45",
+        "label": "60 min + report"
+      },
+      {
+        "price": "$100",
+        "label": "Full analysis"
+      }
     ],
     "topics": [
       "Suspicion of a crime",
@@ -169,10 +181,22 @@
     "backToBlog": "Back to blog",
     "noPosts": "No articles in this category yet.",
     "categories": [
-      { "slug": "regulatory", "label": "Regulatory Law" },
-      { "slug": "blockchain", "label": "Blockchain" },
-      { "slug": "criminal", "label": "Criminal Law" },
-      { "slug": "cyber", "label": "Cyber Law" }
+      {
+        "slug": "regulatory",
+        "label": "Regulatory Law"
+      },
+      {
+        "slug": "blockchain",
+        "label": "Blockchain"
+      },
+      {
+        "slug": "criminal",
+        "label": "Criminal Law"
+      },
+      {
+        "slug": "cyber",
+        "label": "Cyber Law"
+      }
     ],
     "fallbackPosts": [
       {
@@ -237,9 +261,18 @@
     "backToNews": "Back to news",
     "noNews": "No news in this category yet.",
     "types": [
-      { "slug": "firm-news", "label": "Firm News" },
-      { "slug": "award", "label": "Awards" },
-      { "slug": "deal", "label": "Deals" }
+      {
+        "slug": "firm-news",
+        "label": "Firm News"
+      },
+      {
+        "slug": "award",
+        "label": "Awards"
+      },
+      {
+        "slug": "deal",
+        "label": "Deals"
+      }
     ],
     "fallbackNews": [
       {
@@ -298,27 +331,37 @@
       {
         "name": "Oleksandr Gangan",
         "role": "Managing Partner · Criminal Practice",
-        "bio": "Leads the firm and coordinates defense in the most high-profile criminal proceedings. Over 15 years of practice in criminal law."
+        "bio": "Leads the firm and coordinates defense in the most high-profile criminal proceedings. Over 15 years of practice in criminal law.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Maria Kovalenko",
         "role": "Partner · AML & Compliance",
-        "bio": "Specializes in money laundering cases and conducts compliance audits for financial and crypto businesses."
+        "bio": "Specializes in money laundering cases and conducts compliance audits for financial and crypto businesses.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Dmytro Savchuk",
         "role": "Counsel · Transnational Investigations",
-        "bio": "Handles cases with an international element: extradition, MLAT requests, coordination with foreign jurisdictions."
+        "bio": "Handles cases with an international element: extradition, MLAT requests, coordination with foreign jurisdictions.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Anna Lytvyn",
         "role": "Associate · Blockchain Investigations",
-        "bio": "Combines a legal background with technical expertise in blockchain transaction analysis and crypto-asset tracing."
+        "bio": "Combines a legal background with technical expertise in blockchain transaction analysis and crypto-asset tracing.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Ihor Petrenko",
         "role": "Associate · Cyber Law",
-        "bio": "Handles cybercrime cases, digital evidence protection, and liaison with the Cyber Police."
+        "bio": "Handles cybercrime cases, digital evidence protection, and liaison with the Cyber Police.",
+        "facebook": "#",
+        "linkedin": "#"
       }
     ]
   },
@@ -336,17 +379,41 @@
     "mission": "To provide the highest level of legal defense where the stakes are highest, and where case complexity demands both legal and technical expertise.",
     "valuesTitle": "Our Principles",
     "values": [
-      { "title": "Expertise", "desc": "Deep specialization in narrow, technologically complex areas of law." },
-      { "title": "Confidentiality", "desc": "Attorney-client privilege and full protection of client information." },
-      { "title": "Speed", "desc": "Response to inquiries within 2 hours during business hours." },
-      { "title": "Transparency", "desc": "Clear pricing and defense strategy from the first consultation." }
+      {
+        "title": "Expertise",
+        "desc": "Deep specialization in narrow, technologically complex areas of law."
+      },
+      {
+        "title": "Confidentiality",
+        "desc": "Attorney-client privilege and full protection of client information."
+      },
+      {
+        "title": "Speed",
+        "desc": "Response to inquiries within 2 hours during business hours."
+      },
+      {
+        "title": "Transparency",
+        "desc": "Clear pricing and defense strategy from the first consultation."
+      }
     ],
     "statsTitle": "By the Numbers",
     "stats": [
-      { "value": "150+", "label": "Cases handled" },
-      { "value": "15", "label": "Years of team experience" },
-      { "value": "6", "label": "Practice areas" },
-      { "value": "24/7", "label": "Availability for urgent cases" }
+      {
+        "value": "150+",
+        "label": "Cases handled"
+      },
+      {
+        "value": "15",
+        "label": "Years of team experience"
+      },
+      {
+        "value": "6",
+        "label": "Practice areas"
+      },
+      {
+        "value": "24/7",
+        "label": "Availability for urgent cases"
+      }
     ]
   },
   "Calculator": {

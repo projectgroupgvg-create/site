@@ -141,10 +141,22 @@
     "payTitle": "Beratungstarife",
     "intakeLink": "Oder ein ausführliches Fallformular ausfüllen",
     "tiers": [
-      { "price": "Kostenlos", "label": "KI-Chat" },
-      { "price": "€15", "label": "30 Min. online" },
-      { "price": "€45", "label": "60 Min. + Bericht" },
-      { "price": "€100", "label": "Vollständige Analyse" }
+      {
+        "price": "Kostenlos",
+        "label": "KI-Chat"
+      },
+      {
+        "price": "€15",
+        "label": "30 Min. online"
+      },
+      {
+        "price": "€45",
+        "label": "60 Min. + Bericht"
+      },
+      {
+        "price": "€100",
+        "label": "Vollständige Analyse"
+      }
     ],
     "topics": [
       "Tatverdacht",
@@ -169,10 +181,22 @@
     "backToBlog": "Zurück zum Blog",
     "noPosts": "In dieser Kategorie sind noch keine Artikel vorhanden.",
     "categories": [
-      { "slug": "regulatory", "label": "Aufsichtsrecht" },
-      { "slug": "blockchain", "label": "Blockchain" },
-      { "slug": "criminal", "label": "Strafrecht" },
-      { "slug": "cyber", "label": "Cyberrecht" }
+      {
+        "slug": "regulatory",
+        "label": "Aufsichtsrecht"
+      },
+      {
+        "slug": "blockchain",
+        "label": "Blockchain"
+      },
+      {
+        "slug": "criminal",
+        "label": "Strafrecht"
+      },
+      {
+        "slug": "cyber",
+        "label": "Cyberrecht"
+      }
     ],
     "fallbackPosts": [
       {
@@ -237,9 +261,18 @@
     "backToNews": "Zurück zu Neuigkeiten",
     "noNews": "In dieser Kategorie gibt es noch keine Neuigkeiten.",
     "types": [
-      { "slug": "firm-news", "label": "Kanzlei-News" },
-      { "slug": "award", "label": "Auszeichnungen" },
-      { "slug": "deal", "label": "Mandate" }
+      {
+        "slug": "firm-news",
+        "label": "Kanzlei-News"
+      },
+      {
+        "slug": "award",
+        "label": "Auszeichnungen"
+      },
+      {
+        "slug": "deal",
+        "label": "Mandate"
+      }
     ],
     "fallbackNews": [
       {
@@ -298,27 +331,37 @@
       {
         "name": "Oleksandr Gangan",
         "role": "Geschäftsführender Partner · Strafrecht",
-        "bio": "Leitet die Kanzlei und koordiniert die Verteidigung in den aufsehenerregendsten Strafverfahren. Über 15 Jahre Erfahrung im Strafrecht."
+        "bio": "Leitet die Kanzlei und koordiniert die Verteidigung in den aufsehenerregendsten Strafverfahren. Über 15 Jahre Erfahrung im Strafrecht.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Maria Kowalenko",
         "role": "Partnerin · AML & Compliance",
-        "bio": "Spezialisiert auf Geldwäschefälle und Compliance-Audits für Finanz- und Krypto-Unternehmen."
+        "bio": "Spezialisiert auf Geldwäschefälle und Compliance-Audits für Finanz- und Krypto-Unternehmen.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Dmytro Savchuk",
         "role": "Counsel · Transnationale Ermittlungen",
-        "bio": "Betreut Fälle mit internationalem Bezug: Auslieferung, MLAT-Ersuchen, Koordination mit ausländischen Jurisdiktionen."
+        "bio": "Betreut Fälle mit internationalem Bezug: Auslieferung, MLAT-Ersuchen, Koordination mit ausländischen Jurisdiktionen.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Anna Lytvyn",
         "role": "Associate · Blockchain-Ermittlungen",
-        "bio": "Verbindet juristisches Fachwissen mit technischer Expertise in der Analyse von Blockchain-Transaktionen und der Rückverfolgung von Krypto-Vermögenswerten."
+        "bio": "Verbindet juristisches Fachwissen mit technischer Expertise in der Analyse von Blockchain-Transaktionen und der Rückverfolgung von Krypto-Vermögenswerten.",
+        "facebook": "#",
+        "linkedin": "#"
       },
       {
         "name": "Ihor Petrenko",
         "role": "Associate · Cyberrecht",
-        "bio": "Bearbeitet Fälle von Cyberkriminalität, den Schutz digitaler Beweismittel und die Zusammenarbeit mit der Cyberpolizei."
+        "bio": "Bearbeitet Fälle von Cyberkriminalität, den Schutz digitaler Beweismittel und die Zusammenarbeit mit der Cyberpolizei.",
+        "facebook": "#",
+        "linkedin": "#"
       }
     ]
   },
@@ -336,17 +379,41 @@
     "mission": "Höchste Qualität der Rechtsverteidigung dort zu gewährleisten, wo am meisten auf dem Spiel steht und die Komplexität des Falls sowohl juristisches als auch technisches Fachwissen erfordert.",
     "valuesTitle": "Unsere Grundsätze",
     "values": [
-      { "title": "Expertise", "desc": "Tiefe Spezialisierung in eng begrenzten, technologisch komplexen Rechtsbereichen." },
-      { "title": "Vertraulichkeit", "desc": "Anwaltsgeheimnis und vollständiger Schutz der Mandanteninformationen." },
-      { "title": "Schnelligkeit", "desc": "Antwort auf Anfragen innerhalb von 2 Stunden während der Geschäftszeiten." },
-      { "title": "Transparenz", "desc": "Klare Kosten und Verteidigungsstrategie bereits ab der ersten Beratung." }
+      {
+        "title": "Expertise",
+        "desc": "Tiefe Spezialisierung in eng begrenzten, technologisch komplexen Rechtsbereichen."
+      },
+      {
+        "title": "Vertraulichkeit",
+        "desc": "Anwaltsgeheimnis und vollständiger Schutz der Mandanteninformationen."
+      },
+      {
+        "title": "Schnelligkeit",
+        "desc": "Antwort auf Anfragen innerhalb von 2 Stunden während der Geschäftszeiten."
+      },
+      {
+        "title": "Transparenz",
+        "desc": "Klare Kosten und Verteidigungsstrategie bereits ab der ersten Beratung."
+      }
     ],
     "statsTitle": "Zahlen & Fakten",
     "stats": [
-      { "value": "150+", "label": "Bearbeitete Fälle" },
-      { "value": "15", "label": "Jahre Teamerfahrung" },
-      { "value": "6", "label": "Praxisbereiche" },
-      { "value": "24/7", "label": "Erreichbarkeit für dringende Fälle" }
+      {
+        "value": "150+",
+        "label": "Bearbeitete Fälle"
+      },
+      {
+        "value": "15",
+        "label": "Jahre Teamerfahrung"
+      },
+      {
+        "value": "6",
+        "label": "Praxisbereiche"
+      },
+      {
+        "value": "24/7",
+        "label": "Erreichbarkeit für dringende Fälle"
+      }
     ]
   },
   "Calculator": {
