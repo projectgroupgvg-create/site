@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 export type SearchItem = {
-  type: 'practice' | 'blog' | 'news';
+  type: 'practice' | 'blog' | 'news' | 'faq';
   title: string;
   excerpt: string;
   href: string;
@@ -28,7 +28,13 @@ export default function SearchClient({ items }: { items: SearchItem[] }) {
   }, [items, query]);
 
   const typeLabel = (type: SearchItem['type']) =>
-    type === 'practice' ? t('typePractice') : type === 'blog' ? t('typeBlog') : t('typeNews');
+    type === 'practice'
+      ? t('typePractice')
+      : type === 'blog'
+        ? t('typeBlog')
+        : type === 'news'
+          ? t('typeNews')
+          : t('typeFaq');
 
   return (
     <div>

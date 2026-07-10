@@ -14,7 +14,8 @@
     "about": "About",
     "contacts": "Contacts",
     "cta": "Book a Call",
-    "search": "Search"
+    "search": "Search",
+    "faq": "FAQ"
   },
   "Hero": {
     "eyebrow": "Law Firm · Kyiv",
@@ -436,7 +437,20 @@
     "lastReviewedLabel": "Last reviewed",
     "sourceLabel": "Source",
     "disclaimer": "This calculator is for informational purposes only and does not constitute tax or legal advice. Rates and rules may change; we make an effort to keep this data current but do not guarantee it fully reflects the latest legislative changes. Consult a tax lawyer before making any filing or payment decisions.",
-    "ctaConsult": "Discuss with a lawyer"
+    "ctaConsult": "Discuss with a lawyer",
+    "compareToggleOn": "Compare jurisdictions",
+    "compareToggleOff": "Single jurisdiction",
+    "compareHint": "Select jurisdictions to compare (minimum 1)",
+    "purchaseDateLabel": "Purchase date",
+    "saleDateLabel": "Sale date",
+    "heldMonthsResult": "Holding period: {months} mo.",
+    "heldExemptNote": "Exceeds the exemption period — tax-exempt.",
+    "heldNotExemptNote": "Below the exemption period — taxed on general terms.",
+    "compareCountryCol": "Jurisdiction",
+    "compareResultCol": "Result",
+    "compareExempt": "Exempt",
+    "compareDescriptive": "Needs consultation",
+    "compareNotApplicable": "N/A"
   },
   "Intake": {
     "lbl": "Intake",
@@ -490,7 +504,8 @@
     "noResults": "No results found.",
     "typePractice": "Practice",
     "typeBlog": "Blog",
-    "typeNews": "News"
+    "typeNews": "News",
+    "typeFaq": "FAQ"
   },
   "QuickContact": {
     "toggle": "Quick contact",
@@ -533,5 +548,47 @@
     "consult": "Consultation",
     "news": "News",
     "contacts": "Contacts"
+  },
+  "FAQ": {
+    "lbl": "FAQ",
+    "title": "Frequently Asked Questions",
+    "sub": "General answers to common questions about criminal procedure, crypto assets, and cybercrime in Ukraine.",
+    "disclaimer": "This information is for general education only and does not replace legal advice about your specific situation.",
+    "moreQuestions": "Didn't find an answer to your question?",
+    "moreQuestionsBtn": "Ask the AI assistant",
+    "list": [
+      {
+        "q": "What are your rights immediately after detention or being notified of suspicion?",
+        "a": "Under Articles 42 and 208 of the Criminal Procedure Code (CPC) of Ukraine, you have the right to know the reason for detention, to remain silent, to a defense lawyer from the moment of detention (including a free state-appointed one), to notify relatives, and to challenge the detention before an investigating judge. Warrantless detention cannot exceed 72 hours before a court must rule on a preventive measure."
+      },
+      {
+        "q": "What happens during the pre-trial investigation?",
+        "a": "Investigation begins once information is entered into the Unified Register of Pre-Trial Investigations. General deadlines run up to 12 months for minor/moderate offenses and 18 months for serious/especially serious ones before a suspicion notice is served; shorter deadlines apply afterward. Exact timelines depend on the offense classification and case specifics."
+      },
+      {
+        "q": "Can a crypto exchange freeze or seize your assets?",
+        "a": "Yes — Article 170 of the CPC allows seizure of \"virtual assets\" within criminal proceedings; investigators typically request the exchange to freeze the account. You can challenge the seizure before an investigating judge, and challenge any transfer to the Asset Recovery and Management Agency (ARMA) during confiscation proceedings. Whether virtual assets qualify as \"material evidence\" remains legally contested in Ukrainian courts."
+      },
+      {
+        "q": "What does Article 209 of the Criminal Code (money laundering) cover?",
+        "a": "Article 209 criminalizes acquiring, possessing, using, or disposing of property known to derive from criminal activity, including financial transactions or concealment of its origin. Enhanced penalties apply for \"large\" (over 6,000 tax-free minimum incomes) and \"especially large\" (over 18,000) amounts. The article was substantially amended by Law No. 361-IX, effective April 28, 2020."
+      },
+      {
+        "q": "What should a cyberattack or phishing victim do?",
+        "a": "Report to the Cyber Police via ticket.cyberpolice.gov.ua, email callcenter@cyberpolice.gov.ua, phone 0 800 50 51 70 (weekdays, 09:00–18:00), or in person at any police station. Preserve evidence beforehand — screenshots, correspondence, transaction records. Filing opens a case number in the Unified Register of Pre-Trial Investigations."
+      },
+      {
+        "q": "What's the difference between \"suspicion\" and a formal \"charge\"?",
+        "a": "A person becomes a \"suspect\" upon receiving a written notice of suspicion or upon detention — during the investigation stage. A person becomes formally \"accused\" only once the prosecutor files an indictment with the court, setting out the established facts and legal classification. Suspicion marks the investigation stage; formal charge marks the transition to trial."
+      },
+      {
+        "q": "How does extradition to/from Ukraine work, at a basic level?",
+        "a": "The Prosecutor General's Office handles extradition requests during investigation or trial; the Ministry of Justice handles cases involving convicted persons. Requests proceed under applicable treaties or diplomatically on a reciprocity basis where none exists. A simplified procedure is available with the person's consent and an investigating judge's approval."
+      },
+      {
+        "q": "Is cryptocurrency legal in Ukraine as of 2026?",
+        "a": "Owning and trading cryptocurrency isn't criminalized, but a dedicated regulatory framework is still incomplete. The 2022 \"On Virtual Assets\" law was signed but never took effect, pending Tax Code amendments. A new bill (No. 10225-d) passed its first reading in September 2025 and remains pending — treat this area as evolving, not settled."
+      }
+    ]
   }
 }

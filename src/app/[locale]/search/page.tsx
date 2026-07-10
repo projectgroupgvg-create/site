@@ -39,6 +39,7 @@ export default async function SearchPage({
   const tPractices = await getTranslations('Practices');
   const tBlog = await getTranslations('Blog');
   const tNews = await getTranslations('News');
+  const tFaq = await getTranslations('FAQ');
 
   const practiceList = tPractices.raw('list') as PracticeContent[];
   const practiceItems: SearchItem[] = practiceList.map((p, i) => ({
@@ -66,7 +67,15 @@ export default async function SearchPage({
     href: `/news/${n.slug}`,
   }));
 
-  const items = [...practiceItems, ...blogItems, ...newsItems];
+  const faqList = tFaq.raw('list') as { q: string; a: string }[];
+  const faqItems: SearchItem[] = faqList.map((item, i) => ({
+    type: 'faq',
+    title: item.q,
+    excerpt: item.a,
+    href: `/faq#${i}`,
+  }));
+
+  const items = [...practiceItems, ...blogItems, ...newsItems, ...faqItems];
 
   return (
     <main>

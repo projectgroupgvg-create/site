@@ -61,6 +61,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
+          <Link href="/faq" className="text-xs tracking-wide text-[var(--ink3)] transition-colors hover:text-[var(--ink)]">
+            {t('faq')}
+          </Link>
+        </li>
+        <li>
           <Link href="/#contacts" className="text-xs tracking-wide text-[var(--ink3)] transition-colors hover:text-[var(--ink)]">
             {t('contacts')}
           </Link>

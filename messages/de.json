@@ -14,7 +14,8 @@
     "about": "Über uns",
     "contacts": "Kontakt",
     "cta": "Termin vereinbaren",
-    "search": "Suche"
+    "search": "Suche",
+    "faq": "FAQ"
   },
   "Hero": {
     "eyebrow": "Anwaltskanzlei · Kyjiw",
@@ -436,7 +437,20 @@
     "lastReviewedLabel": "Zuletzt geprüft",
     "sourceLabel": "Quelle",
     "disclaimer": "Dieser Rechner dient ausschließlich Informationszwecken und stellt keine Steuer- oder Rechtsberatung dar. Sätze und Regeln können sich ändern; wir bemühen uns, diese Daten aktuell zu halten, garantieren jedoch nicht, dass sie den neuesten Gesetzesänderungen vollständig entsprechen. Konsultieren Sie vor Erklärungs- oder Zahlungsentscheidungen einen Steueranwalt.",
-    "ctaConsult": "Mit einem Anwalt besprechen"
+    "ctaConsult": "Mit einem Anwalt besprechen",
+    "compareToggleOn": "Jurisdiktionen vergleichen",
+    "compareToggleOff": "Einzelne Jurisdiktion",
+    "compareHint": "Wählen Sie Jurisdiktionen zum Vergleich (mindestens 1)",
+    "purchaseDateLabel": "Kaufdatum",
+    "saleDateLabel": "Verkaufsdatum",
+    "heldMonthsResult": "Haltedauer: {months} Mon.",
+    "heldExemptNote": "Überschreitet die Freistellungsfrist — steuerfrei.",
+    "heldNotExemptNote": "Unter der Freistellungsfrist — regulär besteuert.",
+    "compareCountryCol": "Jurisdiktion",
+    "compareResultCol": "Ergebnis",
+    "compareExempt": "Steuerfrei",
+    "compareDescriptive": "Beratung erforderlich",
+    "compareNotApplicable": "N/A"
   },
   "Intake": {
     "lbl": "Anfrage",
@@ -490,7 +504,8 @@
     "noResults": "Keine Ergebnisse gefunden.",
     "typePractice": "Praxisbereich",
     "typeBlog": "Blog",
-    "typeNews": "Neuigkeiten"
+    "typeNews": "Neuigkeiten",
+    "typeFaq": "FAQ"
   },
   "QuickContact": {
     "toggle": "Schnellkontakt",
@@ -533,5 +548,47 @@
     "consult": "Beratung",
     "news": "Neuigkeiten",
     "contacts": "Kontakt"
+  },
+  "FAQ": {
+    "lbl": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "sub": "Allgemeine Antworten auf häufige Fragen zu Strafverfahren, Krypto-Vermögenswerten und Cyberkriminalität in der Ukraine.",
+    "disclaimer": "Diese Informationen dienen nur der allgemeinen Aufklärung und ersetzen keine Rechtsberatung zu Ihrer konkreten Situation.",
+    "moreQuestions": "Ihre Frage war nicht dabei?",
+    "moreQuestionsBtn": "Den KI-Assistenten fragen",
+    "list": [
+      {
+        "q": "Welche Rechte habe ich unmittelbar nach der Festnahme oder Verdächtigenmitteilung?",
+        "a": "Gemäß Art. 42 und 208 der Strafprozessordnung (StPO) der Ukraine haben Sie das Recht, den Grund der Festnahme zu erfahren, zu schweigen, ab dem Zeitpunkt der Festnahme einen Verteidiger zu haben (auch kostenlos), Angehörige zu informieren und die Festnahme vor einem Ermittlungsrichter anzufechten. Eine Festnahme ohne richterlichen Beschluss darf 72 Stunden nicht überschreiten, bevor ein Gericht über eine Sicherungsmaßnahme entscheiden muss."
+      },
+      {
+        "q": "Was passiert während der Voruntersuchung (досудове розслідування)?",
+        "a": "Die Ermittlung beginnt mit der Eintragung ins Einheitliche Register der Voruntersuchungen. Allgemeine Fristen betragen bis zu 12 Monate für minder schwere und 18 Monate für schwere/besonders schwere Delikte vor Zustellung des Tatverdachts; danach gelten kürzere Fristen. Die genauen Fristen hängen von der Einstufung der Straftat und den Umständen des Falls ab."
+      },
+      {
+        "q": "Kann eine Krypto-Börse mein Guthaben einfrieren oder beschlagnahmen?",
+        "a": "Ja — Art. 170 der StPO erlaubt die Beschlagnahme „virtueller Vermögenswerte“ im Rahmen von Strafverfahren; Ermittler fordern die Börse in der Regel auf, das Konto einzufrieren. Sie können die Beschlagnahme vor einem Ermittlungsrichter anfechten sowie eine Übertragung an die Vermögensverwaltungsbehörde (ARMA) im Einziehungsverfahren angreifen. Ob virtuelle Vermögenswerte als „Sachbeweis“ gelten, ist in der ukrainischen Rechtsprechung weiterhin umstritten."
+      },
+      {
+        "q": "Was umfasst Art. 209 des Strafgesetzbuchs (Geldwäsche)?",
+        "a": "Art. 209 stellt den Erwerb, Besitz, die Nutzung oder Verfügung über Vermögen, das nachweislich aus Straftaten stammt, unter Strafe, einschließlich Finanztransaktionen oder Verschleierung der Herkunft. Verschärfte Strafen gelten bei „großem“ (über 6.000 steuerfreie Mindesteinkommen) und „besonders großem“ Umfang (über 18.000). Der Artikel wurde durch das Gesetz Nr. 361-IX, in Kraft seit 28. April 2020, wesentlich geändert."
+      },
+      {
+        "q": "Was sollte ein Opfer eines Cyberangriffs oder Phishings tun?",
+        "a": "Melden Sie sich bei der Cyberpolizei über ticket.cyberpolice.gov.ua, per E-Mail an callcenter@cyberpolice.gov.ua, telefonisch unter 0 800 50 51 70 (werktags, 09:00–18:00 Uhr) oder persönlich bei jeder Polizeidienststelle. Sichern Sie vorab Beweise — Screenshots, Korrespondenz, Transaktionsdaten. Die Meldung erhält eine Registrierungsnummer im Einheitlichen Register der Voruntersuchungen."
+      },
+      {
+        "q": "Was unterscheidet „Tatverdacht“ von einer formellen „Anklage“?",
+        "a": "Eine Person wird nach Erhalt einer schriftlichen Verdächtigenmitteilung oder bei Festnahme zum „Verdächtigen“ — während der Ermittlungsphase. Erst wenn die Staatsanwaltschaft eine Anklageschrift beim Gericht einreicht, wird die Person formell zum „Angeklagten“. Der Tatverdacht markiert die Ermittlungsphase, die Anklage den Übergang zum Gerichtsverfahren."
+      },
+      {
+        "q": "Wie funktioniert die Auslieferung von/nach der Ukraine grundsätzlich?",
+        "a": "Die Generalstaatsanwaltschaft bearbeitet Auslieferungsersuchen während Ermittlung oder Verfahren; das Justizministerium ist für verurteilte Personen zuständig. Anträge werden gemäß geltenden Verträgen oder — sofern keiner besteht — diplomatisch auf Gegenseitigkeitsbasis gestellt. Mit Zustimmung der Person und Genehmigung eines Ermittlungsrichters ist ein vereinfachtes Verfahren möglich."
+      },
+      {
+        "q": "Ist Kryptowährung in der Ukraine im Jahr 2026 legal?",
+        "a": "Besitz und Handel mit Kryptowährungen sind nicht strafbar, ein umfassender Regulierungsrahmen fehlt jedoch weiterhin. Das 2022 unterzeichnete Gesetz „Über virtuelle Vermögenswerte“ ist mangels Änderungen der Abgabenordnung nie in Kraft getreten. Ein neuer Gesetzentwurf (Nr. 10225-d) passierte im September 2025 die erste Lesung und ist weiterhin anhängig — dieser Bereich ist im Wandel, nicht endgültig geregelt."
+      }
+    ]
   }
 }

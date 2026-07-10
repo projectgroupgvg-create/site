@@ -14,7 +14,8 @@
     "about": "À propos",
     "contacts": "Contact",
     "cta": "Prendre rendez-vous",
-    "search": "Rechercher"
+    "search": "Rechercher",
+    "faq": "FAQ"
   },
   "Hero": {
     "eyebrow": "Cabinet d'avocats · Kyiv",
@@ -436,7 +437,20 @@
     "lastReviewedLabel": "Dernière vérification",
     "sourceLabel": "Source",
     "disclaimer": "Ce calculateur est fourni à titre purement informatif et ne constitue pas un conseil fiscal ou juridique. Les taux et règles peuvent évoluer ; nous nous efforçons de maintenir ces données à jour mais ne garantissons pas qu'elles reflètent pleinement les derniers changements législatifs. Consultez un avocat fiscaliste avant toute décision de déclaration ou de paiement.",
-    "ctaConsult": "En discuter avec un avocat"
+    "ctaConsult": "En discuter avec un avocat",
+    "compareToggleOn": "Comparer les juridictions",
+    "compareToggleOff": "Une seule juridiction",
+    "compareHint": "Sélectionnez les juridictions à comparer (minimum 1)",
+    "purchaseDateLabel": "Date d'achat",
+    "saleDateLabel": "Date de vente",
+    "heldMonthsResult": "Durée de détention : {months} mois",
+    "heldExemptNote": "Dépasse la période d'exonération — exonéré d'impôt.",
+    "heldNotExemptNote": "Inférieur à la période d'exonération — imposé normalement.",
+    "compareCountryCol": "Juridiction",
+    "compareResultCol": "Résultat",
+    "compareExempt": "Exonéré",
+    "compareDescriptive": "Consultation nécessaire",
+    "compareNotApplicable": "N/D"
   },
   "Intake": {
     "lbl": "Formulaire",
@@ -490,7 +504,8 @@
     "noResults": "Aucun résultat trouvé.",
     "typePractice": "Domaine",
     "typeBlog": "Blog",
-    "typeNews": "Actualités"
+    "typeNews": "Actualités",
+    "typeFaq": "FAQ"
   },
   "QuickContact": {
     "toggle": "Contact rapide",
@@ -533,5 +548,47 @@
     "consult": "Consultation",
     "news": "Actualités",
     "contacts": "Contact"
+  },
+  "FAQ": {
+    "lbl": "FAQ",
+    "title": "Questions fréquentes",
+    "sub": "Réponses générales aux questions courantes sur la procédure pénale, les actifs crypto et la cybercriminalité en Ukraine.",
+    "disclaimer": "Ces informations sont fournies à titre éducatif général et ne remplacent pas un conseil juridique adapté à votre situation.",
+    "moreQuestions": "Vous n'avez pas trouvé de réponse à votre question ?",
+    "moreQuestionsBtn": "Demander à l'assistant IA",
+    "list": [
+      {
+        "q": "Quels sont mes droits immédiatement après une arrestation ou une notification de soupçon ?",
+        "a": "En vertu des art. 42 et 208 du Code de procédure pénale (CPP) ukrainien, vous avez le droit de connaître le motif de l'arrestation, de garder le silence, d'avoir un avocat dès l'arrestation (y compris commis d'office gratuitement), d'informer vos proches et de contester l'arrestation devant un juge d'instruction. Une arrestation sans mandat ne peut excéder 72 heures avant qu'un tribunal ne statue sur une mesure préventive."
+      },
+      {
+        "q": "Que se passe-t-il pendant l'enquête préliminaire ?",
+        "a": "L'enquête débute dès l'inscription au Registre unifié des enquêtes préliminaires. Les délais généraux vont jusqu'à 12 mois pour les infractions mineures/modérées et 18 mois pour les infractions graves/particulièrement graves avant la notification du soupçon ; des délais plus courts s'appliquent ensuite. Les délais exacts dépendent de la qualification de l'infraction et des circonstances de l'affaire."
+      },
+      {
+        "q": "Une plateforme d'échange crypto peut-elle geler ou saisir mes actifs ?",
+        "a": "Oui — l'art. 170 du CPP autorise la saisie d'« actifs virtuels » dans le cadre de procédures pénales ; les enquêteurs demandent généralement à la plateforme de geler le compte. Vous pouvez contester la saisie devant un juge d'instruction, ainsi que tout transfert à l'Agence de recouvrement et de gestion des actifs (ARMA) lors d'une procédure de confiscation. La question de savoir si les actifs virtuels constituent une « preuve matérielle » reste juridiquement contestée devant les tribunaux ukrainiens."
+      },
+      {
+        "q": "Que couvre l'article 209 du Code pénal (blanchiment d'argent) ?",
+        "a": "L'art. 209 incrimine l'acquisition, la détention, l'utilisation ou la disposition de biens dont on sait qu'ils proviennent d'une activité criminelle, y compris les opérations financières ou la dissimulation de leur origine. Des peines aggravées s'appliquent pour les montants « importants » (plus de 6 000 revenus minimaux non imposables) et « particulièrement importants » (plus de 18 000). L'article a été substantiellement modifié par la loi n° 361-IX, en vigueur depuis le 28 avril 2020."
+      },
+      {
+        "q": "Que doit faire une victime de cyberattaque ou de phishing ?",
+        "a": "Signalez l'incident à la Cyberpolice via ticket.cyberpolice.gov.ua, par e-mail à callcenter@cyberpolice.gov.ua, par téléphone au 0 800 50 51 70 (jours ouvrés, 9h–18h), ou en personne dans un commissariat. Conservez au préalable les preuves — captures d'écran, correspondance, données de transaction. Le signalement génère un numéro d'enregistrement dans le Registre unifié des enquêtes préliminaires."
+      },
+      {
+        "q": "Quelle est la différence entre « soupçon » et « accusation » formelle ?",
+        "a": "Une personne devient « suspecte » dès réception d'une notification écrite de soupçon ou lors de son arrestation — pendant la phase d'enquête. Elle ne devient « accusée » formellement que lorsque le procureur dépose un acte d'accusation devant le tribunal, exposant les faits établis et la qualification juridique. Le soupçon marque la phase d'enquête, l'accusation marque le passage au procès."
+      },
+      {
+        "q": "Comment fonctionne l'extradition depuis/vers l'Ukraine, en principe ?",
+        "a": "Le Bureau du procureur général traite les demandes d'extradition pendant l'enquête ou le procès ; le ministère de la Justice s'occupe des personnes condamnées. Les demandes suivent les traités applicables ou, à défaut, la voie diplomatique sur une base de réciprocité. Une procédure simplifiée existe avec le consentement de la personne et l'accord d'un juge d'instruction."
+      },
+      {
+        "q": "La cryptomonnaie est-elle légale en Ukraine en 2026 ?",
+        "a": "Détenir et échanger des cryptomonnaies n'est pas criminalisé, mais un cadre réglementaire dédié reste incomplet. La loi de 2022 « Sur les actifs virtuels » a été signée mais n'est jamais entrée en vigueur, faute de modifications du Code fiscal. Un nouveau projet de loi (n° 10225-d) a passé sa première lecture en septembre 2025 et reste en attente — ce domaine évolue encore, il n'est pas définitivement fixé."
+      }
+    ]
   }
 }
