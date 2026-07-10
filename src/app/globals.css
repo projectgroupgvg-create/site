@@ -3,24 +3,23 @@
 @tailwind utilities;
 
 :root {
-  /* Plum & gold, matched to the physical business card (deep aubergine
-     card stock, gold foil mark) sitting on the same grey marble seen in
-     the site background. Marble texture stays neutral; the plum lives in
-     the surfaces (--bg/--bgc/--wh), gold in labels, borders and accents. */
-  --bg: rgba(20, 12, 19, 0.6);
-  --bg2: rgba(24, 14, 23, 0.72);
-  --bg3: rgba(28, 17, 27, 0.38);
-  --bgc: #251a26;
-  --ink: #ece4d9;
-  --ink2: #c2b6a8;
-  --ink3: #8f7f74;
+  /* Moodboard palette: dusty mauve, black, camel/taupe, dark chocolate —
+     with the silver/chrome mark (not gold). Surfaces built from the black
+     and dark-brown swatches; text in the mauve and camel tones. */
+  --bg: rgba(20, 15, 12, 0.6);
+  --bg2: rgba(24, 17, 13, 0.72);
+  --bg3: rgba(28, 20, 16, 0.38);
+  --bgc: #2b1a12;
+  --ink: #d8c4bd;
+  --ink2: #a2816e;
+  --ink3: #8a7365;
   --s1: #6f6f6d;
   --s2: #3a3a3d;
-  --s3: #c9a66b;
-  --wh: #1f1420;
-  --b: rgba(201, 166, 107, 0.14);
-  --bs: rgba(201, 166, 107, 0.26);
-  --ink-hover: #f0dcb0;
+  --s3: #b89a8f;
+  --wh: #1a1a1a;
+  --b: rgba(162, 129, 110, 0.16);
+  --bs: rgba(162, 129, 110, 0.28);
+  --ink-hover: #e8d9d2;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -65,13 +64,13 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #8a6a3d 0%,
-      #f2dba8 22%,
-      #c9a66b 40%,
-      #8a6a3d 52%,
-      #f5e2bc 68%,
-      #b8925a 85%,
-      #f2dba8 100%
+      #86847d 0%,
+      #f4f2ea 22%,
+      #cac7bc 40%,
+      #7d7b74 52%,
+      #efeee6 68%,
+      #9e9c94 85%,
+      #f4f2ea 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
