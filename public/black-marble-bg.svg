@@ -1,9 +1,9 @@
 <svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="baseBlack" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e0e12"/>
-      <stop offset="50%" stop-color="#08080b"/>
-      <stop offset="100%" stop-color="#050506"/>
+      <stop offset="0%" stop-color="#241811"/>
+      <stop offset="50%" stop-color="#1a120c"/>
+      <stop offset="100%" stop-color="#120c08"/>
     </linearGradient>
 
     <radialGradient id="sheenDark" cx="30%" cy="15%" r="90%">
@@ -18,15 +18,15 @@
     </filter>
 
     <linearGradient id="veinStrokeLight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#d8d8d6"/>
-      <stop offset="100%" stop-color="#8f8f8d"/>
+      <stop offset="0%" stop-color="#e8d4c4"/>
+      <stop offset="100%" stop-color="#a2816e"/>
     </linearGradient>
   </defs>
 
-  <!-- Base black marble surface -->
+  <!-- Base warm brown marble surface -->
   <rect width="1600" height="1000" fill="url(#baseBlack)"/>
 
-  <!-- Diagonal vein network, light on dark -->
+  <!-- Diagonal vein network, camel/cream on warm brown -->
   <g filter="url(#marbleVeinsDark)" opacity="0.9">
     <g stroke="url(#veinStrokeLight)" fill="none" stroke-linecap="round">
       <path d="M -50,900 C 200,750 350,650 500,500 C 650,350 750,250 950,50" stroke-width="2.6" opacity="0.75"/>
@@ -46,7 +46,7 @@
 
   <!-- Fine hairline cracks for extra realism -->
   <g filter="url(#marbleVeinsDark)" opacity="0.6">
-    <g stroke="#6f6f6d" fill="none" stroke-linecap="round">
+    <g stroke="#8a7365" fill="none" stroke-linecap="round">
       <path d="M 50,850 C 220,760 360,660 520,530" stroke-width="0.5"/>
       <path d="M 700,900 C 850,760 980,650 1150,500" stroke-width="0.5"/>
       <path d="M 1300,850 C 1420,740 1520,640 1600,540" stroke-width="0.5"/>
