@@ -10,6 +10,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import QuickContactWidget from '@/components/QuickContactWidget';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 // Fonts are loaded via a standard Google Fonts <link> (like the original
 // landing page) rather than next/font/google, so the build doesn't require
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="font-sans">
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <Nav />
           {children}

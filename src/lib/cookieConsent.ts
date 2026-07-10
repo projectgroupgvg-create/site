@@ -8,3 +8,8 @@ export function hasCookieConsentDecision(): boolean {
   const stored = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
   return stored === 'accepted' || stored === 'declined';
 }
+
+export function hasCookieConsentAccepted(): boolean {
+  if (typeof window === 'undefined') return false;
+  return window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY) === 'accepted';
+}
