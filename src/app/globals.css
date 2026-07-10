@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Moodboard palette: dusty mauve, black, camel/taupe, dark chocolate —
-     with the silver/chrome mark (not gold). Surfaces built from the black
-     and dark-brown swatches; text in the mauve and camel tones. */
-  --bg: rgba(20, 15, 12, 0.6);
-  --bg2: rgba(24, 17, 13, 0.72);
-  --bg3: rgba(28, 20, 16, 0.38);
-  --bgc: #2b1a12;
-  --ink: #d8c4bd;
-  --ink2: #a2816e;
-  --ink3: #8a7365;
-  --s1: #6f6f6d;
-  --s2: #3a3a3d;
-  --s3: #b89a8f;
-  --wh: #1a1a1a;
-  --b: rgba(162, 129, 110, 0.16);
-  --bs: rgba(162, 129, 110, 0.28);
-  --ink-hover: #e8d9d2;
+  /* Light Calacatta-gold marble: white/cream base with gold veins.
+     Theme flips to light-on-dark-text — surfaces are warm off-whites,
+     text is a dark warm brown/near-black, accents and the wordmark are
+     gold to match the vein color. */
+  --bg: rgba(255, 255, 255, 0.55);
+  --bg2: rgba(250, 246, 238, 0.78);
+  --bg3: rgba(255, 255, 255, 0.35);
+  --bgc: #f6f1e6;
+  --ink: #2a1d12;
+  --ink2: #5c4a35;
+  --ink3: #8a7458;
+  --s1: #b7b0a3;
+  --s2: #ded6c4;
+  --s3: #a2811c;
+  --wh: #fdfbf7;
+  --b: rgba(169, 130, 40, 0.22);
+  --bs: rgba(169, 130, 40, 0.38);
+  --ink-hover: #4a3722;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -41,7 +42,7 @@ html {
 }
 
 body {
-  background-color: #1a120c;
+  background-color: #f6f1e6;
   background-image: url('/black-marble-bg.svg');
   background-size: cover;
   background-position: center;
@@ -64,19 +65,19 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #86847d 0%,
-      #f4f2ea 22%,
-      #cac7bc 40%,
-      #7d7b74 52%,
-      #efeee6 68%,
-      #9e9c94 85%,
-      #f4f2ea 100%
+      #7a5c1e 0%,
+      #e2be7c 22%,
+      #a2811c 40%,
+      #7a5c1e 52%,
+      #e8c988 68%,
+      #8f6d22 85%,
+      #e2be7c 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
   }
 }
 
