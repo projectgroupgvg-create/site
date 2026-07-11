@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { practiceSlugs } from '@/data/practices';
+import PracticesArt from './PracticesArt';
 
 export default function PracticesGrid() {
   const t = useTranslations('Practices');
@@ -12,16 +13,23 @@ export default function PracticesGrid() {
 
   return (
     <section id="practices" className="bg-[var(--bg2)] px-6 py-24 sm:px-11">
-      <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-        {t('lbl')}
+      <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+            {t('lbl')}
+          </div>
+          <h2 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+            {t('title')}
+          </h2>
+          <div className="divider" />
+          <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
+            {t('sub')}
+          </p>
+        </div>
+        <div className="hidden h-[280px] w-[200px] shrink-0 opacity-90 lg:block xl:h-[320px] xl:w-[230px]">
+          <PracticesArt />
+        </div>
       </div>
-      <h2 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
-        {t('title')}
-      </h2>
-      <div className="divider" />
-      <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
-        {t('sub')}
-      </p>
 
       <div
         className="mt-20 grid grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2 lg:grid-cols-3"
