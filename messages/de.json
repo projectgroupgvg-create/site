@@ -590,5 +590,63 @@
         "a": "Besitz und Handel mit Kryptowährungen sind nicht strafbar, ein umfassender Regulierungsrahmen fehlt jedoch weiterhin. Das 2022 unterzeichnete Gesetz „Über virtuelle Vermögenswerte“ ist mangels Änderungen der Abgabenordnung nie in Kraft getreten. Ein neuer Gesetzentwurf (Nr. 10225-d) passierte im September 2025 die erste Lesung und ist weiterhin anhängig — dieser Bereich ist im Wandel, nicht endgültig geregelt."
       }
     ]
+  },
+  "WalletScreen": {
+    "lbl": "Werkzeug",
+    "title": "Krypto-Wallet-Screening",
+    "sub": "Vorläufige Prüfung einer Wallet-Adresse gegen US-OFAC-Sanktionslisten. Kostenlos, ohne Anmeldung.",
+    "inputLabel": "Wallet-Adresse (Bitcoin oder Ethereum)",
+    "placeholder": "Adresse einfügen...",
+    "checkBtn": "Prüfen",
+    "resultInvalid": "Adressformat nicht erkannt. Unterstützt werden Bitcoin und Ethereum.",
+    "resultFlaggedTitle": "Treffer auf einer Sanktionsliste",
+    "resultFlaggedNote": "Diese Adresse ist Stand {date} auf der OFAC-SDN-Liste verzeichnet. Konsultieren Sie vor jeglichen Schritten einen Anwalt für eine vollständige Prüfung.",
+    "resultClearTitle": "Kein Treffer gefunden",
+    "resultClearNote": "Diese Adresse wurde Stand {date} nicht in der geprüften OFAC-Liste gefunden. Dies bestätigt KEINE Risikofreiheit — geprüft wurde nur gegen eine einzige öffentliche Sanktionsliste, ohne Analyse der Transaktionshistorie, Mixer-Verbindungen oder anderer Listen (EU, UK, UN).",
+    "disclaimer": "Dieses Tool ist ein vorläufiger Anhaltspunkt, kein professionelles AML/KYC-Screening und keine Rechtsauskunft. Die Liste basiert auf öffentlichen OFAC-Daten und wird manuell aktualisiert, kann also hinter dem offiziellen Register zurückliegen. Nutzen Sie für Compliance-Zwecke einen lizenzierten Screening-Dienst.",
+    "lastUpdatedLabel": "Liste zuletzt aktualisiert",
+    "ctaConsult": "Mit einem Anwalt sprechen"
+  },
+  "Notary": {
+    "lbl": "Werkzeug",
+    "title": "Blockchain-Dokumentennotarisierung",
+    "sub": "Verankern Sie den Nachweis der Existenz eines Dokuments in der Bitcoin-Blockchain — kostenlos, ohne Anmeldung, die Datei selbst wird nie hochgeladen.",
+    "dropHint": "Datei auswählen — das Hashing erfolgt in Ihrem Browser, die Datei selbst wird nirgendwohin gesendet.",
+    "chooseFile": "Datei auswählen",
+    "statusHashing": "Hash wird berechnet...",
+    "statusSubmitting": "Verankerung in der Blockchain...",
+    "resultDone": "Nachweisdatei (.ots) heruntergeladen. Bewahren Sie sie zusammen mit dem Originaldokument auf — Sie benötigen sie zur Verifizierung.",
+    "resultError": "Der Nachweis konnte nicht erstellt werden. Bitte versuchen Sie es später erneut.",
+    "howItWorks": "So funktioniert es: Ihr Browser berechnet den SHA-256-Hash der Datei, und nur dieser Hash (nicht die Datei) wird an die öffentlichen Kalenderserver des OpenTimestamps-Protokolls gesendet, die ihn in der Bitcoin-Blockchain verankern. Die resultierende .ots-Datei ist ein standardisiertes, offenes Format, das Sie unabhängig auf opentimestamps.org verifizieren können.",
+    "disclaimer": "Die vollständige Blockchain-Bestätigung (Aufnahme in einen Block) dauert in der Regel einige Stunden. Die erhaltene .ots-Datei enthält sofort eine vorläufige Zeitstempelung; für die vollständige unabhängige Verifizierung nutzen Sie später opentimestamps.org. Dies ersetzt keine rechtliche Einschätzung zur Beweiskraft eines Dokuments in einem konkreten Fall.",
+    "ctaConsult": "Mit einem Anwalt sprechen"
+  },
+  "Confidential": {
+    "lbl": "Sicherer Kanal",
+    "title": "Vertrauliche Anfrage",
+    "sub": "Für besonders sensible Angelegenheiten — Ihre Nachricht wird in Ihrem Browser verschlüsselt und kann nur von der Kanzlei gelesen werden.",
+    "encryptedBadge": "Ende-zu-Ende-verschlüsselt — selbst wir sehen den Inhalt erst nach Entschlüsselung mit unserem eigenen privaten Schlüssel.",
+    "contactLabel": "Kontakt für eine Antwort (optional)",
+    "contactPlaceholder": "E-Mail, Telegram oder ein Kanal, den Sie für sicher halten",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Beschreiben Sie Ihre Situation...",
+    "submit": "Verschlüsselt senden",
+    "sending": "Verschlüsseln und Senden...",
+    "error": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "notConfigured": "Dieses Formular ist noch nicht mit einem Dienst verbunden — fügen Sie NEXT_PUBLIC_FORM_ENDPOINT in .env.local hinzu.",
+    "successTitle": "Nachricht gesendet",
+    "successBody": "Ihre verschlüsselte Nachricht wurde empfangen. Wir kontaktieren Sie über den angegebenen Kanal.",
+    "howItWorks": "So funktioniert es: Ihre Nachricht wird in Ihrem Browser (RSA + AES-256) mit dem öffentlichen Schlüssel der Kanzlei verschlüsselt, bevor sie gesendet wird. Nur wer den passenden privaten Schlüssel besitzt, kann sie entschlüsseln."
+  },
+  "Decrypt": {
+    "title": "Nachricht entschlüsseln",
+    "sub": "Internes Werkzeug. Der private Schlüssel und der Inhalt verlassen diesen Browser nie.",
+    "privateKeyLabel": "Privater Schlüssel (PEM)",
+    "payloadLabel": "Verschlüsselte Nachricht",
+    "decryptBtn": "Entschlüsseln",
+    "decryptError": "Entschlüsselung fehlgeschlagen. Prüfen Sie Schlüssel und Nachricht.",
+    "contactLabel": "Kontakt",
+    "messageLabel": "Nachricht",
+    "note": "Die Entschlüsselung erfolgt vollständig auf Ihrem Gerät — es wird nichts gesendet."
   }
 }

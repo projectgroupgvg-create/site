@@ -10,28 +10,29 @@
     "seed": "node scripts/seed-sanity.mjs"
   },
   "dependencies": {
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "next-intl": "^3.17.2",
+    "@portabletext/react": "^3.0.18",
     "@sanity/client": "^6.21.3",
     "@sanity/image-url": "^1.0.2",
-    "@portabletext/react": "^3.0.18",
+    "@sanity/vision": "^3.62.0",
     "clsx": "^2.1.1",
-    "sanity": "^3.62.0",
+    "next": "^14.2.5",
+    "next-intl": "^3.17.2",
     "next-sanity": "^9.8.5",
-    "styled-components": "^6.1.13",
-    "@sanity/vision": "^3.62.0"
+    "opentimestamps": "^0.4.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.62.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "typescript": "^5.5.3",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "tailwindcss": "^3.4.4",
-    "postcss": "^8.4.39",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.5"
+    "eslint-config-next": "^14.2.5",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3"
   }
 }

@@ -590,5 +590,63 @@
         "a": "Owning and trading cryptocurrency isn't criminalized, but a dedicated regulatory framework is still incomplete. The 2022 \"On Virtual Assets\" law was signed but never took effect, pending Tax Code amendments. A new bill (No. 10225-d) passed its first reading in September 2025 and remains pending — treat this area as evolving, not settled."
       }
     ]
+  },
+  "WalletScreen": {
+    "lbl": "Tool",
+    "title": "Crypto Wallet Screening",
+    "sub": "Preliminary check of a wallet address against US OFAC sanctions lists. Free, no signup.",
+    "inputLabel": "Wallet address (Bitcoin or Ethereum)",
+    "placeholder": "Paste an address...",
+    "checkBtn": "Check",
+    "resultInvalid": "Address format not recognized. Bitcoin and Ethereum are supported.",
+    "resultFlaggedTitle": "Match found on a sanctions list",
+    "resultFlaggedNote": "This address appears on the OFAC SDN List as of {date}. Before taking any action, consult a lawyer for a full review.",
+    "resultClearTitle": "No match found",
+    "resultClearNote": "This address was not found in the checked OFAC list as of {date}. This does NOT confirm the absence of risk — it was checked against a single public sanctions list only, without transaction history analysis, mixer-link detection, or other lists (EU, UK, UN).",
+    "disclaimer": "This tool is a preliminary indicator, not a professional AML/KYC screening or legal opinion. The list is built from public OFAC data and updated manually, so it may lag behind the official registry. Use a licensed screening service for compliance purposes.",
+    "lastUpdatedLabel": "List last updated",
+    "ctaConsult": "Talk to a lawyer"
+  },
+  "Notary": {
+    "lbl": "Tool",
+    "title": "Blockchain Document Notarization",
+    "sub": "Anchor proof of a document's existence into the Bitcoin blockchain — free, no signup, the file itself is never uploaded.",
+    "dropHint": "Choose a file — hashing happens in your browser, the file itself is never sent anywhere.",
+    "chooseFile": "Choose file",
+    "statusHashing": "Hashing...",
+    "statusSubmitting": "Anchoring to blockchain...",
+    "resultDone": "Proof file (.ots) downloaded. Keep it together with the original document — you'll need it for verification.",
+    "resultError": "Couldn't create the proof. Please try again later.",
+    "howItWorks": "How it works: your browser computes the file's SHA-256 hash, and only that hash (not the file) is sent to the public calendar servers of the OpenTimestamps protocol, which anchor it into the Bitcoin blockchain. The resulting .ots file is a standard, open format you can independently verify at opentimestamps.org.",
+    "disclaimer": "Full blockchain confirmation (inclusion in a block) usually takes a few hours. The .ots file you receive immediately records a preliminary timestamp; for full independent verification, use opentimestamps.org later. This does not substitute for a legal opinion on a document's evidentiary weight in a specific case.",
+    "ctaConsult": "Talk to a lawyer"
+  },
+  "Confidential": {
+    "lbl": "Secure Channel",
+    "title": "Confidential Inquiry",
+    "sub": "For especially sensitive matters — your message is encrypted in your browser and can only be read by the firm.",
+    "encryptedBadge": "End-to-end encrypted — even we can't see the content until we decrypt it with our own private key.",
+    "contactLabel": "Contact for a reply (optional)",
+    "contactPlaceholder": "Email, Telegram, or any channel you consider safe",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your situation...",
+    "submit": "Send encrypted",
+    "sending": "Encrypting and sending...",
+    "error": "Failed to send. Please try again.",
+    "notConfigured": "This form isn't connected to a service yet — add NEXT_PUBLIC_FORM_ENDPOINT in .env.local.",
+    "successTitle": "Message sent",
+    "successBody": "Your encrypted message has been received. We'll contact you via the channel you provided.",
+    "howItWorks": "How it works: your message is encrypted in your browser (RSA + AES-256) with the firm's public key before it's sent. Only whoever holds the matching private key can decrypt it."
+  },
+  "Decrypt": {
+    "title": "Decrypt a Message",
+    "sub": "Internal tool. The private key and content never leave this browser.",
+    "privateKeyLabel": "Private key (PEM)",
+    "payloadLabel": "Encrypted message",
+    "decryptBtn": "Decrypt",
+    "decryptError": "Couldn't decrypt. Check the key and the message.",
+    "contactLabel": "Contact",
+    "messageLabel": "Message",
+    "note": "Decryption happens entirely on your device — nothing is sent anywhere."
   }
 }

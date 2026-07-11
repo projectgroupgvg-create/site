@@ -11,6 +11,7 @@ import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import QuickContactWidget from '@/components/QuickContactWidget';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 
 // Fonts are loaded via a standard Google Fonts <link> (like the original
 // landing page) rather than next/font/google, so the build doesn't require
@@ -71,9 +72,15 @@ export default async function LocaleLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Michroma&display=swap"
           rel="stylesheet"
         />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <meta name="theme-color" content="#3a2318" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Gangan & Partners" />
       </head>
       <body className="font-sans">
         <GoogleAnalytics />
+        <ServiceWorkerRegistration />
         <NextIntlClientProvider messages={messages}>
           <Nav />
           {children}

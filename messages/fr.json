@@ -590,5 +590,63 @@
         "a": "Détenir et échanger des cryptomonnaies n'est pas criminalisé, mais un cadre réglementaire dédié reste incomplet. La loi de 2022 « Sur les actifs virtuels » a été signée mais n'est jamais entrée en vigueur, faute de modifications du Code fiscal. Un nouveau projet de loi (n° 10225-d) a passé sa première lecture en septembre 2025 et reste en attente — ce domaine évolue encore, il n'est pas définitivement fixé."
       }
     ]
+  },
+  "WalletScreen": {
+    "lbl": "Outil",
+    "title": "Filtrage de portefeuille crypto",
+    "sub": "Vérification préliminaire d'une adresse de portefeuille par rapport aux listes de sanctions OFAC (États-Unis). Gratuit, sans inscription.",
+    "inputLabel": "Adresse de portefeuille (Bitcoin ou Ethereum)",
+    "placeholder": "Collez une adresse...",
+    "checkBtn": "Vérifier",
+    "resultInvalid": "Format d'adresse non reconnu. Bitcoin et Ethereum sont pris en charge.",
+    "resultFlaggedTitle": "Correspondance trouvée sur une liste de sanctions",
+    "resultFlaggedNote": "Cette adresse figure sur la liste OFAC SDN en date du {date}. Avant toute action, consultez un avocat pour une vérification complète.",
+    "resultClearTitle": "Aucune correspondance trouvée",
+    "resultClearNote": "Cette adresse n'a pas été trouvée dans la liste OFAC vérifiée en date du {date}. Cela ne confirme PAS l'absence de risque — la vérification a porté sur une seule liste de sanctions publique, sans analyse de l'historique des transactions, des liens avec des mixeurs, ni d'autres listes (UE, Royaume-Uni, ONU).",
+    "disclaimer": "Cet outil est un indicateur préliminaire, pas un filtrage AML/KYC professionnel ni un avis juridique. La liste est constituée à partir de données publiques OFAC et mise à jour manuellement ; elle peut donc être en retard par rapport au registre officiel. Utilisez un service de filtrage agréé à des fins de conformité.",
+    "lastUpdatedLabel": "Liste mise à jour le",
+    "ctaConsult": "Consulter un avocat"
+  },
+  "Notary": {
+    "lbl": "Outil",
+    "title": "Notarisation blockchain de documents",
+    "sub": "Ancrez la preuve d'existence d'un document dans la blockchain Bitcoin — gratuit, sans inscription, le fichier lui-même n'est jamais téléversé.",
+    "dropHint": "Choisissez un fichier — le hachage s'effectue dans votre navigateur, le fichier lui-même n'est jamais envoyé.",
+    "chooseFile": "Choisir un fichier",
+    "statusHashing": "Calcul du hachage...",
+    "statusSubmitting": "Ancrage dans la blockchain...",
+    "resultDone": "Fichier de preuve (.ots) téléchargé. Conservez-le avec le document original — vous en aurez besoin pour la vérification.",
+    "resultError": "Impossible de créer la preuve. Veuillez réessayer plus tard.",
+    "howItWorks": "Comment ça marche : votre navigateur calcule le hachage SHA-256 du fichier, et seul ce hachage (pas le fichier) est envoyé aux serveurs de calendrier publics du protocole OpenTimestamps, qui l'ancrent dans la blockchain Bitcoin. Le fichier .ots obtenu est un format standard et ouvert que vous pouvez vérifier indépendamment sur opentimestamps.org.",
+    "disclaimer": "La confirmation blockchain complète (inclusion dans un bloc) prend généralement quelques heures. Le fichier .ots reçu enregistre immédiatement un horodatage préliminaire ; pour une vérification indépendante complète, utilisez opentimestamps.org plus tard. Ceci ne remplace pas un avis juridique sur la valeur probante d'un document dans une affaire précise.",
+    "ctaConsult": "Consulter un avocat"
+  },
+  "Confidential": {
+    "lbl": "Canal sécurisé",
+    "title": "Demande confidentielle",
+    "sub": "Pour les affaires particulièrement sensibles — votre message est chiffré dans votre navigateur et ne peut être lu que par le cabinet.",
+    "encryptedBadge": "Chiffrement de bout en bout — même nous ne voyons pas le contenu avant de le déchiffrer avec notre propre clé privée.",
+    "contactLabel": "Contact pour une réponse (facultatif)",
+    "contactPlaceholder": "E-mail, Telegram, ou tout canal que vous jugez sûr",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Décrivez votre situation...",
+    "submit": "Envoyer chiffré",
+    "sending": "Chiffrement et envoi...",
+    "error": "Échec de l'envoi. Veuillez réessayer.",
+    "notConfigured": "Ce formulaire n'est pas encore connecté à un service — ajoutez NEXT_PUBLIC_FORM_ENDPOINT dans .env.local.",
+    "successTitle": "Message envoyé",
+    "successBody": "Votre message chiffré a été reçu. Nous vous contacterons via le canal indiqué.",
+    "howItWorks": "Comment ça marche : votre message est chiffré dans votre navigateur (RSA + AES-256) avec la clé publique du cabinet avant l'envoi. Seul le détenteur de la clé privée correspondante peut le déchiffrer."
+  },
+  "Decrypt": {
+    "title": "Déchiffrer un message",
+    "sub": "Outil interne. La clé privée et le contenu ne quittent jamais ce navigateur.",
+    "privateKeyLabel": "Clé privée (PEM)",
+    "payloadLabel": "Message chiffré",
+    "decryptBtn": "Déchiffrer",
+    "decryptError": "Échec du déchiffrement. Vérifiez la clé et le message.",
+    "contactLabel": "Contact",
+    "messageLabel": "Message",
+    "note": "Le déchiffrement s'effectue entièrement sur votre appareil — rien n'est envoyé nulle part."
   }
 }
