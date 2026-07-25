@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { practiceSlugs } from '@/data/practices';
+import { practiceSlugs, practiceImages } from '@/data/practices';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import { buildServiceSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
@@ -97,6 +98,21 @@ export default async function PracticePage({
           {practice.title}
         </h1>
       </div>
+
+      {practiceImages[slug as (typeof practiceSlugs)[number]] && (
+        <div className="mx-auto max-w-[880px] px-6 pt-12 sm:px-11">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
+            <Image
+              src={practiceImages[slug as (typeof practiceSlugs)[number]]!}
+              alt={practice.title}
+              fill
+              sizes="(max-width: 900px) 100vw, 880px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
         {practice.intro.map((p, i) => (

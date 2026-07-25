@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getAllPosts, type FallbackPost } from '@/lib/blog';
@@ -27,12 +28,22 @@ export default async function BlogPreview() {
             style={{ borderColor: 'var(--b)' }}
           >
             <div
-              className="relative flex h-40 items-center justify-center border-b-hair bg-[var(--bg3)]"
+              className="relative flex h-40 items-center justify-center overflow-hidden border-b-hair bg-[var(--bg3)]"
               style={{ borderColor: 'var(--b)' }}
             >
-              <span className="select-none font-serif text-[44px] font-bold text-[rgba(42,29,18,0.06)]">
-                {post.mono ?? post.category.slice(0, 3).toUpperCase()}
-              </span>
+              {post.mainImage ? (
+                <Image
+                  src={post.mainImage}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              ) : (
+                <span className="select-none font-serif text-[44px] font-bold text-[rgba(42,29,18,0.06)]">
+                  {post.mono ?? post.category.slice(0, 3).toUpperCase()}
+                </span>
+              )}
               <span
                 className="absolute left-3.5 top-3.5 rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[8.5px] uppercase tracking-[0.22em] text-[var(--s3)]"
                 style={{ borderColor: 'var(--b)' }}

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -91,6 +92,21 @@ export default async function BlogPostPage({
           {post.title}
         </h1>
       </div>
+
+      {post.mainImage && (
+        <div className="mx-auto max-w-[880px] px-6 pt-10 sm:px-11">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
+            <Image
+              src={post.mainImage}
+              alt={post.title}
+              fill
+              sizes="(max-width: 900px) 100vw, 880px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      )}
 
       <article className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
         {post.source === 'fallback' && Array.isArray(post.body) ? (

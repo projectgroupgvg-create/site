@@ -11,3 +11,9 @@ export const practiceSlugs = [
 ] as const;
 
 export type PracticeSlug = (typeof practiceSlugs)[number];
+
+// Optional real photo per practice area — deliberately empty by default.
+// To add a photo: drop a real file into /public/practices/<slug>.jpg and add
+// an entry here, e.g. 'criminal-defense': '/practices/criminal-defense.jpg'.
+// Nothing renders until a real image is added — no placeholder/stock photos.
+export const practiceImages: Partial<Record<PracticeSlug, string>> = {};
