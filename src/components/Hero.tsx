@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
             from the reference mark, the descriptor sits under it */}
-        <h1 className="mb-8 font-display text-[clamp(30px,5.2vw,64px)] tracking-[0.04em] text-metal">
+        <h1 className="mb-8 whitespace-nowrap font-display text-[clamp(22px,4.4vw,48px)] tracking-[0.03em] text-metal">
           GANGAN &amp; PARTNERS
         </h1>
         <div className="mb-16 text-[clamp(16px,1.8vw,21px)] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
