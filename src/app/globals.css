@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Dark navy + gold, no texture: the marble image is gone, replaced by a
-     flat/gradient navy body background (see body{} below) so nothing
-     competes with content. --ink is still the "ink" role (primary text +
-     solid-button fill, light) and --wh is still the "paper" role
-     (input/card surfaces + button text, dark). */
-  --bg: rgba(10, 16, 30, 0.55);
-  --bg2: rgba(14, 21, 38, 0.8);
-  --bg3: rgba(8, 13, 24, 0.4);
-  --bgc: #172440;
-  --ink: #eef1f7;
-  --ink2: #93a4c2;
-  --ink3: #b7c2d6;
-  --s1: #55698f;
-  --s2: #24304d;
-  --s3: #8fa3c7;
-  --wh: #0e1728;
-  --b: rgba(238, 241, 247, 0.14);
-  --bs: rgba(238, 241, 247, 0.28);
-  --ink-hover: #d7dce6;
+  /* Espresso-black + gold: warm dark brown-black instead of navy — reads like
+     dark wood paneling with a gold nameplate. --ink is still the "ink" role
+     (primary text + solid-button fill, light/warm-ivory) and --wh is still
+     the "paper" role (input/card surfaces + button text, dark). */
+  --bg: rgba(20, 15, 12, 0.55);
+  --bg2: rgba(26, 20, 16, 0.8);
+  --bg3: rgba(14, 10, 8, 0.4);
+  --bgc: #241c17;
+  --ink: #f2ece2;
+  --ink2: #b3a08c;
+  --ink3: #c9bcaa;
+  --s1: #6b5c4d;
+  --s2: #34281f;
+  --s3: #b09a80;
+  --wh: #150f0c;
+  --b: rgba(243, 237, 228, 0.14);
+  --bs: rgba(243, 237, 228, 0.28);
+  --ink-hover: #d9cfc0;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -43,11 +42,11 @@ html {
 }
 
 body {
-  background-color: #0a111f;
+  background-color: #0a0706;
   background-image:
-    radial-gradient(ellipse 900px 600px at 18% 0%, rgba(36, 50, 80, 0.55) 0%, rgba(10, 17, 31, 0) 60%),
-    radial-gradient(ellipse 700px 500px at 100% 100%, rgba(30, 26, 16, 0.3) 0%, rgba(10, 17, 31, 0) 55%),
-    linear-gradient(180deg, #101d33 0%, #0a111f 55%, #070c16 100%);
+    radial-gradient(ellipse 900px 600px at 18% 0%, rgba(64, 48, 34, 0.5) 0%, rgba(10, 7, 6, 0) 60%),
+    radial-gradient(ellipse 700px 500px at 100% 100%, rgba(58, 44, 20, 0.28) 0%, rgba(10, 7, 6, 0) 55%),
+    linear-gradient(180deg, #1a1512 0%, #120e0c 55%, #0a0706 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--ink);
@@ -67,13 +66,13 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #8f9aad 0%,
-      #f4f7fb 22%,
-      #c3cbdb 40%,
-      #8f9aad 52%,
-      #f4f7fb 68%,
-      #a9b3c4 85%,
-      #f4f7fb 100%
+      #9a8f7f 0%,
+      #f7f2e8 22%,
+      #c9bda8 40%,
+      #9a8f7f 52%,
+      #f7f2e8 68%,
+      #a89a86 85%,
+      #f7f2e8 100%
     );
     background-clip: text;
     -webkit-background-clip: text;

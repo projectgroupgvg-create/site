@@ -118,7 +118,7 @@ export default async function BlogArchivePage({
                       className="object-cover"
                     />
                   ) : (
-                    <span className="select-none font-serif text-[44px] font-bold text-[rgba(238,241,247,0.06)]">
+                    <span className="select-none font-serif text-[44px] font-bold text-[rgba(243,237,228,0.06)]">
                       {post.mono ?? post.category.slice(0, 3).toUpperCase()}
                     </span>
                   )}
