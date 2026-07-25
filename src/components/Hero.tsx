@@ -14,7 +14,7 @@ export default function Hero() {
           competing with the type */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full border-hair"
-        style={{ borderColor: 'rgba(162,129,110,0.16)' }}
+        style={{ borderColor: 'rgba(16,34,63,0.16)' }}
       />
 
       {/* big transparent monogram watermark, centered behind everything */}

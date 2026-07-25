@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Light Calacatta-gold marble: white/cream base with gold veins.
-     Theme flips to light-on-dark-text — surfaces are warm off-whites,
-     text is a dark warm brown/near-black, accents and the wordmark are
-     gold to match the vein color. */
+  /* Calacatta-gold marble stays as the surface; the ink palette moved from
+     warm brown/camel to navy so the site reads as a law firm rather than a
+     jewelry/spa brand. Navy for text and structure, gold stays as the sole
+     accent (unchanged) — the classic "big law" pairing. */
   --bg: rgba(255, 255, 255, 0.55);
-  --bg2: rgba(250, 246, 238, 0.78);
+  --bg2: rgba(246, 248, 251, 0.8);
   --bg3: rgba(255, 255, 255, 0.35);
-  --bgc: #f6f1e6;
-  --ink: #3a2318;
-  --ink2: #a2816e;
-  --ink3: #8a7365;
-  --s1: #b7b0a3;
-  --s2: #ded6c4;
-  --s3: #9c7f78;
-  --wh: #fdfbf7;
-  --b: rgba(162, 129, 110, 0.22);
-  --bs: rgba(162, 129, 110, 0.38);
-  --ink-hover: #241610;
+  --bgc: #f5f6f9;
+  --ink: #10223f;
+  --ink2: #5c7099;
+  --ink3: #4f6382;
+  --s1: #a7b3c7;
+  --s2: #d7dde8;
+  --s3: #6b7fa3;
+  --wh: #fbfcfe;
+  --b: rgba(16, 34, 63, 0.16);
+  --bs: rgba(16, 34, 63, 0.32);
+  --ink-hover: #081527;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -65,13 +65,13 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #6b6b68 0%,
-      #d8d6ce 22%,
-      #9a9890 40%,
-      #6b6b68 52%,
-      #e0ded6 68%,
-      #838179 85%,
-      #d8d6ce 100%
+      #5c6672 0%,
+      #dbe1ea 22%,
+      #8793a5 40%,
+      #5c6672 52%,
+      #dbe1ea 68%,
+      #707c8f 85%,
+      #dbe1ea 100%
     );
     background-clip: text;
     -webkit-background-clip: text;

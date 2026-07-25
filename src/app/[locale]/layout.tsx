@@ -74,7 +74,7 @@ export default async function LocaleLayout({
         />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-        <meta name="theme-color" content="#3a2318" />
+        <meta name="theme-color" content="#10223f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="Gangan & Partners" />
       </head>
