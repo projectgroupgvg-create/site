@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import HeroSlogan from './HeroSlogan';
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -14,7 +13,7 @@ export default function Hero() {
           competing with the type */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full border-hair"
-        style={{ borderColor: 'rgba(16,34,63,0.16)' }}
+        style={{ borderColor: 'rgba(238,241,247,0.14)' }}
       />
 
       {/* big transparent monogram watermark, centered behind everything */}
@@ -30,15 +29,12 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[980px] px-6 text-center">
         {/* identity: the firm's name gets the chrome/industrial treatment
             from the reference mark, the descriptor sits under it */}
-        <div className="mb-6 font-display text-[clamp(19px,3.2vw,38px)] tracking-[0.04em] text-metal">
+        <h1 className="mb-8 font-display text-[clamp(30px,5.2vw,64px)] tracking-[0.04em] text-metal">
           GANGAN &amp; PARTNERS
-        </div>
-        <div className="mb-10 text-[15px] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+        </h1>
+        <div className="mb-16 text-[clamp(16px,1.8vw,21px)] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
           {t('eyebrow')}
         </div>
-
-        {/* the slogan — fades in on load, fades out as the page scrolls past */}
-        <HeroSlogan pre={t('titlePre')} em={t('titleEm')} post={t('titlePost')} />
 
         <div className="flex flex-wrap justify-center gap-4">
           <a

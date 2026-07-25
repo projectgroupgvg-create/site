@@ -62,7 +62,7 @@ export default function HeroCanvas() {
           const b = particles[j];
           const dist = Math.hypot(a.x - b.x, a.y - b.y);
           if (dist < maxDist) {
-            ctx!.strokeStyle = `rgba(16,34,63,${(1 - dist / maxDist) * 0.28})`;
+            ctx!.strokeStyle = `rgba(238,241,247,${(1 - dist / maxDist) * 0.22})`;
             ctx!.lineWidth = 1;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -72,7 +72,7 @@ export default function HeroCanvas() {
         }
       }
 
-      ctx!.fillStyle = 'rgba(16,34,63,0.45)';
+      ctx!.fillStyle = 'rgba(238,241,247,0.4)';
       for (const p of particles) {
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, 1.8, 0, Math.PI * 2);

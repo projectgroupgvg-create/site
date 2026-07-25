@@ -3,24 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Calacatta-gold marble stays as the surface; the ink palette moved from
-     warm brown/camel to navy so the site reads as a law firm rather than a
-     jewelry/spa brand. Navy for text and structure, gold stays as the sole
-     accent (unchanged) — the classic "big law" pairing. */
-  --bg: rgba(255, 255, 255, 0.55);
-  --bg2: rgba(246, 248, 251, 0.8);
-  --bg3: rgba(255, 255, 255, 0.35);
-  --bgc: #f5f6f9;
-  --ink: #10223f;
-  --ink2: #5c7099;
-  --ink3: #4f6382;
-  --s1: #a7b3c7;
-  --s2: #d7dde8;
-  --s3: #6b7fa3;
-  --wh: #fbfcfe;
-  --b: rgba(16, 34, 63, 0.16);
-  --bs: rgba(16, 34, 63, 0.32);
-  --ink-hover: #081527;
+  /* Full dark flip: Portoro-style navy-black marble with gold veining.
+     Surfaces go dark, text/accents go light — same navy+gold identity,
+     inverted for an evening/prestige read. --ink is still the "ink" role
+     (primary text + solid-button fill, now light) and --wh is still the
+     "paper" role (input/card surfaces + button text, now dark). */
+  --bg: rgba(10, 16, 30, 0.55);
+  --bg2: rgba(14, 21, 38, 0.8);
+  --bg3: rgba(8, 13, 24, 0.4);
+  --bgc: #172440;
+  --ink: #eef1f7;
+  --ink2: #93a4c2;
+  --ink3: #b7c2d6;
+  --s1: #55698f;
+  --s2: #24304d;
+  --s3: #8fa3c7;
+  --wh: #0e1728;
+  --b: rgba(238, 241, 247, 0.14);
+  --bs: rgba(238, 241, 247, 0.28);
+  --ink-hover: #d7dce6;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -42,7 +43,7 @@ html {
 }
 
 body {
-  background-color: #eef1f5;
+  background-color: #0e1728;
   background-image: url('/marble-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -65,19 +66,19 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #5c6672 0%,
-      #dbe1ea 22%,
-      #8793a5 40%,
-      #5c6672 52%,
-      #dbe1ea 68%,
-      #707c8f 85%,
-      #dbe1ea 100%
+      #8f9aad 0%,
+      #f4f7fb 22%,
+      #c3cbdb 40%,
+      #8f9aad 52%,
+      #f4f7fb 68%,
+      #a9b3c4 85%,
+      #f4f7fb 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
   }
 }
 
