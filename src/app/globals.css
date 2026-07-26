@@ -80,6 +80,23 @@ body {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 1px 1px rgba(28, 21, 16, 0.15));
   }
+  .text-metal-photo {
+    background: linear-gradient(
+      115deg,
+      #b8a88e 0%,
+      #f7f0e0 22%,
+      #d4c4a8 40%,
+      #b8a88e 52%,
+      #f7f0e0 68%,
+      #c9b696 85%,
+      #f7f0e0 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.55));
+  }
 }
 
 @keyframes dots {

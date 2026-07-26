@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * Background video for the hero. Progressive enhancement on top of
- * HeroCanvas: renders invisible until the file actually loads and starts
- * playing, then fades in. If the file is missing (not added yet) or fails
- * to load, this renders nothing and the canvas animation underneath stays
- * as the background — the page never breaks waiting on an asset.
+ * Background video for the hero. Progressive enhancement on top of the
+ * static hero photo: renders invisible until the file actually loads and
+ * starts playing, then fades in over it. If the file is missing (not added
+ * yet) or fails to load, this renders nothing and the photo underneath
+ * stays as the background — the page never breaks waiting on an asset.
  *
  * Expects, in /public/videos/:
  *   hero.mp4        — required, H.264, ~15-25s, muted-safe (no audio needed)
@@ -48,8 +48,10 @@ export default function HeroVideo() {
         <source src="/videos/hero.webm" type="video/webm" />
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
-      {/* light scrim so dark serif text stays readable over footage */}
-      {ready && <div className="pointer-events-none absolute inset-0 bg-[var(--bg3)] opacity-55" />}
+      {/* dark scrim so the light hero type stays readable over footage */}
+      {ready && (
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.75)] via-[rgba(10,8,6,0.45)] to-[rgba(10,8,6,0.55)]" />
+      )}
     </>
   );
 }
