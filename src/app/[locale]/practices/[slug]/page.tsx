@@ -26,7 +26,7 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
   'crypto-fraud': '/practice-tech-bg.jpg',
   'aml-compliance': '/practice-aml-bg.jpg',
   cybercrime: '/practice-cyber-bg.jpg',
-  'blockchain-investigations': '/practice-tech-bg.jpg',
+  'blockchain-investigations': '/practice-blockchain-investigations-bg.jpg',
 };
 
 export function generateStaticParams() {
