@@ -606,7 +606,12 @@
     "resultClearNote": "This address was not found in the checked OFAC list as of {date}. This does NOT confirm the absence of risk — it was checked against a single public sanctions list only, without transaction history analysis, mixer-link detection, or other lists (EU, UK, UN).",
     "disclaimer": "This tool is a preliminary indicator, not a professional AML/KYC screening or legal opinion. The list is built from public OFAC data and updated manually, so it may lag behind the official registry. Use a licensed screening service for compliance purposes.",
     "lastUpdatedLabel": "List last updated",
-    "ctaConsult": "Talk to a lawyer"
+    "ctaConsult": "Talk to a lawyer",
+    "bannerEyebrow": "ON-CHAIN INTELLIGENCE",
+    "bannerHeadline": "Every transaction leaves a trace",
+    "bannerSub": "Check a wallet address against sanctions lists and trace the movement of funds on-chain — fast, free, no registration required.",
+    "bannerCta1": "Check a wallet",
+    "bannerCta2": "Talk to a lawyer"
   },
   "Notary": {
     "lbl": "Tool",

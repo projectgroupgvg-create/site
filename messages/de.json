@@ -606,7 +606,12 @@
     "resultClearNote": "Diese Adresse wurde Stand {date} nicht in der geprüften OFAC-Liste gefunden. Dies bestätigt KEINE Risikofreiheit — geprüft wurde nur gegen eine einzige öffentliche Sanktionsliste, ohne Analyse der Transaktionshistorie, Mixer-Verbindungen oder anderer Listen (EU, UK, UN).",
     "disclaimer": "Dieses Tool ist ein vorläufiger Anhaltspunkt, kein professionelles AML/KYC-Screening und keine Rechtsauskunft. Die Liste basiert auf öffentlichen OFAC-Daten und wird manuell aktualisiert, kann also hinter dem offiziellen Register zurückliegen. Nutzen Sie für Compliance-Zwecke einen lizenzierten Screening-Dienst.",
     "lastUpdatedLabel": "Liste zuletzt aktualisiert",
-    "ctaConsult": "Mit einem Anwalt sprechen"
+    "ctaConsult": "Mit einem Anwalt sprechen",
+    "bannerEyebrow": "ON-CHAIN-ANALYSE",
+    "bannerHeadline": "Jede Transaktion hinterlässt eine Spur",
+    "bannerSub": "Prüfen Sie eine Wallet-Adresse anhand von Sanktionslisten und verfolgen Sie den Geldfluss on-chain — schnell, kostenlos, ohne Registrierung.",
+    "bannerCta1": "Wallet prüfen",
+    "bannerCta2": "Mit einem Anwalt sprechen"
   },
   "Notary": {
     "lbl": "Werkzeug",

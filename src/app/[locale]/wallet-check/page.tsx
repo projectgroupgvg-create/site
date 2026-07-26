@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import WalletScreener from '@/components/WalletScreener';
+import BlockchainDnaBanner from '@/components/BlockchainDnaBanner';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -37,7 +38,17 @@ export default async function WalletCheckPage({
 
   return (
     <main>
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+      <BlockchainDnaBanner
+        eyebrow={t('bannerEyebrow')}
+        headline={t('bannerHeadline')}
+        subtext={t('bannerSub')}
+        cta1Label={t('bannerCta1')}
+        cta1Href="#wallet-form"
+        cta2Label={t('bannerCta2')}
+        cta2Href="/#ai"
+      />
+
+      <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
           {t('lbl')}
         </div>
@@ -50,7 +61,7 @@ export default async function WalletCheckPage({
         </p>
       </div>
 
-      <div className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
+      <div id="wallet-form" className="mx-auto max-w-[680px] scroll-mt-20 px-6 py-16 sm:px-11">
         <WalletScreener />
       </div>
     </main>

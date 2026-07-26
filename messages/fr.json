@@ -606,7 +606,12 @@
     "resultClearNote": "Cette adresse n'a pas été trouvée dans la liste OFAC vérifiée en date du {date}. Cela ne confirme PAS l'absence de risque — la vérification a porté sur une seule liste de sanctions publique, sans analyse de l'historique des transactions, des liens avec des mixeurs, ni d'autres listes (UE, Royaume-Uni, ONU).",
     "disclaimer": "Cet outil est un indicateur préliminaire, pas un filtrage AML/KYC professionnel ni un avis juridique. La liste est constituée à partir de données publiques OFAC et mise à jour manuellement ; elle peut donc être en retard par rapport au registre officiel. Utilisez un service de filtrage agréé à des fins de conformité.",
     "lastUpdatedLabel": "Liste mise à jour le",
-    "ctaConsult": "Consulter un avocat"
+    "ctaConsult": "Consulter un avocat",
+    "bannerEyebrow": "ANALYSE ON-CHAIN",
+    "bannerHeadline": "Chaque transaction laisse une trace",
+    "bannerSub": "Vérifiez une adresse de portefeuille par rapport aux listes de sanctions et suivez les mouvements de fonds on-chain — rapide, gratuit, sans inscription.",
+    "bannerCta1": "Vérifier un portefeuille",
+    "bannerCta2": "Consulter un avocat"
   },
   "Notary": {
     "lbl": "Outil",
