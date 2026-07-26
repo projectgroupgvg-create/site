@@ -9,6 +9,7 @@ export type FallbackPost = {
   title: string;
   excerpt: string;
   body: string[];
+  mainImage?: string;
 };
 
 export type SanityPost = {
@@ -43,6 +44,7 @@ function fromFallback(p: FallbackPost): BlogPost {
     date: p.date,
     category: p.category,
     mono: p.mono,
+    mainImage: p.mainImage ?? null,
     source: 'fallback',
     body: p.body,
   };
