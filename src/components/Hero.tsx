@@ -30,7 +30,7 @@ export default function Hero() {
           background. */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/hero-bg-v2.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.75)] via-[rgba(10,8,6,0.45)] to-[rgba(10,8,6,0.55)]" />
       <HeroVideo />
