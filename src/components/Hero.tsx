@@ -1,11 +1,20 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import HeroCanvas from './HeroCanvas';
+import HeroVideo from './HeroVideo';
 
 export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg3)] py-28">
+      {/* abstract, coded atmosphere — no stock photo/video needed. If a real
+          video is later added at /public/videos/hero.(webm|mp4), HeroVideo
+          fades in on top automatically; otherwise this canvas is the whole
+          background layer. */}
+      <HeroCanvas />
+      <HeroVideo />
+
       <div className="absolute bottom-0 top-0 left-12 hidden w-px bg-[color:var(--b)] sm:block" />
       <div className="absolute bottom-0 top-0 right-12 hidden w-px bg-[color:var(--b)] sm:block" />
 
@@ -13,7 +22,7 @@ export default function Hero() {
           competing with the type */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[480px] w-[480px] rounded-full border-hair"
-        style={{ borderColor: 'rgba(243,237,228,0.14)' }}
+        style={{ borderColor: 'rgba(28,21,16,0.14)' }}
       />
 
       {/* big transparent monogram watermark, centered behind everything */}

@@ -3,24 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Espresso-black + gold: warm dark brown-black instead of navy — reads like
-     dark wood paneling with a gold nameplate. --ink is still the "ink" role
-     (primary text + solid-button fill, light/warm-ivory) and --wh is still
-     the "paper" role (input/card surfaces + button text, dark). */
-  --bg: rgba(20, 15, 12, 0.55);
-  --bg2: rgba(26, 20, 16, 0.8);
-  --bg3: rgba(14, 10, 8, 0.4);
-  --bgc: #241c17;
-  --ink: #f2ece2;
-  --ink2: #b3a08c;
-  --ink3: #c9bcaa;
-  --s1: #6b5c4d;
-  --s2: #34281f;
-  --s3: #b09a80;
-  --wh: #150f0c;
-  --b: rgba(243, 237, 228, 0.14);
-  --bs: rgba(243, 237, 228, 0.28);
-  --ink-hover: #d9cfc0;
+  /* Light flip (Latham & Watkins-style editorial look): white/warm-paper
+     background, dark warm-espresso text, gold stays the sole accent. --ink
+     is the "ink" role (primary text + solid-button fill, now dark) and
+     --wh is the "paper" role (input/card surfaces + button text, now
+     light/white). */
+  --bg: rgba(255, 255, 255, 0.6);
+  --bg2: rgba(250, 247, 242, 0.85);
+  --bg3: rgba(255, 255, 255, 0.4);
+  --bgc: #faf8f4;
+  --ink: #1c1510;
+  --ink2: #8a7360;
+  --ink3: #5c4c3f;
+  --s1: #cdbfae;
+  --s2: #eee6db;
+  --s3: #9c8267;
+  --wh: #ffffff;
+  --b: rgba(28, 21, 16, 0.14);
+  --bs: rgba(28, 21, 16, 0.28);
+  --ink-hover: #100b08;
 
   --font-playfair: 'Playfair Display', Georgia, serif;
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -42,11 +43,10 @@ html {
 }
 
 body {
-  background-color: #0a0706;
+  background-color: #faf8f4;
   background-image:
-    radial-gradient(ellipse 900px 600px at 18% 0%, rgba(64, 48, 34, 0.5) 0%, rgba(10, 7, 6, 0) 60%),
-    radial-gradient(ellipse 700px 500px at 100% 100%, rgba(58, 44, 20, 0.28) 0%, rgba(10, 7, 6, 0) 55%),
-    linear-gradient(180deg, #1a1512 0%, #120e0c 55%, #0a0706 100%);
+    radial-gradient(ellipse 900px 600px at 18% 0%, rgba(212, 176, 120, 0.1) 0%, rgba(250, 248, 244, 0) 60%),
+    linear-gradient(180deg, #fdfcfa 0%, #faf8f4 55%, #f5f2ec 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--ink);
@@ -66,19 +66,19 @@ body {
   .text-metal {
     background: linear-gradient(
       115deg,
-      #9a8f7f 0%,
-      #f7f2e8 22%,
-      #c9bda8 40%,
-      #9a8f7f 52%,
-      #f7f2e8 68%,
-      #a89a86 85%,
-      #f7f2e8 100%
+      #4a3d31 0%,
+      #a89a86 22%,
+      #6b5c4d 40%,
+      #4a3d31 52%,
+      #a89a86 68%,
+      #5c4c3f 85%,
+      #a89a86 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 1px 1px rgba(28, 21, 16, 0.15));
   }
 }
 

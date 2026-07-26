@@ -5,7 +5,7 @@
 // locale-routed and has live forms/AI chat, so over-caching HTML would
 // risk showing stale content instead of genuinely helping offline use.
 
-const CACHE_NAME = 'gp-shell-v2';
+const CACHE_NAME = 'gp-shell-v3';
 const PRECACHE_URLS = ['/offline.html', '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png'];
 
 self.addEventListener('install', (event) => {
