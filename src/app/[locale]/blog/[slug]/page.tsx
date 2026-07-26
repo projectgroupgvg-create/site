@@ -88,19 +88,19 @@ export default async function BlogPostPage({
         <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
           {categoryLabel} · {post.date}
         </div>
-        <h1 className="max-w-[820px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+        <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
           {post.title}
         </h1>
       </div>
 
       {post.mainImage && (
-        <div className="mx-auto max-w-[1000px] px-6 pt-10 sm:px-11">
+        <div className="mx-auto max-w-[1320px] px-6 pt-10 sm:px-11">
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
             <Image
               src={post.mainImage}
               alt={post.title}
               fill
-              sizes="(max-width: 1040px) 100vw, 1000px"
+              sizes="(max-width: 1360px) 100vw, 1320px"
               className="object-cover"
               priority
             />
@@ -108,15 +108,15 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      <article className="mx-auto max-w-[820px] bg-white px-6 py-16 sm:px-11">
+      <article className="mx-auto max-w-[1320px] bg-white px-6 py-16 sm:px-11">
         {post.source === 'fallback' && Array.isArray(post.body) ? (
           (post.body as string[]).map((p, i) => (
-            <p key={i} className="mb-5 text-[15.5px] leading-[1.95] text-[var(--ink)]">
+            <p key={i} className="mb-5 text-justify text-[15.5px] leading-[1.95] text-[var(--ink)]">
               {p}
             </p>
           ))
         ) : post.body ? (
-          <div className="prose-blog text-[15.5px] leading-[1.95] text-[var(--ink)]">
+          <div className="prose-blog text-justify text-[15.5px] leading-[1.95] text-[var(--ink)]">
             <PortableText value={post.body as Parameters<typeof PortableText>[0]['value']} />
           </div>
         ) : null}
