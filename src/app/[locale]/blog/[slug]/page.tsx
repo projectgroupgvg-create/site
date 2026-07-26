@@ -61,7 +61,7 @@ export default async function BlogPostPage({
     categories.find((c) => c.slug === post.category)?.label ?? post.category;
 
   return (
-    <main>
+    <main className="bg-white">
       <JsonLd
         data={buildArticleSchema({
           locale,
@@ -78,7 +78,7 @@ export default async function BlogPostPage({
           { name: post.title, path: `/blog/${slug}` },
         ])}
       />
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+      <div className="border-b-hair bg-white px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <Link
           href="/blog"
           className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
@@ -88,19 +88,19 @@ export default async function BlogPostPage({
         <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
           {categoryLabel} · {post.date}
         </div>
-        <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+        <h1 className="max-w-[820px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
           {post.title}
         </h1>
       </div>
 
       {post.mainImage && (
-        <div className="mx-auto max-w-[880px] px-6 pt-10 sm:px-11">
+        <div className="mx-auto max-w-[1000px] px-6 pt-10 sm:px-11">
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
             <Image
               src={post.mainImage}
               alt={post.title}
               fill
-              sizes="(max-width: 900px) 100vw, 880px"
+              sizes="(max-width: 1040px) 100vw, 1000px"
               className="object-cover"
               priority
             />
@@ -108,15 +108,15 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      <article className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
+      <article className="mx-auto max-w-[820px] bg-white px-6 py-16 sm:px-11">
         {post.source === 'fallback' && Array.isArray(post.body) ? (
           (post.body as string[]).map((p, i) => (
-            <p key={i} className="mb-5 text-[14.5px] leading-[1.9] text-[var(--ink2)]">
+            <p key={i} className="mb-5 text-[15.5px] leading-[1.95] text-[var(--ink)]">
               {p}
             </p>
           ))
         ) : post.body ? (
-          <div className="prose-blog text-[14.5px] leading-[1.9] text-[var(--ink2)]">
+          <div className="prose-blog text-[15.5px] leading-[1.95] text-[var(--ink)]">
             <PortableText value={post.body as Parameters<typeof PortableText>[0]['value']} />
           </div>
         ) : null}
