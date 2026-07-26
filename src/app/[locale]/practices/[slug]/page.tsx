@@ -21,9 +21,12 @@ type PracticeContent = {
 // Practices with a supplied atmospheric photo get it as a header background
 // instead of the plain text block. Not every practice has one yet.
 const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], string>> = {
-  'crypto-fraud': '/practice-tech-bg.jpg',
-  'blockchain-investigations': '/practice-tech-bg.jpg',
   'criminal-defense': '/practice-criminal-bg.jpg',
+  'transnational-investigations': '/practice-transnational-bg.jpg',
+  'crypto-fraud': '/practice-tech-bg.jpg',
+  'aml-compliance': '/practice-aml-bg.jpg',
+  cybercrime: '/practice-cyber-bg.jpg',
+  'blockchain-investigations': '/practice-tech-bg.jpg',
 };
 
 export function generateStaticParams() {
@@ -97,7 +100,7 @@ export default async function PracticePage({
         const headerPhoto = practiceHeaderPhotos[slug as (typeof practiceSlugs)[number]];
         return headerPhoto ? (
           <div
-            className="relative overflow-hidden px-6 py-16 sm:px-11"
+            className="relative flex min-h-[52vh] items-end overflow-hidden px-6 py-16 sm:px-11 sm:min-h-[58vh]"
             style={{
               '--ink': '#f7f4ee',
               '--ink3': '#d9cfbd',
@@ -108,7 +111,7 @@ export default async function PracticePage({
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${headerPhoto}')` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.58)] to-[rgba(10,8,6,0.62)]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.4)] to-[rgba(10,8,6,0.5)]" />
             <div className="relative z-10">
               <Link
                 href="/#practices"
