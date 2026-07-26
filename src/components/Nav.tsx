@@ -20,7 +20,7 @@ export default function Nav() {
         />
 
         <span>
-          <span className="block font-serif text-[13.5px] font-bold uppercase tracking-[0.07em] text-[var(--ink)] leading-tight">
+          <span className="block font-display text-[13.5px] uppercase tracking-[0.07em] leading-tight text-metal">
             Gangan &amp; Partners
           </span>
           <span className="mt-0.5 block text-[8.5px] uppercase tracking-[0.24em] text-[var(--ink3)]">

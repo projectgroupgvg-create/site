@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="text-[11px] font-light text-[rgba(245,245,245,0.3)]">
           © {year} Gangan &amp; Partners. {t('rights')}
         </div>
-        <div className="font-serif text-[13px] tracking-wide text-[rgba(245,245,245,0.5)]">
+        <div className="font-display text-[13px] uppercase tracking-[0.07em] text-metal-photo">
           Gangan &amp; Partners
         </div>
         <div className="flex flex-wrap gap-6">
