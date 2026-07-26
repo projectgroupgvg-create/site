@@ -57,6 +57,74 @@
       },
       {
         "num": "02",
+        "title": "Civil Law",
+        "desc": "Protecting the property and personal non-property rights of individuals and legal entities. Contract disputes, debt recovery, inheritance matters.",
+        "intro": [
+          "Gangan & Partners handles civil matters of any complexity — from drafting agreements to representation in court once a dispute arises.",
+          "We combine a preventive approach (structuring legal relationships correctly to avoid future disputes) with the readiness to defend a client's interests in litigation once a conflict has already emerged."
+        ],
+        "services": [
+          "Drafting and legal review of contracts",
+          "Debt and damages recovery",
+          "Inheritance disputes and estate matters",
+          "Protection of property rights",
+          "Compensation for damage to property or person",
+          "Representation in courts of all instances"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Commercial Law",
+        "desc": "Legal support for business — from company registration to complex corporate disputes and bankruptcy.",
+        "intro": [
+          "We support companies' commercial activity at every stage — from structuring the business to resolving disputes between counterparties or company participants.",
+          "The Gangan & Partners team has experience working with both international structures and local businesses, allowing us to offer solutions tailored to the specifics of a given industry."
+        ],
+        "services": [
+          "Corporate structuring and M&A support",
+          "Contract drafting and commercial disputes",
+          "Representation in bankruptcy proceedings",
+          "Corporate conflicts between shareholders/participants",
+          "Support for foreign economic activity",
+          "Representation in commercial courts"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Antitrust Law",
+        "desc": "Support in proceedings before the Antimonopoly Committee of Ukraine: merger clearances, defense against allegations of collusion or abuse of dominance.",
+        "intro": [
+          "Antitrust regulation increasingly shapes deal structures and market conduct. We help clients navigate this scrutiny without delays or fines.",
+          "Our team handles both preventive procedures (obtaining AMCU merger clearance) and defense in proceedings concerning breaches of competition law."
+        ],
+        "services": [
+          "Obtaining AMCU merger clearance and concerted-action approvals",
+          "Defense in abuse-of-dominance proceedings",
+          "Appealing decisions of the Antimonopoly Committee",
+          "Market-power analysis and compliance audits",
+          "Support in anti-competitive concerted-action investigations",
+          "Representation in courts in disputes with the AMCU"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Administrative Law",
+        "desc": "Protecting rights and legitimate interests in dealings with state and local authorities; challenging their decisions, actions, or inaction.",
+        "intro": [
+          "We represent clients in disputes with state authorities — from tax and customs to regulators and local government.",
+          "Our team's experience allows us to effectively challenge unlawful decisions, actions, or inaction of public authorities, both administratively and in court."
+        ],
+        "services": [
+          "Challenging decisions, actions, and inaction of public authorities",
+          "Support during tax audits and disputes",
+          "Appealing sanctions and restrictive measures",
+          "Licensing and permitting procedures",
+          "Representation in administrative courts",
+          "Challenging public procurement decisions"
+        ]
+      },
+      {
+        "num": "01.1",
         "title": "Transnational Investigations",
         "desc": "Cases with an international element: extradition, mutual legal assistance, investigation of financial crimes.",
         "intro": [
@@ -71,7 +139,7 @@
         ]
       },
       {
-        "num": "03",
+        "num": "01.2",
         "title": "Crypto Fraud & Blockchain",
         "desc": "Recovering assets frozen on exchanges. Investigating DeFi fraud, rug pulls and NFT abuse.",
         "intro": [
@@ -86,7 +154,7 @@
         ]
       },
       {
-        "num": "04",
+        "num": "01.3",
         "title": "Money Laundering / AML",
         "desc": "Defense in money laundering cases. Compliance audits, liaison with FATF and regulators.",
         "intro": [
@@ -100,7 +168,7 @@
         ]
       },
       {
-        "num": "05",
+        "num": "01.4",
         "title": "Cybercrime",
         "desc": "Defense in cases of unauthorized access, hacking, phishing and cyber investigations.",
         "intro": [
@@ -115,7 +183,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "01.5",
         "title": "Blockchain Investigations",
         "desc": "Tracing on-chain transactions, identifying wallets, building an evidentiary record from on-chain data.",
         "intro": [

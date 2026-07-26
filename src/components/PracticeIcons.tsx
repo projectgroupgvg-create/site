@@ -110,8 +110,65 @@ export function BlockchainInvestigationsIcon({ className }: IconProps) {
   );
 }
 
+export function CivilLawIcon({ className }: IconProps) {
+  const g = 'pmGold-civil';
+  return (
+    <Base id={g} className={className}>
+      <path d="M9 4 H19 L24 9 V28 H9 Z" stroke="var(--ink3)" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M19 4 V9 H24" stroke="var(--ink3)" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M12.3 14 H20.7 M12.3 18 H20.7 M12.3 22 H17" stroke="var(--ink3)" strokeWidth="1.1" strokeLinecap="round" />
+      <path d="M12 25.8 Q14.5 23.6 17 25.8 T22 25.8" stroke={`url(#${g})`} strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <circle cx="22" cy="25.8" r="1" fill="#c9a227" />
+    </Base>
+  );
+}
+
+export function CommercialLawIcon({ className }: IconProps) {
+  const g = 'pmGold-commercial';
+  return (
+    <Base id={g} className={className}>
+      <rect x="5" y="12.5" width="22" height="14.5" rx="2.5" stroke="var(--ink3)" strokeWidth="1.5" />
+      <path d="M12 12.5 V9.3 A2.4 2.4 0 0 1 14.4 6.9 H17.6 A2.4 2.4 0 0 1 20 9.3 V12.5" stroke="var(--ink3)" strokeWidth="1.4" />
+      <path d="M5 19 H27" stroke="var(--ink3)" strokeWidth="1.1" />
+      <rect x="14.2" y="17" width="3.6" height="3.6" rx="0.8" stroke={`url(#${g})`} strokeWidth="1.5" />
+      <circle cx="16" cy="18.8" r="0.6" fill="#c9a227" />
+    </Base>
+  );
+}
+
+export function AntitrustLawIcon({ className }: IconProps) {
+  const g = 'pmGold-antitrust';
+  return (
+    <Base id={g} className={className}>
+      <circle cx="14" cy="14" r="9.5" stroke="var(--ink3)" strokeWidth="1.5" />
+      <path d="M14 14 V4.5" stroke="var(--ink3)" strokeWidth="1.1" />
+      <path d="M14 14 L21.7 9.3" stroke="var(--ink3)" strokeWidth="1.1" />
+      <path d="M14 14 L14 4.5 A9.5 9.5 0 0 1 21.7 9.3 Z" fill="none" stroke={`url(#${g})`} strokeWidth="1.7" strokeLinejoin="round" />
+      <path d="M20.7 20.7 L28.5 28.5" stroke="var(--ink3)" strokeWidth="1.7" strokeLinecap="round" />
+      <circle cx="28.5" cy="28.5" r="1" fill="#c9a227" />
+    </Base>
+  );
+}
+
+export function AdministrativeLawIcon({ className }: IconProps) {
+  const g = 'pmGold-administrative';
+  return (
+    <Base id={g} className={className}>
+      <path d="M4 27.5 H28" stroke="var(--ink3)" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M6.5 27 V15.5 M11.5 27 V15.5 M16 27 V15.5 M20.5 27 V15.5 M25.5 27 V15.5" stroke="var(--ink3)" strokeWidth="1.2" />
+      <path d="M3 15.5 L16 6.5 L29 15.5 Z" stroke="var(--ink3)" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M16 6.5 L29 15.5" stroke={`url(#${g})`} strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="29" cy="15.5" r="1" fill="#c9a227" />
+    </Base>
+  );
+}
+
 export const PRACTICE_ICONS: Record<PracticeSlug, (props: IconProps) => JSX.Element> = {
   'criminal-defense': CriminalDefenseIcon,
+  'civil-law': CivilLawIcon,
+  'commercial-law': CommercialLawIcon,
+  'antitrust-law': AntitrustLawIcon,
+  'administrative-law': AdministrativeLawIcon,
   'transnational-investigations': TransnationalIcon,
   'crypto-fraud': CryptoFraudIcon,
   'aml-compliance': AmlComplianceIcon,

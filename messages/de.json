@@ -57,6 +57,74 @@
       },
       {
         "num": "02",
+        "title": "Zivilrecht",
+        "desc": "Schutz der vermögensrechtlichen und persönlichen nichtvermögensrechtlichen Rechte von natürlichen und juristischen Personen. Vertragsstreitigkeiten, Forderungseinzug, Erbschaftssachen.",
+        "intro": [
+          "Gangan & Partners begleitet zivilrechtliche Angelegenheiten jeder Komplexität — vom Abschluss von Verträgen bis zur Vertretung vor Gericht bei einem Streitfall.",
+          "Wir verbinden einen präventiven Ansatz (rechtssichere Gestaltung von Rechtsverhältnissen zur Vermeidung künftiger Streitigkeiten) mit der Bereitschaft, die Interessen des Mandanten im Prozess zu vertreten, sobald ein Konflikt entstanden ist."
+        ],
+        "services": [
+          "Erstellung und rechtliche Prüfung von Verträgen",
+          "Forderungs- und Schadenersatzeinzug",
+          "Erbstreitigkeiten und Nachlassangelegenheiten",
+          "Schutz des Eigentumsrechts",
+          "Ersatz von Sach- und Personenschäden",
+          "Vertretung vor Gerichten aller Instanzen"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Wirtschaftsrecht",
+        "desc": "Rechtliche Begleitung von Unternehmen — von der Gründung bis zu komplexen Gesellschafterstreitigkeiten und Insolvenzverfahren.",
+        "intro": [
+          "Wir begleiten die geschäftliche Tätigkeit von Unternehmen in jeder Phase — von der Strukturierung des Geschäfts bis zur Beilegung von Streitigkeiten zwischen Vertragspartnern oder Gesellschaftern.",
+          "Das Team von Gangan & Partners verfügt über Erfahrung sowohl mit internationalen Strukturen als auch mit lokalen Unternehmen und bietet Lösungen, die die Besonderheiten der jeweiligen Branche berücksichtigen."
+        ],
+        "services": [
+          "Unternehmensstrukturierung und Begleitung von M&A-Transaktionen",
+          "Vertragsgestaltung und Handelsstreitigkeiten",
+          "Vertretung in Insolvenzverfahren",
+          "Gesellschafterstreitigkeiten",
+          "Begleitung der Außenwirtschaftstätigkeit",
+          "Vertretung vor Wirtschaftsgerichten"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Kartellrecht",
+        "desc": "Begleitung von Verfahren vor dem Antimonopolkomitee der Ukraine: Fusionskontrolle, Verteidigung gegen Vorwürfe der Absprache oder des Marktmachtmissbrauchs.",
+        "intro": [
+          "Das Kartellrecht prägt zunehmend die Struktur von Transaktionen und das Marktverhalten von Unternehmen. Wir helfen Mandanten, diese Prüfung ohne Verzögerungen oder Bußgelder zu durchlaufen.",
+          "Unser Team begleitet sowohl präventive Verfahren (Erlangung der Fusionsfreigabe durch das AMKU) als auch die Verteidigung in Verfahren wegen Verstößen gegen das Wettbewerbsrecht."
+        ],
+        "services": [
+          "Erlangung der Fusionsfreigabe und Genehmigung abgestimmter Verhaltensweisen",
+          "Verteidigung in Verfahren wegen Marktmachtmissbrauchs",
+          "Anfechtung von Entscheidungen des Antimonopolkomitees",
+          "Marktmachtanalyse und Compliance-Audits",
+          "Begleitung von Untersuchungen wettbewerbswidriger Absprachen",
+          "Gerichtliche Vertretung in Streitigkeiten mit dem AMKU"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Verwaltungsrecht",
+        "desc": "Schutz von Rechten und berechtigten Interessen im Verhältnis zu staatlichen und kommunalen Behörden; Anfechtung ihrer Entscheidungen, Handlungen oder Untätigkeit.",
+        "intro": [
+          "Wir vertreten Mandanten in Streitigkeiten mit staatlichen Behörden — von Steuer- und Zollbehörden bis zu Regulierungsbehörden und Kommunalverwaltungen.",
+          "Die Erfahrung unseres Teams ermöglicht es, rechtswidrige Entscheidungen, Handlungen oder Untätigkeit von Trägern öffentlicher Gewalt sowohl im Verwaltungsverfahren als auch gerichtlich wirksam anzufechten."
+        ],
+        "services": [
+          "Anfechtung von Entscheidungen, Handlungen und Untätigkeit von Behörden",
+          "Begleitung von Steuerprüfungen und -streitigkeiten",
+          "Anfechtung von Sanktionen und beschränkenden Maßnahmen",
+          "Lizenzierungs- und Genehmigungsverfahren",
+          "Vertretung vor Verwaltungsgerichten",
+          "Anfechtung von Entscheidungen im öffentlichen Vergabewesen"
+        ]
+      },
+      {
+        "num": "01.1",
         "title": "Transnationale Ermittlungen",
         "desc": "Fälle mit internationalem Bezug: Auslieferung, internationale Rechtshilfe, Ermittlungen zu Finanzdelikten.",
         "intro": [
@@ -71,7 +139,7 @@
         ]
       },
       {
-        "num": "03",
+        "num": "01.2",
         "title": "Krypto-Betrug & Blockchain",
         "desc": "Rückgewinnung von auf Börsen eingefrorenen Vermögenswerten. Ermittlungen zu DeFi-Betrug, Rug Pulls und NFT-Missbrauch.",
         "intro": [
@@ -86,7 +154,7 @@
         ]
       },
       {
-        "num": "04",
+        "num": "01.3",
         "title": "Geldwäsche / AML",
         "desc": "Verteidigung in Geldwäschefällen. Compliance-Audits, Zusammenarbeit mit FATF und Aufsichtsbehörden.",
         "intro": [
@@ -100,7 +168,7 @@
         ]
       },
       {
-        "num": "05",
+        "num": "01.4",
         "title": "Cyberkriminalität",
         "desc": "Verteidigung in Fällen von unbefugtem Zugriff, Hacking, Phishing und Cyber-Ermittlungen.",
         "intro": [
@@ -115,7 +183,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "01.5",
         "title": "Blockchain-Ermittlungen",
         "desc": "Rückverfolgung von On-Chain-Transaktionen, Identifizierung von Wallets, Aufbau einer Beweisgrundlage aus On-Chain-Daten.",
         "intro": [

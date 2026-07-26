@@ -1,15 +1,22 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { practiceSlugs } from '@/data/practices';
+import { topLevelPracticeSlugs } from '@/data/practices';
 import { PRACTICE_ICONS } from './PracticeIcons';
 
 export default function PracticesGrid() {
   const t = useTranslations('Practices');
-  const list = t.raw('list') as Array<{
-    num: string;
-    title: string;
-    desc: string;
-  }>;
+  // Only the 5 top-level "fields of law" show as cards here. Criminal
+  // Defense's own specializations (crypto-fraud, AML, etc.) are Practices.list
+  // items 5-9 — intentionally excluded so they aren't listed twice (once as a
+  // field of law, once as a Criminal Defense sub-topic). They're still fully
+  // reachable at their own URLs, linked from the Criminal Defense page.
+  const list = (
+    t.raw('list') as Array<{
+      num: string;
+      title: string;
+      desc: string;
+    }>
+  ).slice(0, topLevelPracticeSlugs.length);
 
   return (
     <section id="practices" className="bg-[var(--bg2)] px-6 py-24 sm:px-11">
@@ -29,11 +36,11 @@ export default function PracticesGrid() {
         style={{ borderColor: 'var(--b)' }}
       >
         {list.map((p, i) => {
-          const Icon = PRACTICE_ICONS[practiceSlugs[i]];
+          const Icon = PRACTICE_ICONS[topLevelPracticeSlugs[i]];
           return (
             <Link
-              key={practiceSlugs[i]}
-              href={`/practices/${practiceSlugs[i]}`}
+              key={topLevelPracticeSlugs[i]}
+              href={`/practices/${topLevelPracticeSlugs[i]}`}
               className="group relative overflow-hidden border-hair bg-[var(--bgc)] p-9 transition-colors hover:bg-[var(--wh)]"
               style={{ borderColor: 'var(--b)' }}
             >

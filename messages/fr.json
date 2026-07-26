@@ -57,6 +57,74 @@
       },
       {
         "num": "02",
+        "title": "Droit civil",
+        "desc": "Protection des droits patrimoniaux et personnels non patrimoniaux des personnes physiques et morales. Litiges contractuels, recouvrement de créances, successions.",
+        "intro": [
+          "Gangan & Partners accompagne les affaires civiles de toute complexité — de la rédaction des contrats à la représentation devant les tribunaux en cas de litige.",
+          "Nous combinons une approche préventive (structuration rigoureuse des relations juridiques afin de prévenir les litiges futurs) avec la capacité de défendre les intérêts du client en contentieux dès qu'un conflit survient."
+        ],
+        "services": [
+          "Rédaction et analyse juridique des contrats",
+          "Recouvrement de créances et de dommages-intérêts",
+          "Litiges successoraux et règlement des successions",
+          "Protection du droit de propriété",
+          "Indemnisation des dommages causés aux biens ou aux personnes",
+          "Représentation devant les tribunaux de toutes instances"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Droit des affaires",
+        "desc": "Accompagnement juridique des entreprises — de la constitution de la société aux litiges corporatifs complexes et aux procédures de faillite.",
+        "intro": [
+          "Nous accompagnons l'activité commerciale des entreprises à chaque étape — de la structuration de l'activité au règlement des litiges entre partenaires commerciaux ou associés.",
+          "L'équipe de Gangan & Partners possède une expérience aussi bien auprès de structures internationales que d'entreprises locales, ce qui permet de proposer des solutions adaptées aux spécificités de chaque secteur."
+        ],
+        "services": [
+          "Structuration corporative et accompagnement des opérations de fusion-acquisition",
+          "Rédaction contractuelle et litiges commerciaux",
+          "Représentation dans les procédures de faillite",
+          "Conflits entre associés/actionnaires",
+          "Accompagnement des activités économiques extérieures",
+          "Représentation devant les tribunaux de commerce"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Droit de la concurrence",
+        "desc": "Accompagnement dans les procédures devant le Comité antimonopole d'Ukraine : autorisations de concentration, défense contre les accusations d'entente ou d'abus de position dominante.",
+        "intro": [
+          "La régulation de la concurrence influence de plus en plus la structuration des opérations et le comportement des entreprises sur le marché. Nous aidons nos clients à traverser ce contrôle sans retard ni sanction.",
+          "Notre équipe accompagne aussi bien les procédures préventives (obtention de l'autorisation de concentration auprès de l'AMCU) que la défense dans les procédures pour infraction au droit de la concurrence."
+        ],
+        "services": [
+          "Obtention des autorisations de concentration et d'actions concertées auprès de l'AMCU",
+          "Défense dans les procédures pour abus de position dominante",
+          "Contestation des décisions du Comité antimonopole",
+          "Analyse du pouvoir de marché et audits de conformité",
+          "Accompagnement des enquêtes pour ententes anticoncurrentielles",
+          "Représentation devant les tribunaux dans les litiges avec l'AMCU"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Droit administratif",
+        "desc": "Protection des droits et intérêts légitimes dans les relations avec les autorités publiques et locales ; contestation de leurs décisions, actions ou inactions.",
+        "intro": [
+          "Nous représentons nos clients dans les litiges avec les autorités publiques — des services fiscaux et douaniers aux régulateurs et aux collectivités locales.",
+          "L'expérience de notre équipe permet de contester efficacement les décisions, actions ou inactions illégales des autorités publiques, tant par voie administrative que judiciaire."
+        ],
+        "services": [
+          "Contestation des décisions, actions et inactions des autorités publiques",
+          "Accompagnement des contrôles et litiges fiscaux",
+          "Contestation des sanctions et mesures restrictives",
+          "Procédures de licence et d'autorisation",
+          "Représentation devant les juridictions administratives",
+          "Contestation des décisions en matière de marchés publics"
+        ]
+      },
+      {
+        "num": "01.1",
         "title": "Enquêtes transnationales",
         "desc": "Affaires comportant un élément international : extradition, entraide judiciaire internationale, enquêtes sur les crimes financiers.",
         "intro": [
@@ -71,7 +139,7 @@
         ]
       },
       {
-        "num": "03",
+        "num": "01.2",
         "title": "Fraude crypto et blockchain",
         "desc": "Récupération d'actifs bloqués sur des plateformes d'échange. Enquêtes sur les fraudes DeFi, rug pulls et abus liés aux NFT.",
         "intro": [
@@ -86,7 +154,7 @@
         ]
       },
       {
-        "num": "04",
+        "num": "01.3",
         "title": "Blanchiment de capitaux / AML",
         "desc": "Défense dans les affaires de blanchiment de capitaux. Audits de conformité, liaison avec le FATF et les régulateurs.",
         "intro": [
@@ -100,7 +168,7 @@
         ]
       },
       {
-        "num": "05",
+        "num": "01.4",
         "title": "Cybercriminalité",
         "desc": "Défense dans les affaires d'accès non autorisé, de piratage, de phishing et d'enquêtes cyber.",
         "intro": [
@@ -115,7 +183,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "01.5",
         "title": "Enquêtes blockchain",
         "desc": "Traçage des transactions on-chain, identification des portefeuilles, constitution d'un dossier de preuves à partir de données on-chain.",
         "intro": [

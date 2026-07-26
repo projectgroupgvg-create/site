@@ -4,7 +4,12 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { practiceSlugs, practiceImages } from '@/data/practices';
+import {
+  practiceSlugs,
+  practiceImages,
+  topLevelPracticeSlugs,
+  criminalSubPracticeSlugs,
+} from '@/data/practices';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import { buildServiceSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
@@ -75,9 +80,29 @@ export default async function PracticePage({
   const list = t.raw('list') as PracticeContent[];
   const practice = list[index];
 
-  const others = practiceSlugs
-    .map((s, i) => ({ slug: s, ...list[i] }))
-    .filter((_, i) => i !== index);
+  // Scoped "other practices" links: Criminal Defense links to its own
+  // specializations as an independent sub-structure; each specialization
+  // links back to Criminal Defense plus its siblings; each of the other
+  // top-level fields of law links only to the other top-level fields — so a
+  // specialization never gets listed twice (as a field of law AND as a
+  // Criminal Defense sub-topic) and unrelated top-level fields don't cross-link.
+  const currentSlug = slug as (typeof practiceSlugs)[number];
+  const isCriminalMain = currentSlug === 'criminal-defense';
+  const isCriminalSub = (criminalSubPracticeSlugs as readonly string[]).includes(currentSlug);
+
+  let othersSlugs: (typeof practiceSlugs)[number][];
+  if (isCriminalMain) {
+    othersSlugs = [...criminalSubPracticeSlugs];
+  } else if (isCriminalSub) {
+    othersSlugs = [
+      'criminal-defense',
+      ...criminalSubPracticeSlugs.filter((s) => s !== currentSlug),
+    ];
+  } else {
+    othersSlugs = topLevelPracticeSlugs.filter((s) => s !== currentSlug);
+  }
+
+  const others = othersSlugs.map((s) => ({ slug: s, ...list[practiceSlugs.indexOf(s)] }));
 
   return (
     <main>
