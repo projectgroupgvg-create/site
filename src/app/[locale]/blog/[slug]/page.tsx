@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -78,33 +79,53 @@ export default async function BlogPostPage({
           { name: post.title, path: `/blog/${slug}` },
         ])}
       />
-      <div className="border-b-hair bg-white px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <Link
-          href="/blog"
-          className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+      {post.mainImage ? (
+        <div
+          className="relative flex min-h-[52vh] items-center overflow-hidden px-6 py-16 sm:min-h-[58vh] sm:px-11"
+          style={{
+            '--ink': '#f7f4ee',
+            '--ink3': '#d9cfbd',
+            '--s3': '#d9c9a8',
+          } as CSSProperties}
         >
-          ← {t('backToBlog')}
-        </Link>
-        <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
-          {categoryLabel} · {post.date}
-        </div>
-        <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
-          {post.title}
-        </h1>
-      </div>
-
-      {post.mainImage && (
-        <div className="mx-auto max-w-[1320px] px-6 pt-10 sm:px-11">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
-            <Image
-              src={post.mainImage}
-              alt={post.title}
-              fill
-              sizes="(max-width: 1360px) 100vw, 1320px"
-              className="object-cover"
-              priority
-            />
+          <Image
+            src={post.mainImage}
+            alt={post.title}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
+          <div className="relative z-10">
+            <Link
+              href="/blog"
+              className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+            >
+              ← {t('backToBlog')}
+            </Link>
+            <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+              {categoryLabel} · {post.date}
+            </div>
+            <h1 className="max-w-[1000px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+              {post.title}
+            </h1>
           </div>
+        </div>
+      ) : (
+        <div className="border-b-hair bg-white px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+          <Link
+            href="/blog"
+            className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+          >
+            ← {t('backToBlog')}
+          </Link>
+          <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+            {categoryLabel} · {post.date}
+          </div>
+          <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+            {post.title}
+          </h1>
         </div>
       )}
 
