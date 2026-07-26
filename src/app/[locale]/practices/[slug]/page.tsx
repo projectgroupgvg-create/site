@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -16,6 +17,13 @@ type PracticeContent = {
   intro: string[];
   services: string[];
 };
+
+// The two most explicitly "on-chain/tech" practices get the abstract
+// data-network photo as a header background instead of the plain block.
+const techHeaderSlugs: ReadonlyArray<(typeof practiceSlugs)[number]> = [
+  'crypto-fraud',
+  'blockchain-investigations',
+];
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -84,20 +92,51 @@ export default async function PracticePage({
           { name: practice.title, path: `/practices/${slug}` },
         ])}
       />
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <Link
-          href="/#practices"
-          className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+      {techHeaderSlugs.includes(slug as (typeof practiceSlugs)[number]) ? (
+        <div
+          className="relative overflow-hidden px-6 py-16 sm:px-11"
+          style={{
+            '--ink': '#f7f4ee',
+            '--ink3': '#d9cfbd',
+            '--s3': '#d9c9a8',
+          } as CSSProperties}
         >
-          ← {t('backLink')}
-        </Link>
-        <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-          {practice.num} / {t('lbl')}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/practice-tech-bg.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.58)] to-[rgba(10,8,6,0.62)]" />
+          <div className="relative z-10">
+            <Link
+              href="/#practices"
+              className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+            >
+              ← {t('backLink')}
+            </Link>
+            <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+              {practice.num} / {t('lbl')}
+            </div>
+            <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+              {practice.title}
+            </h1>
+          </div>
         </div>
-        <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
-          {practice.title}
-        </h1>
-      </div>
+      ) : (
+        <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+          <Link
+            href="/#practices"
+            className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+          >
+            ← {t('backLink')}
+          </Link>
+          <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+            {practice.num} / {t('lbl')}
+          </div>
+          <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+            {practice.title}
+          </h1>
+        </div>
+      )}
 
       {practiceImages[slug as (typeof practiceSlugs)[number]] && (
         <div className="mx-auto max-w-[880px] px-6 pt-12 sm:px-11">
