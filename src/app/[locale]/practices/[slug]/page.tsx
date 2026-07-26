@@ -100,7 +100,7 @@ export default async function PracticePage({
         const headerPhoto = practiceHeaderPhotos[slug as (typeof practiceSlugs)[number]];
         return headerPhoto ? (
           <div
-            className="relative flex min-h-[52vh] items-end overflow-hidden px-6 py-16 sm:px-11 sm:min-h-[58vh]"
+            className="relative flex min-h-[52vh] items-center overflow-hidden px-6 py-16 sm:px-11 sm:min-h-[58vh]"
             style={{
               '--ink': '#f7f4ee',
               '--ink3': '#d9cfbd',
@@ -111,7 +111,7 @@ export default async function PracticePage({
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${headerPhoto}')` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.4)] to-[rgba(10,8,6,0.5)]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
             <div className="relative z-10">
               <Link
                 href="/#practices"
