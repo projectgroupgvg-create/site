@@ -145,6 +145,25 @@ export default async function PracticePage({
         );
       })()}
 
+      <div className="border-b-hair bg-[var(--bg2)] px-6 py-5 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+        <div className="flex flex-wrap items-center gap-2.5">
+          <span className="mr-1 shrink-0 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+            {t('moreTitle')}
+          </span>
+          {others.map((o) => (
+            <Link
+              key={o.slug}
+              href={`/practices/${o.slug}`}
+              className="whitespace-nowrap rounded-full border-hair px-4 py-2 text-[12px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)] hover:text-[var(--ink)]"
+              style={{ borderColor: 'var(--b)' }}
+            >
+              <span className="mr-1.5 text-[var(--s3)]">{o.num}</span>
+              {o.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {practiceImages[slug as (typeof practiceSlugs)[number]] && (
         <div className="mx-auto max-w-[880px] px-6 pt-12 sm:px-11">
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
@@ -193,23 +212,6 @@ export default async function PracticePage({
           >
             {t('ctaBtn')}
           </Link>
-        </div>
-
-        <h3 className="mb-5 mt-16 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
-          {t('moreTitle')}
-        </h3>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {others.map((o) => (
-            <Link
-              key={o.slug}
-              href={`/practices/${o.slug}`}
-              className="rounded-sm border-hair px-5 py-4 text-[13px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)]"
-              style={{ borderColor: 'var(--b)' }}
-            >
-              <span className="mr-2 text-[var(--s3)]">{o.num}</span>
-              {o.title}
-            </Link>
-          ))}
         </div>
       </div>
     </main>
