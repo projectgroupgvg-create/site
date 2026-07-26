@@ -49,30 +49,17 @@ export default async function TeamPage({
   const firmEmail = 'gangan.partners@gmail.com';
   const firmPhone = tContact('phoneValue');
 
-  // the firm name inside the page title gets the same Michroma/metal
-  // treatment as the Hero, Nav, and Footer wordmarks — split it out of the
-  // translated string (the proper name reads the same in every locale)
-  // rather than hardcoding a single word order.
-  const title = t('title');
-  const [titleBefore, titleAfter] = title.includes('Gangan & Partners')
-    ? title.split('Gangan & Partners')
-    : [title, undefined];
-
   return (
     <main>
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+        {/* visually hidden — keeps a real page heading for SEO/accessibility
+            without showing "Юристи Gangan & Partners" on the page */}
+        <h1 className="sr-only">{t('title')}</h1>
+        <div className="mb-5 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
           {t('lbl')}
         </div>
-        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
-          {titleBefore}
-          {titleAfter !== undefined && (
-            <span className="font-display text-metal">Gangan &amp; Partners</span>
-          )}
-          {titleAfter}
-        </h1>
         <div className="divider" />
-        <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
+        <p className="mt-5 max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
           {t('sub')}
         </p>
       </div>
