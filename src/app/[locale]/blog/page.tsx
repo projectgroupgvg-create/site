@@ -59,7 +59,7 @@ export default async function BlogArchivePage({
       {/* light, low-contrast abstract texture spans the whole blog page (header
           + the article-links feed below it) — soft scrim back to --bg2 so
           heading/filter/card text stays readable */}
-      <div className="fixed inset-0 -z-10 bg-[var(--bg2)]/92" />
+      <div className="fixed inset-0 -z-10 bg-[var(--bg2)]/78" />
 
       <div className="border-b-hair px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
