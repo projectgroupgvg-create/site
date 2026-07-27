@@ -51,17 +51,27 @@ export default async function TeamPage({
 
   return (
     <main>
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        {/* visually hidden — keeps a real page heading for SEO/accessibility
-            without showing "Юристи Gangan & Partners" on the page */}
-        <h1 className="sr-only">{t('title')}</h1>
-        <div className="mb-5 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-          {t('lbl')}
+      <div className="relative overflow-hidden border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/team-section-bg.jpg')" }}
+        />
+        {/* light, low-contrast abstract texture — soft scrim back to --bg2 so
+            heading text stays readable, same treatment as Blog/Practices */}
+        <div className="absolute inset-0 bg-[var(--bg2)]/85" />
+
+        <div className="relative z-10">
+          {/* visually hidden — keeps a real page heading for SEO/accessibility
+              without showing "Юристи Gangan & Partners" on the page */}
+          <h1 className="sr-only">{t('title')}</h1>
+          <div className="mb-5 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+            {t('lbl')}
+          </div>
+          <div className="divider" />
+          <p className="mt-5 max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
+            {t('sub')}
+          </p>
         </div>
-        <div className="divider" />
-        <p className="mt-5 max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
-          {t('sub')}
-        </p>
       </div>
 
       <div
