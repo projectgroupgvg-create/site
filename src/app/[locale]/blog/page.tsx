@@ -51,56 +51,55 @@ export default async function BlogArchivePage({
     categories.find((c) => c.slug === slug)?.label ?? slug;
 
   return (
-    <main>
-      <div className="relative overflow-hidden border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/blog-section-bg.jpg')" }}
-        />
-        {/* light, low-contrast abstract texture — soft scrim back to --bg2 so
-            heading/filter text stays readable, same treatment as the Practices
-            grid background */}
-        <div className="absolute inset-0 bg-[var(--bg2)]/75" />
+    <main className="relative">
+      <div
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/blog-section-bg.jpg')" }}
+      />
+      {/* light, low-contrast abstract texture spans the whole blog page (header
+          + the article-links grid below it) — soft scrim back to --bg2 so
+          heading/filter/card text stays readable, same treatment as the
+          Practices grid background */}
+      <div className="fixed inset-0 -z-10 bg-[var(--bg2)]/80" />
 
-        <div className="relative z-10">
-          <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-            {t('lbl')}
-          </div>
-          <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
-            {t('title')}
-          </h1>
-          <div className="divider" />
-          <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
-            {t('sub')}
-          </p>
+      <div className="border-b-hair px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+        <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+          {t('lbl')}
+        </div>
+        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+          {t('title')}
+        </h1>
+        <div className="divider" />
+        <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
+          {t('sub')}
+        </p>
 
-          <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-2">
+          <Link
+            href="/blog"
+            className={`border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+              !category
+                ? 'bg-[var(--ink)] text-[var(--wh)]'
+                : 'text-[var(--ink3)] hover:text-[var(--ink)]'
+            }`}
+            style={{ borderColor: !category ? 'var(--ink)' : 'var(--b)' }}
+          >
+            {t('filterAll')}
+          </Link>
+          {categories.map((c) => (
             <Link
-              href="/blog"
-              className={`border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
-                !category
+              key={c.slug}
+              href={`/blog?category=${c.slug}`}
+              className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+                category === c.slug
                   ? 'bg-[var(--ink)] text-[var(--wh)]'
                   : 'text-[var(--ink3)] hover:text-[var(--ink)]'
               }`}
-              style={{ borderColor: !category ? 'var(--ink)' : 'var(--b)' }}
+              style={{ borderColor: category === c.slug ? 'var(--ink)' : 'var(--b)' }}
             >
-              {t('filterAll')}
+              {c.label}
             </Link>
-            {categories.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/blog?category=${c.slug}`}
-                className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
-                  category === c.slug
-                    ? 'bg-[var(--ink)] text-[var(--wh)]'
-                    : 'text-[var(--ink3)] hover:text-[var(--ink)]'
-                }`}
-                style={{ borderColor: category === c.slug ? 'var(--ink)' : 'var(--b)' }}
-              >
-                {c.label}
-              </Link>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
 
