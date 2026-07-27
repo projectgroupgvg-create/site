@@ -55,7 +55,7 @@ export default async function BlogArchivePage({
       <div className="relative overflow-hidden border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/blog-section-bg.jpg')" }}
+          style={{ backgroundImage: "url('/blog-section-bg-v2.jpg')" }}
         />
         {/* light, low-contrast abstract texture — soft scrim back to --bg2 so
             heading/filter text stays readable, same treatment as the Practices
