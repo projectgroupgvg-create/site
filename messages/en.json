@@ -340,7 +340,8 @@
           "FATF's seventh targeted update does not create a standalone new crypto business regulatory regime, but confirms the general direction of AML/CFT requirements: from formal adoption of rules to verification of their practical implementation. For businesses, the key factor is no longer just having internal policies in place, but the ability to demonstrate that procedures actually work and are technically compatible with regulated counterparties.",
           "Disclaimer. This material is of a general informational and analytical nature, does not constitute individual legal advice, and does not take into account the specifics of a particular jurisdiction, business model, or transaction.",
           "Sources: FATF — Seventh Targeted Update on Implementation of the FATF Standards on Virtual Assets/VASPs (16 July 2026); FATF — The FATF Recommendations; Regulation (EU) 2023/1113 on information accompanying transfers of funds and certain crypto-assets; FinCEN — Funds “Travel” Regulations: Questions & Answers; FATF — Jurisdictions under Increased Monitoring (19 June 2026); FATF — High-Risk Jurisdictions subject to a Call for Action (19 June 2026); Verkhovna Rada of Ukraine — Draft Law No. 10225-d record card; Council of Europe — MONEYVAL: Ukraine; Chainalysis — 2026 Crypto Crime Report: Scams."
-        ]
+        ],
+        "mainImage": "/blog-fatf-banner.jpg"
       },
       {
         "slug": "defi-shakhraystvo-povernennya-koshtiv",
@@ -379,7 +380,8 @@
           "The cases of 2024–2026 show that a decentralised architecture does not eliminate the possibility of judicial protection, but significantly complicates it. What matters most is precisely identifying the mechanism of the incident, preserving digital evidence, rapid asset tracing, the correct choice of defendant and jurisdiction, and the existence of a person or infrastructure capable of enforcing a court order.",
           "Disclaimer. This material is of a purely general informational and analytical nature, does not constitute individual legal advice, and contains no guarantee of digital asset recovery. The legal assessment depends on the facts of the specific case, the applicable law, and the jurisdiction.",
           "Sources: Chainalysis — Inside the KelpDAO Bridge Exploit (23 April 2026); Arbitrum Foundation Forum — Constitutional AIP: Approve Release of Frozen ETH; CoinDesk — Aave launches binding Arbitrum vote to move disputed ETH (12 May 2026); CFTC — Default judgment against Ooki DAO (9 June 2023); CFTC — Orders against Opyn, ZeroEx and Deridex (7 September 2023); Samuels v. Lido DAO, order of 18 November 2024; Kim et al. v. Railgun DAO, D.D.C., No. 1:26-cv-00179; Law Commission — Property (Digital Assets etc) Act 2025 received Royal Assent; Wilden v. Person Unknown and Huobi Global SA [2026] EWHC 1355 (KB); Ping Fai Yuen v. Fun Yung Li & Anor [2026] EWHC 532 (KB); Civil Code of Ukraine, Article 179-1; Law of Ukraine “On Virtual Assets” No. 2074-IX; Verkhovna Rada of Ukraine — Draft Law No. 10225-d record card."
-        ]
+        ],
+        "mainImage": "/blog-defi-banner.jpg"
       },
       {
         "slug": "st-209-praktyka-zahystu",

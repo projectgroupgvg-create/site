@@ -340,7 +340,8 @@
           "La septième mise à jour ciblée du GAFI ne crée pas de nouveau régime réglementaire autonome pour les entreprises crypto, mais confirme l'orientation générale des exigences AML/CFT : de l'adoption formelle de règles à la vérification de leur mise en œuvre pratique. Pour les entreprises, l'enjeu clé n'est plus seulement de disposer de politiques internes, mais de démontrer que les procédures fonctionnent réellement et qu'elles sont techniquement compatibles avec les contreparties réglementées.",
           "Avertissement. Ce document a un caractère général d'information et d'analyse, ne constitue pas un conseil juridique individuel et ne tient pas compte des particularités d'une juridiction, d'un modèle d'affaires ou d'une opération donnés.",
           "Sources : GAFI — Seventh Targeted Update on Implementation of the FATF Standards on Virtual Assets/VASPs (16 juillet 2026) ; GAFI — The FATF Recommendations ; règlement (UE) 2023/1113 sur les informations accompagnant les transferts de fonds et de certains crypto-actifs ; FinCEN — Funds « Travel » Regulations : Questions & Answers ; GAFI — Jurisdictions under Increased Monitoring (19 juin 2026) ; GAFI — High-Risk Jurisdictions subject to a Call for Action (19 juin 2026) ; Verkhovna Rada d'Ukraine — fiche du projet de loi n° 10225-d ; Conseil de l'Europe — MONEYVAL : Ukraine ; Chainalysis — 2026 Crypto Crime Report: Scams."
-        ]
+        ],
+        "mainImage": "/blog-fatf-banner.jpg"
       },
       {
         "slug": "defi-shakhraystvo-povernennya-koshtiv",
@@ -379,7 +380,8 @@
           "Les affaires des années 2024–2026 montrent qu'une architecture décentralisée n'exclut pas la protection judiciaire, mais la complique sensiblement. Sont déterminants la détermination précise du mécanisme de l'incident, la préservation des preuves numériques, le traçage rapide des actifs, le choix correct du défendeur et de la juridiction, ainsi que l'existence d'une personne ou d'une infrastructure capable de faire exécuter une décision de justice.",
           "Avertissement. Ce document a un caractère strictement général d'information et d'analyse, ne constitue pas un conseil juridique individuel et ne comporte aucune garantie de récupération des actifs numériques. L'appréciation juridique dépend des faits de l'espèce, du droit applicable et de la juridiction compétente.",
           "Sources : Chainalysis — Inside the KelpDAO Bridge Exploit (23 avril 2026) ; Arbitrum Foundation Forum — Constitutional AIP: Approve Release of Frozen ETH ; CoinDesk — Aave launches binding Arbitrum vote to move disputed ETH (12 mai 2026) ; CFTC — Default judgment against Ooki DAO (9 juin 2023) ; CFTC — Orders against Opyn, ZeroEx and Deridex (7 septembre 2023) ; Samuels v. Lido DAO, ordonnance du 18 novembre 2024 ; Kim et al. v. Railgun DAO, D.D.C., n° 1:26-cv-00179 ; Law Commission — Property (Digital Assets etc) Act 2025 received Royal Assent ; Wilden v. Person Unknown and Huobi Global SA [2026] EWHC 1355 (KB) ; Ping Fai Yuen v. Fun Yung Li & Anor [2026] EWHC 532 (KB) ; Code civil d'Ukraine, article 179-1 ; loi d'Ukraine « relative aux actifs virtuels » n° 2074-IX ; Verkhovna Rada d'Ukraine — fiche du projet de loi n° 10225-d."
-        ]
+        ],
+        "mainImage": "/blog-defi-banner.jpg"
       },
       {
         "slug": "st-209-praktyka-zahystu",
