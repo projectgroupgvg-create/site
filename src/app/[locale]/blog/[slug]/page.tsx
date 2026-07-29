@@ -8,9 +8,10 @@ import { Link } from '@/i18n/navigation';
 import { getPostBySlug, type FallbackPost } from '@/lib/blog';
 import { routing } from '@/i18n/routing';
 import { blogFallbackSlugs as fallbackSlugs } from '@/data/blogSlugs';
-import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import { buildAlternates, buildOpenGraph, localizedUrl } from '@/lib/metadata';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
+import ShareButtons from '@/components/ShareButtons';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -141,6 +142,8 @@ export default async function BlogPostPage({
             <PortableText value={post.body as Parameters<typeof PortableText>[0]['value']} />
           </div>
         ) : null}
+
+        <ShareButtons url={localizedUrl(locale, `/blog/${slug}`)} title={post.title} />
       </article>
     </main>
   );

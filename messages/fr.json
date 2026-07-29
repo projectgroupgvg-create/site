@@ -906,5 +906,10 @@
     "contactLabel": "Contact",
     "messageLabel": "Message",
     "note": "Le déchiffrement s'effectue entièrement sur votre appareil — rien n'est envoyé nulle part."
+  },
+  "Share": {
+    "label": "Partager",
+    "copied": "Lien copié",
+    "instagramHint": "Copier le lien pour Instagram"
   }
 }

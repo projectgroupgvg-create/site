@@ -906,5 +906,10 @@
     "contactLabel": "Contact",
     "messageLabel": "Message",
     "note": "Decryption happens entirely on your device — nothing is sent anywhere."
+  },
+  "Share": {
+    "label": "Share",
+    "copied": "Link copied",
+    "instagramHint": "Copy link for Instagram"
   }
 }

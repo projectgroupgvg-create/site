@@ -906,5 +906,10 @@
     "contactLabel": "Kontakt",
     "messageLabel": "Nachricht",
     "note": "Die Entschlüsselung erfolgt vollständig auf Ihrem Gerät — es wird nichts gesendet."
+  },
+  "Share": {
+    "label": "Teilen",
+    "copied": "Link kopiert",
+    "instagramHint": "Link für Instagram kopieren"
   }
 }
