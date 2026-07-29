@@ -124,6 +124,40 @@
         ]
       },
       {
+        "num": "06",
+        "title": "Droit foncier",
+        "desc": "Accompagnement des opérations foncières, protection du droit de propriété et d'usage, litiges relatifs au bail, aux parts foncières et à l'attribution de parcelles.",
+        "intro": [
+          "Nous accompagnons les opérations foncières à chaque étape — de la vérification du statut juridique et de l'historique d'une parcelle à l'enregistrement des droits et à la défense des intérêts dans les litiges fonciers.",
+          "L'équipe de Gangan & Partners possède une expérience aussi bien auprès de propriétaires fonciers privés que d'entreprises devant sécuriser des droits fonciers pour des projets d'investissement ou d'infrastructure."
+        ],
+        "services": [
+          "Vérification du statut juridique et de l'historique d'une parcelle (due diligence)",
+          "Accompagnement de l'achat, de la vente et de la location de terrains",
+          "Protection du droit de propriété et d'usage du foncier",
+          "Litiges relatifs aux limites, à l'occupation illégale et aux parts foncières",
+          "Changement d'affectation et attribution de parcelles",
+          "Représentation devant les tribunaux dans les litiges fonciers"
+        ]
+      },
+      {
+        "num": "07",
+        "title": "Droit réglementaire",
+        "desc": "Accompagnement des relations des entreprises avec les régulateurs : agrément, conformité, contrôles et contestation des décisions des autorités de surveillance de l'État.",
+        "intro": [
+          "Nous aidons les entreprises à construire leurs relations avec les régulateurs — de l'obtention de licences et d'autorisations à l'accompagnement des contrôles et à la contestation des décisions des autorités de surveillance.",
+          "Nous portons une attention particulière aux secteurs financier et technologique, où les exigences réglementaires évoluent le plus rapidement et où le coût d'une erreur est le plus élevé."
+        ],
+        "services": [
+          "Obtention de licences et de documents d'autorisation",
+          "Élaboration et mise en œuvre de procédures de conformité",
+          "Accompagnement des contrôles réglementaires",
+          "Contestation des décisions, injonctions et sanctions des autorités de surveillance",
+          "Analyse des évolutions réglementaires et adaptation des processus d'entreprise",
+          "Interaction avec la BNU, la NSSMC et d'autres régulateurs"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Enquêtes transnationales",
         "desc": "Affaires comportant un élément international : extradition, entraide judiciaire internationale, enquêtes sur les crimes financiers.",

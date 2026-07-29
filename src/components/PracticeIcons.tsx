@@ -163,12 +163,39 @@ export function AdministrativeLawIcon({ className }: IconProps) {
   );
 }
 
+export function LandLawIcon({ className }: IconProps) {
+  const g = 'pmGold-land';
+  return (
+    <Base id={g} className={className}>
+      <path d="M4 27 H28" stroke="var(--ink3)" strokeWidth="1.5" strokeLinecap="round" />
+      <rect x="7" y="10.5" width="18" height="16.5" stroke="var(--ink3)" strokeWidth="1.4" />
+      <path d="M7 17.2 H25 M13.7 10.5 V27 M20.3 10.5 V27" stroke="var(--ink3)" strokeWidth="1" />
+      <path d="M16 4 L20 10.5 H12 Z" fill="none" stroke={`url(#${g})`} strokeWidth="1.6" strokeLinejoin="round" />
+      <circle cx="16" cy="4" r="1" fill="#c9a227" />
+    </Base>
+  );
+}
+
+export function RegulatoryLawIcon({ className }: IconProps) {
+  const g = 'pmGold-regulatory';
+  return (
+    <Base id={g} className={className}>
+      <rect x="8" y="4" width="16" height="24" rx="2" stroke="var(--ink3)" strokeWidth="1.5" />
+      <path d="M12 10 H20 M12 14.5 H20 M12 19 H17" stroke="var(--ink3)" strokeWidth="1.1" strokeLinecap="round" />
+      <circle cx="21" cy="23" r="5" fill="var(--bgc)" stroke={`url(#${g})`} strokeWidth="1.6" />
+      <path d="M18.7 23 L20.3 24.6 L23.5 21.2" stroke={`url(#${g})`} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </Base>
+  );
+}
+
 export const PRACTICE_ICONS: Record<PracticeSlug, (props: IconProps) => JSX.Element> = {
   'criminal-defense': CriminalDefenseIcon,
   'civil-law': CivilLawIcon,
   'commercial-law': CommercialLawIcon,
   'antitrust-law': AntitrustLawIcon,
   'administrative-law': AdministrativeLawIcon,
+  'land-law': LandLawIcon,
+  'regulatory-law': RegulatoryLawIcon,
   'transnational-investigations': TransnationalIcon,
   'crypto-fraud': CryptoFraudIcon,
   'aml-compliance': AmlComplianceIcon,

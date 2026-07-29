@@ -124,6 +124,40 @@
         ]
       },
       {
+        "num": "06",
+        "title": "Agrarrecht",
+        "desc": "Begleitung von Grundstücksgeschäften, Schutz des Eigentums- und Nutzungsrechts, Streitigkeiten über Pacht, Flächenanteile und die Zuteilung von Grundstücken.",
+        "intro": [
+          "Wir begleiten Grundstücksgeschäfte in jeder Phase — von der Prüfung des rechtlichen Status und der Historie eines Grundstücks bis zur Eintragung von Rechten und der Vertretung von Interessen in Grundstücksstreitigkeiten.",
+          "Das Team von Gangan & Partners verfügt über Erfahrung sowohl mit privaten Grundeigentümern als auch mit Unternehmen, die Landrechte für Investitions- oder Infrastrukturprojekte sichern müssen."
+        ],
+        "services": [
+          "Prüfung des rechtlichen Status und der Historie eines Grundstücks (Due Diligence)",
+          "Begleitung von Kauf, Verkauf und Pacht von Grundstücken",
+          "Schutz des Eigentums- und Nutzungsrechts an Grundstücken",
+          "Streitigkeiten über Grenzen, unbefugte Inanspruchnahme und Flächenanteile",
+          "Änderung der Nutzungsart und Zuteilung von Grundstücken",
+          "Vertretung vor Gericht in Grundstücksstreitigkeiten"
+        ]
+      },
+      {
+        "num": "07",
+        "title": "Aufsichtsrecht",
+        "desc": "Begleitung der Interaktion von Unternehmen mit Aufsichtsbehörden: Lizenzierung, Compliance, Prüfungen und Anfechtung von Entscheidungen staatlicher Aufsichtsorgane.",
+        "intro": [
+          "Wir helfen Unternehmen, Beziehungen zu Aufsichtsbehörden aufzubauen — von der Erlangung von Lizenzen und Genehmigungen über die Begleitung von Prüfungen bis zur Anfechtung von Entscheidungen der Aufsichtsorgane.",
+          "Besondere Aufmerksamkeit widmen wir dem Finanz- und Technologiesektor, in denen sich regulatorische Anforderungen am schnellsten ändern und der Preis eines Fehlers am höchsten ist."
+        ],
+        "services": [
+          "Erlangung von Lizenzen und Genehmigungsdokumenten",
+          "Entwicklung und Einführung von Compliance-Verfahren",
+          "Begleitung von Prüfungen durch Aufsichtsbehörden",
+          "Anfechtung von Entscheidungen, Anordnungen und Sanktionen der Aufsichtsorgane",
+          "Analyse regulatorischer Änderungen und Anpassung von Geschäftsprozessen",
+          "Interaktion mit der Nationalbank, der Wertpapier- und Börsenaufsicht und anderen Regulierungsbehörden"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Transnationale Ermittlungen",
         "desc": "Fälle mit internationalem Bezug: Auslieferung, internationale Rechtshilfe, Ermittlungen zu Finanzdelikten.",

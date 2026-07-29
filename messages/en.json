@@ -124,6 +124,40 @@
         ]
       },
       {
+        "num": "06",
+        "title": "Land Law",
+        "desc": "Support for land transactions, protection of ownership and use rights, and disputes over leases, land shares, and land allocation.",
+        "intro": [
+          "We support land transactions at every stage — from verifying a parcel's legal status and history to registering rights and defending interests in land disputes.",
+          "The Gangan & Partners team has experience working with both private landowners and businesses that need to secure land rights for investment or infrastructure projects."
+        ],
+        "services": [
+          "Verification of a land parcel's legal status and history (due diligence)",
+          "Support for the purchase, sale, and lease of land",
+          "Protection of ownership and use rights over land",
+          "Disputes over boundaries, unlawful occupation, and land shares",
+          "Change of designated use and allocation of parcels",
+          "Representation in courts in land disputes"
+        ]
+      },
+      {
+        "num": "07",
+        "title": "Regulatory Law",
+        "desc": "Support for business interaction with regulators: licensing, compliance, inspections, and challenging decisions of state supervisory authorities.",
+        "intro": [
+          "We help companies build relationships with regulators — from obtaining licences and permits to supporting inspections and challenging decisions of supervisory authorities.",
+          "We pay particular attention to the financial and technology sectors, where regulatory requirements change fastest and the cost of a mistake is highest."
+        ],
+        "services": [
+          "Obtaining licences and permitting documents",
+          "Developing and implementing compliance procedures",
+          "Support during regulatory inspections",
+          "Challenging decisions, orders, and sanctions of supervisory authorities",
+          "Analysis of regulatory changes and adaptation of business processes",
+          "Interaction with the NBU, the NSSMC, and other regulators"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Transnational Investigations",
         "desc": "Cases with an international element: extradition, mutual legal assistance, investigation of financial crimes.",
