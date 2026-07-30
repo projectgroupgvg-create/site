@@ -54,10 +54,11 @@ export default async function NewsArchivePage({
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/news-section-bg.jpg')" }}
         />
-        {/* this photo has genuinely dark areas (not just a light texture), so a
-            stronger scrim than the Blog/Team pages is needed to keep the
-            heading/filter text readable */}
-        <div className="absolute inset-0 bg-[var(--bg2)]/93" />
+        {/* Explicit rgba (not a Tailwind opacity modifier on the --bg2 CSS var,
+            which silently fails to apply since --bg2 is itself a full rgba()
+            string, not bare "R G B"). This photo has genuinely dark areas, so
+            a strong, reliably-applied scrim is needed for text readability. */}
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(250, 247, 242, 0.93)' }} />
 
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
