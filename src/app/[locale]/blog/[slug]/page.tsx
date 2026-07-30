@@ -130,7 +130,12 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      <article className="mx-auto max-w-[1320px] bg-white px-6 py-16 sm:px-11">
+      <article
+        className={`relative z-10 mx-auto max-w-[1320px] bg-white px-6 py-16 sm:px-11 ${
+          post.mainImage ? 'rounded-t-lg shadow-[0_-10px_28px_rgba(0,0,0,0.1)]' : ''
+        }`}
+        style={post.mainImage ? { marginTop: '-1cm' } : undefined}
+      >
         {post.source === 'fallback' && Array.isArray(post.body) ? (
           (post.body as string[]).map((p, i) => (
             <p key={i} className="mb-5 text-justify text-[15.5px] leading-[1.95] text-[var(--ink)]">
