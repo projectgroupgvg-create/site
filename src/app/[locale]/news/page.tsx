@@ -54,9 +54,10 @@ export default async function NewsArchivePage({
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/news-section-bg.jpg')" }}
         />
-        {/* light, low-contrast abstract photo — soft scrim back to --bg2 so
-            heading/filter text stays readable, same treatment as the Blog page */}
-        <div className="absolute inset-0 bg-[var(--bg2)]/85" />
+        {/* this photo has genuinely dark areas (not just a light texture), so a
+            stronger scrim than the Blog/Team pages is needed to keep the
+            heading/filter text readable */}
+        <div className="absolute inset-0 bg-[var(--bg2)]/93" />
 
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
