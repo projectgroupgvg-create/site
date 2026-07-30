@@ -49,44 +49,54 @@ export default async function NewsArchivePage({
 
   return (
     <main>
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-          {t('lbl')}
-        </div>
-        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
-          {t('title')}
-        </h1>
-        <div className="divider" />
-        <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
-          {t('sub')}
-        </p>
+      <div className="relative overflow-hidden border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/news-section-bg.jpg')" }}
+        />
+        {/* light, low-contrast abstract photo — soft scrim back to --bg2 so
+            heading/filter text stays readable, same treatment as the Blog page */}
+        <div className="absolute inset-0 bg-[var(--bg2)]/85" />
 
-        <div className="mt-8 flex flex-wrap gap-2">
-          <Link
-            href="/news"
-            className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
-              !type
-                ? 'bg-[var(--ink)] text-[var(--wh)]'
-                : 'text-[var(--ink3)] hover:text-[var(--ink)]'
-            }`}
-            style={{ borderColor: !type ? 'var(--ink)' : 'var(--b)' }}
-          >
-            {t('filterAll')}
-          </Link>
-          {types.map((tItem) => (
+        <div className="relative z-10">
+          <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
+            {t('lbl')}
+          </div>
+          <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+            {t('title')}
+          </h1>
+          <div className="divider" />
+          <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
+            {t('sub')}
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-2">
             <Link
-              key={tItem.slug}
-              href={`/news?type=${tItem.slug}`}
+              href="/news"
               className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
-                type === tItem.slug
+                !type
                   ? 'bg-[var(--ink)] text-[var(--wh)]'
                   : 'text-[var(--ink3)] hover:text-[var(--ink)]'
               }`}
-              style={{ borderColor: type === tItem.slug ? 'var(--ink)' : 'var(--b)' }}
+              style={{ borderColor: !type ? 'var(--ink)' : 'var(--b)' }}
             >
-              {tItem.label}
+              {t('filterAll')}
             </Link>
-          ))}
+            {types.map((tItem) => (
+              <Link
+                key={tItem.slug}
+                href={`/news?type=${tItem.slug}`}
+                className={`rounded-sm border-hair px-3.5 py-2 text-[11px] uppercase tracking-[0.08em] transition-colors ${
+                  type === tItem.slug
+                    ? 'bg-[var(--ink)] text-[var(--wh)]'
+                    : 'text-[var(--ink3)] hover:text-[var(--ink)]'
+                }`}
+                style={{ borderColor: type === tItem.slug ? 'var(--ink)' : 'var(--b)' }}
+              >
+                {tItem.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
