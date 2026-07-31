@@ -6,16 +6,20 @@ import { Link } from '@/i18n/navigation';
 export type HeroNewsItem = {
   slug: string;
   title: string;
+  excerpt?: string;
   eyebrow?: string;
 };
 
 /**
- * Hero background photo (static — pass a single image) plus a slow, soft
- * crossfading caption cycling through the firm's latest news items, styled
- * like a law-firm carousel slide: small eyebrow label, headline-style link,
- * separate "read more" line. The caption fade is deliberately gentle and
- * unhurried (long hold, slow ease crossfade) rather than snappy. Falls back
- * gracefully to nothing shown if no news items are available.
+ * Hero background photos crossfade slowly through a small set of real
+ * images, in sync with a caption cycling through the firm's latest news
+ * items — styled like a law-firm carousel slide (small eyebrow/category
+ * label, large multi-line headline, short excerpt, separate "read more"
+ * link), bottom-left aligned, similar to lw.com's homepage slider. Both the
+ * photo crossfade and the caption fade are deliberately slow and soft (long
+ * hold, gentle ease) rather than snappy. All stacked items share the same
+ * CSS grid cell so the caption block's height can vary per item (headlines
+ * wrap to different numbers of lines) without an explicit fixed height.
  */
 export default function HeroRotator({
   images,
@@ -53,29 +57,36 @@ export default function HeroRotator({
       ))}
 
       {newsItems.length > 0 && (
-        <div className="absolute bottom-24 left-1/2 z-10 w-full max-w-[860px] -translate-x-1/2 px-6 text-center sm:bottom-28">
-          <div className="relative h-[68px] sm:h-[60px]">
-            {newsItems.map((item, i) => (
-              <Link
-                key={item.slug}
-                href={`/news/${item.slug}`}
-                aria-hidden={i !== index}
-                tabIndex={i === index ? 0 : -1}
-                className="group absolute inset-x-0 top-0 flex flex-col items-center gap-1.5 transition-opacity duration-[1800ms] ease-in-out"
-                style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
-              >
-                <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
-                  {item.eyebrow ?? label}
+        <div className="absolute bottom-16 left-6 z-10 grid max-w-[620px] text-left sm:bottom-20 sm:left-12">
+          {newsItems.map((item, i) => (
+            <Link
+              key={item.slug}
+              href={`/news/${item.slug}`}
+              aria-hidden={i !== index}
+              tabIndex={i === index ? 0 : -1}
+              className="group transition-opacity duration-[1800ms] ease-in-out"
+              style={{
+                gridArea: '1 / 1',
+                opacity: i === index ? 1 : 0,
+                pointerEvents: i === index ? 'auto' : 'none',
+              }}
+            >
+              <span className="mb-3 block text-[10px] font-semibold uppercase tracking-[0.32em] text-[var(--s3)]">
+                {item.eyebrow ?? label}
+              </span>
+              <span className="mb-4 block font-serif text-[clamp(20px,3vw,32px)] font-semibold leading-[1.2] text-[var(--ink)]">
+                {item.title}
+              </span>
+              {item.excerpt && (
+                <span className="mb-5 line-clamp-2 block max-w-[520px] text-[13.5px] leading-[1.6] text-[var(--ink3)]">
+                  {item.excerpt}
                 </span>
-                <span className="line-clamp-1 max-w-full font-serif text-[14px] font-semibold leading-tight text-[var(--ink)] sm:text-[17px]">
-                  {item.title}
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors group-hover:text-[var(--s3)]">
-                  {readMoreLabel} →
-                </span>
-              </Link>
-            ))}
-          </div>
+              )}
+              <span className="inline-block text-[10.5px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-colors group-hover:text-[var(--s3)]">
+                {readMoreLabel} →
+              </span>
+            </Link>
+          ))}
         </div>
       )}
     </>

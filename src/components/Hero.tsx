@@ -5,11 +5,10 @@ import HeroVideo from './HeroVideo';
 import HeroRotator from './HeroRotator';
 import { getAllNews, type FallbackNewsItem } from '@/lib/news';
 
-// Reverted to the original office photo per the user's request (was
-// swapped for procedurally-generated art briefly — they preferred the
-// real photo back). Contrast for the type is handled by the darker scrim
-// below rather than by changing the photo itself.
-const HERO_BACKGROUNDS = ['/hero-bg-v2.jpg'];
+// Two real photos (no stock/generated art) crossfade slowly behind the
+// hero, each tied to one of the firm's latest news items. Contrast for the
+// type is handled by the darker scrim below rather than by the photo choice.
+const HERO_BACKGROUNDS = ['/hero-bg-v2.jpg', '/hero-bg.jpg'];
 
 // Hero runs light-on-dark locally, independent of the site's light theme —
 // standard treatment for a photo hero. These CSS custom properties are
@@ -29,20 +28,28 @@ export default async function Hero() {
   const t = await getTranslations('Hero');
   const newsT = await getTranslations('News');
   const fallbackNews = newsT.raw('fallbackNews') as FallbackNewsItem[];
+  const newsTypes = newsT.raw('types') as { slug: string; label: string }[];
+  const typeLabel = (slug: string) =>
+    newsTypes.find((nt) => nt.slug === slug)?.label ?? t('latestLabel');
   const latestNews = (await getAllNews(locale, fallbackNews))
     .slice(0, 3)
-    .map((n) => ({ slug: n.slug, title: n.title }));
+    .map((n) => ({
+      slug: n.slug,
+      title: n.title,
+      excerpt: n.excerpt,
+      eyebrow: typeLabel(n.newsType),
+    }));
   const readMoreLabel = t('readMore');
 
   return (
     <section
-      className="relative flex min-h-[calc(100vh-4cm)] items-center justify-center overflow-hidden py-28"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden py-28"
       style={heroLocalVars}
     >
-      {/* static office photo background; the caption below (eyebrow +
-          headline + read-more link) cycles slowly through the firm's 3
-          latest news items with a soft, unhurried crossfade — modeled on
-          large law-firm carousel heroes (e.g. lw.com's homepage slider). */}
+      {/* two real photos crossfade slowly; the caption (eyebrow + headline +
+          excerpt + read-more link) cycles in sync through the firm's 3
+          latest news items — modeled on large law-firm carousel heroes
+          (e.g. lw.com's homepage slider). */}
       <HeroRotator
         images={HERO_BACKGROUNDS}
         newsItems={latestNews}
