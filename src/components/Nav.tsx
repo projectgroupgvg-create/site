@@ -38,6 +38,7 @@ export default function Nav() {
   }, [open]);
 
   return (
+    <>
     <nav className="sticky top-0 z-[100] flex h-16 items-center justify-between border-b-hair border-b border-b-[color:var(--b)] bg-[var(--bg)]/95 px-5 backdrop-blur-xl sm:px-8 lg:px-11">
       <Link href="/" className="flex items-center gap-3">
         <Image
@@ -115,11 +116,18 @@ export default function Nav() {
           )}
         </button>
       </div>
+    </nav>
 
-      {/* mobile menu overlay panel */}
-      {open && (
+    {/* mobile menu overlay panel — rendered as a sibling of <nav>, not a
+        child: <nav> has backdrop-blur (a CSS filter), and any ancestor with
+        a filter establishes a new containing block for position:fixed
+        descendants, which was clipping this panel to the navbar's own
+        64px-tall box instead of the viewport. Also needs a solid opaque
+        background — the shared --bg/--bg2/--bg3 tokens are all translucent
+        overlay tints (meant to sit over a photo), not real page backgrounds. */}
+    {open && (
         <div
-          className="fixed inset-x-0 bottom-0 top-16 z-[99] overflow-y-auto bg-[var(--bg)] px-6 py-8 md:hidden"
+          className="fixed inset-x-0 bottom-0 top-16 z-[99] overflow-y-auto bg-[#faf8f4] px-6 py-8 md:hidden"
           style={{ borderTop: '1px solid var(--b)' }}
         >
           <ul className="flex flex-col gap-1">
@@ -159,7 +167,7 @@ export default function Nav() {
             {t('cta')}
           </Link>
         </div>
-      )}
-    </nav>
+    )}
+    </>
   );
 }
