@@ -199,4 +199,12 @@ export const PRACTICE_ICONS: Record<PracticeSlug, (props: IconProps) => JSX.Elem
   'aml-compliance': AmlComplianceIcon,
   cybercrime: CybercrimeIcon,
   'blockchain-investigations': BlockchainInvestigationsIcon,
+  // New sub-practices reuse their parent's mark — these are never actually
+  // rendered today (PracticesGrid only looks up icons for the 5 top-level
+  // slugs), but PRACTICE_ICONS' Record type must stay exhaustive over
+  // PracticeSlug, so every slug needs an entry.
+  'property-rights-protection': CivilLawIcon,
+  'marital-property-division': CivilLawIcon,
+  'corporate-disputes': CommercialLawIcon,
+  'customs-disputes': AdministrativeLawIcon,
 };

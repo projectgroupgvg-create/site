@@ -24,15 +24,47 @@ export const criminalSubPracticeSlugs = [
   'blockchain-investigations',
 ] as const;
 
+// Same pattern as Criminal Defense's sub-practices, generalized to the other
+// top-level fields of law: each of these has its own full page at
+// /practices/<slug>, nested under a parent in the "other practices" pill
+// navigation (see getParentSlug in the [slug] page), but not listed a
+// second time as its own top-level grid card.
+export const civilSubPracticeSlugs = ['property-rights-protection', 'marital-property-division'] as const;
+export const commercialSubPracticeSlugs = ['corporate-disputes'] as const;
+export const administrativeSubPracticeSlugs = ['customs-disputes'] as const;
+
 // Canonical practice slugs — order matches the "list" array index in messages/*.json
 // (Practices.list[0] = criminal-defense, etc). Keep slugs locale-independent so URLs
-// stay stable across UA/EN/DE/FR.
+// stay stable across UA/EN/DE/FR. New sub-practice groups are appended at the
+// end (not interleaved) so existing indices never shift.
 export const practiceSlugs = [
   ...topLevelPracticeSlugs,
   ...criminalSubPracticeSlugs,
+  ...civilSubPracticeSlugs,
+  ...commercialSubPracticeSlugs,
+  ...administrativeSubPracticeSlugs,
 ] as const;
 
 export type PracticeSlug = (typeof practiceSlugs)[number];
+
+// Maps every top-level practice to its own sub-practices (empty array if it
+// has none, e.g. land-law). Used by the [slug] page to build the "other
+// practices" pill navigation generically instead of hardcoding just the
+// Criminal Defense case.
+export const subPracticesByParent: Record<(typeof topLevelPracticeSlugs)[number], readonly string[]> = {
+  'criminal-defense': criminalSubPracticeSlugs,
+  'civil-law': civilSubPracticeSlugs,
+  'commercial-law': commercialSubPracticeSlugs,
+  'administrative-law': administrativeSubPracticeSlugs,
+  'land-law': [],
+};
+
+export function getParentSlug(slug: string): (typeof topLevelPracticeSlugs)[number] | null {
+  for (const parent of topLevelPracticeSlugs) {
+    if (subPracticesByParent[parent].includes(slug)) return parent;
+  }
+  return null;
+}
 
 // Optional real photo per practice area — deliberately empty by default.
 // To add a photo: drop a real file into /public/practices/<slug>.jpg and add

@@ -8,7 +8,8 @@ import {
   practiceSlugs,
   practiceImages,
   topLevelPracticeSlugs,
-  criminalSubPracticeSlugs,
+  subPracticesByParent,
+  getParentSlug,
 } from '@/data/practices';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
@@ -90,24 +91,28 @@ export default async function PracticePage({
   const list = t.raw('list') as PracticeContent[];
   const practice = list[index];
 
-  // Scoped "other practices" links: Criminal Defense links to its own
-  // specializations as an independent sub-structure; each specialization
-  // links back to Criminal Defense plus its siblings; each of the other
-  // top-level fields of law links only to the other top-level fields — so a
-  // specialization never gets listed twice (as a field of law AND as a
-  // Criminal Defense sub-topic) and unrelated top-level fields don't cross-link.
+  // Scoped "other practices" links, generalized across every top-level field
+  // of law (not just Criminal Defense): a top-level page links to its own
+  // sub-practices if it has any, otherwise falls back to the other
+  // top-level fields; a sub-practice page links back to its parent plus its
+  // siblings. This keeps a specialization from ever being listed twice
+  // (once as a field of law, once as a sub-topic of its parent) and keeps
+  // unrelated top-level fields from cross-linking to each other's subs.
   const currentSlug = slug as (typeof practiceSlugs)[number];
-  const isCriminalMain = currentSlug === 'criminal-defense';
-  const isCriminalSub = (criminalSubPracticeSlugs as readonly string[]).includes(currentSlug);
+  const isTopLevel = (topLevelPracticeSlugs as readonly string[]).includes(currentSlug);
+  const parentSlug = isTopLevel ? null : getParentSlug(currentSlug);
 
   let othersSlugs: (typeof practiceSlugs)[number][];
-  if (isCriminalMain) {
-    othersSlugs = [...criminalSubPracticeSlugs];
-  } else if (isCriminalSub) {
+  if (isTopLevel) {
+    const subs = subPracticesByParent[currentSlug as (typeof topLevelPracticeSlugs)[number]];
+    othersSlugs = subs.length > 0
+      ? [...subs] as (typeof practiceSlugs)[number][]
+      : topLevelPracticeSlugs.filter((s) => s !== currentSlug);
+  } else if (parentSlug) {
     othersSlugs = [
-      'criminal-defense',
-      ...criminalSubPracticeSlugs.filter((s) => s !== currentSlug),
-    ];
+      parentSlug,
+      ...subPracticesByParent[parentSlug].filter((s) => s !== currentSlug),
+    ] as (typeof practiceSlugs)[number][];
   } else {
     othersSlugs = topLevelPracticeSlugs.filter((s) => s !== currentSlug);
   }
