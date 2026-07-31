@@ -21,6 +21,15 @@ type PracticeContent = {
   desc: string;
   intro: string[];
   services: string[];
+  // Optional richer content, supplied for some practices via SEO-authored
+  // copy. `pageH1`/`seoTitle` let the on-page heading and <title> tag differ
+  // from the short `title` used everywhere else (grid cards, breadcrumbs,
+  // cross-link pills) without changing those existing labels.
+  pageH1?: string;
+  seoTitle?: string;
+  scenariosLabel?: string;
+  sections?: { title: string; body: string[] }[];
+  faq?: { q: string; a: string }[];
 };
 
 // Practices with a supplied atmospheric photo get it as a header background
@@ -52,14 +61,15 @@ export async function generateMetadata({
   const list = t.raw('list') as PracticeContent[];
   const practice = list[index];
   const path = `/practices/${slug}`;
+  const metaTitle = practice.seoTitle ?? practice.pageH1 ?? practice.title;
   return {
-    title: practice.title,
+    title: metaTitle,
     description: practice.desc,
     alternates: buildAlternates(locale, path),
     openGraph: buildOpenGraph({
       locale,
       path,
-      title: practice.title,
+      title: metaTitle,
       description: practice.desc,
     }),
   };
@@ -103,6 +113,7 @@ export default async function PracticePage({
   }
 
   const others = othersSlugs.map((s) => ({ slug: s, ...list[practiceSlugs.indexOf(s)] }));
+  const h1 = practice.pageH1 ?? practice.title;
 
   return (
     <main>
@@ -110,7 +121,7 @@ export default async function PracticePage({
         data={buildServiceSchema({
           locale,
           path: `/practices/${slug}`,
-          name: practice.title,
+          name: h1,
           description: practice.desc,
         })}
       />
@@ -118,7 +129,7 @@ export default async function PracticePage({
         data={buildBreadcrumbSchema(locale, [
           { name: 'Gangan & Partners', path: '/' },
           { name: t('lbl'), path: '/#practices' },
-          { name: practice.title, path: `/practices/${slug}` },
+          { name: h1, path: `/practices/${slug}` },
         ])}
       />
       {(() => {
@@ -148,7 +159,7 @@ export default async function PracticePage({
                 {practice.num} / {t('lbl')}
               </div>
               <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
-                {practice.title}
+                {h1}
               </h1>
             </div>
           </div>
@@ -164,7 +175,7 @@ export default async function PracticePage({
               {practice.num} / {t('lbl')}
             </div>
             <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
-              {practice.title}
+              {h1}
             </h1>
           </div>
         );
@@ -209,7 +220,7 @@ export default async function PracticePage({
         ))}
 
         <h2 className="mb-4 mt-10 font-serif text-[22px] font-normal text-[var(--ink)]">
-          {t('servicesTitle')}
+          {practice.scenariosLabel ?? t('servicesTitle')}
         </h2>
         <ul className="mb-2">
           {practice.services.map((s) => (
@@ -223,6 +234,42 @@ export default async function PracticePage({
             </li>
           ))}
         </ul>
+
+        {practice.sections && practice.sections.length > 0 && (
+          <div className="mt-12">
+            <h2 className="mb-6 font-serif text-[22px] font-normal text-[var(--ink)]">
+              {t('servicesTitle')}
+            </h2>
+            <div className="space-y-8">
+              {practice.sections.map((s) => (
+                <div key={s.title}>
+                  <h3 className="mb-2 font-serif text-[16px] font-semibold text-[var(--ink)]">{s.title}</h3>
+                  {s.body.map((p, i) => (
+                    <p key={i} className="mb-2 text-[13.5px] leading-[1.85] text-[var(--ink2)]">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {practice.faq && practice.faq.length > 0 && (
+          <div className="mt-14 border-t-hair pt-10" style={{ borderColor: 'var(--b)' }}>
+            <h2 className="mb-6 font-serif text-[20px] font-normal text-[var(--ink)]">
+              Поширені запитання
+            </h2>
+            <div className="space-y-5">
+              {practice.faq.map((item) => (
+                <div key={item.q}>
+                  <div className="mb-1.5 text-[13.5px] font-semibold text-[var(--ink)]">{item.q}</div>
+                  <p className="text-[13.5px] leading-[1.8] text-[var(--ink3)]">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-14 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
           <div className="mb-4 font-serif text-[18px] font-semibold text-[var(--ink)]">
