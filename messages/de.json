@@ -499,20 +499,7 @@
         "label": "Mandate"
       }
     ],
-    "fallbackNews": [
-      {
-        "slug": "favorable-ruling-crypto-exchange-freeze",
-        "newsType": "deal",
-        "date": "Mai 2025",
-        "title": "Mandant erhält wieder Zugriff auf von einer Krypto-Börse eingefrorene Vermögenswerte",
-        "excerpt": "Das Team von Gangan & Partners erwirkte nach drei Monaten Verhandlungen mit einer internationalen Börse die Freigabe des Kontos eines Mandanten.",
-        "body": [
-          "Nach drei Monaten Verhandlungen und Beweisvorbereitung erwirkte das Team von Gangan & Partners die Freigabe des Krypto-Kontos eines Mandanten, das von einer internationalen Börse wegen des Verdachts einer Verbindung zu einem Betrugssystem eingefroren worden war.",
-          "Der Fall erforderte parallele Arbeit mit der Compliance-Abteilung der Börse sowie die Vorbereitung von Unterlagen zum Nachweis der legalen Herkunft der Gelder.",
-          "Details des Falls werden auf Wunsch des Mandanten nicht veröffentlicht."
-        ]
-      }
-    ]
+    "fallbackNews": []
   },
   "Team": {
     "lbl": "Team",

@@ -499,20 +499,7 @@
         "label": "Affaires"
       }
     ],
-    "fallbackNews": [
-      {
-        "slug": "favorable-ruling-crypto-exchange-freeze",
-        "newsType": "deal",
-        "date": "Mai 2025",
-        "title": "Un client récupère l'accès à des actifs bloqués par une plateforme d'échange crypto",
-        "excerpt": "L'équipe de Gangan & Partners a obtenu le déblocage du compte d'un client après trois mois de négociations avec une plateforme internationale.",
-        "body": [
-          "Après trois mois de négociations et de préparation des preuves, l'équipe de Gangan & Partners a obtenu le déblocage du compte crypto d'un client, gelé par une plateforme d'échange internationale en raison d'un soupçon de lien avec un système frauduleux.",
-          "L'affaire a nécessité un travail simultané avec le service de conformité de la plateforme et la préparation de documents attestant de l'origine légale des fonds.",
-          "Les détails de l'affaire ne sont pas divulgués à la demande du client."
-        ]
-      }
-    ]
+    "fallbackNews": []
   },
   "Team": {
     "lbl": "Équipe",
