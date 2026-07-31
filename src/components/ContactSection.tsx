@@ -2,14 +2,22 @@ import { useTranslations } from 'next-intl';
 
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? '';
 
+const phoneRaw = '+380965549847';
+
 export default function ContactSection() {
   const t = useTranslations('Contact');
 
   const items = [
     { icon: '✦', label: t('addrLabel'), value: t('addrValue') },
-    { icon: '✉', label: t('emailLabel'), value: 'gangan.partners@gmail.com' },
-    { icon: '✆', label: t('phoneLabel'), value: t('phoneValue') },
-    { icon: '◎', label: 'Telegram', value: '@gangan_law' },
+    { icon: '✉', label: t('emailLabel'), value: 'gangan.partners@gmail.com', href: 'mailto:gangan.partners@gmail.com' },
+    { icon: '✆', label: t('phoneLabel'), value: t('phoneValue'), href: `tel:${phoneRaw}` },
+    {
+      icon: 'WA',
+      label: 'WhatsApp',
+      value: t('phoneValue'),
+      href: `https://wa.me/${phoneRaw.replace('+', '')}`,
+    },
+    { icon: 'TG', label: 'Telegram', value: '@gangan_law', href: 'https://t.me/gangan_law' },
   ];
 
   return (
@@ -28,10 +36,18 @@ export default function ContactSection() {
           </p>
 
           <div className="flex flex-col gap-6">
-            {items.map((item) => (
-              <div key={item.label} className="flex items-start gap-5">
+            {items.map((item) => {
+              const Wrapper = item.href ? 'a' : 'div';
+              return (
+              <Wrapper
+                key={item.label}
+                {...(item.href
+                  ? { href: item.href, target: item.href.startsWith('http') ? '_blank' : undefined, rel: item.href.startsWith('http') ? 'noopener noreferrer' : undefined }
+                  : {})}
+                className={`flex items-start gap-5 ${item.href ? 'transition-colors hover:opacity-80' : ''}`}
+              >
                 <div
-                  className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-sm border-hair bg-[var(--wh)] text-[13px] text-[var(--s3)]"
+                  className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-sm border-hair bg-[var(--wh)] text-[10px] font-semibold text-[var(--s3)]"
                   style={{ borderColor: 'var(--b)' }}
                 >
                   {item.icon}
@@ -42,8 +58,9 @@ export default function ContactSection() {
                   </div>
                   <div className="text-[13.5px] text-[var(--ink)]">{item.value}</div>
                 </div>
-              </div>
-            ))}
+              </Wrapper>
+              );
+            })}
           </div>
         </div>
 

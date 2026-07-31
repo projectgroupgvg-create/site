@@ -67,9 +67,6 @@ export default async function AboutPage({
             {t('type')}
           </div>
           <div className="h-[1px] w-10 bg-[var(--s3)] opacity-70" />
-          <p className="mt-5 max-w-[520px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
-            {t('sub')}
-          </p>
         </div>
       </div>
 
@@ -111,7 +108,7 @@ export default async function AboutPage({
         <h2 className="mb-6 mt-14 font-serif text-[22px] font-semibold text-[var(--ink)]">
           {t('statsTitle')}
         </h2>
-        <div className="grid grid-cols-2 gap-5 rounded-lg border-hair p-7 sm:grid-cols-4" style={{ borderColor: 'var(--b)' }}>
+        <div className="grid grid-cols-1 gap-5 rounded-lg border-hair p-7 sm:grid-cols-3" style={{ borderColor: 'var(--b)' }}>
           {stats.map((s) => (
             <div key={s.label}>
               <div className="font-serif text-[28px] font-bold text-[var(--ink)]">{s.value}</div>

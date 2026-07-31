@@ -10,7 +10,6 @@ export default function AIConsultation() {
   const t = useTranslations('AI');
   const locale = useLocale();
   const greeting = t('greeting');
-  const tiers = t.raw('tiers') as { price: string; label: string }[];
   const topics = t.raw('topics') as string[];
   const topicPrompts = t.raw('topicPrompts') as string[];
 
@@ -19,7 +18,6 @@ export default function AIConsultation() {
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
-  const [selectedTier, setSelectedTier] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -70,40 +68,6 @@ export default function AIConsultation() {
           <p className="max-w-[460px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">
             {t('sub')}
           </p>
-
-          <div className="mt-10 rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
-            <div className="mb-3.5 text-[9px] font-semibold uppercase tracking-[0.28em] text-[var(--s3)]">
-              {t('payTitle')}
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {tiers.map((tier, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSelectedTier(i)}
-                  className={`min-w-[90px] flex-1 rounded-sm border-hair px-2 py-3 text-center text-[11px] text-[var(--ink2)] transition-colors ${
-                    selectedTier === i ? 'bg-[var(--bg2)]' : 'bg-[var(--wh)]'
-                  }`}
-                  style={{ borderColor: selectedTier === i ? 'var(--ink)' : 'var(--b)' }}
-                >
-                  <strong className="block font-serif text-[14.5px] font-bold text-[var(--ink)]">
-                    {tier.price}
-                  </strong>
-                  {tier.label}
-                </button>
-              ))}
-            </div>
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-              {['Visa', 'Mastercard', 'Apple Pay', 'LiqPay', 'SWIFT'].map((p) => (
-                <span
-                  key={p}
-                  className="rounded-sm border-hair bg-[var(--wh)] px-2.5 py-1 text-[10px] text-[var(--ink3)]"
-                  style={{ borderColor: 'var(--b)' }}
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
-          </div>
 
           <Link
             href="/intake"

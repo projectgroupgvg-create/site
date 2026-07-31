@@ -3,6 +3,10 @@
 export const newsFallbackSlugs = [
   'gangan-partners-launches-crypto-practice',
   'favorable-ruling-crypto-exchange-freeze',
-  'gangan-partners-recognized-emerging-firm',
   'new-partner-blockchain-investigations',
+  'new-expert-cybercrime',
+  'softened-preventive-measure-official-crimes',
+  'zurich-prosecutor-virtual-assets-advisory',
+  'nabu-sap-case-materials-200m-legalization',
+  'report-virtual-assets-cross-border-legal-risks',
 ] as const;

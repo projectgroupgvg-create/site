@@ -172,9 +172,6 @@ export default async function PracticePage({
 
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-5 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <div className="flex flex-wrap items-center gap-2.5">
-          <span className="mr-1 shrink-0 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
-            {t('moreTitle')}
-          </span>
           {others.map((o) => (
             <Link
               key={o.slug}

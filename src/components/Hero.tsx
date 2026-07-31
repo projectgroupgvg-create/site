@@ -1,7 +1,15 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import HeroVideo from './HeroVideo';
+import HeroRotator from './HeroRotator';
+import { getAllNews, type FallbackNewsItem } from '@/lib/news';
+
+const HERO_BACKGROUNDS = [
+  '/hero-bg-abstract-1.jpg',
+  '/hero-bg-abstract-2.jpg',
+  '/hero-bg-abstract-3.jpg',
+];
 
 // Hero runs light-on-dark locally, independent of the site's light theme —
 // standard treatment for a photo hero. These CSS custom properties are
@@ -16,22 +24,26 @@ const heroLocalVars = {
   '--bs': 'rgba(247,244,238,0.4)',
 } as CSSProperties;
 
-export default function Hero() {
-  const t = useTranslations('Hero');
+export default async function Hero() {
+  const locale = await getLocale();
+  const t = await getTranslations('Hero');
+  const newsT = await getTranslations('News');
+  const fallbackNews = newsT.raw('fallbackNews') as FallbackNewsItem[];
+  const latestNews = (await getAllNews(locale, fallbackNews))
+    .slice(0, 3)
+    .map((n) => ({ slug: n.slug, title: n.title }));
 
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden py-28"
+      className="relative flex min-h-[calc(100vh-4cm)] items-center justify-center overflow-hidden py-28"
       style={heroLocalVars}
     >
-      {/* photo hero: office at dusk overlooking the city. HeroVideo layers on
-          top and fades in automatically if a real video is later added at
-          /public/videos/hero.(webm|mp4) — otherwise this photo is the whole
-          background. */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg-v2.jpg')" }}
-      />
+      {/* rotating set of original, procedurally-generated abstract
+          backgrounds (no stock photography), each paired with one of the
+          firm's 3 latest news items. HeroVideo layers on top and fades in
+          automatically if a real video is later added at
+          /public/videos/hero.(webm|mp4). */}
+      <HeroRotator images={HERO_BACKGROUNDS} newsItems={latestNews} label={t('latestLabel')} />
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.75)] via-[rgba(10,8,6,0.45)] to-[rgba(10,8,6,0.55)]" />
       <HeroVideo />
 

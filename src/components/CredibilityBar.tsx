@@ -14,7 +14,7 @@ export default function CredibilityBar() {
       className="border-b-hair bg-[var(--bg3)]"
       style={{ borderColor: 'var(--b)' }}
     >
-      <div className="mx-auto grid max-w-[1100px] grid-cols-2 sm:grid-cols-4">
+      <div className="mx-auto grid max-w-[1100px] grid-cols-1 sm:grid-cols-3">
         {stats.map((stat, i) => (
           <div
             key={stat.label}

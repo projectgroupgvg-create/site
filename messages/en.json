@@ -25,7 +25,8 @@
     "titlePost": "business and cross-border investigations",
     "btn1": "Get a Consultation",
     "btn2": "Our Practices",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "latestLabel": "Latest news:"
   },
   "Practices": {
     "lbl": "Practices",
@@ -40,7 +41,7 @@
     "list": [
       {
         "num": "01",
-        "title": "Criminal Defense",
+        "title": "Criminal Law",
         "desc": "Defending suspects and defendants at every stage of criminal proceedings — from pre-trial investigation to appeal.",
         "intro": [
           "Gangan & Partners provides full-cycle defense in criminal proceedings — from the moment of detention or summons for questioning through to a final, legally binding verdict.",
@@ -503,7 +504,8 @@
         ],
         "mainImage": "/blog-phishing-banner.jpg"
       }
-    ]
+    ],
+    "authorLabel": "Author:"
   },
   "News": {
     "lbl": "News",
@@ -518,10 +520,6 @@
       {
         "slug": "firm-news",
         "label": "Firm News"
-      },
-      {
-        "slug": "award",
-        "label": "Awards"
       },
       {
         "slug": "deal",
@@ -551,17 +549,6 @@
           "After three months of negotiations and evidence preparation, the Gangan & Partners team secured the unblocking of a client's crypto account, which had been frozen by an international exchange over suspected links to a fraud scheme.",
           "The case required simultaneous work with the exchange's compliance department and preparation of documentation confirming the legitimate origin of the funds.",
           "Case details are withheld at the client's request."
-        ]
-      },
-      {
-        "slug": "gangan-partners-recognized-emerging-firm",
-        "newsType": "award",
-        "date": "April 2025",
-        "title": "Gangan & Partners Recognized as an Emerging Firm in Blockchain Law",
-        "excerpt": "An industry publication recognized the team for its distinctive approach to investigations at the intersection of criminal law and blockchain analytics.",
-        "body": [
-          "Gangan & Partners received recognition from an industry publication covering the Ukrainian legal market, in the category of emerging teams in the law of new technologies.",
-          "The jury's commentary highlighted the firm's unique combination of classic criminal practice with technical expertise in blockchain transaction analysis."
         ]
       },
       {
@@ -653,10 +640,6 @@
     "statsTitle": "By the Numbers",
     "stats": [
       {
-        "value": "150+",
-        "label": "Cases handled"
-      },
-      {
         "value": "15",
         "label": "Years of team experience"
       },
@@ -734,7 +717,7 @@
     "addrValue": "1 Stolychne Shose, Office P-4, Kyiv, 01013, Ukraine",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
-    "phoneValue": "+38 (050) 000-00-00",
+    "phoneValue": "+38 (096) 554-98-47",
     "formTitle": "Send an Inquiry",
     "formName": "Your name",
     "formPhone": "Phone or Telegram",

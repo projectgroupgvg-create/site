@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { hasCookieConsentDecision } from '@/lib/cookieConsent';
 
-const phoneRaw = '+380500000000';
+const phoneRaw = '+380965549847';
 const email = 'gangan.partners@gmail.com';
 const telegramHandle = 'gangan_law';
 

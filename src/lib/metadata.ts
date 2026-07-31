@@ -45,13 +45,24 @@ export function buildOpenGraph({
   title,
   description,
   type = 'website',
+  image,
 }: {
   locale: string;
   path: string;
   title: string;
   description: string;
   type?: 'website' | 'article';
+  // Absolute or root-relative image URL for this specific page (e.g. a blog
+  // post's own header photo). Falls back to the firm logo when not given, so
+  // link-preview cards for articles show the article's photo, not the logo.
+  image?: string | null;
 }) {
+  const resolvedImage = image
+    ? image.startsWith('http')
+      ? image
+      : `${siteUrl}${image}`
+    : `${siteUrl}/logo.jpg`;
+
   return {
     title,
     description,
@@ -61,10 +72,10 @@ export function buildOpenGraph({
     type,
     images: [
       {
-        url: `${siteUrl}/logo.jpg`,
-        width: 1000,
-        height: 1000,
-        alt: siteName,
+        url: resolvedImage,
+        width: image ? 1200 : 1000,
+        height: image ? 630 : 1000,
+        alt: title,
       },
     ],
   };
