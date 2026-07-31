@@ -56,6 +56,7 @@ const ukOnlySlugs = new Set([
   'marital-property-division',
   'corporate-disputes',
   'customs-disputes',
+  'land-allocation-registration',
 ]);
 
 export function generateStaticParams() {

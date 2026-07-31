@@ -32,6 +32,7 @@ export const criminalSubPracticeSlugs = [
 export const civilSubPracticeSlugs = ['property-rights-protection', 'marital-property-division'] as const;
 export const commercialSubPracticeSlugs = ['corporate-disputes'] as const;
 export const administrativeSubPracticeSlugs = ['customs-disputes'] as const;
+export const landSubPracticeSlugs = ['land-allocation-registration'] as const;
 
 // Canonical practice slugs — order matches the "list" array index in messages/*.json
 // (Practices.list[0] = criminal-defense, etc). Keep slugs locale-independent so URLs
@@ -43,6 +44,7 @@ export const practiceSlugs = [
   ...civilSubPracticeSlugs,
   ...commercialSubPracticeSlugs,
   ...administrativeSubPracticeSlugs,
+  ...landSubPracticeSlugs,
 ] as const;
 
 export type PracticeSlug = (typeof practiceSlugs)[number];
@@ -56,7 +58,7 @@ export const subPracticesByParent: Record<(typeof topLevelPracticeSlugs)[number]
   'civil-law': civilSubPracticeSlugs,
   'commercial-law': commercialSubPracticeSlugs,
   'administrative-law': administrativeSubPracticeSlugs,
-  'land-law': [],
+  'land-law': landSubPracticeSlugs,
 };
 
 export function getParentSlug(slug: string): (typeof topLevelPracticeSlugs)[number] | null {

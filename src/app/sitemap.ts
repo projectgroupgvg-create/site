@@ -22,6 +22,7 @@ const ukOnlySlugs = new Set([
   'marital-property-division',
   'corporate-disputes',
   'customs-disputes',
+  'land-allocation-registration',
 ]);
 
 const ukOnlyPaths = [
