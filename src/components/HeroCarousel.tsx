@@ -51,9 +51,9 @@ export default function HeroCarousel({
     if (slideCount <= 1) return;
     const delay = index === 0 ? INITIAL_HOLD_MS : NEWS_HOLD_MS;
     const id = window.setTimeout(() => {
-      // slide 0 is the one-time brand intro; once we've left it, keep
-      // cycling only through the news slides (1..slideCount-1).
-      setIndex((i) => (i === 0 ? 1 : (i % (slideCount - 1)) + 1));
+      // full loop: brand slide -> each news slide in turn -> back to the
+      // brand slide again, repeating for as long as the page stays open.
+      setIndex((i) => (i + 1) % slideCount);
     }, delay);
     return () => window.clearTimeout(id);
   }, [index, slideCount]);
@@ -153,9 +153,11 @@ export default function HeroCarousel({
               <span className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
                 {newsLabel}
               </span>
-              <span className="block text-[clamp(26px,4.2vw,48px)] font-bold leading-[1.2] text-[var(--ink)]">
-                {item.title}
-              </span>
+              <div className="my-1">
+                <span className="box-decoration-clone inline bg-[rgba(10,8,6,0.55)] px-2.5 py-1 text-[clamp(26px,4.2vw,48px)] font-normal leading-[1.45] text-[var(--ink)]">
+                  {item.title}
+                </span>
+              </div>
               <span className="mt-6 inline-block text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-colors group-hover:text-[var(--s3)]">
                 {readMoreLabel} →
               </span>
