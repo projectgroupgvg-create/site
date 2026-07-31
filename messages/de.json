@@ -99,23 +99,6 @@
       },
       {
         "num": "04",
-        "title": "Kartellrecht",
-        "desc": "Begleitung von Verfahren vor dem Antimonopolkomitee der Ukraine: Fusionskontrolle, Verteidigung gegen Vorwürfe der Absprache oder des Marktmachtmissbrauchs.",
-        "intro": [
-          "Das Kartellrecht prägt zunehmend die Struktur von Transaktionen und das Marktverhalten von Unternehmen. Wir helfen Mandanten, diese Prüfung ohne Verzögerungen oder Bußgelder zu durchlaufen.",
-          "Unser Team begleitet sowohl präventive Verfahren (Erlangung der Fusionsfreigabe durch das AMKU) als auch die Verteidigung in Verfahren wegen Verstößen gegen das Wettbewerbsrecht."
-        ],
-        "services": [
-          "Erlangung der Fusionsfreigabe und Genehmigung abgestimmter Verhaltensweisen",
-          "Verteidigung in Verfahren wegen Marktmachtmissbrauchs",
-          "Anfechtung von Entscheidungen des Antimonopolkomitees",
-          "Marktmachtanalyse und Compliance-Audits",
-          "Begleitung von Untersuchungen wettbewerbswidriger Absprachen",
-          "Gerichtliche Vertretung in Streitigkeiten mit dem AMKU"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Verwaltungsrecht",
         "desc": "Schutz von Rechten und berechtigten Interessen im Verhältnis zu staatlichen und kommunalen Behörden; Anfechtung ihrer Entscheidungen, Handlungen oder Untätigkeit.",
         "intro": [
@@ -132,7 +115,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "Agrarrecht",
         "desc": "Begleitung von Grundstücksgeschäften, Schutz des Eigentums- und Nutzungsrechts, Streitigkeiten über Pacht, Flächenanteile und die Zuteilung von Grundstücken.",
         "intro": [
@@ -146,23 +129,6 @@
           "Streitigkeiten über Grenzen, unbefugte Inanspruchnahme und Flächenanteile",
           "Änderung der Nutzungsart und Zuteilung von Grundstücken",
           "Vertretung vor Gericht in Grundstücksstreitigkeiten"
-        ]
-      },
-      {
-        "num": "07",
-        "title": "Aufsichtsrecht",
-        "desc": "Begleitung der Interaktion von Unternehmen mit Aufsichtsbehörden: Lizenzierung, Compliance, Prüfungen und Anfechtung von Entscheidungen staatlicher Aufsichtsorgane.",
-        "intro": [
-          "Wir helfen Unternehmen, Beziehungen zu Aufsichtsbehörden aufzubauen — von der Erlangung von Lizenzen und Genehmigungen über die Begleitung von Prüfungen bis zur Anfechtung von Entscheidungen der Aufsichtsorgane.",
-          "Besondere Aufmerksamkeit widmen wir dem Finanz- und Technologiesektor, in denen sich regulatorische Anforderungen am schnellsten ändern und der Preis eines Fehlers am höchsten ist."
-        ],
-        "services": [
-          "Erlangung von Lizenzen und Genehmigungsdokumenten",
-          "Entwicklung und Einführung von Compliance-Verfahren",
-          "Begleitung von Prüfungen durch Aufsichtsbehörden",
-          "Anfechtung von Entscheidungen, Anordnungen und Sanktionen der Aufsichtsorgane",
-          "Analyse regulatorischer Änderungen und Anpassung von Geschäftsprozessen",
-          "Interaktion mit der Nationalbank, der Wertpapier- und Börsenaufsicht und anderen Regulierungsbehörden"
         ]
       },
       {

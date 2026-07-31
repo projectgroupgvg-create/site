@@ -99,23 +99,6 @@
       },
       {
         "num": "04",
-        "title": "Antitrust Law",
-        "desc": "Support in proceedings before the Antimonopoly Committee of Ukraine: merger clearances, defense against allegations of collusion or abuse of dominance.",
-        "intro": [
-          "Antitrust regulation increasingly shapes deal structures and market conduct. We help clients navigate this scrutiny without delays or fines.",
-          "Our team handles both preventive procedures (obtaining AMCU merger clearance) and defense in proceedings concerning breaches of competition law."
-        ],
-        "services": [
-          "Obtaining AMCU merger clearance and concerted-action approvals",
-          "Defense in abuse-of-dominance proceedings",
-          "Appealing decisions of the Antimonopoly Committee",
-          "Market-power analysis and compliance audits",
-          "Support in anti-competitive concerted-action investigations",
-          "Representation in courts in disputes with the AMCU"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Administrative Law",
         "desc": "Protecting rights and legitimate interests in dealings with state and local authorities; challenging their decisions, actions, or inaction.",
         "intro": [
@@ -132,7 +115,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "Land Law",
         "desc": "Support for land transactions, protection of ownership and use rights, and disputes over leases, land shares, and land allocation.",
         "intro": [
@@ -146,23 +129,6 @@
           "Disputes over boundaries, unlawful occupation, and land shares",
           "Change of designated use and allocation of parcels",
           "Representation in courts in land disputes"
-        ]
-      },
-      {
-        "num": "07",
-        "title": "Regulatory Law",
-        "desc": "Support for business interaction with regulators: licensing, compliance, inspections, and challenging decisions of state supervisory authorities.",
-        "intro": [
-          "We help companies build relationships with regulators — from obtaining licences and permits to supporting inspections and challenging decisions of supervisory authorities.",
-          "We pay particular attention to the financial and technology sectors, where regulatory requirements change fastest and the cost of a mistake is highest."
-        ],
-        "services": [
-          "Obtaining licences and permitting documents",
-          "Developing and implementing compliance procedures",
-          "Support during regulatory inspections",
-          "Challenging decisions, orders, and sanctions of supervisory authorities",
-          "Analysis of regulatory changes and adaptation of business processes",
-          "Interaction with the NBU, the NSSMC, and other regulators"
         ]
       },
       {

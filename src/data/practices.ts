@@ -8,10 +8,8 @@ export const topLevelPracticeSlugs = [
   'criminal-defense',
   'civil-law',
   'commercial-law',
-  'antitrust-law',
   'administrative-law',
   'land-law',
-  'regulatory-law',
 ] as const;
 
 // Criminal Defense's own specializations. Each still has a fully independent

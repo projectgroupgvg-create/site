@@ -99,23 +99,6 @@
       },
       {
         "num": "04",
-        "title": "Droit de la concurrence",
-        "desc": "Accompagnement dans les procédures devant le Comité antimonopole d'Ukraine : autorisations de concentration, défense contre les accusations d'entente ou d'abus de position dominante.",
-        "intro": [
-          "La régulation de la concurrence influence de plus en plus la structuration des opérations et le comportement des entreprises sur le marché. Nous aidons nos clients à traverser ce contrôle sans retard ni sanction.",
-          "Notre équipe accompagne aussi bien les procédures préventives (obtention de l'autorisation de concentration auprès de l'AMCU) que la défense dans les procédures pour infraction au droit de la concurrence."
-        ],
-        "services": [
-          "Obtention des autorisations de concentration et d'actions concertées auprès de l'AMCU",
-          "Défense dans les procédures pour abus de position dominante",
-          "Contestation des décisions du Comité antimonopole",
-          "Analyse du pouvoir de marché et audits de conformité",
-          "Accompagnement des enquêtes pour ententes anticoncurrentielles",
-          "Représentation devant les tribunaux dans les litiges avec l'AMCU"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Droit administratif",
         "desc": "Protection des droits et intérêts légitimes dans les relations avec les autorités publiques et locales ; contestation de leurs décisions, actions ou inactions.",
         "intro": [
@@ -132,7 +115,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "Droit foncier",
         "desc": "Accompagnement des opérations foncières, protection du droit de propriété et d'usage, litiges relatifs au bail, aux parts foncières et à l'attribution de parcelles.",
         "intro": [
@@ -146,23 +129,6 @@
           "Litiges relatifs aux limites, à l'occupation illégale et aux parts foncières",
           "Changement d'affectation et attribution de parcelles",
           "Représentation devant les tribunaux dans les litiges fonciers"
-        ]
-      },
-      {
-        "num": "07",
-        "title": "Droit réglementaire",
-        "desc": "Accompagnement des relations des entreprises avec les régulateurs : agrément, conformité, contrôles et contestation des décisions des autorités de surveillance de l'État.",
-        "intro": [
-          "Nous aidons les entreprises à construire leurs relations avec les régulateurs — de l'obtention de licences et d'autorisations à l'accompagnement des contrôles et à la contestation des décisions des autorités de surveillance.",
-          "Nous portons une attention particulière aux secteurs financier et technologique, où les exigences réglementaires évoluent le plus rapidement et où le coût d'une erreur est le plus élevé."
-        ],
-        "services": [
-          "Obtention de licences et de documents d'autorisation",
-          "Élaboration et mise en œuvre de procédures de conformité",
-          "Accompagnement des contrôles réglementaires",
-          "Contestation des décisions, injonctions et sanctions des autorités de surveillance",
-          "Analyse des évolutions réglementaires et adaptation des processus d'entreprise",
-          "Interaction avec la BNU, la NSSMC et d'autres régulateurs"
         ]
       },
       {
