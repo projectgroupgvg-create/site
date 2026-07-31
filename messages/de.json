@@ -16,7 +16,9 @@
     "cta": "Termin vereinbaren",
     "search": "Suche",
     "faq": "FAQ",
-    "walletCheck": "Screening"
+    "walletCheck": "Screening",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
   },
   "Hero": {
     "eyebrow": "Anwaltskanzlei · Kyjiw",

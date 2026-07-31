@@ -16,7 +16,9 @@
     "cta": "Записатись",
     "search": "Пошук",
     "faq": "FAQ",
-    "walletCheck": "Скринінг"
+    "walletCheck": "Скринінг",
+    "openMenu": "Відкрити меню",
+    "closeMenu": "Закрити меню"
   },
   "Hero": {
     "eyebrow": "Адвокатське об'єднання · Київ",

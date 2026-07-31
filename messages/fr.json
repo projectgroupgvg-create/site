@@ -16,7 +16,9 @@
     "cta": "Prendre rendez-vous",
     "search": "Rechercher",
     "faq": "FAQ",
-    "walletCheck": "Filtrage"
+    "walletCheck": "Filtrage",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "Hero": {
     "eyebrow": "Cabinet d'avocats · Kyiv",

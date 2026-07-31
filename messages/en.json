@@ -16,7 +16,9 @@
     "cta": "Book a Call",
     "search": "Search",
     "faq": "FAQ",
-    "walletCheck": "Screening"
+    "walletCheck": "Screening",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Hero": {
     "eyebrow": "Law Firm · Kyiv",
