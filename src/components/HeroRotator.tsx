@@ -6,60 +6,77 @@ import { Link } from '@/i18n/navigation';
 export type HeroNewsItem = {
   slug: string;
   title: string;
+  eyebrow?: string;
 };
 
 /**
- * Rotates the hero's background photo through a small set of images, each
- * paired with one of the firm's latest news items (shown as a small link
- * near the bottom of the hero, changing in sync with the background).
- * Purely decorative/informational — falls back gracefully to a single
- * static background if only one image or no news items are available.
+ * Hero background photo (static — pass a single image) plus a slow, soft
+ * crossfading caption cycling through the firm's latest news items, styled
+ * like a law-firm carousel slide: small eyebrow label, headline-style link,
+ * separate "read more" line. The caption fade is deliberately gentle and
+ * unhurried (long hold, slow ease crossfade) rather than snappy. Falls back
+ * gracefully to nothing shown if no news items are available.
  */
 export default function HeroRotator({
   images,
   newsItems,
   label,
+  readMoreLabel,
 }: {
   images: string[];
   newsItems: HeroNewsItem[];
   label: string;
+  readMoreLabel: string;
 }) {
   const [index, setIndex] = useState(0);
-  const count = Math.max(images.length, 1);
+  const newsCount = Math.max(newsItems.length, 1);
+  const imgCount = Math.max(images.length, 1);
 
   useEffect(() => {
-    if (count <= 1) return;
+    if (newsCount <= 1) return;
+    // slow, deliberate hold between changes — softer pacing than a typical
+    // UI carousel, closer to an editorial slideshow.
     const id = window.setInterval(() => {
-      setIndex((i) => (i + 1) % count);
-    }, 6500);
+      setIndex((i) => (i + 1) % newsCount);
+    }, 9000);
     return () => window.clearInterval(id);
-  }, [count]);
-
-  const currentNews = newsItems[index % Math.max(newsItems.length, 1)];
+  }, [newsCount]);
 
   return (
     <>
       {images.map((src, i) => (
         <div
           key={src}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms] ease-in-out"
-          style={{ backgroundImage: `url('${src}')`, opacity: i === index ? 1 : 0 }}
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-[2200ms] ease-in-out"
+          style={{ backgroundImage: `url('${src}')`, opacity: i === index % imgCount ? 1 : 0 }}
         />
       ))}
 
-      {currentNews && (
-        <Link
-          href={`/news/${currentNews.slug}`}
-          className="group absolute bottom-20 left-1/2 z-10 flex max-w-[92vw] -translate-x-1/2 items-center gap-3 rounded-sm border-hair bg-[rgba(10,8,6,0.35)] px-5 py-2.5 text-[11px] text-[var(--ink)] backdrop-blur-sm transition-colors hover:bg-[rgba(10,8,6,0.55)] sm:max-w-none"
-          style={{ borderColor: 'var(--b)' }}
-        >
-          <span className="whitespace-nowrap font-semibold uppercase tracking-[0.16em] text-[var(--s3)]">
-            {label}
-          </span>
-          <span className="truncate text-[var(--ink)] group-hover:text-[var(--s3)]">
-            {currentNews.title}
-          </span>
-        </Link>
+      {newsItems.length > 0 && (
+        <div className="absolute bottom-16 left-1/2 z-10 w-full max-w-[640px] -translate-x-1/2 px-6 text-center sm:bottom-20">
+          <div className="relative h-[64px] sm:h-[58px]">
+            {newsItems.map((item, i) => (
+              <Link
+                key={item.slug}
+                href={`/news/${item.slug}`}
+                aria-hidden={i !== index}
+                tabIndex={i === index ? 0 : -1}
+                className="group absolute inset-x-0 top-0 flex flex-col items-center gap-1.5 transition-opacity duration-[1800ms] ease-in-out"
+                style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
+              >
+                <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+                  {item.eyebrow ?? label}
+                </span>
+                <span className="line-clamp-1 font-serif text-[15px] font-semibold leading-tight text-[var(--ink)] sm:text-[17px]">
+                  {item.title}
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors group-hover:text-[var(--s3)]">
+                  {readMoreLabel} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
       )}
     </>
   );

@@ -28,7 +28,8 @@
     "btn1": "Beratung erhalten",
     "btn2": "Unsere Praxisbereiche",
     "scroll": "Scrollen",
-    "latestLabel": "Neueste Nachrichten:"
+    "latestLabel": "Neueste Nachrichten",
+    "readMore": "Weiterlesen"
   },
   "Practices": {
     "lbl": "Praxisbereiche",

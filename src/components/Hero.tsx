@@ -5,11 +5,11 @@ import HeroVideo from './HeroVideo';
 import HeroRotator from './HeroRotator';
 import { getAllNews, type FallbackNewsItem } from '@/lib/news';
 
-const HERO_BACKGROUNDS = [
-  '/hero-bg-abstract-1.jpg',
-  '/hero-bg-abstract-2.jpg',
-  '/hero-bg-abstract-3.jpg',
-];
+// Reverted to the original office photo per the user's request (was
+// swapped for procedurally-generated art briefly — they preferred the
+// real photo back). Contrast for the type is handled by the darker scrim
+// below rather than by changing the photo itself.
+const HERO_BACKGROUNDS = ['/hero-bg-v2.jpg'];
 
 // Hero runs light-on-dark locally, independent of the site's light theme —
 // standard treatment for a photo hero. These CSS custom properties are
@@ -32,19 +32,24 @@ export default async function Hero() {
   const latestNews = (await getAllNews(locale, fallbackNews))
     .slice(0, 3)
     .map((n) => ({ slug: n.slug, title: n.title }));
+  const readMoreLabel = t('readMore');
 
   return (
     <section
       className="relative flex min-h-[calc(100vh-4cm)] items-center justify-center overflow-hidden py-28"
       style={heroLocalVars}
     >
-      {/* rotating set of original, procedurally-generated abstract
-          backgrounds (no stock photography), each paired with one of the
-          firm's 3 latest news items. HeroVideo layers on top and fades in
-          automatically if a real video is later added at
-          /public/videos/hero.(webm|mp4). */}
-      <HeroRotator images={HERO_BACKGROUNDS} newsItems={latestNews} label={t('latestLabel')} />
-      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.75)] via-[rgba(10,8,6,0.45)] to-[rgba(10,8,6,0.55)]" />
+      {/* static office photo background; the caption below (eyebrow +
+          headline + read-more link) cycles slowly through the firm's 3
+          latest news items with a soft, unhurried crossfade — modeled on
+          large law-firm carousel heroes (e.g. lw.com's homepage slider). */}
+      <HeroRotator
+        images={HERO_BACKGROUNDS}
+        newsItems={latestNews}
+        label={t('latestLabel')}
+        readMoreLabel={readMoreLabel}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.58)] to-[rgba(10,8,6,0.65)]" />
       <HeroVideo />
 
       <div className="absolute bottom-0 top-0 left-12 hidden w-px bg-[color:var(--b)] sm:block" />

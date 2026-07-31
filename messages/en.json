@@ -28,7 +28,8 @@
     "btn1": "Get a Consultation",
     "btn2": "Our Practices",
     "scroll": "Scroll",
-    "latestLabel": "Latest news:"
+    "latestLabel": "Latest News",
+    "readMore": "Read More"
   },
   "Practices": {
     "lbl": "Practices",
