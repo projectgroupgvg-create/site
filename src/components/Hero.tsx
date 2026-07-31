@@ -85,7 +85,7 @@ export default async function Hero() {
         <h1 className="mb-8 whitespace-nowrap font-display text-[clamp(22px,4.4vw,48px)] tracking-[0.03em] text-metal-photo">
           GANGAN &amp; PARTNERS
         </h1>
-        <div className="mb-16 text-[clamp(16px,1.8vw,21px)] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
+        <div className="mb-10 text-[clamp(16px,1.8vw,21px)] font-medium uppercase tracking-[0.32em] text-[var(--s3)]">
           {t('eyebrow')}
         </div>
 

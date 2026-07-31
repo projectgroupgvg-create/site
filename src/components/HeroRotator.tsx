@@ -57,7 +57,7 @@ export default function HeroRotator({
       ))}
 
       {newsItems.length > 0 && (
-        <div className="absolute bottom-16 left-6 z-10 grid max-w-[620px] text-left sm:bottom-20 sm:left-12">
+        <div className="absolute bottom-10 left-6 z-10 grid max-w-[560px] text-left sm:bottom-14 sm:left-12">
           {newsItems.map((item, i) => (
             <Link
               key={item.slug}
@@ -71,18 +71,18 @@ export default function HeroRotator({
                 pointerEvents: i === index ? 'auto' : 'none',
               }}
             >
-              <span className="mb-3 block text-[10px] font-semibold uppercase tracking-[0.32em] text-[var(--s3)]">
+              <span className="mb-2 block text-[9.5px] font-semibold uppercase tracking-[0.32em] text-[var(--s3)]">
                 {item.eyebrow ?? label}
               </span>
-              <span className="mb-4 block font-serif text-[clamp(20px,3vw,32px)] font-semibold leading-[1.2] text-[var(--ink)]">
+              <span className="line-clamp-2 mb-2.5 block font-serif text-[clamp(17px,2.2vw,24px)] font-semibold leading-[1.25] text-[var(--ink)]">
                 {item.title}
               </span>
               {item.excerpt && (
-                <span className="mb-5 line-clamp-2 block max-w-[520px] text-[13.5px] leading-[1.6] text-[var(--ink3)]">
+                <span className="line-clamp-1 mb-3 hidden max-w-[480px] text-[13px] leading-[1.5] text-[var(--ink3)] sm:block">
                   {item.excerpt}
                 </span>
               )}
-              <span className="inline-block text-[10.5px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-colors group-hover:text-[var(--s3)]">
+              <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-colors group-hover:text-[var(--s3)]">
                 {readMoreLabel} →
               </span>
             </Link>
