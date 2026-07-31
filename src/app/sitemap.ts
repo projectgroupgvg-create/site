@@ -12,6 +12,23 @@ function localizedPath(locale: string, path: string): string {
   return `${prefix}${path}` || '/';
 }
 
+// Ukrainian-only pages added per the SEO brief (new /virtual-assets/,
+// /team/viacheslav-gangan/, /research/, /media/, /reports/ pillar pages —
+// English/German/French are an explicit "stage 2" there, so these only
+// exist for the default locale and get a single sitemap entry each, not one
+// per locale like the rest of the site).
+const ukOnlyPaths = [
+  '/virtual-assets',
+  '/virtual-assets/criminal-defence',
+  '/virtual-assets/eu-market-entry-mica',
+  '/team/viacheslav-gangan',
+  '/research',
+  '/media',
+  '/reports',
+  '/reports/digital-assets-cross-border-2026',
+  '/editorial-policy',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ['/', '/about', '/team', '/blog', '/news', '/calculator', '/intake', '/faq', '/wallet-check', '/document-notary', '/confidential'];
   const practicePaths = practiceSlugs.map((slug) => `/practices/${slug}`);
@@ -41,6 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages },
       });
     }
+  }
+
+  for (const path of ukOnlyPaths) {
+    entries.push({
+      url: `${siteUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: path === '/virtual-assets' || path.startsWith('/reports/') ? 0.8 : 0.6,
+    });
   }
 
   return entries;

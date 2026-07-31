@@ -11,7 +11,7 @@ export const siteName = 'Gangan & Partners';
 
 export const contact = {
   email: 'gangan.partners@gmail.com',
-  phone: '+380500000000',
+  phone: '+380965549847',
   addressLine: "Столичне шосе, 1, офіс П-4, м. Київ, 01013",
   city: 'Kyiv',
   postalCode: '01013',

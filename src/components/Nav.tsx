@@ -11,12 +11,22 @@ const navItems = [
   { href: '/#practices', key: 'practices' },
   { href: '/team', key: 'team' },
   { href: '/about', key: 'about' },
-  { href: '/blog', key: 'blog' },
   { href: '/news', key: 'news' },
   { href: '/calculator', key: 'calculator' },
   { href: '/wallet-check', key: 'walletCheck' },
   { href: '/faq', key: 'faq' },
   { href: '/#contacts', key: 'contacts' },
+] as const;
+
+// "Аналітика" dropdown per the SEO brief (section 3.1). Blog is fully
+// translated (all 4 locales); Reports/Research/Media are Ukrainian-only for
+// now (see reportDigitalAssets2026.ts and friends), so those three force
+// locale="uk" to avoid 404s when a non-uk visitor clicks them.
+const insightsItems = [
+  { href: '/blog', key: 'blog', forceUk: false },
+  { href: '/reports', key: 'reports', forceUk: true },
+  { href: '/research', key: 'research', forceUk: true },
+  { href: '/media', key: 'media', forceUk: true },
 ] as const;
 
 export default function Nav() {
@@ -60,7 +70,44 @@ export default function Nav() {
       </Link>
 
       <ul className="hidden items-center gap-8 md:flex">
-        {navItems.map((item) => (
+        {navItems.slice(0, 3).map((item) => (
+          <li key={item.key}>
+            <Link
+              href={item.href}
+              className="text-xs tracking-wide text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+            >
+              {t(item.key)}
+            </Link>
+          </li>
+        ))}
+
+        {/* "Аналітика" dropdown: Блог + Звіти + Наукові публікації + Медіа */}
+        <li className="group relative">
+          <button type="button" className="flex items-center gap-1 text-xs tracking-wide text-[var(--ink3)] transition-colors hover:text-[var(--ink)]">
+            {t('insights')}
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <ul
+            className="invisible absolute left-0 top-full z-10 w-56 rounded-sm border-hair bg-[var(--bg)] py-2 opacity-0 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all group-hover:visible group-hover:opacity-100"
+            style={{ borderColor: 'var(--b)' }}
+          >
+            {insightsItems.map((item) => (
+              <li key={item.key}>
+                <Link
+                  href={item.href}
+                  {...(item.forceUk ? { locale: 'uk' as const } : {})}
+                  className="block px-4 py-2.5 text-xs text-[var(--ink3)] transition-colors hover:bg-[var(--bgc)] hover:text-[var(--ink)]"
+                >
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+
+        {navItems.slice(3).map((item) => (
           <li key={item.key}>
             <Link
               href={item.href}
@@ -131,7 +178,37 @@ export default function Nav() {
           style={{ borderTop: '1px solid var(--b)' }}
         >
           <ul className="flex flex-col gap-1">
-            {navItems.map((item) => (
+            {navItems.slice(0, 3).map((item) => (
+              <li key={item.key} className="border-b-hair" style={{ borderColor: 'var(--b)' }}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-4 text-[15px] tracking-wide text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
+                >
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+
+            <li className="border-b-hair pt-3" style={{ borderColor: 'var(--b)' }}>
+              <div className="mb-1 text-[11px] uppercase tracking-[0.14em] text-[var(--s3)]">{t('insights')}</div>
+              <ul className="pb-2">
+                {insightsItems.map((item) => (
+                  <li key={item.key}>
+                    <Link
+                      href={item.href}
+                      {...(item.forceUk ? { locale: 'uk' as const } : {})}
+                      onClick={() => setOpen(false)}
+                      className="block py-2.5 pl-3 text-[14px] tracking-wide text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
+                    >
+                      {t(item.key)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            {navItems.slice(3).map((item) => (
               <li key={item.key} className="border-b-hair" style={{ borderColor: 'var(--b)' }}>
                 <Link
                   href={item.href}

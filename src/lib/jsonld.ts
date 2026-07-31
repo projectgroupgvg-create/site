@@ -86,6 +86,40 @@ export function buildServiceSchema({
   };
 }
 
+export function buildProfilePageSchema({
+  locale,
+  path,
+  name,
+  alternateNames,
+  jobTitle,
+  sameAs,
+}: {
+  locale: string;
+  path: string;
+  name: string;
+  alternateNames: string[];
+  jobTitle: string;
+  sameAs: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: localizedUrl(locale, path),
+    mainEntity: {
+      '@type': 'Person',
+      name,
+      alternateName: alternateNames,
+      jobTitle,
+      worksFor: {
+        '@type': 'LegalService',
+        name: siteName,
+        url: localizedUrl(locale, '/'),
+      },
+      sameAs,
+    },
+  };
+}
+
 export function buildBreadcrumbSchema(
   locale: string,
   items: { name: string; path: string }[],

@@ -8,6 +8,10 @@
     "practices": "Domaines",
     "consult": "Consultation",
     "blog": "Blog",
+    "insights": "Analyses",
+    "reports": "Rapports",
+    "research": "Recherche",
+    "media": "Médias",
     "news": "Actualités",
     "calculator": "Calculateur",
     "team": "Équipe",
@@ -550,7 +554,7 @@
     "sub": "Une équipe d'avocats et d'analystes expérimentés en droit pénal, financier et blockchain.",
     "members": [
       {
-        "name": "Oleksandr Gangan",
+        "name": "Vyacheslav Gangan",
         "role": "Associé gérant · Droit pénal",
         "bio": "Dirige le cabinet et coordonne la défense dans les procédures pénales les plus médiatisées. Plus de 15 ans d'expérience en droit pénal.",
         "facebook": "#",

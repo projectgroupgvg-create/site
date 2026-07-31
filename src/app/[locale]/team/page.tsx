@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import { Link } from '@/i18n/navigation';
 
 type Member = { name: string; role: string; bio: string; facebook?: string; linkedin?: string };
 
@@ -91,7 +92,16 @@ export default async function TeamPage({
               {initials(m.name)}
             </div>
             <div className="mb-1 font-serif text-[17px] font-semibold text-[var(--ink)]">
-              {m.name}
+              {m.name === "В'ячеслав Ганган" || m.name === 'Vyacheslav Gangan' ? (
+                // Profile page is Ukrainian-only for now — force that locale
+                // so this link works regardless of which locale the visitor
+                // is currently browsing, instead of 404ing on /en/, /de/, /fr/.
+                <Link href="/team/viacheslav-gangan" locale="uk" className="transition-colors hover:text-[var(--s3)]">
+                  {m.name}
+                </Link>
+              ) : (
+                m.name
+              )}
             </div>
             <div className="mb-4 text-[11px] uppercase tracking-[0.08em] text-[var(--s3)]">
               {m.role}

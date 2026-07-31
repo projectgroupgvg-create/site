@@ -8,6 +8,10 @@
     "practices": "Practices",
     "consult": "Consultation",
     "blog": "Blog",
+    "insights": "Insights",
+    "reports": "Reports",
+    "research": "Research",
+    "media": "Media",
     "news": "News",
     "calculator": "Calculator",
     "team": "Team",
@@ -550,7 +554,7 @@
     "sub": "A team of attorneys and analysts experienced in criminal, financial and blockchain law.",
     "members": [
       {
-        "name": "Oleksandr Gangan",
+        "name": "Vyacheslav Gangan",
         "role": "Managing Partner · Criminal Practice",
         "bio": "Leads the firm and coordinates defense in the most high-profile criminal proceedings. Over 15 years of practice in criminal law.",
         "facebook": "#",

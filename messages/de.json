@@ -8,6 +8,10 @@
     "practices": "Praxisbereiche",
     "consult": "Beratung",
     "blog": "Blog",
+    "insights": "Analysen",
+    "reports": "Berichte",
+    "research": "Forschung",
+    "media": "Medien",
     "news": "Neuigkeiten",
     "calculator": "Rechner",
     "team": "Team",
@@ -550,7 +554,7 @@
     "sub": "Ein Team von Anwälten und Analysten mit Erfahrung im Straf-, Finanz- und Blockchain-Recht.",
     "members": [
       {
-        "name": "Oleksandr Gangan",
+        "name": "Vyacheslav Gangan",
         "role": "Geschäftsführender Partner · Strafrecht",
         "bio": "Leitet die Kanzlei und koordiniert die Verteidigung in den aufsehenerregendsten Strafverfahren. Über 15 Jahre Erfahrung im Strafrecht.",
         "facebook": "#",
