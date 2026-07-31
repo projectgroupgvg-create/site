@@ -531,18 +531,6 @@
     ],
     "fallbackNews": [
       {
-        "slug": "gangan-partners-launches-crypto-practice",
-        "newsType": "firm-news",
-        "date": "June 2025",
-        "title": "Gangan & Partners Launches Dedicated Crypto Fraud Practice",
-        "excerpt": "In response to growing demand, the team has spun off crypto fraud and blockchain investigations into a dedicated practice area.",
-        "body": [
-          "Gangan & Partners announces the launch of a dedicated practice focused on investigating crypto fraud and tracing blockchain transactions.",
-          "The decision follows a significant increase in inquiries from individuals and businesses affected by DeFi fraud, rug pulls, and frozen exchange accounts.",
-          "The new practice will be led by a team combining legal expertise with technical skills in on-chain data analysis."
-        ]
-      },
-      {
         "slug": "favorable-ruling-crypto-exchange-freeze",
         "newsType": "deal",
         "date": "May 2025",
@@ -552,17 +540,6 @@
           "After three months of negotiations and evidence preparation, the Gangan & Partners team secured the unblocking of a client's crypto account, which had been frozen by an international exchange over suspected links to a fraud scheme.",
           "The case required simultaneous work with the exchange's compliance department and preparation of documentation confirming the legitimate origin of the funds.",
           "Case details are withheld at the client's request."
-        ]
-      },
-      {
-        "slug": "new-partner-blockchain-investigations",
-        "newsType": "firm-news",
-        "date": "March 2025",
-        "title": "New Partner Joins the Blockchain Investigations Practice",
-        "excerpt": "Experience in tracing crypto transactions and building evidentiary records for court will strengthen the firm's crypto practice.",
-        "body": [
-          "Gangan & Partners is pleased to announce a new partner specializing in blockchain investigations and the preparation of analytical reports for court proceedings.",
-          "This addition reflects the firm's strategy of growing technical expertise alongside its classic criminal practice."
         ]
       }
     ]

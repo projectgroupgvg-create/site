@@ -531,18 +531,6 @@
     ],
     "fallbackNews": [
       {
-        "slug": "gangan-partners-launches-crypto-practice",
-        "newsType": "firm-news",
-        "date": "Juin 2025",
-        "title": "Gangan & Partners lance un département dédié à la fraude crypto",
-        "excerpt": "Face à une demande croissante, l'équipe a créé un département dédié à la fraude crypto et aux enquêtes blockchain.",
-        "body": [
-          "Gangan & Partners annonce la création d'un département dédié à l'investigation de la fraude crypto et au traçage des transactions blockchain.",
-          "Cette décision fait suite à une augmentation significative des demandes de particuliers et d'entreprises touchés par la fraude DeFi, les rug pulls et le blocage de comptes sur des plateformes d'échange.",
-          "Ce nouveau département sera dirigé par une équipe alliant expertise juridique et compétences techniques en analyse de données on-chain."
-        ]
-      },
-      {
         "slug": "favorable-ruling-crypto-exchange-freeze",
         "newsType": "deal",
         "date": "Mai 2025",
@@ -552,17 +540,6 @@
           "Après trois mois de négociations et de préparation des preuves, l'équipe de Gangan & Partners a obtenu le déblocage du compte crypto d'un client, gelé par une plateforme d'échange internationale en raison d'un soupçon de lien avec un système frauduleux.",
           "L'affaire a nécessité un travail simultané avec le service de conformité de la plateforme et la préparation de documents attestant de l'origine légale des fonds.",
           "Les détails de l'affaire ne sont pas divulgués à la demande du client."
-        ]
-      },
-      {
-        "slug": "new-partner-blockchain-investigations",
-        "newsType": "firm-news",
-        "date": "Mars 2025",
-        "title": "Un nouvel associé rejoint le département Enquêtes blockchain",
-        "excerpt": "Une expertise en traçage de transactions crypto et en constitution de dossiers de preuves pour les tribunaux renforcera le département crypto du cabinet.",
-        "body": [
-          "Gangan & Partners est heureux d'annoncer l'arrivée d'un nouvel associé spécialisé dans les enquêtes blockchain et la préparation de rapports analytiques pour les procédures judiciaires.",
-          "Ce renfort s'inscrit dans la stratégie du cabinet visant à développer son expertise technique parallèlement à sa pratique pénale classique."
         ]
       }
     ]
