@@ -6,6 +6,7 @@ import { buildAlternates, buildOpenGraph, localizedUrl } from '@/lib/metadata';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import ShareButtons from '@/components/ShareButtons';
 import {
   reportMeta,
   executiveBrief,
@@ -151,6 +152,9 @@ export default async function ReportPage() {
             >
               Обговорити свій кейс
             </a>
+          </div>
+          <div className="mt-6">
+            <ShareButtons url={localizedUrl(locale, PATH)} title={reportMeta.title} />
           </div>
         </div>
       </div>
