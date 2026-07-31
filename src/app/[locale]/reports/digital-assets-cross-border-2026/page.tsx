@@ -40,6 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: reportMeta.title,
       description: reportMeta.subtitle,
       type: 'article',
+      image: '/report-og-digital-assets-2026.jpg',
     }),
   };
 }
