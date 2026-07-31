@@ -72,6 +72,7 @@ export default async function BlogPostPage({
           title: post.title,
           description: post.excerpt,
           image: post.mainImage,
+          author: { name: "В'ячеслав Ганган", path: '/team/viacheslav-gangan' },
         })}
       />
       <JsonLd
@@ -163,7 +164,14 @@ export default async function BlogPostPage({
         ) : null}
 
         <div className="mt-10 border-t-hair pt-6 text-[12px] text-[var(--ink3)]" style={{ borderColor: 'var(--b)' }}>
-          {t('authorLabel')} <span className="text-[var(--ink2)]">Ганган В&apos;ячеслав</span>
+          {t('authorLabel')}{' '}
+          <Link
+            href="/team/viacheslav-gangan"
+            locale="uk"
+            className="text-[var(--ink2)] underline decoration-[var(--b)] underline-offset-2 hover:text-[var(--ink)]"
+          >
+            Ганган В&apos;ячеслав — про автора →
+          </Link>
         </div>
       </article>
     </main>

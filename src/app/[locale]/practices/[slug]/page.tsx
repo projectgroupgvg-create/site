@@ -304,7 +304,30 @@ export default async function PracticePage({
           </div>
         )}
 
-        <div className="mt-14 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
+        {/* "Практика → профіль: Блок відповідального адвоката" — TZ
+            Rozshyreni_profili_komandy §4. Only rendered for uk since the
+            profile page itself is uk-only for now. */}
+        {locale === routing.defaultLocale && (
+          <Link
+            href="/team/viacheslav-gangan"
+            locale="uk"
+            className="mt-14 flex items-center gap-4 rounded-lg border-hair p-5 transition-colors hover:border-[color:var(--s3)]"
+            style={{ borderColor: 'var(--b)' }}
+          >
+            <div
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-hair font-serif text-[15px] font-bold text-[var(--ink)]"
+              style={{ borderColor: 'var(--b)' }}
+            >
+              ВГ
+            </div>
+            <div>
+              <div className="text-[11px] uppercase tracking-[0.12em] text-[var(--s3)]">Відповідальний адвокат</div>
+              <div className="text-[14px] font-semibold text-[var(--ink)]">В&apos;ячеслав Ганган — про адвоката →</div>
+            </div>
+          </Link>
+        )}
+
+        <div className="mt-8 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
           <div className="mb-4 font-serif text-[18px] font-semibold text-[var(--ink)]">
             {t('ctaTitle')}
           </div>

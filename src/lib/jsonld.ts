@@ -1,5 +1,6 @@
 import { siteUrl, siteName, contact } from './site';
 import { localizedUrl } from './metadata';
+import { routing } from '@/i18n/routing';
 
 export function buildLegalServiceSchema(locale: string) {
   return {
@@ -31,6 +32,7 @@ export function buildArticleSchema({
   description,
   datePublished,
   image,
+  author,
 }: {
   locale: string;
   path: string;
@@ -38,6 +40,9 @@ export function buildArticleSchema({
   description: string;
   datePublished?: string;
   image?: string | null;
+  // Links the article to its author's own profile page (ProfilePage/Person)
+  // for Google's Article author signals — see TZ_Rozshyreni_profili_komandy.
+  author?: { name: string; path: string } | null;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -48,6 +53,15 @@ export function buildArticleSchema({
     inLanguage: locale,
     ...(datePublished ? { datePublished } : {}),
     image: image ?? `${siteUrl}/logo.jpg`,
+    ...(author
+      ? {
+          author: {
+            '@type': 'Person',
+            name: author.name,
+            url: localizedUrl(routing.defaultLocale, author.path),
+          },
+        }
+      : {}),
     publisher: {
       '@type': 'Organization',
       name: siteName,
@@ -93,6 +107,10 @@ export function buildProfilePageSchema({
   alternateNames,
   jobTitle,
   sameAs,
+  description,
+  image,
+  knowsAbout,
+  dateModified,
 }: {
   locale: string;
   path: string;
@@ -100,21 +118,32 @@ export function buildProfilePageSchema({
   alternateNames: string[];
   jobTitle: string;
   sameAs: string[];
+  description?: string;
+  image?: string | null;
+  knowsAbout?: string[];
+  dateModified?: string;
 }) {
+  const url = localizedUrl(locale, path);
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfilePage',
-    url: localizedUrl(locale, path),
+    url,
+    ...(dateModified ? { dateModified } : {}),
     mainEntity: {
       '@type': 'Person',
+      '@id': `${url}#person`,
       name,
       alternateName: alternateNames,
       jobTitle,
+      ...(description ? { description } : {}),
+      ...(image ? { image } : {}),
+      url,
       worksFor: {
         '@type': 'LegalService',
         name: siteName,
         url: localizedUrl(locale, '/'),
       },
+      ...(knowsAbout && knowsAbout.length > 0 ? { knowsAbout } : {}),
       sameAs,
     },
   };
