@@ -214,19 +214,19 @@ export default async function PracticePage({
 
       <div className="py-16" style={{ paddingLeft: '2cm', paddingRight: '2cm' }}>
         {practice.intro.map((p, i) => (
-          <p key={i} className="mb-5 text-justify text-[14px] leading-[1.9] text-[var(--ink2)]">
+          <p key={i} className="mb-5 text-justify text-[16.5px] leading-[1.85] text-[var(--ink2)]">
             {p}
           </p>
         ))}
 
-        <h2 className="mb-4 mt-10 font-serif text-[22px] font-normal text-[var(--ink)]">
+        <h2 className="mb-4 mt-10 font-serif text-[24px] font-normal text-[var(--ink)]">
           {practice.scenariosLabel ?? t('servicesTitle')}
         </h2>
         <ul className="mb-2">
           {practice.services.map((s) => (
             <li
               key={s}
-              className="relative border-b-hair py-2.5 pl-5 text-[13px] text-[var(--ink3)]"
+              className="relative border-b-hair py-3 pl-5 text-[15px] text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             >
               <span className="absolute left-0 text-[var(--s3)]">—</span>
@@ -237,15 +237,15 @@ export default async function PracticePage({
 
         {practice.sections && practice.sections.length > 0 && (
           <div className="mt-12">
-            <h2 className="mb-6 font-serif text-[22px] font-normal text-[var(--ink)]">
+            <h2 className="mb-6 font-serif text-[24px] font-normal text-[var(--ink)]">
               {t('servicesTitle')}
             </h2>
             <div className="space-y-8">
               {practice.sections.map((s) => (
                 <div key={s.title}>
-                  <h3 className="mb-2 font-serif text-[16px] font-semibold text-[var(--ink)]">{s.title}</h3>
+                  <h3 className="mb-2 font-serif text-[18.5px] font-semibold text-[var(--ink)]">{s.title}</h3>
                   {s.body.map((p, i) => (
-                    <p key={i} className="mb-2 text-justify text-[13.5px] leading-[1.85] text-[var(--ink2)]">
+                    <p key={i} className="mb-2 text-justify text-[16px] leading-[1.8] text-[var(--ink2)]">
                       {p}
                     </p>
                   ))}
@@ -257,14 +257,14 @@ export default async function PracticePage({
 
         {practice.faq && practice.faq.length > 0 && (
           <div className="mt-14 border-t-hair pt-10" style={{ borderColor: 'var(--b)' }}>
-            <h2 className="mb-6 font-serif text-[20px] font-normal text-[var(--ink)]">
+            <h2 className="mb-6 font-serif text-[22px] font-normal text-[var(--ink)]">
               Поширені запитання
             </h2>
             <div className="space-y-5">
               {practice.faq.map((item) => (
                 <div key={item.q}>
-                  <div className="mb-1.5 text-[13.5px] font-semibold text-[var(--ink)]">{item.q}</div>
-                  <p className="text-justify text-[13.5px] leading-[1.8] text-[var(--ink3)]">{item.a}</p>
+                  <div className="mb-1.5 text-[15.5px] font-semibold text-[var(--ink)]">{item.q}</div>
+                  <p className="text-justify text-[15px] leading-[1.75] text-[var(--ink3)]">{item.a}</p>
                 </div>
               ))}
             </div>
