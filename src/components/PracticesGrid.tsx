@@ -22,11 +22,11 @@ export default function PracticesGrid() {
     <section id="practices" className="relative overflow-hidden bg-[var(--bg2)] px-6 py-24 sm:px-11">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/blog-section-bg-v2.jpg')" }}
+        style={{ backgroundImage: "url('/practices-section-bg.jpg')" }}
       />
-      {/* the photo is a very light, low-contrast abstract marble/glass render —
-          a soft scrim back to --bg2 keeps card text readable while still
-          letting the texture show through above/around the grid */}
+      {/* moody marble/bronze corridor render — a soft scrim back to --bg2
+          keeps card text readable while still letting the architecture
+          show through above/around the grid */}
       <div className="absolute inset-0 bg-[var(--bg2)]/75" />
 
       <div className="relative z-10">
