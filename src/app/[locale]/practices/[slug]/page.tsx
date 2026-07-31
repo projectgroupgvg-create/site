@@ -44,9 +44,25 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
   'blockchain-investigations': '/practice-blockchain-investigations-bg.jpg',
 };
 
+// These 4 sub-practices only have content in messages/uk.json so far (added
+// via client-supplied SEO copy that hasn't been translated yet — English is
+// an explicit "stage 2" for this project, same precedent as the /reports,
+// /research, /media pages). Statically generating their /en/, /de/, /fr/
+// variants would index into an array position that doesn't exist in those
+// locale files and crash the whole build, so they're skipped for now and
+// the page component below defensively 404s if content is ever missing.
+const ukOnlySlugs = new Set([
+  'property-rights-protection',
+  'marital-property-division',
+  'corporate-disputes',
+  'customs-disputes',
+]);
+
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    practiceSlugs.map((slug) => ({ locale, slug })),
+    practiceSlugs
+      .filter((slug) => locale === routing.defaultLocale || !ukOnlySlugs.has(slug))
+      .map((slug) => ({ locale, slug })),
   );
 }
 
@@ -61,6 +77,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Practices' });
   const list = t.raw('list') as PracticeContent[];
   const practice = list[index];
+  if (!practice) return {};
   const path = `/practices/${slug}`;
   const metaTitle = practice.seoTitle ?? practice.pageH1 ?? practice.title;
   return {
@@ -90,6 +107,7 @@ export default async function PracticePage({
   const t = await getTranslations('Practices');
   const list = t.raw('list') as PracticeContent[];
   const practice = list[index];
+  if (!practice) notFound();
 
   // Scoped "other practices" links, generalized across every top-level field
   // of law (not just Criminal Defense): a top-level page links to its own
@@ -117,7 +135,16 @@ export default async function PracticePage({
     othersSlugs = topLevelPracticeSlugs.filter((s) => s !== currentSlug);
   }
 
-  const others = othersSlugs.map((s) => ({ slug: s, ...list[practiceSlugs.indexOf(s)] }));
+  // Uk-only sub-practices (see ukOnlySlugs above) don't have content in
+  // other locales — drop them from the cross-link pills rather than
+  // pointing non-uk visitors at a 404.
+  if (locale !== routing.defaultLocale) {
+    othersSlugs = othersSlugs.filter((s) => !ukOnlySlugs.has(s));
+  }
+
+  const others = othersSlugs
+    .map((s) => ({ slug: s, ...list[practiceSlugs.indexOf(s)] }))
+    .filter((o) => o.title !== undefined);
   const h1 = practice.pageH1 ?? practice.title;
 
   return (

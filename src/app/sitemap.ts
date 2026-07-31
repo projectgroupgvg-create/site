@@ -17,6 +17,13 @@ function localizedPath(locale: string, path: string): string {
 // English/German/French are an explicit "stage 2" there, so these only
 // exist for the default locale and get a single sitemap entry each, not one
 // per locale like the rest of the site).
+const ukOnlySlugs = new Set([
+  'property-rights-protection',
+  'marital-property-division',
+  'corporate-disputes',
+  'customs-disputes',
+]);
+
 const ukOnlyPaths = [
   '/virtual-assets',
   '/virtual-assets/criminal-defence',
@@ -27,11 +34,17 @@ const ukOnlyPaths = [
   '/reports',
   '/reports/digital-assets-cross-border-2026',
   '/editorial-policy',
+  // Sub-practices added via client-supplied copy that's uk-only so far (see
+  // the matching ukOnlySlugs set in practices/[slug]/page.tsx) — listed
+  // once here instead of once per locale like the rest of /practices/.
+  ...[...ukOnlySlugs].map((slug) => `/practices/${slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ['/', '/about', '/team', '/blog', '/news', '/calculator', '/intake', '/faq', '/wallet-check', '/document-notary', '/confidential'];
-  const practicePaths = practiceSlugs.map((slug) => `/practices/${slug}`);
+  const practicePaths = practiceSlugs
+    .filter((slug) => !ukOnlySlugs.has(slug))
+    .map((slug) => `/practices/${slug}`);
   const blogPostPaths = blogFallbackSlugs.map((slug) => `/blog/${slug}`);
   const newsItemPaths = newsFallbackSlugs.map((slug) => `/news/${slug}`);
   const allPaths = [...staticPaths, ...practicePaths, ...blogPostPaths, ...newsItemPaths];
