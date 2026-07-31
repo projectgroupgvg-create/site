@@ -147,17 +147,15 @@ export default function HeroCarousel({
           <div className="relative z-10 flex h-full flex-col justify-center px-6 sm:px-16">
             <Link
               href={`/news/${item.slug}`}
-              className="group max-w-[760px] text-left"
-              style={{ fontFamily: TIMES_FONT }}
+              className="group inline-block max-w-[760px] rounded-sm bg-[rgba(255,255,255,0.12)] px-6 py-5 text-left backdrop-blur-[2px]"
+              style={{ fontFamily: TIMES_FONT, border: '1px solid rgba(255,255,255,0.18)' }}
             >
               <span className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
                 {newsLabel}
               </span>
-              <div className="my-1">
-                <span className="box-decoration-clone inline bg-[rgba(10,8,6,0.55)] px-2.5 py-1 text-[clamp(26px,4.2vw,48px)] font-normal leading-[1.45] text-[var(--ink)]">
-                  {item.title}
-                </span>
-              </div>
+              <span className="block text-[clamp(26px,4.2vw,48px)] font-normal leading-[1.3] text-[var(--ink)]">
+                {item.title}
+              </span>
               <span className="mt-6 inline-block text-[12px] font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-colors group-hover:text-[var(--s3)]">
                 {readMoreLabel} →
               </span>
