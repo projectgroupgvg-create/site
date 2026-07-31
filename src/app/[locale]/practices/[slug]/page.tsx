@@ -212,9 +212,9 @@ export default async function PracticePage({
         </div>
       )}
 
-      <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
+      <div className="py-16" style={{ paddingLeft: '2cm', paddingRight: '2cm' }}>
         {practice.intro.map((p, i) => (
-          <p key={i} className="mb-5 text-[14px] leading-[1.9] text-[var(--ink2)]">
+          <p key={i} className="mb-5 text-justify text-[14px] leading-[1.9] text-[var(--ink2)]">
             {p}
           </p>
         ))}
@@ -245,7 +245,7 @@ export default async function PracticePage({
                 <div key={s.title}>
                   <h3 className="mb-2 font-serif text-[16px] font-semibold text-[var(--ink)]">{s.title}</h3>
                   {s.body.map((p, i) => (
-                    <p key={i} className="mb-2 text-[13.5px] leading-[1.85] text-[var(--ink2)]">
+                    <p key={i} className="mb-2 text-justify text-[13.5px] leading-[1.85] text-[var(--ink2)]">
                       {p}
                     </p>
                   ))}
@@ -264,7 +264,7 @@ export default async function PracticePage({
               {practice.faq.map((item) => (
                 <div key={item.q}>
                   <div className="mb-1.5 text-[13.5px] font-semibold text-[var(--ink)]">{item.q}</div>
-                  <p className="text-[13.5px] leading-[1.8] text-[var(--ink3)]">{item.a}</p>
+                  <p className="text-justify text-[13.5px] leading-[1.8] text-[var(--ink3)]">{item.a}</p>
                 </div>
               ))}
             </div>
