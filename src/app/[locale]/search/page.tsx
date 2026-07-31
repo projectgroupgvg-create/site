@@ -80,7 +80,7 @@ export default async function SearchPage({
   return (
     <main>
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <h1 className="mb-3 font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.1] text-[var(--ink)]">
+        <h1 className="mb-3 font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.1] text-[var(--ink)]">
           {t('title')}
         </h1>
       </div>

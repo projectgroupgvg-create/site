@@ -13,10 +13,15 @@ import QuickContactWidget from '@/components/QuickContactWidget';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 
-// Fonts are loaded via a standard Google Fonts <link> (like the original
-// landing page) rather than next/font/google, so the build doesn't require
-// network access to fonts.googleapis.com at build time. --font-playfair /
-// --font-inter are defined in globals.css and consumed by tailwind.config.ts.
+// Fonts are loaded via plain <link> tags (not next/font) so the build
+// doesn't require network access at build time. Switzer (Fontshare) is the
+// site-wide typeface — a free, open-license alternative to Suisse Int'l
+// (same weight names: Light/Regular/Medium/etc., very close letterforms) —
+// used for everything except the homepage brand wordmark, which keeps
+// Michroma so "GANGAN & PARTNERS" stays untouched per the client's request.
+// --font-switzer / --font-michroma are defined in globals.css and consumed
+// by tailwind.config.ts (both `font-sans` and `font-serif` now resolve to
+// Switzer; only `font-display` still resolves to Michroma).
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -69,7 +74,12 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Michroma&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&display=swap"
           rel="stylesheet"
         />
         <link rel="manifest" href="/manifest.json" />

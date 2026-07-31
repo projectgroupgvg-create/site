@@ -60,7 +60,7 @@ export default async function AboutPage({
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
             {t('lbl')}
           </div>
-          <h1 className="mb-3 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+          <h1 className="mb-3 font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
             {t('title')}
           </h1>
           <div className="mb-5 text-[12px] font-medium uppercase tracking-[0.28em] text-[var(--s3)]">
@@ -71,7 +71,7 @@ export default async function AboutPage({
       </div>
 
       <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
-        <h2 className="mb-5 font-serif text-[22px] font-semibold text-[var(--ink)]">
+        <h2 className="mb-5 font-serif text-[22px] font-normal text-[var(--ink)]">
           {t('historyTitle')}
         </h2>
         {history.map((p, i) => (
@@ -87,7 +87,7 @@ export default async function AboutPage({
           <p className="text-[14px] leading-[1.8] text-[var(--ink2)]">{t('mission')}</p>
         </div>
 
-        <h2 className="mb-6 mt-14 font-serif text-[22px] font-semibold text-[var(--ink)]">
+        <h2 className="mb-6 mt-14 font-serif text-[22px] font-normal text-[var(--ink)]">
           {t('valuesTitle')}
         </h2>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -105,7 +105,7 @@ export default async function AboutPage({
           ))}
         </div>
 
-        <h2 className="mb-6 mt-14 font-serif text-[22px] font-semibold text-[var(--ink)]">
+        <h2 className="mb-6 mt-14 font-serif text-[22px] font-normal text-[var(--ink)]">
           {t('statsTitle')}
         </h2>
         <div className="grid grid-cols-1 gap-5 rounded-lg border-hair p-7 sm:grid-cols-3" style={{ borderColor: 'var(--b)' }}>

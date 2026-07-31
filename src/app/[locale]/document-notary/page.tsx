@@ -41,7 +41,7 @@ export default async function DocumentNotaryPage({
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
           {t('lbl')}
         </div>
-        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
           {t('title')}
         </h1>
         <div className="divider" />

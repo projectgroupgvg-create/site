@@ -23,9 +23,12 @@
   --bs: rgba(28, 21, 16, 0.28);
   --ink-hover: #100b08;
 
-  --font-playfair: 'Playfair Display', Georgia, serif;
-  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-michroma: 'Michroma', 'Inter', sans-serif;
+  /* Site-wide typeface (free Suisse Int'l alternative from Fontshare).
+     Used for both `font-sans` and `font-serif` Tailwind utilities — see
+     tailwind.config.ts — so the whole site reads as one consistent
+     typographic family instead of the previous serif/sans split. */
+  --font-switzer: 'Switzer', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-michroma: 'Michroma', 'Switzer', sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -51,6 +54,15 @@ body {
   background-repeat: no-repeat;
   color: var(--ink);
   overflow-x: hidden;
+  /* Base tracking for Ukrainian/Cyrillic body text — kept within the
+     requested 0.01–0.03em range. Large all-caps Latin headlines (rare;
+     the homepage brand wordmark is excluded from this font entirely) use
+     a wider 0.04–0.08em via .tracking-latin-heading where needed. */
+  letter-spacing: 0.02em;
+}
+
+.tracking-latin-heading {
+  letter-spacing: 0.06em;
 }
 
 @layer utilities {

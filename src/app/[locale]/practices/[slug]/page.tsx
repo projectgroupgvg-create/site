@@ -147,7 +147,7 @@ export default async function PracticePage({
               <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
                 {practice.num} / {t('lbl')}
               </div>
-              <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+              <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
                 {practice.title}
               </h1>
             </div>
@@ -163,7 +163,7 @@ export default async function PracticePage({
             <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
               {practice.num} / {t('lbl')}
             </div>
-            <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-bold leading-[1.1] text-[var(--ink)]">
+            <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
               {practice.title}
             </h1>
           </div>
@@ -208,7 +208,7 @@ export default async function PracticePage({
           </p>
         ))}
 
-        <h2 className="mb-4 mt-10 font-serif text-[22px] font-semibold text-[var(--ink)]">
+        <h2 className="mb-4 mt-10 font-serif text-[22px] font-normal text-[var(--ink)]">
           {t('servicesTitle')}
         </h2>
         <ul className="mb-2">

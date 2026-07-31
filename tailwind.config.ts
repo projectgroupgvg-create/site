@@ -26,8 +26,14 @@ const config: Config = {
         bs: 'var(--bs)',
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'serif'],
-        sans: ['var(--font-inter)', 'sans-serif'],
+        // Both serif and sans resolve to the same site-wide typeface
+        // (Switzer, a free Suisse Int'l alternative) — kept as two Tailwind
+        // families rather than merged so existing `font-serif`/`font-sans`
+        // usage across the codebase doesn't need to change, only what each
+        // one points to. `display` (Michroma) is untouched — it's used
+        // solely for the homepage brand wordmark, which keeps its own look.
+        serif: ['var(--font-switzer)', 'sans-serif'],
+        sans: ['var(--font-switzer)', 'sans-serif'],
         display: ['var(--font-michroma)', 'sans-serif'],
       },
       borderWidth: {

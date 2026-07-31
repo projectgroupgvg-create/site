@@ -120,7 +120,7 @@ export default async function BlogPostPage({
             <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
               {categoryLabel} · {post.date}
             </div>
-            <h1 className="max-w-[1000px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+            <h1 className="max-w-[1000px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
               {post.title}
             </h1>
           </div>
@@ -136,7 +136,7 @@ export default async function BlogPostPage({
           <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
             {categoryLabel} · {post.date}
           </div>
-          <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+          <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
             {post.title}
           </h1>
         </div>

@@ -87,7 +87,7 @@ export default async function NewsItemPage({
         <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
           {typeLabel} · {item.date}
         </div>
-        <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-bold leading-[1.2] text-[var(--ink)]">
+        <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
           {item.title}
         </h1>
       </div>
