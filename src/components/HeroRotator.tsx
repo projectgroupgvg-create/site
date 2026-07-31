@@ -53,8 +53,8 @@ export default function HeroRotator({
       ))}
 
       {newsItems.length > 0 && (
-        <div className="absolute bottom-16 left-1/2 z-10 w-full max-w-[640px] -translate-x-1/2 px-6 text-center sm:bottom-20">
-          <div className="relative h-[64px] sm:h-[58px]">
+        <div className="absolute bottom-24 left-1/2 z-10 w-full max-w-[860px] -translate-x-1/2 px-6 text-center sm:bottom-28">
+          <div className="relative h-[68px] sm:h-[60px]">
             {newsItems.map((item, i) => (
               <Link
                 key={item.slug}
@@ -67,7 +67,7 @@ export default function HeroRotator({
                 <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
                   {item.eyebrow ?? label}
                 </span>
-                <span className="line-clamp-1 font-serif text-[15px] font-semibold leading-tight text-[var(--ink)] sm:text-[17px]">
+                <span className="line-clamp-1 max-w-full font-serif text-[14px] font-semibold leading-tight text-[var(--ink)] sm:text-[17px]">
                   {item.title}
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors group-hover:text-[var(--s3)]">
