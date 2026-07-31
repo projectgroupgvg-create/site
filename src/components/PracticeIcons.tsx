@@ -176,6 +176,20 @@ export function LandLawIcon({ className }: IconProps) {
   );
 }
 
+export function ITLawIcon({ className }: IconProps) {
+  const g = 'pmGold-it';
+  return (
+    <Base id={g} className={className}>
+      <rect x="4" y="7" width="24" height="15" rx="1.6" stroke="var(--ink3)" strokeWidth="1.5" />
+      <path d="M4 19.5 H28" stroke="var(--ink3)" strokeWidth="1" />
+      <path d="M10 27 H22 M13 22 L12 27 M19 22 L20 27" stroke="var(--ink3)" strokeWidth="1.2" strokeLinecap="round" />
+      <path d="M11 14.5 L8 12 L11 9.5" stroke={`url(#${g})`} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path d="M17 9 L15 15" stroke="var(--ink3)" strokeWidth="1.3" strokeLinecap="round" />
+      <circle cx="21" cy="12" r="1" fill="#c9a227" />
+    </Base>
+  );
+}
+
 export function RegulatoryLawIcon({ className }: IconProps) {
   const g = 'pmGold-regulatory';
   return (
@@ -194,6 +208,7 @@ export const PRACTICE_ICONS: Record<PracticeSlug, (props: IconProps) => JSX.Elem
   'commercial-law': CommercialLawIcon,
   'administrative-law': AdministrativeLawIcon,
   'land-law': LandLawIcon,
+  'it-law': ITLawIcon,
   'transnational-investigations': TransnationalIcon,
   'crypto-fraud': CryptoFraudIcon,
   'aml-compliance': AmlComplianceIcon,

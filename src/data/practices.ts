@@ -10,6 +10,7 @@ export const topLevelPracticeSlugs = [
   'commercial-law',
   'administrative-law',
   'land-law',
+  'it-law',
 ] as const;
 
 // Criminal Defense's own specializations. Each still has a fully independent
@@ -59,6 +60,7 @@ export const subPracticesByParent: Record<(typeof topLevelPracticeSlugs)[number]
   'commercial-law': commercialSubPracticeSlugs,
   'administrative-law': administrativeSubPracticeSlugs,
   'land-law': landSubPracticeSlugs,
+  'it-law': [],
 };
 
 export function getParentSlug(slug: string): (typeof topLevelPracticeSlugs)[number] | null {

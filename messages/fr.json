@@ -132,6 +132,23 @@
         ]
       },
       {
+        "num": "06",
+        "title": "Droit informatique",
+        "desc": "Accompagnement juridique des entreprises IT : contrats de développement et de licence de logiciels, protection des données, e-commerce et droit du numérique.",
+        "intro": [
+          "Nous accompagnons les entreprises IT, les équipes produit et les start-ups dans la structuration de leurs relations contractuelles, la protection de la propriété intellectuelle logicielle et le respect des exigences en matière de protection des données.",
+          "Gangan & Partners allie une compréhension des processus technologiques à une expérience pratique du droit pénal, civil et réglementaire — essentielle pour les projets impliquant le traitement de données, le développement externalisé et les produits numériques."
+        ],
+        "services": [
+          "Contrats de développement, de licence et de cession de droits sur les logiciels",
+          "Conformité en matière de protection des données (RGPD, droit ukrainien)",
+          "Structuration des accords d'externalisation (outsourcing/outstaffing)",
+          "Contrats SaaS, services cloud et accords de niveau de service (SLA)",
+          "Protection de la propriété intellectuelle sur le code source et les produits numériques",
+          "Droit du numérique, réponse aux violations de données et incidents cyber"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Enquêtes transnationales",
         "desc": "Affaires comportant un élément international : extradition, entraide judiciaire internationale, enquêtes sur les crimes financiers.",

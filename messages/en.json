@@ -132,6 +132,23 @@
         ]
       },
       {
+        "num": "06",
+        "title": "IT Law",
+        "desc": "Legal support for IT businesses: software development and licensing agreements, data protection, e-commerce and cyber law.",
+        "intro": [
+          "We advise IT companies, product teams and startups on structuring contractual relationships, protecting software intellectual property, and complying with data protection requirements.",
+          "Gangan & Partners combines an understanding of technology processes with practical experience in criminal, civil and regulatory law — essential for projects involving data processing, outsourced development and digital products."
+        ],
+        "services": [
+          "Software development, licensing and IP transfer agreements",
+          "Data protection compliance (GDPR, Ukrainian law)",
+          "Structuring outsourcing and outstaffing arrangements",
+          "SaaS, cloud services and SLA agreements",
+          "Protection of intellectual property in source code and digital products",
+          "Cyber law, data breach and cyber incident response"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Transnational Investigations",
         "desc": "Cases with an international element: extradition, mutual legal assistance, investigation of financial crimes.",

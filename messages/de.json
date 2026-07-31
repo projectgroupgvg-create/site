@@ -132,6 +132,23 @@
         ]
       },
       {
+        "num": "06",
+        "title": "IT-Recht",
+        "desc": "Rechtliche Begleitung von IT-Unternehmen: Software-Entwicklungs- und Lizenzverträge, Datenschutz, E-Commerce und Cyberrecht.",
+        "intro": [
+          "Wir beraten IT-Unternehmen, Produktteams und Start-ups bei der Strukturierung vertraglicher Beziehungen, dem Schutz geistigen Eigentums an Software und der Einhaltung datenschutzrechtlicher Anforderungen.",
+          "Gangan & Partners verbindet technisches Verständnis mit praktischer Erfahrung im Straf-, Zivil- und Regulierungsrecht — wichtig für Projekte mit Datenverarbeitung, Outsourcing-Entwicklung und digitalen Produkten."
+        ],
+        "services": [
+          "Verträge über Softwareentwicklung, Lizenzierung und Rechteübertragung",
+          "Datenschutz-Compliance (DSGVO, ukrainisches Recht)",
+          "Strukturierung von Outsourcing- und Outstaffing-Vereinbarungen",
+          "SaaS-, Cloud- und SLA-Verträge",
+          "Schutz geistigen Eigentums an Quellcode und digitalen Produkten",
+          "Cyberrecht, Reaktion auf Datenlecks und Cybervorfälle"
+        ]
+      },
+      {
         "num": "01.1",
         "title": "Transnationale Ermittlungen",
         "desc": "Fälle mit internationalem Bezug: Auslieferung, internationale Rechtshilfe, Ermittlungen zu Finanzdelikten.",
