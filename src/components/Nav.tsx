@@ -25,7 +25,6 @@ const navItems = [
 const insightsItems = [
   { href: '/blog', key: 'blog', forceUk: false },
   { href: '/reports', key: 'reports', forceUk: true },
-  { href: '/research', key: 'research', forceUk: true },
   { href: '/media', key: 'media', forceUk: true },
 ] as const;
 
