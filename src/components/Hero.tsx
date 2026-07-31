@@ -28,11 +28,11 @@ export default async function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden" style={heroLocalVars}>
       {/* First-visit reveal: brand identity slide (photo + firm name +
-          tagline + CTAs) shown first, then after a few seconds the whole
-          slide — image included — slides fully left and is replaced by an
-          announcement-style slide (photo + news headline + link), cycling
-          through the firm's latest news. See HeroCarousel for the timing
-          and transition mechanics. */}
+          tagline + CTAs) shown first, then after a few seconds it fades out
+          and an announcement-style slide slowly fades in (photo + small
+          "news" label + headline + read-more link, left-aligned, Times New
+          Roman), cycling through the firm's latest news. See HeroCarousel
+          for the timing and crossfade mechanics. */}
       <HeroCarousel
         brandBg="/hero-bg-v2.jpg"
         newsBg="/hero-bg.jpg"
@@ -41,6 +41,7 @@ export default async function Hero() {
         btn1Label={t('btn1')}
         btn2Label={t('btn2')}
         scrollLabel={t('scroll')}
+        newsLabel={t('latestLabel')}
         readMoreLabel={t('readMore')}
       />
     </section>
