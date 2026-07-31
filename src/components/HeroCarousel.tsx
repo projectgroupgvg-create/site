@@ -8,6 +8,10 @@ import HeroVideo from './HeroVideo';
 export type HeroNewsSlide = {
   slug: string;
   title: string;
+  // Optional per-item photo (matched to that specific news story, e.g. the
+  // building where a hearing took place). Falls back to the shared newsBg
+  // for any item that doesn't have one yet.
+  bg?: string;
 };
 
 // First-visit reveal: the visitor sees the full brand identity slide first
@@ -140,7 +144,7 @@ export default function HeroCarousel({
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('${newsBg}')` }}
+            style={{ backgroundImage: `url('${item.bg ?? newsBg}')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.72)] via-[rgba(10,8,6,0.48)] to-[rgba(10,8,6,0.52)]" />
 

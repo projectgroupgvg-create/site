@@ -16,6 +16,16 @@ const heroLocalVars = {
   '--bs': 'rgba(247,244,238,0.4)',
 } as CSSProperties;
 
+// Per-story photos for the Hero's news slides — matched to the specific
+// case/event rather than a generic office shot (e.g. the actual building
+// where a hearing or filing took place). Any news item not listed here
+// falls back to the shared newsBg passed to HeroCarousel.
+const NEWS_SLIDE_BG: Record<string, string> = {
+  'nabu-sap-case-materials-200m-legalization': '/news-hero-nabu-sap.jpg',
+  'zurich-prosecutor-virtual-assets-advisory': '/news-hero-zurich.jpg',
+  'report-virtual-assets-cross-border-legal-risks': '/news-hero-report.jpg',
+};
+
 export default async function Hero() {
   const locale = await getLocale();
   const t = await getTranslations('Hero');
@@ -23,7 +33,7 @@ export default async function Hero() {
   const fallbackNews = newsT.raw('fallbackNews') as FallbackNewsItem[];
   const latestNews = (await getAllNews(locale, fallbackNews))
     .slice(0, 3)
-    .map((n) => ({ slug: n.slug, title: n.title }));
+    .map((n) => ({ slug: n.slug, title: n.title, bg: NEWS_SLIDE_BG[n.slug] }));
 
   return (
     <section className="relative min-h-screen overflow-hidden" style={heroLocalVars}>
