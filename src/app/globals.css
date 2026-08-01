@@ -114,16 +114,21 @@ body {
 @keyframes page-fade-in {
   from {
     opacity: 0;
-    transform: translateY(6px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
+/* Opacity-only on purpose (no transform): a transform here promotes this
+   wrapper to its own GPU layer for the whole 1600ms. If a priority/above-
+   the-fold image (hero background, practice photo, etc.) finishes decoding
+   partway through, Chromium sometimes never repaints that layer again once
+   the animation ends — the image stays invisible until the user scrolls or
+   otherwise forces a repaint. Dropping the transform avoids the layer
+   promotion and the stale-paint bug that came with it. */
 .page-transition {
-  animation: page-fade-in 1600ms ease-in-out both;
+  animation: page-fade-in 900ms ease-in-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
