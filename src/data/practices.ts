@@ -74,4 +74,6 @@ export function getParentSlug(slug: string): (typeof topLevelPracticeSlugs)[numb
 // To add a photo: drop a real file into /public/practices/<slug>.jpg and add
 // an entry here, e.g. 'criminal-defense': '/practices/criminal-defense.jpg'.
 // Nothing renders until a real image is added — no placeholder/stock photos.
-export const practiceImages: Partial<Record<PracticeSlug, string>> = {};
+export const practiceImages: Partial<Record<PracticeSlug, string>> = {
+  'property-rights-protection': '/practices/property-rights-protection.jpg',
+};
