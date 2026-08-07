@@ -1,7 +1,23 @@
+import type { CSSProperties } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { topLevelPracticeSlugs } from '@/data/practices';
 import { PRACTICE_ICONS } from './PracticeIcons';
+
+// This section runs light-on-dark, independent of the site's light theme —
+// same approach as Hero.tsx — so the moody corridor photo and the card grid
+// read as one continuous scene instead of a light card block dropped onto a
+// dark photo. Every var(--ink)/(--s3)/etc. reference below cascades through
+// this override automatically.
+const practicesLocalVars = {
+  '--ink': '#f7f4ee',
+  '--ink2': 'rgba(247,244,238,0.72)',
+  '--ink3': 'rgba(247,244,238,0.58)',
+  '--bgc': 'rgba(24,19,14,0.5)',
+  '--wh': 'rgba(36,29,21,0.7)',
+  '--b': 'rgba(247,244,238,0.16)',
+  '--s3': '#d9c9a8',
+} as CSSProperties;
 
 export default function PracticesGrid() {
   const t = useTranslations('Practices');
@@ -19,15 +35,20 @@ export default function PracticesGrid() {
   ).slice(0, topLevelPracticeSlugs.length);
 
   return (
-    <section id="practices" className="relative overflow-hidden bg-[var(--bg2)] px-6 py-24 sm:px-11">
+    <section
+      id="practices"
+      className="relative overflow-hidden px-6 py-24 sm:px-11"
+      style={practicesLocalVars}
+    >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/practices-corridor-bg-v2.jpg')" }}
       />
-      {/* moody marble/bronze corridor render — a soft scrim back to --bg2
-          keeps card text readable while still letting the architecture
-          show through above/around the grid */}
-      <div className="absolute inset-0 bg-[var(--bg2)]/75" />
+      {/* moody marble/bronze corridor render, kept dark and atmospheric the
+          whole way down — deeper toward the bottom where the cards sit —
+          so the photo and the frosted-glass cards read as one continuous
+          scene instead of a light card block dropped onto a dark photo. */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(10,8,6,0.5)] via-[rgba(10,8,6,0.68)] to-[rgba(10,8,6,0.86)]" />
 
       <div className="relative z-10">
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
@@ -51,11 +72,11 @@ export default function PracticesGrid() {
               <Link
                 key={topLevelPracticeSlugs[i]}
                 href={`/practices/${topLevelPracticeSlugs[i]}`}
-                className="group relative overflow-hidden border-hair bg-[var(--bgc)] p-9 transition-colors hover:bg-[var(--wh)]"
+                className="group relative overflow-hidden border-hair bg-[var(--bgc)] p-9 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
-                <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--ink)] transition-all duration-300 group-hover:w-full" />
-                <Icon className="pointer-events-none absolute -bottom-4 -right-4 h-[130px] w-[130px] opacity-[0.06] transition-opacity duration-300 group-hover:opacity-[0.1]" />
+                <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--s3)] transition-all duration-300 group-hover:w-full" />
+                <Icon className="pointer-events-none absolute -bottom-4 -right-4 h-[130px] w-[130px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
                 <div className="relative mb-5 flex items-start justify-between">
                   <span className="text-[9.5px] font-semibold tracking-[0.24em] text-[var(--s3)]">
                     {p.num}
@@ -68,7 +89,7 @@ export default function PracticesGrid() {
                 <div className="relative mb-6 text-[12.5px] leading-[1.75] text-[var(--ink3)]">
                   {p.desc}
                 </div>
-                <span className="relative flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--ink2)] transition-all group-hover:gap-3 group-hover:text-[var(--ink)]">
+                <span className="relative flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--ink2)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
                   {t('cardLink')} →
                 </span>
               </Link>
