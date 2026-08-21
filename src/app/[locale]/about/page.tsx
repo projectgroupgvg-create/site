@@ -70,6 +70,16 @@ export default async function AboutPage({
         </div>
       </div>
 
+      {/* Brand monogram banner — a quiet, deliberate signature moment between
+          the page header and the written content, rather than folded into
+          the header photo (which already carries its own title/label text). */}
+      <div className="relative flex h-[220px] items-center justify-center overflow-hidden bg-black sm:h-[280px]">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/about-vg-monogram-banner.jpg')" }}
+        />
+      </div>
+
       <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
         <h2 className="mb-5 font-serif text-[22px] font-normal text-[var(--ink)]">
           {t('historyTitle')}
