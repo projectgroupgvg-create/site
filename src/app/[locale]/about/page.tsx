@@ -53,9 +53,9 @@ export default async function AboutPage({
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/about-bg.jpg')" }}
+          style={{ backgroundImage: "url('/about-vg-monogram-banner.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.8)] via-[rgba(10,8,6,0.55)] to-[rgba(10,8,6,0.6)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
             {t('lbl')}
@@ -68,16 +68,6 @@ export default async function AboutPage({
           </div>
           <div className="h-[1px] w-10 bg-[var(--s3)] opacity-70" />
         </div>
-      </div>
-
-      {/* Brand monogram banner — a quiet, deliberate signature moment between
-          the page header and the written content, rather than folded into
-          the header photo (which already carries its own title/label text). */}
-      <div className="relative flex h-[220px] items-center justify-center overflow-hidden bg-black sm:h-[280px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/about-vg-monogram-banner.jpg')" }}
-        />
       </div>
 
       <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
