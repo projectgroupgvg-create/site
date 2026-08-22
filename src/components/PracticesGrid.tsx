@@ -11,6 +11,8 @@ import { PRACTICE_ICONS } from './PracticeIcons';
 // without an entry here keep the plain icon-card layout below.
 const PRACTICE_CARD_IMAGES: Partial<Record<(typeof topLevelPracticeSlugs)[number], string>> = {
   'criminal-defense': '/practice-card-criminal-defense.jpg',
+  'commercial-law': '/practice-card-commercial-law.jpg',
+  'administrative-law': '/practice-card-administrative-law.jpg',
 };
 
 // This section runs light-on-dark, independent of the site's light theme —
