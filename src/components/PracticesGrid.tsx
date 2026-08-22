@@ -4,6 +4,15 @@ import { Link } from '@/i18n/navigation';
 import { topLevelPracticeSlugs } from '@/data/practices';
 import { PRACTICE_ICONS } from './PracticeIcons';
 
+// Themed "3D still life" card per practice — a thin title strip over a
+// full-bleed photo of objects associated with that field of law (e.g. the
+// Criminal Procedural Code, an evidence bag, a case file for Criminal
+// Defense). Added one practice at a time as real renders come in; slugs
+// without an entry here keep the plain icon-card layout below.
+const PRACTICE_CARD_IMAGES: Partial<Record<(typeof topLevelPracticeSlugs)[number], string>> = {
+  'criminal-defense': '/practice-card-criminal-defense.jpg',
+};
+
 // This section runs light-on-dark, independent of the site's light theme —
 // same approach as Hero.tsx — so the moody corridor photo and the card grid
 // read as one continuous scene instead of a light card block dropped onto a
@@ -67,12 +76,50 @@ export default function PracticesGrid() {
           style={{ borderColor: 'var(--b)' }}
         >
           {list.map((p, i) => {
-            const Icon = PRACTICE_ICONS[topLevelPracticeSlugs[i]];
+            const slug = topLevelPracticeSlugs[i];
+            const Icon = PRACTICE_ICONS[slug];
+            const cardImage = PRACTICE_CARD_IMAGES[slug];
+
+            if (cardImage) {
+              return (
+                <Link
+                  key={slug}
+                  href={`/practices/${slug}`}
+                  className="group relative flex min-h-[340px] flex-col overflow-hidden border-hair transition-transform"
+                  style={{ borderColor: 'var(--b)' }}
+                >
+                  {/* thin title strip — the practice name, not baked into the
+                      photo, so it stays crisp and locale-independent */}
+                  <div className="relative z-10 flex items-center justify-between gap-3 bg-black px-5 py-3">
+                    <span className="text-[9.5px] font-semibold tracking-[0.24em] text-[var(--s3)]">
+                      {p.num}
+                    </span>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">
+                      {p.title}
+                    </span>
+                  </div>
+
+                  <div className="relative flex-1">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      style={{ backgroundImage: `url('${cardImage}')` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.05)] to-transparent" />
+                    <span className="relative z-10 flex h-full items-end px-5 pb-5">
+                      <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--ink)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
+                        {t('cardLink')} →
+                      </span>
+                    </span>
+                  </div>
+                </Link>
+              );
+            }
+
             return (
               <Link
-                key={topLevelPracticeSlugs[i]}
-                href={`/practices/${topLevelPracticeSlugs[i]}`}
-                className="group relative overflow-hidden border-hair bg-[var(--bgc)] p-9 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
+                key={slug}
+                href={`/practices/${slug}`}
+                className="group relative min-h-[340px] overflow-hidden border-hair bg-[var(--bgc)] p-9 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--s3)] transition-all duration-300 group-hover:w-full" />
