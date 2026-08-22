@@ -72,7 +72,7 @@ export default function PracticesGrid() {
         </p>
 
         <div
-          className="mt-20 grid grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2 lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-[980px] grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2"
           style={{ borderColor: 'var(--b)' }}
         >
           {list.map((p, i) => {
@@ -85,16 +85,16 @@ export default function PracticesGrid() {
                 <Link
                   key={slug}
                   href={`/practices/${slug}`}
-                  className="group relative flex min-h-[340px] flex-col overflow-hidden border-hair transition-transform"
+                  className="group relative flex min-h-[440px] flex-col overflow-hidden border-hair transition-transform"
                   style={{ borderColor: 'var(--b)' }}
                 >
                   {/* thin title strip — the practice name, not baked into the
                       photo, so it stays crisp and locale-independent */}
-                  <div className="relative z-10 flex items-center justify-between gap-3 bg-black px-5 py-3">
-                    <span className="text-[9.5px] font-semibold tracking-[0.24em] text-[var(--s3)]">
+                  <div className="relative z-10 flex items-center justify-between gap-3 bg-black px-6 py-4">
+                    <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
                       {p.num}
                     </span>
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">
+                    <span className="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">
                       {p.title}
                     </span>
                   </div>
@@ -105,8 +105,8 @@ export default function PracticesGrid() {
                       style={{ backgroundImage: `url('${cardImage}')` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.05)] to-transparent" />
-                    <span className="relative z-10 flex h-full items-end px-5 pb-5">
-                      <span className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--ink)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
+                    <span className="relative z-10 flex h-full items-end px-6 pb-6">
+                      <span className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--ink)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
                         {t('cardLink')} →
                       </span>
                     </span>
@@ -119,24 +119,24 @@ export default function PracticesGrid() {
               <Link
                 key={slug}
                 href={`/practices/${slug}`}
-                className="group relative min-h-[340px] overflow-hidden border-hair bg-[var(--bgc)] p-9 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
+                className="group relative flex min-h-[440px] flex-col justify-center overflow-hidden border-hair bg-[var(--bgc)] p-12 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--s3)] transition-all duration-300 group-hover:w-full" />
-                <Icon className="pointer-events-none absolute -bottom-4 -right-4 h-[130px] w-[130px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
-                <div className="relative mb-5 flex items-start justify-between">
-                  <span className="text-[9.5px] font-semibold tracking-[0.24em] text-[var(--s3)]">
+                <Icon className="pointer-events-none absolute -bottom-6 -right-6 h-[170px] w-[170px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
+                <div className="relative mb-6 flex items-start justify-between">
+                  <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
                     {p.num}
                   </span>
-                  <Icon className="h-7 w-7 text-[var(--ink3)]" />
+                  <Icon className="h-9 w-9 text-[var(--ink3)]" />
                 </div>
-                <div className="relative mb-3 font-serif text-[18px] font-semibold leading-[1.3] text-[var(--ink)]">
+                <div className="relative mb-4 font-serif text-[22px] font-semibold leading-[1.3] text-[var(--ink)]">
                   {p.title}
                 </div>
-                <div className="relative mb-6 text-[12.5px] leading-[1.75] text-[var(--ink3)]">
+                <div className="relative mb-7 max-w-[380px] text-[13.5px] leading-[1.8] text-[var(--ink3)]">
                   {p.desc}
                 </div>
-                <span className="relative flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--ink2)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
+                <span className="relative flex items-center gap-2 text-[10.5px] font-medium uppercase tracking-[0.12em] text-[var(--ink2)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
                   {t('cardLink')} →
                 </span>
               </Link>
