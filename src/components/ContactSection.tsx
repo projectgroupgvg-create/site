@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import ContactGraphic from './ContactGraphic';
 
 const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? '';
 
@@ -21,8 +22,14 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contacts" className="border-t-hair bg-[var(--bg3)]" style={{ borderColor: 'var(--b)' }}>
-      <div className="grid grid-cols-1 gap-12 px-6 py-24 sm:px-11 lg:grid-cols-2 lg:gap-20">
+    <section
+      id="contacts"
+      className="relative overflow-hidden border-t-hair bg-[var(--bg3)]"
+      style={{ borderColor: 'var(--b)' }}
+    >
+      <ContactGraphic className="pointer-events-none absolute -right-[12%] top-1/2 h-[900px] w-[900px] -translate-y-1/2 opacity-[0.16] sm:opacity-[0.22]" />
+
+      <div className="relative z-10 grid grid-cols-1 gap-12 px-6 py-24 sm:px-11 lg:grid-cols-2 lg:gap-20">
         <div>
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
             {t('lbl')}
