@@ -74,10 +74,7 @@ export default function PracticesGrid() {
           {t('sub')}
         </p>
 
-        <div
-          className="mx-auto mt-20 grid max-w-[980px] grid-cols-1 overflow-hidden rounded-lg border-hair sm:grid-cols-2"
-          style={{ borderColor: 'var(--b)' }}
-        >
+        <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((p, i) => {
             const slug = topLevelPracticeSlugs[i];
             const Icon = PRACTICE_ICONS[slug];
@@ -88,7 +85,7 @@ export default function PracticesGrid() {
                 <Link
                   key={slug}
                   href={`/practices/${slug}`}
-                  className="group relative flex min-h-[440px] flex-col overflow-hidden border-hair transition-transform"
+                  className="group relative flex min-h-[380px] flex-col overflow-hidden rounded-lg border-hair transition-transform"
                   style={{ borderColor: 'var(--b)' }}
                 >
                   {/* thin title strip — the practice name, not baked into the
@@ -122,7 +119,7 @@ export default function PracticesGrid() {
               <Link
                 key={slug}
                 href={`/practices/${slug}`}
-                className="group relative flex min-h-[440px] flex-col justify-center overflow-hidden border-hair bg-[var(--bgc)] p-12 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
+                className="group relative flex min-h-[380px] flex-col justify-center overflow-hidden rounded-lg border-hair bg-[var(--bgc)] p-10 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--s3)] transition-all duration-300 group-hover:w-full" />
