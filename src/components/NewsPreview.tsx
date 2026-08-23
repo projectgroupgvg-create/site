@@ -19,10 +19,10 @@ export default async function NewsPreview() {
     <section id="news" className="relative overflow-hidden bg-[var(--bg3)] px-6 py-24 sm:px-11">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/practices-bg-marble.jpg')" }}
+        style={{ backgroundImage: "url('/news-panel-bg-v3.jpg')" }}
       />
-      {/* cream marble-panel render (same photo as the Practices grid section)
-          — soft scrim back to --bg3 keeps the news list readable while the
+      {/* sunlit marble room with a river/city view through the window —
+          soft scrim back to --bg3 keeps the news list readable while the
           texture shows through above/around it */}
       <div className="absolute inset-0 bg-[var(--bg3)]/80" />
 
