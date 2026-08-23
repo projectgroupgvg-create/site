@@ -128,10 +128,12 @@ export default async function PracticePage({
       ? [...subs] as (typeof practiceSlugs)[number][]
       : topLevelPracticeSlugs.filter((s) => s !== currentSlug);
   } else if (parentSlug) {
-    othersSlugs = [
-      parentSlug,
-      ...subPracticesByParent[parentSlug].filter((s) => s !== currentSlug),
-    ] as (typeof practiceSlugs)[number][];
+    // Parent is deliberately excluded here — it's already the target of the
+    // "← Back" link above, so listing it again as a pill would duplicate
+    // that link. Only true siblings show up in this row.
+    othersSlugs = subPracticesByParent[parentSlug].filter(
+      (s) => s !== currentSlug,
+    ) as (typeof practiceSlugs)[number][];
   } else {
     othersSlugs = topLevelPracticeSlugs.filter((s) => s !== currentSlug);
   }
@@ -148,6 +150,13 @@ export default async function PracticePage({
     .filter((o) => o.title !== undefined);
   const h1 = practice.pageH1 ?? practice.title;
 
+  // Sub-practice pages return to their immediate parent instead of jumping
+  // all the way back to the homepage grid — a proper "one level up" back
+  // link instead of always resetting to the top.
+  const parentPractice = parentSlug ? list[practiceSlugs.indexOf(parentSlug)] : null;
+  const backHref = parentSlug ? `/practices/${parentSlug}` : '/#practices';
+  const backLabel = parentPractice ? parentPractice.title : t('backLink');
+
   return (
     <main>
       <JsonLd
@@ -162,6 +171,9 @@ export default async function PracticePage({
         data={buildBreadcrumbSchema(locale, [
           { name: 'Gangan & Partners', path: '/' },
           { name: t('lbl'), path: '/#practices' },
+          ...(parentPractice && parentSlug
+            ? [{ name: parentPractice.title, path: `/practices/${parentSlug}` }]
+            : []),
           { name: h1, path: `/practices/${slug}` },
         ])}
       />
@@ -183,10 +195,10 @@ export default async function PracticePage({
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
             <div className="relative z-10">
               <Link
-                href="/#practices"
+                href={backHref}
                 className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
               >
-                ← {t('backLink')}
+                ← {backLabel}
               </Link>
               <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
                 {practice.num} / {t('lbl')}
@@ -199,10 +211,10 @@ export default async function PracticePage({
         ) : (
           <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
             <Link
-              href="/#practices"
+              href={backHref}
               className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
             >
-              ← {t('backLink')}
+              ← {backLabel}
             </Link>
             <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
               {practice.num} / {t('lbl')}
@@ -302,29 +314,6 @@ export default async function PracticePage({
               ))}
             </div>
           </div>
-        )}
-
-        {/* "Практика → профіль: Блок відповідального адвоката" — TZ
-            Rozshyreni_profili_komandy §4. Only rendered for uk since the
-            profile page itself is uk-only for now. */}
-        {locale === routing.defaultLocale && (
-          <Link
-            href="/team/viacheslav-gangan"
-            locale="uk"
-            className="mt-14 flex items-center gap-4 rounded-lg border-hair p-5 transition-colors hover:border-[color:var(--s3)]"
-            style={{ borderColor: 'var(--b)' }}
-          >
-            <div
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-hair font-serif text-[15px] font-bold text-[var(--ink)]"
-              style={{ borderColor: 'var(--b)' }}
-            >
-              ВГ
-            </div>
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.12em] text-[var(--s3)]">Відповідальний адвокат</div>
-              <div className="text-[14px] font-semibold text-[var(--ink)]">В&apos;ячеслав Ганган — про адвоката →</div>
-            </div>
-          </Link>
         )}
 
         <div className="mt-8 rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', background: 'var(--bgc)' }}>
