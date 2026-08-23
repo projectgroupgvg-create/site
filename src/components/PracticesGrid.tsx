@@ -1,5 +1,5 @@
-import type { CSSProperties } from 'react';
-import { useTranslations } from 'next-intl';
+import type { CSSProperties, ComponentType } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { topLevelPracticeSlugs } from '@/data/practices';
 import { PRACTICE_ICONS } from './PracticeIcons';
@@ -32,13 +32,24 @@ const practicesLocalVars = {
   '--s3': '#d9c9a8',
 } as CSSProperties;
 
+type GridCard = {
+  key: string;
+  href: string;
+  num: string;
+  title: string;
+  desc: string;
+  Icon?: ComponentType<{ className?: string }>;
+  cardImage?: string;
+};
+
 export default function PracticesGrid() {
   const t = useTranslations('Practices');
-  // Only the 5 top-level "fields of law" show as cards here. Criminal
-  // Defense's own specializations (crypto-fraud, AML, etc.) are Practices.list
-  // items 5-9 — intentionally excluded so they aren't listed twice (once as a
-  // field of law, once as a Criminal Defense sub-topic). They're still fully
-  // reachable at their own URLs, linked from the Criminal Defense page.
+  const locale = useLocale();
+  // Only the 6 top-level "fields of law" show as cards here. Criminal
+  // Defense's own specializations (crypto-fraud, AML, etc.) are further down
+  // Practices.list — intentionally excluded so they aren't listed twice (once
+  // as a field of law, once as a Criminal Defense sub-topic). They're still
+  // fully reachable at their own URLs, linked from the Criminal Defense page.
   const list = (
     t.raw('list') as Array<{
       num: string;
@@ -46,6 +57,38 @@ export default function PracticesGrid() {
       desc: string;
     }>
   ).slice(0, topLevelPracticeSlugs.length);
+
+  const cards: GridCard[] = topLevelPracticeSlugs.map((slug, i) => ({
+    key: slug,
+    href: `/practices/${slug}`,
+    num: list[i].num,
+    title: list[i].title,
+    desc: list[i].desc,
+    Icon: PRACTICE_ICONS[slug],
+    cardImage: PRACTICE_CARD_IMAGES[slug],
+  }));
+
+  // Ukrainian-only swap: the client wants the homepage grid to foreground
+  // virtual-currency work instead of Land Law, linking out to the existing
+  // /virtual-assets hub (a separate uk-only SEO pillar page, not a
+  // /practices/[slug] page — see project memory on uk-only pillar pages).
+  // Land Law's own page is untouched and still reachable directly; it's
+  // just no longer advertised in this grid. Other locales keep the original
+  // Land Law card since /virtual-assets has no en/de/fr translation.
+  if (locale === 'uk') {
+    const vc = t.raw('virtualCurrencies') as { num: string; title: string; desc: string };
+    const landIndex = cards.findIndex((c) => c.key === 'land-law');
+    if (landIndex !== -1) {
+      cards[landIndex] = {
+        key: 'virtual-currencies',
+        href: '/virtual-assets',
+        num: vc.num,
+        title: vc.title,
+        desc: vc.desc,
+        cardImage: '/practice-card-virtual-currencies.jpg',
+      };
+    }
+  }
 
   return (
     <section
@@ -75,16 +118,14 @@ export default function PracticesGrid() {
         </p>
 
         <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" style={practicesLocalVars}>
-          {list.map((p, i) => {
-            const slug = topLevelPracticeSlugs[i];
-            const Icon = PRACTICE_ICONS[slug];
-            const cardImage = PRACTICE_CARD_IMAGES[slug];
+          {cards.map((card) => {
+            const Icon = card.Icon;
 
-            if (cardImage) {
+            if (card.cardImage) {
               return (
                 <Link
-                  key={slug}
-                  href={`/practices/${slug}`}
+                  key={card.key}
+                  href={card.href}
                   className="group relative flex min-h-[380px] flex-col overflow-hidden rounded-lg border-hair transition-transform"
                   style={{ borderColor: 'var(--b)' }}
                 >
@@ -92,17 +133,17 @@ export default function PracticesGrid() {
                       photo, so it stays crisp and locale-independent */}
                   <div className="relative z-10 flex items-center justify-between gap-3 bg-black px-6 py-4">
                     <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
-                      {p.num}
+                      {card.num}
                     </span>
                     <span className="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">
-                      {p.title}
+                      {card.title}
                     </span>
                   </div>
 
                   <div className="relative flex-1">
                     <div
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                      style={{ backgroundImage: `url('${cardImage}')` }}
+                      style={{ backgroundImage: `url('${card.cardImage}')` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.75)] via-[rgba(0,0,0,0.05)] to-transparent" />
                     <span className="relative z-10 flex h-full items-end px-6 pb-6">
@@ -117,24 +158,26 @@ export default function PracticesGrid() {
 
             return (
               <Link
-                key={slug}
-                href={`/practices/${slug}`}
+                key={card.key}
+                href={card.href}
                 className="group relative flex min-h-[380px] flex-col justify-center overflow-hidden rounded-lg border-hair bg-[var(--bgc)] p-10 backdrop-blur-sm transition-colors hover:bg-[var(--wh)]"
                 style={{ borderColor: 'var(--b)' }}
               >
                 <span className="pointer-events-none absolute bottom-0 left-0 h-[1.5px] w-0 bg-[var(--s3)] transition-all duration-300 group-hover:w-full" />
-                <Icon className="pointer-events-none absolute -bottom-6 -right-6 h-[170px] w-[170px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
+                {Icon && (
+                  <Icon className="pointer-events-none absolute -bottom-6 -right-6 h-[170px] w-[170px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
+                )}
                 <div className="relative mb-6 flex items-start justify-between">
                   <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
-                    {p.num}
+                    {card.num}
                   </span>
-                  <Icon className="h-9 w-9 text-[var(--ink3)]" />
+                  {Icon && <Icon className="h-9 w-9 text-[var(--ink3)]" />}
                 </div>
                 <div className="relative mb-4 font-serif text-[22px] font-semibold leading-[1.3] text-[var(--ink)]">
-                  {p.title}
+                  {card.title}
                 </div>
                 <div className="relative mb-7 max-w-[380px] text-[13.5px] leading-[1.8] text-[var(--ink3)]">
-                  {p.desc}
+                  {card.desc}
                 </div>
                 <span className="relative flex items-center gap-2 text-[10.5px] font-medium uppercase tracking-[0.12em] text-[var(--ink2)] transition-all group-hover:gap-3 group-hover:text-[var(--s3)]">
                   {t('cardLink')} →
