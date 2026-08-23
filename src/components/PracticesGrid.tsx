@@ -14,6 +14,7 @@ const PRACTICE_CARD_IMAGES: Partial<Record<(typeof topLevelPracticeSlugs)[number
   'civil-law': '/practice-card-civil-law.jpg',
   'commercial-law': '/practice-card-commercial-law.jpg',
   'administrative-law': '/practice-card-administrative-law.jpg',
+  'it-law': '/practice-card-it-law.jpg',
 };
 
 // The background photo is a light cream marble panel, so — unlike the
