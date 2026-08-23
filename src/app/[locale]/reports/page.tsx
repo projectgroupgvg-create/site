@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
@@ -38,14 +39,29 @@ export default async function ReportsPage() {
           { name: TITLE, path: PATH },
         ])}
       />
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-12 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: TITLE }]} />
-        <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">Аналітика</div>
-        <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
-          {TITLE}
-        </h1>
-        <div className="divider" />
-        <p className="max-w-[560px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
+      <div
+        className="relative overflow-hidden px-6 py-12 sm:px-11"
+        style={{
+          '--ink': '#f7f4ee',
+          '--ink2': '#e3dcc9',
+          '--ink3': '#d9cfbd',
+          '--s3': '#d9c9a8',
+        } as CSSProperties}
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/reports-bg.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <div className="relative z-10">
+          <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: TITLE }]} />
+          <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">Аналітика</div>
+          <h1 className="mb-5 font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
+            {TITLE}
+          </h1>
+          <div className="divider" />
+          <p className="max-w-[560px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
+        </div>
       </div>
 
       <div className="mx-auto max-w-[880px] px-6 py-16 sm:px-11">
