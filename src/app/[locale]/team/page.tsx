@@ -64,11 +64,10 @@ export default async function TeamPage({
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/about-vg-monogram-banner.jpg')" }}
+          style={{ backgroundImage: "url('/team-section-bg-v2.jpg')" }}
         />
-        {/* VG monogram banner — same dark render used on the About page
-            header, kept dark and atmospheric so light heading text stays
-            readable. */}
+        {/* Round conference table overlooking the Dnipro at dusk, kept dark
+            and atmospheric so light heading text stays readable. */}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
 
         <div className="relative z-10">
