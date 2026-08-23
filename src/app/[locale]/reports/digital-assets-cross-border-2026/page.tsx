@@ -108,8 +108,19 @@ export default async function ReportPage() {
         ])}
       />
 
-      <div className="border-b-hair px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
-        <div className="mx-auto max-w-[860px]">
+      <div
+        className="relative overflow-hidden border-b-hair px-6 py-16 sm:px-11"
+        style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/report-digital-assets-bg.jpg')" }}
+        />
+        {/* light isometric glass-panel render — a soft light scrim keeps the
+            dark ink text readable while the texture still shows through,
+            same treatment as the Practices grid marble background. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(250,247,242,0.92)] via-[rgba(250,247,242,0.8)] to-[rgba(250,247,242,0.55)]" />
+        <div className="relative z-10 mx-auto max-w-[860px]">
           <Breadcrumbs
             items={[
               { name: 'Головна', href: '/' },
