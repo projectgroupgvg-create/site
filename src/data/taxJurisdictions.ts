@@ -1,8 +1,10 @@
 // Seed/fallback data for the crypto tax calculator (used when Sanity has no
 // taxJurisdiction documents yet, or as the starting content for lawyers to
-// review and refine in Studio). Every rate here is sourced from the
-// publications cited in `sourceUrl`, researched July 2026 — tax rules change
-// and this is NOT a substitute for professional advice. See
+// review and refine in Studio). `sourceUrl` on every jurisdiction points to
+// the official government/parliamentary tax authority (BMF, DGFiP/BOFiP,
+// ESTV, VMI, Ministerstwo Finansów, Verkhovna Rada, IRS) rather than a
+// secondary/commercial summary — verified August 2026. Tax rules change and
+// this is NOT a substitute for professional advice. See
 // sanity/schemaTypes/taxJurisdiction.ts for the field meanings and
 // sanity/README.md for how to edit this content in Studio instead.
 
@@ -99,8 +101,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'EUR',
     status: 'stable',
     lastReviewed: '2026-06-20',
-    sourceLabel: 'BMF-Schreiben vom 6. März 2025 (через Winheller Rechtsanwälte)',
-    sourceUrl: 'https://www.winheller.com/en/banking-finance-and-insurance-law/bitcoin-trading/bitcoin-and-tax.html',
+    sourceLabel: 'Bundesministerium der Finanzen — BMF-Schreiben vom 6.03.2025',
+    sourceUrl: 'https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2025-03-06-einzelfragen-kryptowerte-bmf-schreiben.html',
 
     capitalGainsCalculable: false,
     capitalGainsRate: undefined,
@@ -151,8 +153,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'PLN',
     status: 'stable',
     lastReviewed: '2026-06-20',
-    sourceLabel: 'Ustawa o PIT — формуляр PIT-38 (через Dudkowiak & Putyra)',
-    sourceUrl: 'https://www.dudkowiak.com/blog/crypto-tax-in-poland-2025-guide/',
+    sourceLabel: 'Ministerstwo Finansów — Broszura informacyjna do PIT-38 za 2025 r.',
+    sourceUrl: 'https://www.podatki.gov.pl/media/g5ebnm2e/broszura-do-pit-38-za-2025-r.pdf',
 
     capitalGainsCalculable: true,
     capitalGainsRate: 19,
@@ -200,8 +202,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'EUR',
     status: 'stable',
     lastReviewed: '2026-06-20',
-    sourceLabel: 'DGFiP — Prélèvement Forfaitaire Unique (через Blockpit / CMS Law)',
-    sourceUrl: 'https://cms.law/en/int/expert-guides/cms-expert-guide-on-taxation-of-crypto-assets/france',
+    sourceLabel: 'DGFiP — BOFiP BOI-RPPM-PVBMC-30-30 (cession d’actifs numériques)',
+    sourceUrl: 'https://bofip.impots.gouv.fr/bofip/11969-PGP.html/identifiant=BOI-RPPM-PVBMC-30-30-20240423',
 
     capitalGainsCalculable: true,
     capitalGainsRate: 31.4,
@@ -249,8 +251,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'CHF',
     status: 'stable',
     lastReviewed: '2026-06-20',
-    sourceLabel: 'Federal Tax Administration (через CoinTracking / Blockpit)',
-    sourceUrl: 'https://cointracking.info/tax-guides/switzerland/guide/',
+    sourceLabel: 'Eidgenössische Steuerverwaltung (ESTV) — Kryptowährungen, Besteuerung',
+    sourceUrl: 'https://www.estv.admin.ch/de/kryptowaehrungen-besteuerung',
 
     capitalGainsCalculable: true,
     capitalGainsRate: 0,
@@ -302,8 +304,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
       fr: "Une réforme fiscale est entrée en vigueur le 1er janvier 2026 : la plupart des types de revenus des particuliers, y compris les gains de cession de crypto, sont désormais agrégés et imposés à des taux progressifs au lieu de l'ancien taux forfaitaire de 15%.",
     },
     lastReviewed: '2026-06-20',
-    sourceLabel: 'PwC Lithuania Individual Tax Summary',
-    sourceUrl: 'https://taxsummaries.pwc.com/lithuania/individual/significant-developments',
+    sourceLabel: 'Valstybinė mokesčių inspekcija (VMI) — GPM pakeitimai nuo 2026 m.',
+    sourceUrl: 'https://www.vmi.lt/evmi/gyventoju-pajamu-mokescio-pakeitimai-nuo-2026-m.',
 
     capitalGainsCalculable: false,
     capitalGainsRateNote: {
