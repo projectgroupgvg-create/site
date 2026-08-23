@@ -54,7 +54,7 @@ export default async function TeamPage({
   return (
     <main>
       <div
-        className="relative flex min-h-[52vh] items-center overflow-hidden px-6 py-16 sm:min-h-[58vh] sm:px-11"
+        className="relative overflow-hidden px-6 py-16 sm:px-11"
         style={{
           '--ink': '#f7f4ee',
           '--ink2': 'rgba(247,244,238,0.72)',
