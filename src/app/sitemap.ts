@@ -13,10 +13,10 @@ function localizedPath(locale: string, path: string): string {
 }
 
 // Ukrainian-only pages added per the SEO brief (new /virtual-assets/,
-// /team/viacheslav-gangan/, /research/, /media/, /reports/ pillar pages —
-// English/German/French are an explicit "stage 2" there, so these only
-// exist for the default locale and get a single sitemap entry each, not one
-// per locale like the rest of the site).
+// /team/viacheslav-gangan/, /media/, /reports/ pillar pages — English/
+// German/French are an explicit "stage 2" there, so these only exist for
+// the default locale and get a single sitemap entry each, not one per
+// locale like the rest of the site).
 const ukOnlySlugs = new Set([
   'property-rights-protection',
   'marital-property-division',
@@ -30,7 +30,6 @@ const ukOnlyPaths = [
   '/virtual-assets/criminal-defence',
   '/virtual-assets/eu-market-entry-mica',
   '/team/viacheslav-gangan',
-  '/research',
   '/media',
   '/reports',
   '/reports/digital-assets-cross-border-2026',

@@ -159,9 +159,6 @@ export default async function VirtualAssetsPage() {
             <Link href="/blog" className="rounded-sm border-hair px-5 py-2.5 text-[12.5px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]" style={{ borderColor: 'var(--b)' }}>
               Статті у блозі
             </Link>
-            <Link href="/research" className="rounded-sm border-hair px-5 py-2.5 text-[12.5px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]" style={{ borderColor: 'var(--b)' }}>
-              Наукові публікації
-            </Link>
             <Link href="/media" className="rounded-sm border-hair px-5 py-2.5 text-[12.5px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]" style={{ borderColor: 'var(--b)' }}>
               Публікації у медіа
             </Link>

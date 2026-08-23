@@ -284,17 +284,6 @@ export default async function ReportPage() {
           </ol>
         </section>
 
-        {/* Related research placeholder link */}
-        <section className="mb-14 rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
-          <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">Наукова основа дослідження</div>
-          <p className="mb-3 text-[13.5px] leading-[1.7] text-[var(--ink2)]">
-            Звіт спирається також на наукові публікації автора у сфері правового регулювання віртуальних активів — див. розділ «Наукові публікації».
-          </p>
-          <a href="/research" className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[var(--ink)] hover:text-[var(--s3)]">
-            Наукові публікації →
-          </a>
-        </section>
-
         {/* Methodology */}
         <section id="methodology" className="mb-14 scroll-mt-20 border-t-hair pt-10" style={{ borderColor: 'var(--b)' }}>
           <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">About this report</div>

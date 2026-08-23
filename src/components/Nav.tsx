@@ -19,8 +19,8 @@ const navItems = [
 ] as const;
 
 // "Аналітика" dropdown per the SEO brief (section 3.1). Blog is fully
-// translated (all 4 locales); Reports/Research/Media are Ukrainian-only for
-// now (see reportDigitalAssets2026.ts and friends), so those three force
+// translated (all 4 locales); Reports/Media are Ukrainian-only for now
+// (see reportDigitalAssets2026.ts and friends), so those force
 // locale="uk" to avoid 404s when a non-uk visitor clicks them.
 const insightsItems = [
   { href: '/blog', key: 'blog', forceUk: false },
@@ -80,7 +80,7 @@ export default function Nav() {
           </li>
         ))}
 
-        {/* "Аналітика" dropdown: Блог + Звіти + Наукові публікації + Медіа */}
+        {/* "Аналітика" dropdown: Блог + Звіти + Медіа */}
         <li className="group relative">
           <button type="button" className="flex items-center gap-1 text-xs tracking-wide text-[var(--ink3)] transition-colors hover:text-[var(--ink)]">
             {t('insights')}

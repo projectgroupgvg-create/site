@@ -47,7 +47,7 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
 // These 4 sub-practices only have content in messages/uk.json so far (added
 // via client-supplied SEO copy that hasn't been translated yet — English is
 // an explicit "stage 2" for this project, same precedent as the /reports,
-// /research, /media pages). Statically generating their /en/, /de/, /fr/
+// /media pages). Statically generating their /en/, /de/, /fr/
 // variants would index into an array position that doesn't exist in those
 // locale files and crash the whole build, so they're skipped for now and
 // the page component below defensively 404s if content is ever missing.

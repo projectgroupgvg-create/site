@@ -127,10 +127,8 @@ export default async function GanganProfilePage() {
               декількох країн — така координація є наскрізною темою практики.
             </p>
             <p className="text-[14px] leading-[1.85] text-[var(--ink2)]">
-              Поєднує адвокатську практику з науковим дослідженням правового регулювання
-              віртуальних активів, регулярно виступає як експертний коментатор із питань
-              криптозлочинів, AML та регуляторної політики — див. розділи «Наукова діяльність» і
-              «Останні статті» нижче.
+              Регулярно виступає як експертний коментатор із питань криптозлочинів, AML та
+              регуляторної політики — див. розділ «Останні статті» нижче.
             </p>
           </section>
 
@@ -149,20 +147,6 @@ export default async function GanganProfilePage() {
                 </li>
               ))}
             </ul>
-          </section>
-
-          <section className="mb-10 border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
-            <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Наукова діяльність</h2>
-            <p className="mb-2 text-[14px] leading-[1.8] text-[var(--ink2)]">
-              Здобувач наукового ступеня, дослідження у сфері правового регулювання віртуальних активів.
-            </p>
-            <p className="text-[12.5px] italic leading-[1.7] text-[var(--ink3)]">
-              Тема дисертаційного дослідження та статус здобувача будуть уточнені після підтвердження
-              актуальних відомостей.
-            </p>
-            <Link href="/research" className="mt-3 inline-block text-[12px] font-semibold uppercase tracking-[0.12em] text-[var(--ink)] hover:text-[var(--s3)]">
-              Наукові публікації →
-            </Link>
           </section>
 
           <section className="mb-10 border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
