@@ -54,7 +54,7 @@ export default function PracticesGrid() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/practices-corridor-bg-v2.jpg')" }}
+        style={{ backgroundImage: "url('/practices-bg-marble.jpg')" }}
       />
       {/* moody marble/bronze corridor render, kept dark and atmospheric the
           whole way down — deeper toward the bottom where the cards sit —
