@@ -89,7 +89,7 @@ export default async function GanganProfilePage() {
       />
 
       <div
-        className="relative flex min-h-[52vh] items-center overflow-hidden px-6 py-14 sm:min-h-[58vh] sm:px-11"
+        className="relative overflow-hidden px-6 py-14 sm:px-11"
         style={{
           '--ink': '#f7f4ee',
           '--ink2': '#e3dcc9',
@@ -116,18 +116,46 @@ export default async function GanganProfilePage() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-12 px-6 py-16 sm:px-11 lg:grid-cols-[1fr_320px]">
+      <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-12 px-6 py-16 sm:px-11 lg:grid-cols-[320px_1fr]">
+        <aside className="h-fit">
+          <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
+            <div className="relative aspect-square">
+              <Image
+                src="/gangan-portrait.jpg"
+                alt={NAME}
+                fill
+                sizes="(max-width: 1024px) 100vw, 320px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
+            <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">Звернутись</div>
+            <Link
+              href="/#ai"
+              className="mb-3 block w-full rounded-sm bg-[var(--ink)] px-6 py-3.5 text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
+            >
+              Записатись на консультацію
+            </Link>
+            <Link href="/#contacts" className="block text-center text-[12px] text-[var(--ink2)] hover:text-[var(--ink)]">
+              Контакти об&apos;єднання →
+            </Link>
+          </div>
+        </aside>
+
         <div>
           <section className="mb-10">
             <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Про адвоката</h2>
-            <p className="mb-4 text-[14px] leading-[1.85] text-[var(--ink2)]">
+            <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
               В&apos;ячеслав Ганган — адвокат і керуючий партнер адвокатського об&apos;єднання
               «Ганган і Партнери» з понад 15-річним досвідом юридичної практики. Очолює практики
               кримінального захисту, корпоративних та господарських спорів, віртуальних активів,
               AML і транскордонних розслідувань, поєднуючи представництво в судах з побудовою
               комплексної правової стратегії для клієнта.
             </p>
-            <p className="mb-4 text-[14px] leading-[1.85] text-[var(--ink2)]">
+            <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
               Основний фокус практики — кримінальний захист у справах, пов&apos;язаних із
               криптоактивами, легалізацією (відмиванням) доходів, фінансовими розслідуваннями та
               міжнародним співробітництвом у кримінальних провадженнях: екстрадиція, міжнародний
@@ -136,14 +164,14 @@ export default async function GanganProfilePage() {
               криптопроєктів і фінтех-бізнесу, класифікація продуктів та побудова процедур AML і
               санкційного скринінгу до виникнення спору чи розслідування.
             </p>
-            <p className="mb-4 text-[14px] leading-[1.85] text-[var(--ink2)]">
+            <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
               У господарській та адміністративній практиці супроводжує корпоративні спори,
               оскарження рішень державних органів та митні спори, а в цивільній — майнові спори й
               захист права власності. Транскордонний характер багатьох справ вимагає одночасної
               роботи з іноземними юрисдикціями, банками, криптобіржами та правоохоронними органами
               декількох країн — така координація є наскрізною темою практики.
             </p>
-            <p className="text-[14px] leading-[1.85] text-[var(--ink2)]">
+            <p className="text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
               Регулярно виступає як експертний коментатор із питань криптозлочинів, AML та
               регуляторної політики — див. розділ «Останні статті» нижче.
             </p>
@@ -220,34 +248,6 @@ export default async function GanganProfilePage() {
             </div>
           </section>
         </div>
-
-        <aside className="h-fit">
-          <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
-            <div className="relative aspect-square">
-              <Image
-                src="/gangan-portrait.jpg"
-                alt={NAME}
-                fill
-                sizes="(max-width: 1024px) 100vw, 320px"
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-
-          <div className="rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
-          <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">Звернутись</div>
-          <Link
-            href="/#ai"
-            className="mb-3 block w-full rounded-sm bg-[var(--ink)] px-6 py-3.5 text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
-          >
-            Записатись на консультацію
-          </Link>
-          <Link href="/#contacts" className="block text-center text-[12px] text-[var(--ink2)] hover:text-[var(--ink)]">
-            Контакти об&apos;єднання →
-          </Link>
-          </div>
-        </aside>
       </div>
     </main>
   );
