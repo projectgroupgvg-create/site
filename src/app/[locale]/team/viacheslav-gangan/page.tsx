@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
@@ -220,7 +221,21 @@ export default async function GanganProfilePage() {
           </section>
         </div>
 
-        <aside className="h-fit rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
+        <aside className="h-fit">
+          <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
+            <div className="relative aspect-square">
+              <Image
+                src="/gangan-portrait.jpg"
+                alt={NAME}
+                fill
+                sizes="(max-width: 1024px) 100vw, 320px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
           <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">Звернутись</div>
           <Link
             href="/#ai"
@@ -231,6 +246,7 @@ export default async function GanganProfilePage() {
           <Link href="/#contacts" className="block text-center text-[12px] text-[var(--ink2)] hover:text-[var(--ink)]">
             Контакти об&apos;єднання →
           </Link>
+          </div>
         </aside>
       </div>
     </main>
