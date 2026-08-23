@@ -42,6 +42,7 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
   'aml-compliance': '/practice-aml-bg.jpg',
   cybercrime: '/practice-cyber-bg.jpg',
   'blockchain-investigations': '/practice-blockchain-investigations-bg.jpg',
+  'civil-law': '/practice-civil-law-bg.jpg',
 };
 
 // These 4 sub-practices only have content in messages/uk.json so far (added
