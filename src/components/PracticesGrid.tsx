@@ -16,11 +16,12 @@ const PRACTICE_CARD_IMAGES: Partial<Record<(typeof topLevelPracticeSlugs)[number
   'administrative-law': '/practice-card-administrative-law.jpg',
 };
 
-// This section runs light-on-dark, independent of the site's light theme —
-// same approach as Hero.tsx — so the moody corridor photo and the card grid
-// read as one continuous scene instead of a light card block dropped onto a
-// dark photo. Every var(--ink)/(--s3)/etc. reference below cascades through
-// this override automatically.
+// The background photo is a light cream marble panel, so — unlike the
+// previous dark corridor render — the section itself stays on the site's
+// normal light theme (dark ink text directly on the marble, same pattern
+// as the /news archive header). Only the card grid is scoped to this
+// dark-glass override, so each card still reads as a dark module sitting
+// on top of the light marble, the way it did against the old dark photo.
 const practicesLocalVars = {
   '--ink': '#f7f4ee',
   '--ink2': 'rgba(247,244,238,0.72)',
@@ -50,17 +51,16 @@ export default function PracticesGrid() {
     <section
       id="practices"
       className="relative overflow-hidden px-6 py-24 sm:px-11"
-      style={practicesLocalVars}
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/practices-bg-marble.jpg')" }}
       />
-      {/* moody marble/bronze corridor render, kept dark and atmospheric the
-          whole way down — deeper toward the bottom where the cards sit —
-          so the photo and the frosted-glass cards read as one continuous
-          scene instead of a light card block dropped onto a dark photo. */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(10,8,6,0.5)] via-[rgba(10,8,6,0.68)] to-[rgba(10,8,6,0.86)]" />
+      {/* cream marble-panel render — a light warm scrim (not a dark one,
+          since the photo itself is already light) keeps heading/body text
+          readable while the marble texture still clearly shows through,
+          same approach as the /news archive page header. */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(250,247,242,0.55)] via-[rgba(250,247,242,0.7)] to-[rgba(250,247,242,0.85)]" />
 
       <div className="relative z-10">
         <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
@@ -74,7 +74,7 @@ export default function PracticesGrid() {
           {t('sub')}
         </p>
 
-        <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" style={practicesLocalVars}>
           {list.map((p, i) => {
             const slug = topLevelPracticeSlugs[i];
             const Icon = PRACTICE_ICONS[slug];
