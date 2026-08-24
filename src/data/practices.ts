@@ -31,7 +31,7 @@ export const criminalSubPracticeSlugs = [
 // navigation (see getParentSlug in the [slug] page), but not listed a
 // second time as its own top-level grid card.
 export const civilSubPracticeSlugs = ['property-rights-protection', 'marital-property-division'] as const;
-export const commercialSubPracticeSlugs = ['corporate-disputes'] as const;
+export const commercialSubPracticeSlugs = ['corporate-disputes', 'international-corporate-law'] as const;
 export const administrativeSubPracticeSlugs = ['customs-disputes'] as const;
 export const landSubPracticeSlugs = ['land-allocation-registration'] as const;
 

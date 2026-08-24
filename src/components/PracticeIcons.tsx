@@ -221,6 +221,7 @@ export const PRACTICE_ICONS: Record<PracticeSlug, (props: IconProps) => JSX.Elem
   'property-rights-protection': CivilLawIcon,
   'marital-property-division': CivilLawIcon,
   'corporate-disputes': CommercialLawIcon,
+  'international-corporate-law': CommercialLawIcon,
   'customs-disputes': AdministrativeLawIcon,
   'land-allocation-registration': LandLawIcon,
 };
