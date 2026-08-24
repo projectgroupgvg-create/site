@@ -57,8 +57,8 @@ const memberPhotos: Record<string, { src: string; position?: string }> = {
   'Vyacheslav Gangan': { src: '/gangan-portrait.jpg' },
   'Іванна Ганган': { src: '/ivanna-gangan-portrait.jpg', position: '50% 15%' },
   'Ivanna Gangan': { src: '/ivanna-gangan-portrait.jpg', position: '50% 15%' },
-  'Микита Сипало': { src: '/mykyta-sypalo-portrait.jpg' },
-  'Mykyta Sypalo': { src: '/mykyta-sypalo-portrait.jpg' },
+  'Микита Сипало': { src: '/mykyta-sypalo-portrait-v2.jpg', position: '50% 20%' },
+  'Mykyta Sypalo': { src: '/mykyta-sypalo-portrait-v2.jpg', position: '50% 20%' },
 };
 
 // The shared firm phone number reads oddly under an assistant/junior team

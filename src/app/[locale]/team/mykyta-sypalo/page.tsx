@@ -99,11 +99,12 @@ export default async function MykytaSypaloProfilePage() {
           <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
             <div className="relative aspect-square">
               <Image
-                src="/mykyta-sypalo-portrait.jpg"
+                src="/mykyta-sypalo-portrait-v2.jpg"
                 alt={NAME}
                 fill
                 sizes="(max-width: 1024px) 100vw, 320px"
                 className="object-cover"
+                style={{ objectPosition: '50% 20%' }}
                 priority
               />
             </div>
