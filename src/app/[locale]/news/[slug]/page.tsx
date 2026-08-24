@@ -40,6 +40,7 @@ export async function generateMetadata({
       title: item.title,
       description: item.excerpt,
       type: 'article',
+      image: item.mainImage,
     }),
   };
 }
