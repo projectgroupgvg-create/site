@@ -47,6 +47,7 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
   'administrative-law': '/practice-administrative-law-bg.jpg',
   'it-law': '/practice-it-law-bg.jpg',
   'customs-disputes': '/practice-customs-disputes-bg.jpg',
+  'international-corporate-law': '/practice-international-corporate-law-bg.jpg',
 };
 
 // These 4 sub-practices only have content in messages/uk.json so far (added
