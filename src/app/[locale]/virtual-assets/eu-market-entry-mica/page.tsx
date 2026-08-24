@@ -187,7 +187,7 @@ export default async function EuMarketEntryPage() {
             {H1}
           </h1>
           <div className="divider" />
-          <p className="max-w-[600px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
+          <p className="max-w-[600px] text-justify text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
         </div>
       </div>
 
@@ -232,7 +232,7 @@ export default async function EuMarketEntryPage() {
             ← Віртуальні активи
           </Link>
           <Link href="/virtual-assets/criminal-defence" className="rounded-sm border-hair px-5 py-2.5 text-[12px] text-[var(--ink2)] hover:text-[var(--ink)]" style={{ borderColor: 'var(--b)' }}>
-            Кримінальний захист →
+            Захист прав у кримінальних справах →
           </Link>
         </div>
 

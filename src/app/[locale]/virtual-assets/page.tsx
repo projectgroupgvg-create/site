@@ -17,11 +17,11 @@ const PATH = '/virtual-assets';
 const TITLE = 'Віртуальні активи — адвокатська допомога | Ганган і Партнери';
 const H1 = 'Юридичний супровід у сфері віртуальних активів і криптозлочинів';
 const DESCRIPTION =
-  'Кримінальний захист, asset recovery, AML, санкції, MiCA та транскордонні розслідування у справах, пов’язаних із віртуальними активами.';
+  'Захист прав у кримінальних справах з віртуальними активами, asset recovery, AML, санкції, MiCA та транскордонні розслідування.';
 
 const services = [
   {
-    title: 'Кримінальний захист у справах із цифровими активами',
+    title: 'Захист прав у кримінальних справах з віртуальними активами',
     desc: 'Захист за ст. 209 КК та суміжними складами, робота з електронними доказами, арешт і спеціальна конфіскація.',
     href: '/virtual-assets/criminal-defence',
   },
@@ -97,7 +97,7 @@ export default async function VirtualAssetsPage() {
             {H1}
           </h1>
           <div className="divider" />
-          <p className="max-w-[620px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
+          <p className="max-w-[620px] text-justify text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
         </div>
       </div>
 

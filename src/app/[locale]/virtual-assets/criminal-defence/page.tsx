@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 const PATH = '/virtual-assets/criminal-defence';
-const H1 = 'Кримінальний захист у справах із цифровими активами';
+const H1 = 'Захист прав у кримінальних справах з віртуальними активами';
 const DESCRIPTION =
   'Захист у кримінальних провадженнях за ст. 209 КК та суміжними складами, повʼязаними з віртуальними активами: докази, арешт, конфіскація.';
 
@@ -157,12 +157,12 @@ export default async function CriminalDefencePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
         <div className="relative z-10">
-          <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Віртуальні активи', href: '/virtual-assets' }, { name: 'Кримінальний захист' }]} />
+          <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Віртуальні активи', href: '/virtual-assets' }, { name: 'Захист прав у кримінальних справах' }]} />
           <h1 className="mb-5 max-w-[720px] font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.15] text-[var(--ink)]">
             {H1}
           </h1>
           <div className="divider" />
-          <p className="max-w-[600px] text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
+          <p className="max-w-[600px] text-justify text-[14.5px] leading-[1.8] text-[var(--ink3)]">{DESCRIPTION}</p>
         </div>
       </div>
 
