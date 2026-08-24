@@ -30,6 +30,8 @@ const ukOnlyPaths = [
   '/virtual-assets/criminal-defence',
   '/virtual-assets/eu-market-entry-mica',
   '/team/viacheslav-gangan',
+  '/team/ivanna-gangan',
+  '/team/mykyta-sypalo',
   '/media',
   '/reports',
   '/reports/digital-assets-cross-border-2026',

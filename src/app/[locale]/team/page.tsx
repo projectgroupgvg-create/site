@@ -37,6 +37,18 @@ function initials(name: string) {
     .toUpperCase();
 }
 
+// Profile pages are Ukrainian-only for now (same as viacheslav-gangan) — map
+// each member with a dedicated page to its slug and force locale="uk" so the
+// link works regardless of which locale the visitor is currently browsing.
+const memberProfileSlugs: Record<string, string> = {
+  "В'ячеслав Ганган": 'viacheslav-gangan',
+  'Vyacheslav Gangan': 'viacheslav-gangan',
+  'Іванна Ганган': 'ivanna-gangan',
+  'Ivanna Gangan': 'ivanna-gangan',
+  'Микита Сипало': 'mykyta-sypalo',
+  'Mykyta Sypalo': 'mykyta-sypalo',
+};
+
 export default async function TeamPage({
   params,
 }: {
@@ -101,11 +113,12 @@ export default async function TeamPage({
               {initials(m.name)}
             </div>
             <div className="mb-1 font-serif text-[17px] font-semibold text-[var(--ink)]">
-              {m.name === "В'ячеслав Ганган" || m.name === 'Vyacheslav Gangan' ? (
-                // Profile page is Ukrainian-only for now — force that locale
-                // so this link works regardless of which locale the visitor
-                // is currently browsing, instead of 404ing on /en/, /de/, /fr/.
-                <Link href="/team/viacheslav-gangan" locale="uk" className="transition-colors hover:text-[var(--s3)]">
+              {memberProfileSlugs[m.name] ? (
+                <Link
+                  href={`/team/${memberProfileSlugs[m.name]}`}
+                  locale="uk"
+                  className="transition-colors hover:text-[var(--s3)]"
+                >
                   {m.name}
                 </Link>
               ) : (
