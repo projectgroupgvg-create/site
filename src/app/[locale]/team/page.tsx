@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
@@ -48,6 +49,21 @@ const memberProfileSlugs: Record<string, string> = {
   'Микита Сипало': 'mykyta-sypalo',
   'Mykyta Sypalo': 'mykyta-sypalo',
 };
+
+// Real face photos for the team-grid avatar circles (replacing the
+// initials fallback below for members a real photo exists for).
+const memberPhotos: Record<string, { src: string; position?: string }> = {
+  "В'ячеслав Ганган": { src: '/gangan-portrait.jpg' },
+  'Vyacheslav Gangan': { src: '/gangan-portrait.jpg' },
+  'Іванна Ганган': { src: '/ivanna-gangan-portrait.jpg', position: '50% 15%' },
+  'Ivanna Gangan': { src: '/ivanna-gangan-portrait.jpg', position: '50% 15%' },
+  'Микита Сипало': { src: '/mykyta-sypalo-portrait.jpg' },
+  'Mykyta Sypalo': { src: '/mykyta-sypalo-portrait.jpg' },
+};
+
+// The shared firm phone number reads oddly under an assistant/junior team
+// member's card — only show it for members it's explicitly meant for.
+const hidePhoneFor = new Set(['Іванна Ганган', 'Ivanna Gangan', 'Микита Сипало', 'Mykyta Sypalo']);
 
 export default async function TeamPage({
   params,
@@ -107,10 +123,21 @@ export default async function TeamPage({
             style={{ borderColor: 'var(--b)' }}
           >
             <div
-              className="mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full border-hair bg-[var(--wh)] font-serif text-xl font-bold text-[var(--ink)] transition-colors group-hover:border-[color:var(--s3)]"
+              className="relative mb-5 flex h-[72px] w-[72px] items-center justify-center overflow-hidden rounded-full border-hair bg-[var(--wh)] font-serif text-xl font-bold text-[var(--ink)] transition-colors group-hover:border-[color:var(--s3)]"
               style={{ borderColor: 'var(--b)' }}
             >
-              {initials(m.name)}
+              {memberPhotos[m.name] ? (
+                <Image
+                  src={memberPhotos[m.name].src}
+                  alt={m.name}
+                  fill
+                  sizes="72px"
+                  className="object-cover"
+                  style={memberPhotos[m.name].position ? { objectPosition: memberPhotos[m.name].position } : undefined}
+                />
+              ) : (
+                initials(m.name)
+              )}
             </div>
             <div className="mb-1 font-serif text-[17px] font-semibold text-[var(--ink)]">
               {memberProfileSlugs[m.name] ? (
@@ -137,12 +164,14 @@ export default async function TeamPage({
               >
                 <span className="text-[var(--s3)]">✉</span> {firmEmail}
               </a>
-              <a
-                href={`tel:${firmPhone.replace(/[^+\d]/g, '')}`}
-                className="flex items-center gap-2 text-[11.5px] text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
-              >
-                <span className="text-[var(--s3)]">✆</span> {firmPhone}
-              </a>
+              {!hidePhoneFor.has(m.name) && (
+                <a
+                  href={`tel:${firmPhone.replace(/[^+\d]/g, '')}`}
+                  className="flex items-center gap-2 text-[11.5px] text-[var(--ink2)] transition-colors hover:text-[var(--ink)]"
+                >
+                  <span className="text-[var(--s3)]">✆</span> {firmPhone}
+                </a>
+              )}
 
               {(m.facebook || m.linkedin) && (
                 <div className="mt-1 flex items-center gap-2.5">

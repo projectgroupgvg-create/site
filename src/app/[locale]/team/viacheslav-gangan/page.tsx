@@ -111,7 +111,7 @@ export default async function GanganProfilePage() {
             {NAME}
           </h1>
           <p className="max-w-[560px] text-[14px] text-[var(--ink3)]">
-            Vyacheslav Gangan / Viacheslav Gangan
+            Viacheslav Gangan
           </p>
         </div>
       </div>

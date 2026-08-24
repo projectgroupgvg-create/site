@@ -16,7 +16,7 @@ export const dynamicParams = false;
 
 const PATH = '/team/mykyta-sypalo';
 const NAME = 'Микита Сипало';
-const TITLE = `${NAME} — помічник адвоката, кіберправо та легалізація доходів`;
+const TITLE = `${NAME} — помічник керуючого партнера, помічник адвоката`;
 const DESCRIPTION =
   'Микита Сипало — помічник адвоката АО «Ганган і Партнери». Підготовка процесуальних документів у справах про кіберзлочини та легалізацію (відмивання) доходів, аналіз електронних доказів і комплаєнс-матеріалів.';
 
@@ -54,7 +54,7 @@ export default async function MykytaSypaloProfilePage() {
           path: PATH,
           name: NAME,
           alternateNames: ['Mykyta Sypalo'],
-          jobTitle: 'Помічник адвоката',
+          jobTitle: 'Помічник керуючого партнера, помічник адвоката',
           description: 'Помічник адвоката, що спеціалізується на кіберправі та легалізації доходів.',
           knowsAbout,
           sameAs: [],
@@ -85,7 +85,7 @@ export default async function MykytaSypaloProfilePage() {
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-            Помічник адвоката · Кіберправо та легалізація доходів
+            Помічник керуючого партнера · Помічник адвоката
           </div>
           <h1 className="mb-3 font-serif text-[clamp(28px,3.4vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
             {NAME}

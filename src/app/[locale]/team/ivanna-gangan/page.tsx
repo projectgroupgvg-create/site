@@ -16,7 +16,7 @@ export const dynamicParams = false;
 
 const PATH = '/team/ivanna-gangan';
 const NAME = 'Іванна Ганган';
-const TITLE = `${NAME} — адвокат, сімейні та земельні спори`;
+const TITLE = `${NAME} — старший партнер, адвокат`;
 const DESCRIPTION =
   'Іванна Ганган — адвокат АО «Ганган і Партнери». Сімейні спори: поділ майна подружжя, аліменти, визначення місця проживання дітей, розірвання шлюбу. Земельні спори: право власності, оренда, паювання, відведення ділянок.';
 
@@ -55,7 +55,7 @@ export default async function IvannaGanganProfilePage() {
           path: PATH,
           name: NAME,
           alternateNames: ['Ivanna Gangan'],
-          jobTitle: 'Адвокат',
+          jobTitle: 'Старший партнер, адвокат',
           description: 'Адвокат, що спеціалізується на сімейних і земельних спорах.',
           knowsAbout,
           sameAs: [],
@@ -86,7 +86,7 @@ export default async function IvannaGanganProfilePage() {
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-            Адвокат · Сімейні та земельні спори
+            Старший партнер · Сімейні та земельні спори
           </div>
           <h1 className="mb-3 font-serif text-[clamp(28px,3.4vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
             {NAME}
@@ -105,6 +105,7 @@ export default async function IvannaGanganProfilePage() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 320px"
                 className="object-cover"
+                style={{ objectPosition: '50% 15%' }}
                 priority
               />
             </div>
