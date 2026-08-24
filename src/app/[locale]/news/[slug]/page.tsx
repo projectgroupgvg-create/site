@@ -72,7 +72,7 @@ export default async function NewsItemPage({
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: locale === 'uk' ? 'Ганган і Партнери' : 'Gangan & Partners', path: '/' },
           { name: t('title'), path: '/news' },
           { name: item.title, path: `/news/${slug}` },
         ])}

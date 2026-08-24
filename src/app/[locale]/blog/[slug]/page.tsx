@@ -77,7 +77,7 @@ export default async function BlogPostPage({
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: locale === 'uk' ? 'Ганган і Партнери' : 'Gangan & Partners', path: '/' },
           { name: t('title'), path: '/blog' },
           { name: post.title, path: `/blog/${slug}` },
         ])}

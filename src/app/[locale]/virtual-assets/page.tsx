@@ -70,7 +70,7 @@ export default async function VirtualAssetsPage() {
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Практики', path: '/#practices' },
           { name: 'Віртуальні активи', path: PATH },
         ])}

@@ -75,7 +75,7 @@ export default async function EditorialPolicyPage() {
     <main>
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Редакційна політика', path: PATH },
         ])}
       />

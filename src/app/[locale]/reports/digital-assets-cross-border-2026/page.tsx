@@ -102,7 +102,7 @@ export default async function ReportPage() {
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Звіти', path: '/reports' },
           { name: reportMeta.title, path: PATH },
         ])}

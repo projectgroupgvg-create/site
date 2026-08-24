@@ -174,7 +174,7 @@ export default async function PracticePage({
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: locale === 'uk' ? 'Ганган і Партнери' : 'Gangan & Partners', path: '/' },
           { name: t('lbl'), path: '/#practices' },
           ...(parentPractice && parentSlug
             ? [{ name: parentPractice.title, path: `/practices/${parentSlug}` }]

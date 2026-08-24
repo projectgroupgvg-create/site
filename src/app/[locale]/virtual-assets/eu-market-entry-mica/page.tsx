@@ -43,7 +43,7 @@ export default async function EuMarketEntryPage() {
       <JsonLd data={buildServiceSchema({ locale, path: PATH, name: H1, description: DESCRIPTION })} />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Віртуальні активи', path: '/virtual-assets' },
           { name: H1, path: PATH },
         ])}

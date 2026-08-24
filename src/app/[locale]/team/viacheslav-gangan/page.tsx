@@ -82,7 +82,7 @@ export default async function GanganProfilePage() {
       />
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Команда', path: '/team' },
           { name: NAME, path: PATH },
         ])}

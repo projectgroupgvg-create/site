@@ -96,7 +96,7 @@ export default async function MediaPage() {
     <main>
       <JsonLd
         data={buildBreadcrumbSchema(locale, [
-          { name: 'Gangan & Partners', path: '/' },
+          { name: 'Ганган і Партнери', path: '/' },
           { name: 'Медіа', path: PATH },
         ])}
       />
