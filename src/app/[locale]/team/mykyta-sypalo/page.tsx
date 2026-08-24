@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
@@ -93,65 +94,76 @@ export default async function MykytaSypaloProfilePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[720px] px-6 py-16 sm:px-11">
-        <section className="mb-10">
-          <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Про фахівця</h2>
-          <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-            Микита Сипало — помічник адвоката адвокатського об&apos;єднання «Ганган і Партнери»,
-            що працює в межах практик кіберправа та легалізації (відмивання) доходів. Допомагає в
-            підготовці процесуальних документів у справах про кіберзлочини та фінансові
-            розслідування, а також бере участь у зборі та систематизації матеріалів справи на
-            етапі підготовки правової позиції.
-          </p>
-          <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-            Здійснює аналіз електронних доказів — цифрових слідів, листування, транзакційних
-            даних та іншої інформації, що має значення для справ, пов&apos;язаних із
-            кіберзлочинами та легалізацією доходів, а також опрацьовує комплаєнс-матеріали в
-            межах превентивної роботи з клієнтами: перевірку контрагентів, аналіз ризиків та
-            підготовку супровідної документації для AML-процедур.
-          </p>
-          <p className="text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-            Робота ведеться в тісній координації з адвокатами, відповідальними за практики
-            кіберзлочинів та AML-комплаєнсу, забезпечуючи ретельну підготовку матеріалів на
-            кожному етапі провадження.
-          </p>
-        </section>
+      <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-12 px-6 py-16 sm:px-11 lg:grid-cols-[320px_1fr]">
+        <aside className="h-fit">
+          <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
+            <div className="relative aspect-square">
+              <Image
+                src="/mykyta-sypalo-portrait.jpg"
+                alt={NAME}
+                fill
+                sizes="(max-width: 1024px) 100vw, 320px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
 
-        <section className="mb-10 border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
-          <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Практики</h2>
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {keyPractices.map((p) => (
-              <li key={p.slug}>
-                <Link
-                  href={`/practices/${p.slug}`}
-                  className="block rounded-sm border-hair px-4 py-2.5 text-[13px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"
-                  style={{ borderColor: 'var(--b)' }}
-                >
-                  {p.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="rounded-lg border-hair p-7" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
-          <div className="mb-4 font-serif text-[18px] font-semibold text-[var(--ink)]">Звернутись</div>
-          <div className="flex flex-wrap gap-3">
+          <div className="rounded-lg border-hair p-6" style={{ borderColor: 'var(--b)', backgroundColor: 'var(--bgc)' }}>
+            <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">Звернутись</div>
             <Link
               href="/#ai"
-              className="rounded-sm bg-[var(--ink)] px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
+              className="mb-3 block w-full rounded-sm bg-[var(--ink)] px-6 py-3.5 text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"
             >
               Записатись на консультацію
             </Link>
-            <Link
-              href="/#contacts"
-              className="rounded-sm border-hair px-8 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"
-              style={{ borderColor: 'var(--b)' }}
-            >
-              Контакти об&apos;єднання
+            <Link href="/#contacts" className="block text-center text-[12px] text-[var(--ink2)] hover:text-[var(--ink)]">
+              Контакти об&apos;єднання →
             </Link>
           </div>
-        </section>
+        </aside>
+
+        <div>
+          <section className="mb-10">
+            <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Про фахівця</h2>
+            <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
+              Микита Сипало — помічник адвоката адвокатського об&apos;єднання «Ганган і Партнери»,
+              що працює в межах практик кіберправа та легалізації (відмивання) доходів. Допомагає в
+              підготовці процесуальних документів у справах про кіберзлочини та фінансові
+              розслідування, а також бере участь у зборі та систематизації матеріалів справи на
+              етапі підготовки правової позиції.
+            </p>
+            <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
+              Здійснює аналіз електронних доказів — цифрових слідів, листування, транзакційних
+              даних та іншої інформації, що має значення для справ, пов&apos;язаних із
+              кіберзлочинами та легалізацією доходів, а також опрацьовує комплаєнс-матеріали в
+              межах превентивної роботи з клієнтами: перевірку контрагентів, аналіз ризиків та
+              підготовку супровідної документації для AML-процедур.
+            </p>
+            <p className="text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
+              Робота ведеться в тісній координації з адвокатами, відповідальними за практики
+              кіберзлочинів та AML-комплаєнсу, забезпечуючи ретельну підготовку матеріалів на
+              кожному етапі провадження.
+            </p>
+          </section>
+
+          <section className="mb-10 border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
+            <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Практики</h2>
+            <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {keyPractices.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/practices/${p.slug}`}
+                    className="block rounded-sm border-hair px-4 py-2.5 text-[13px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"
+                    style={{ borderColor: 'var(--b)' }}
+                  >
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </div>
     </main>
   );
