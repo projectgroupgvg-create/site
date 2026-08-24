@@ -7,6 +7,12 @@
 // this is NOT a substitute for professional advice. See
 // sanity/schemaTypes/taxJurisdiction.ts for the field meanings and
 // sanity/README.md for how to edit this content in Studio instead.
+//
+// Note (DE): bundesfinanzministerium.de blocks some visitors/regions with a
+// blanket 403 (confirmed on the direct BMF page AND its own homepage), so
+// the Germany sourceUrl points to the identical BMF-Schreiben PDF mirrored
+// on bzst.de (Bundeszentralamt für Steuern, also an official federal tax
+// authority) instead — same document, a host that doesn't block the link.
 
 export type LocalizedText = { uk: string; en: string; de: string; fr: string };
 
@@ -101,8 +107,8 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'EUR',
     status: 'stable',
     lastReviewed: '2026-06-20',
-    sourceLabel: 'Bundesministerium der Finanzen — BMF-Schreiben vom 6.03.2025',
-    sourceUrl: 'https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2025-03-06-einzelfragen-kryptowerte-bmf-schreiben.html',
+    sourceLabel: 'BMF-Schreiben vom 6.03.2025 — Einzelfragen zur ertragsteuerrechtlichen Behandlung bestimmter Kryptowerte (публікація BZSt)',
+    sourceUrl: 'https://www.bzst.de/SharedDocs/Downloads/DE/DAC8/einzelfragen_kryptowerte_bmf.pdf',
 
     capitalGainsCalculable: false,
     capitalGainsRate: undefined,
