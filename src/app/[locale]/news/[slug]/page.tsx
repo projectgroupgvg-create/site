@@ -8,9 +8,10 @@ import { Link } from '@/i18n/navigation';
 import { getNewsBySlug, type FallbackNewsItem } from '@/lib/news';
 import { routing } from '@/i18n/routing';
 import { newsFallbackSlugs as fallbackSlugs } from '@/data/newsSlugs';
-import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import { buildAlternates, buildOpenGraph, localizedUrl } from '@/lib/metadata';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
+import ShareButtons from '@/components/ShareButtons';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -131,6 +132,8 @@ export default async function NewsItemPage({
       )}
 
       <article className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
+        <ShareButtons url={localizedUrl(locale, `/news/${slug}`)} title={item.title} />
+
         {item.source === 'fallback' && Array.isArray(item.body) ? (
           (item.body as string[]).map((p, i) => (
             <p key={i} className="mb-5 text-[14.5px] leading-[1.9] text-[var(--ink2)]">
