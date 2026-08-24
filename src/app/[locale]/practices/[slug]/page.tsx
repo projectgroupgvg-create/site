@@ -48,6 +48,7 @@ const practiceHeaderPhotos: Partial<Record<(typeof practiceSlugs)[number], strin
   'it-law': '/practice-it-law-bg.jpg',
   'customs-disputes': '/practice-customs-disputes-bg.jpg',
   'international-corporate-law': '/practice-international-corporate-law-bg.jpg',
+  'forensic-services': '/practice-forensic-services-bg.jpg',
 };
 
 // These 4 sub-practices only have content in messages/uk.json so far (added
@@ -62,6 +63,7 @@ const ukOnlySlugs = new Set([
   'marital-property-division',
   'corporate-disputes',
   'international-corporate-law',
+  'forensic-services',
   'customs-disputes',
   'land-allocation-registration',
 ]);

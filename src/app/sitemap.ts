@@ -22,6 +22,7 @@ const ukOnlySlugs = new Set([
   'marital-property-division',
   'corporate-disputes',
   'international-corporate-law',
+  'forensic-services',
   'customs-disputes',
   'land-allocation-registration',
 ]);
