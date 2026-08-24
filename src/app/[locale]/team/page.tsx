@@ -155,7 +155,14 @@ export default async function TeamPage({
             <div className="mb-4 text-[11px] uppercase tracking-[0.08em] text-[var(--s3)]">
               {m.role}
             </div>
-            <p className="mb-5 text-[12.5px] leading-[1.75] text-[var(--ink3)]">{m.bio}</p>
+            {/* When a member has a dedicated profile page, its own "Про
+                адвоката" section already spells out the practice
+                description in full — repeating it here would just be
+                redundant, so the card bio is only shown as a fallback for
+                members without one. */}
+            {!memberProfileSlugs[m.name] && (
+              <p className="mb-5 text-[12.5px] leading-[1.75] text-[var(--ink3)]">{m.bio}</p>
+            )}
 
             <div className="flex flex-col gap-1.5 border-t-hair pt-4" style={{ borderColor: 'var(--b)' }}>
               <a
