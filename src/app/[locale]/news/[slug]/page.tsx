@@ -1,5 +1,7 @@
+import type { CSSProperties } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -77,20 +79,56 @@ export default async function NewsItemPage({
           { name: item.title, path: `/news/${slug}` },
         ])}
       />
-      <div className="border-b-hair bg-[var(--bg2)] px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
-        <Link
-          href="/news"
-          className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+      {item.mainImage ? (
+        <div
+          className="relative flex min-h-[42vh] items-center overflow-hidden px-6 py-14 sm:px-11"
+          style={{
+            '--ink': '#f7f4ee',
+            '--ink2': '#e3dcc9',
+            '--ink3': '#d9cfbd',
+            '--s3': '#d9c9a8',
+          } as CSSProperties}
         >
-          ← {t('backToNews')}
-        </Link>
-        <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
-          {typeLabel} · {item.date}
+          <Image
+            src={item.mainImage}
+            alt={item.title}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
+          <div className="relative z-10">
+            <Link
+              href="/news"
+              className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+            >
+              ← {t('backToNews')}
+            </Link>
+            <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+              {typeLabel} · {item.date}
+            </div>
+            <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
+              {item.title}
+            </h1>
+          </div>
         </div>
-        <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
-          {item.title}
-        </h1>
-      </div>
+      ) : (
+        <div className="border-b-hair bg-[var(--bg2)] px-6 py-14 sm:px-11" style={{ borderColor: 'var(--b)' }}>
+          <Link
+            href="/news"
+            className="mb-6 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+          >
+            ← {t('backToNews')}
+          </Link>
+          <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
+            {typeLabel} · {item.date}
+          </div>
+          <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
+            {item.title}
+          </h1>
+        </div>
+      )}
 
       <article className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
         {item.source === 'fallback' && Array.isArray(item.body) ? (

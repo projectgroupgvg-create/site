@@ -8,6 +8,7 @@ export type FallbackNewsItem = {
   title: string;
   excerpt: string;
   body: string[];
+  mainImage?: string;
 };
 
 export type SanityNewsItem = {
@@ -38,6 +39,7 @@ function fromFallback(n: FallbackNewsItem): NewsItem {
     excerpt: n.excerpt,
     date: n.date,
     newsType: n.newsType,
+    mainImage: n.mainImage ?? null,
     source: 'fallback',
     body: n.body,
   };
