@@ -39,6 +39,13 @@ export default function AIConsultation() {
   // distinguishable from intake/contact/newsletter submissions. This is the
   // only place an AI-secretary conversation gets captured anywhere — see
   // route.ts for why (nothing is persisted server-side).
+  //
+  // Formspree's spam heuristics silently routed the first test submissions
+  // to the Spam folder (no email notification sent) — unlike the other
+  // forms on this site, this payload had no `email` field at all. Including
+  // one (even a fixed placeholder, since the AI collects a phone number as
+  // free text rather than a verified email) is what keeps these landing in
+  // the inbox like every other submission.
   function sendTranscript(fullConversation: Msg[]) {
     if (!formEndpoint || transcriptSentRef.current) return;
     transcriptSentRef.current = true;
@@ -48,7 +55,12 @@ export default function AIConsultation() {
     fetch(formEndpoint, {
       method: 'POST',
       headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ formType: 'ai-consult', locale, message: transcriptText }),
+      body: JSON.stringify({
+        formType: 'ai-consult',
+        locale,
+        email: 'ai-widget@gangan.partners',
+        message: transcriptText,
+      }),
     }).catch(() => {
       // Best-effort only — don't surface a failure to the client, the
       // conversation itself already succeeded on their end.
