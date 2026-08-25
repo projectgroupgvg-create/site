@@ -264,7 +264,10 @@
       "I was accused of an AML violation",
       "I became a victim of cybercrime"
     ],
-    "disclaimer": "Chatting with the AI assistant is organizational in nature: it takes your inquiry and helps schedule a meeting or call. This is not legal advice and does not create an attorney-client relationship."
+    "disclaimer": "Chatting with the AI assistant is organizational in nature: it takes your inquiry and helps schedule a meeting or call. This is not legal advice and does not create an attorney-client relationship.",
+    "consent1": "I am 18 or older. I have read the Privacy Policy and consent to processing of my data to operate the AI secretary and to forward a brief summary of my inquiry to the firm's team.",
+    "consent2": "I agree that the text of my messages will be sent to Anthropic, PBC (USA) to generate a response. I am informed of the cross-border transfer of data to the USA and the risks described in the Privacy Policy.",
+    "consent3": "I confirm I will not enter passwords, private keys, full card numbers, documents, evidence, or detailed health, criminal record, or third-party data — I will use another secure channel for that."
   },
   "Blog": {
     "lbl": "Blog",
@@ -701,8 +704,8 @@
   },
   "Privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: July 2026",
-    "placeholderNote": "This is a template privacy policy describing the site's technical structure. It should be reviewed and approved by a data-protection lawyer before publication.",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "The authoritative, full version of this Privacy Policy — prepared with the firm's data-protection counsel — is published in Ukrainian at /uk/privacy. This English summary has not yet been through full legal translation; where the two differ, the Ukrainian text prevails.",
     "sections": [
       {
         "heading": "Data we collect",
@@ -727,7 +730,11 @@
     "practices": "Practices",
     "consult": "Consultation",
     "news": "News",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "legalName": "Gangan & Partners Law Firm (Advokatske Ob'iednannia)",
+    "edrpou": "EDRPOU code: [to be added]",
+    "registryNote": "Bar registry: ЄРАУ (Ukrainian Bar Register) — details pending",
+    "complaintsLabel": "Complaints can be sent to"
   },
   "FAQ": {
     "lbl": "FAQ",

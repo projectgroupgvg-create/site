@@ -5,6 +5,8 @@ import NewsletterSignup from './NewsletterSignup';
 export default function Footer() {
   const t = useTranslations('Footer');
   const tNewsletter = useTranslations('Newsletter');
+  const tContact = useTranslations('Contact');
+  const tPrivacy = useTranslations('Privacy');
   const year = new Date().getFullYear();
 
   return (
@@ -38,7 +40,26 @@ export default function Footer() {
           <Link href="/#contacts" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
             {t('contacts')}
           </Link>
+          <Link href="/privacy" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
+            {tPrivacy('title')}
+          </Link>
         </div>
+      </div>
+
+      {/* Legal identification block — required on every page under Art. 7 of
+          the E-Commerce Law (name, EDRPOU, address, contacts, complaints
+          channel). `edrpou` still carries a bracketed placeholder pending
+          the firm supplying the real code — see project audit notes. */}
+      <div className="mt-6 border-t-hair border-[rgba(245,245,245,0.1)] pt-6 text-[10px] leading-[1.8] text-[rgba(245,245,245,0.25)]">
+        <p>
+          {t('legalName')} · {t('edrpou')} · {tContact('addrValue')}
+        </p>
+        <p>
+          {tContact('emailLabel')}: gangan.partners@gmail.com · {tContact('phoneLabel')}: {tContact('phoneValue')} · {t('registryNote')}
+        </p>
+        <p>
+          {t('complaintsLabel')} gangan.partners@gmail.com
+        </p>
       </div>
     </footer>
   );

@@ -264,7 +264,10 @@
       "On m'a accusé d'une violation AML",
       "J'ai été victime de cybercriminalité"
     ],
-    "disclaimer": "Le chat avec l'assistant IA a un caractère organisationnel : il recueille votre demande et aide à planifier un rendez-vous ou un appel. Ceci ne constitue pas un conseil juridique et ne crée pas de relation avocat-client."
+    "disclaimer": "Le chat avec l'assistant IA a un caractère organisationnel : il recueille votre demande et aide à planifier un rendez-vous ou un appel. Ceci ne constitue pas un conseil juridique et ne crée pas de relation avocat-client.",
+    "consent1": "J'ai au moins 18 ans. J'ai lu la Politique de confidentialité et je consens au traitement de mes données pour le fonctionnement du secrétaire numérique et la transmission d'un bref résumé de ma demande à l'équipe du cabinet.",
+    "consent2": "J'accepte que le texte de mes messages soit transmis à Anthropic, PBC (États-Unis) pour générer une réponse. Je suis informé(e) du transfert transfrontalier de données vers les États-Unis et des risques décrits dans la Politique de confidentialité.",
+    "consent3": "Je confirme que je ne saisirai pas de mots de passe, de clés privées, de numéros de carte complets, de documents, de preuves ni de données détaillées de santé, de casier judiciaire ou de tiers — j'utiliserai un autre canal sécurisé pour cela."
   },
   "Blog": {
     "lbl": "Blog",
@@ -701,8 +704,8 @@
   },
   "Privacy": {
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : juillet 2026",
-    "placeholderNote": "Ceci est un modèle de politique de confidentialité décrivant la structure technique du site. Il doit être révisé et approuvé par un avocat spécialisé en protection des données avant publication.",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "La version faisant foi et complète de cette politique de confidentialité — préparée avec le conseil du cabinet en protection des données — est publiée en ukrainien à /uk/privacy. Ce résumé en français n'a pas encore fait l'objet d'une traduction juridique complète ; en cas de divergence, le texte ukrainien prévaut.",
     "sections": [
       {
         "heading": "Données que nous collectons",
@@ -727,7 +730,11 @@
     "practices": "Domaines",
     "consult": "Consultation",
     "news": "Actualités",
-    "contacts": "Contact"
+    "contacts": "Contact",
+    "legalName": "Cabinet d'avocats « Gangan & Partners » (Advokatske Ob'iednannia)",
+    "edrpou": "Code EDRPOU : [à préciser]",
+    "registryNote": "Registre des avocats : ЄРАУ (registre ukrainien des avocats) — détails à venir",
+    "complaintsLabel": "Les réclamations peuvent être envoyées à"
   },
   "FAQ": {
     "lbl": "FAQ",

@@ -7,11 +7,6 @@ import { formEndpoint } from '@/lib/site';
 
 type Msg = { role: 'user' | 'assistant'; text: string };
 
-const SENDER_LABEL: Record<Msg['role'], string> = {
-  user: 'Клієнт',
-  assistant: 'AI-секретар',
-};
-
 export default function AIConsultation() {
   const t = useTranslations('AI');
   const tc = useTranslations('Consent');
@@ -25,41 +20,39 @@ export default function AIConsultation() {
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
-  // The AI collects a topic + factual summary + phone/contact preference,
-  // then forwards the whole transcript to the firm's inbox (see
-  // sendTranscript below) and, before that, sends every message to
-  // Anthropic's API — both are third-party data flows, so we gate the chat
-  // behind an explicit consent checkbox rather than treating the disclaimer
-  // text alone as sufficient (same reasoning applied to the other forms).
-  const [consentGiven, setConsentGiven] = useState(false);
+  // Per the firm's data-protection counsel, a single generic checkbox isn't
+  // sufficient consent for this data flow. Three separate, all-required
+  // checkboxes: (1) privacy policy acknowledgment, (2) explicit awareness
+  // that message text goes to Anthropic in the US, (3) confirmation the
+  // client won't paste passwords/keys/documents/sensitive third-party data.
+  const [consent1, setConsent1] = useState(false);
+  const [consent2, setConsent2] = useState(false);
+  const [consent3, setConsent3] = useState(false);
+  const consentGiven = consent1 && consent2 && consent3;
   const scrollRef = useRef<HTMLDivElement>(null);
-  // Guards against sending the transcript more than once per conversation —
-  // the backend can in principle flip `intakeComplete` again if the client
-  // keeps chatting after the handoff message.
-  const transcriptSentRef = useRef(false);
+  // Guards against sending the handoff notice more than once per
+  // conversation — the backend can in principle flip `intakeComplete` again
+  // if the client keeps chatting after the handoff message.
+  const summarySentRef = useRef(false);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
   }, [messages]);
 
-  // Fire-and-forget: forwards the full conversation to the firm's inbox via
-  // the same Formspree endpoint used by the other forms, tagged so it's
-  // distinguishable from intake/contact/newsletter submissions. This is the
-  // only place an AI-secretary conversation gets captured anywhere — see
-  // route.ts for why (nothing is persisted server-side).
-  //
-  // Formspree's spam heuristics silently routed the first test submissions
-  // to the Spam folder (no email notification sent) — unlike the other
-  // forms on this site, this payload had no `email` field at all. Including
-  // one (even a fixed placeholder, since the AI collects a phone number as
-  // free text rather than a verified email) is what keeps these landing in
-  // the inbox like every other submission.
-  function sendTranscript(fullConversation: Msg[]) {
-    if (!formEndpoint || transcriptSentRef.current) return;
-    transcriptSentRef.current = true;
-    const transcriptText = fullConversation
-      .map((m) => `${SENDER_LABEL[m.role]}: ${m.text}`)
-      .join('\n\n');
+  // Fire-and-forget: notifies the firm's inbox that an intake finished, via
+  // the same Formspree endpoint used by the other forms. Deliberately does
+  // NOT forward the full conversation — counsel flagged that a complete
+  // transcript can carry attorney-client-privileged or special-category
+  // data that Formspree's and Anthropic's standard terms aren't cleared to
+  // receive. Only the topic + the contact method/time the client stated
+  // (extracted server-side into `contactSummary`, see route.ts) is sent;
+  // the full chat history is never persisted anywhere.
+  function sendHandoffNotice(contactSummary: string | null) {
+    if (!formEndpoint || summarySentRef.current) return;
+    summarySentRef.current = true;
+    const message = contactSummary
+      ? `Новий інтейк через AI-секретар. ${contactSummary}`
+      : 'Новий інтейк через AI-секретар завершено, але короткий підсумок не сформувався автоматично — клієнту рекомендовано звернутися через /intake або за телефоном.';
     fetch(formEndpoint, {
       method: 'POST',
       headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
@@ -67,7 +60,7 @@ export default function AIConsultation() {
         formType: 'ai-consult',
         locale,
         email: 'ai-widget@gangan.partners',
-        message: transcriptText,
+        message,
       }),
     }).catch(() => {
       // Best-effort only — don't surface a failure to the client, the
@@ -101,7 +94,7 @@ export default function AIConsultation() {
       const assistantMsg: Msg = { role: 'assistant', text: data.reply };
       setMessages((m) => [...m, assistantMsg]);
       if (data.intakeComplete) {
-        sendTranscript([...messages, userMsg, assistantMsg]);
+        sendHandoffNotice(data.contactSummary ?? null);
       }
     } catch {
       setMessages((m) => [...m, { role: 'assistant', text: t('error') }]);
@@ -205,20 +198,40 @@ export default function AIConsultation() {
                   </div>
                 </>
               ) : (
-                <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
-                  <input
-                    type="checkbox"
-                    checked={consentGiven}
-                    onChange={(e) => setConsentGiven(e.target.checked)}
-                    className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
-                  />
-                  <span>
-                    {tc('text')}{' '}
-                    <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
-                      {tc('linkText')}
-                    </Link>
-                  </span>
-                </label>
+                <div className="flex flex-col gap-2.5">
+                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
+                    <input
+                      type="checkbox"
+                      checked={consent1}
+                      onChange={(e) => setConsent1(e.target.checked)}
+                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    <span>
+                      {t('consent1')}{' '}
+                      <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+                        {tc('linkText')}
+                      </Link>
+                    </span>
+                  </label>
+                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
+                    <input
+                      type="checkbox"
+                      checked={consent2}
+                      onChange={(e) => setConsent2(e.target.checked)}
+                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    <span>{t('consent2')}</span>
+                  </label>
+                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
+                    <input
+                      type="checkbox"
+                      checked={consent3}
+                      onChange={(e) => setConsent3(e.target.checked)}
+                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    <span>{t('consent3')}</span>
+                  </label>
+                </div>
               )}
             </div>
           </div>

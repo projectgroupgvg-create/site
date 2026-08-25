@@ -264,7 +264,10 @@
       "Mir wurde ein AML-Verstoß vorgeworfen",
       "Ich wurde Opfer von Cyberkriminalität"
     ],
-    "disclaimer": "Der Chat mit dem KI-Assistenten dient organisatorischen Zwecken: Er nimmt Ihr Anliegen entgegen und hilft, ein Treffen oder einen Anruf zu vereinbaren. Dies ist keine Rechtsberatung und begründet kein Mandatsverhältnis."
+    "disclaimer": "Der Chat mit dem KI-Assistenten dient organisatorischen Zwecken: Er nimmt Ihr Anliegen entgegen und hilft, ein Treffen oder einen Anruf zu vereinbaren. Dies ist keine Rechtsberatung und begründet kein Mandatsverhältnis.",
+    "consent1": "Ich bin volljährig. Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung meiner Daten ein, damit der digitale Sekretär funktioniert und eine kurze Zusammenfassung meiner Anfrage an das Team der Kanzlei weitergeleitet wird.",
+    "consent2": "Ich stimme zu, dass der Text meiner Nachrichten an Anthropic, PBC (USA) gesendet wird, um eine Antwort zu erzeugen. Ich bin über die grenzüberschreitende Datenübermittlung in die USA und die in der Datenschutzerklärung beschriebenen Risiken informiert.",
+    "consent3": "Ich bestätige, dass ich keine Passwörter, privaten Schlüssel, vollständigen Kartennummern, Dokumente, Beweise oder detaillierten Gesundheits-, Straf- oder Daten Dritter eingeben werde — dafür nutze ich einen anderen sicheren Kanal."
   },
   "Blog": {
     "lbl": "Blog",
@@ -701,8 +704,8 @@
   },
   "Privacy": {
     "title": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert: Juli 2026",
-    "placeholderNote": "Dies ist eine Muster-Datenschutzerklärung, die die technische Struktur der Website beschreibt. Sie sollte vor Veröffentlichung von einem Datenschutzanwalt geprüft und freigegeben werden.",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Die maßgebliche, vollständige Fassung dieser Datenschutzerklärung — erstellt mit dem Datenschutzberater der Kanzlei — ist auf Ukrainisch unter /uk/privacy veröffentlicht. Diese deutsche Zusammenfassung wurde noch keiner vollständigen juristischen Übersetzung unterzogen; bei Abweichungen gilt der ukrainische Text.",
     "sections": [
       {
         "heading": "Welche Daten wir erheben",
@@ -727,7 +730,11 @@
     "practices": "Praxisbereiche",
     "consult": "Beratung",
     "news": "Neuigkeiten",
-    "contacts": "Kontakt"
+    "contacts": "Kontakt",
+    "legalName": "Anwaltskanzlei „Gangan & Partners\" (Advokatske Ob'jednannja)",
+    "edrpou": "EDRPOU-Code: [noch anzugeben]",
+    "registryNote": "Anwaltsregister: ЄРАУ (ukrainisches Anwaltsregister) — Angaben folgen",
+    "complaintsLabel": "Beschwerden können gesendet werden an"
   },
   "FAQ": {
     "lbl": "FAQ",
