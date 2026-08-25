@@ -3,8 +3,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { formEndpoint } from '@/lib/site';
 
 type Msg = { role: 'user' | 'assistant'; text: string };
+
+const SENDER_LABEL: Record<Msg['role'], string> = {
+  user: 'Клієнт',
+  assistant: 'AI-секретар',
+};
 
 export default function AIConsultation() {
   const t = useTranslations('AI');
@@ -19,17 +25,43 @@ export default function AIConsultation() {
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  // Guards against sending the transcript more than once per conversation —
+  // the backend can in principle flip `intakeComplete` again if the client
+  // keeps chatting after the handoff message.
+  const transcriptSentRef = useRef(false);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
   }, [messages]);
+
+  // Fire-and-forget: forwards the full conversation to the firm's inbox via
+  // the same Formspree endpoint used by the other forms, tagged so it's
+  // distinguishable from intake/contact/newsletter submissions. This is the
+  // only place an AI-secretary conversation gets captured anywhere — see
+  // route.ts for why (nothing is persisted server-side).
+  function sendTranscript(fullConversation: Msg[]) {
+    if (!formEndpoint || transcriptSentRef.current) return;
+    transcriptSentRef.current = true;
+    const transcriptText = fullConversation
+      .map((m) => `${SENDER_LABEL[m.role]}: ${m.text}`)
+      .join('\n\n');
+    fetch(formEndpoint, {
+      method: 'POST',
+      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ formType: 'ai-consult', locale, message: transcriptText }),
+    }).catch(() => {
+      // Best-effort only — don't surface a failure to the client, the
+      // conversation itself already succeeded on their end.
+    });
+  }
 
   async function send(text?: string) {
     const value = (text ?? input).trim();
     if (!value || sending) return;
     setInput('');
     setSending(true);
-    setMessages((m) => [...m, { role: 'user', text: value }]);
+    const userMsg: Msg = { role: 'user', text: value };
+    setMessages((m) => [...m, userMsg]);
 
     try {
       const res = await fetch('/api/ai-consult', {
@@ -46,7 +78,11 @@ export default function AIConsultation() {
       // instead of falling through to the generic error message.
       const data = await res.json().catch(() => null);
       if (!data?.reply) throw new Error('bad response');
-      setMessages((m) => [...m, { role: 'assistant', text: data.reply }]);
+      const assistantMsg: Msg = { role: 'assistant', text: data.reply };
+      setMessages((m) => [...m, assistantMsg]);
+      if (data.intakeComplete) {
+        sendTranscript([...messages, userMsg, assistantMsg]);
+      }
     } catch {
       setMessages((m) => [...m, { role: 'assistant', text: t('error') }]);
     } finally {
