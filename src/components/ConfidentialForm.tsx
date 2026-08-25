@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { encryptMessage } from '@/lib/confidentialCrypto';
 import { CONFIDENTIAL_PUBLIC_KEY_PEM } from '@/lib/confidentialPublicKey';
-
-const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? '';
+import { formEndpoint as endpoint } from '@/lib/site';
 
 export default function ConfidentialForm() {
   const t = useTranslations('Confidential');

@@ -9,6 +9,14 @@ export const siteUrl =
 
 export const siteName = 'Gangan & Partners';
 
+// Formspree endpoint the contact/intake/confidential forms POST to — set as
+// a Vercel env var (NEXT_PUBLIC_FORM_ENDPOINT) if you ever need to swap
+// providers without a code change. Falls back to the firm's actual
+// Formspree form (submissions forward to gangan.partners@gmail.com) so the
+// forms work out of the box even when the env var isn't configured.
+export const formEndpoint =
+  process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? 'https://formspree.io/f/xyegqdaw';
+
 export const contact = {
   email: 'gangan.partners@gmail.com',
   phone: '+380965549847',

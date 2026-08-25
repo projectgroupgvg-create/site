@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl';
 import ContactGraphic from './ContactGraphic';
-
-const formEndpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? '';
+import { formEndpoint } from '@/lib/site';
 
 const phoneRaw = '+380965549847';
 

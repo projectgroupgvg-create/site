@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
-const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? '';
+import { formEndpoint as endpoint } from '@/lib/site';
 
 type Practice = { num: string; title: string };
 
