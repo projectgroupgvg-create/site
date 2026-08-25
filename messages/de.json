@@ -695,6 +695,10 @@
     "accept": "Akzeptieren",
     "decline": "Nicht notwendige ablehnen"
   },
+  "Consent": {
+    "text": "Mit Ihrer Zustimmung willigen Sie in die Verarbeitung Ihrer personenbezogenen Daten gemäß unserer",
+    "linkText": "Datenschutzerklärung"
+  },
   "Privacy": {
     "title": "Datenschutzerklärung",
     "lastUpdated": "Zuletzt aktualisiert: Juli 2026",

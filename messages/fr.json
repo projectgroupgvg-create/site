@@ -695,6 +695,10 @@
     "accept": "Accepter",
     "decline": "Refuser les non essentiels"
   },
+  "Consent": {
+    "text": "En acceptant, vous consentez au traitement de vos données personnelles conformément à notre",
+    "linkText": "Politique de confidentialité"
+  },
   "Privacy": {
     "title": "Politique de confidentialité",
     "lastUpdated": "Dernière mise à jour : juillet 2026",

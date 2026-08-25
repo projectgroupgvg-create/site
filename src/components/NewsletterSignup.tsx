@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { formEndpoint } from '@/lib/site';
 
 // Formspree's free plan allows one form per project, so the newsletter
@@ -14,12 +15,14 @@ const endpoint = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT ?? formEndpoint;
 
 export default function NewsletterSignup() {
   const t = useTranslations('Newsletter');
+  const tc = useTranslations('Consent');
   const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!endpoint || !email || status === 'sending') return;
+    if (!endpoint || !email || !consent || status === 'sending') return;
     setStatus('sending');
     try {
       const res = await fetch(endpoint, {
@@ -55,12 +58,27 @@ export default function NewsletterSignup() {
         />
         <button
           type="submit"
-          disabled={status === 'sending'}
-          className="whitespace-nowrap rounded-r-sm border-hair border-[rgba(245,245,245,0.15)] bg-[rgba(245,245,245,0.08)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[rgba(245,245,245,0.15)] disabled:cursor-wait"
+          disabled={status === 'sending' || !consent}
+          className="whitespace-nowrap rounded-r-sm border-hair border-[rgba(245,245,245,0.15)] bg-[rgba(245,245,245,0.08)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[rgba(245,245,245,0.15)] disabled:cursor-wait disabled:opacity-50"
         >
           {status === 'sending' ? '...' : t('submit')}
         </button>
       </form>
+      <label className="mt-2 flex max-w-[360px] items-start gap-2 text-[10.5px] leading-[1.5] text-[rgba(245,245,245,0.45)]">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          required
+          className="mt-0.5 h-3 w-3 flex-shrink-0"
+        />
+        <span>
+          {tc('text')}{' '}
+          <Link href="/privacy" className="underline decoration-[rgba(245,245,245,0.3)] underline-offset-2 hover:text-[rgba(245,245,245,0.7)]">
+            {tc('linkText')}
+          </Link>
+        </span>
+      </label>
       {status === 'error' && (
         <p className="mt-2 text-[11px] text-[rgba(245,245,245,0.45)]">{t('error')}</p>
       )}

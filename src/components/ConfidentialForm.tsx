@@ -2,19 +2,22 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { encryptMessage } from '@/lib/confidentialCrypto';
 import { CONFIDENTIAL_PUBLIC_KEY_PEM } from '@/lib/confidentialPublicKey';
 import { formEndpoint as endpoint } from '@/lib/site';
 
 export default function ConfidentialForm() {
   const t = useTranslations('Confidential');
+  const tc = useTranslations('Consent');
   const [contact, setContact] = useState('');
   const [message, setMessage] = useState('');
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!endpoint || !message.trim() || status === 'sending') return;
+    if (!endpoint || !message.trim() || !consent || status === 'sending') return;
     setStatus('sending');
 
     try {
@@ -91,10 +94,26 @@ export default function ConfidentialForm() {
         />
       </div>
 
+      <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink3)]">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          required
+          className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+        />
+        <span>
+          {tc('text')}{' '}
+          <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+            {tc('linkText')}
+          </Link>
+        </span>
+      </label>
+
       <button
         type="submit"
-        disabled={status === 'sending'}
-        className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait"
+        disabled={status === 'sending' || !consent}
+        className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait disabled:opacity-50"
       >
         {status === 'sending' ? t('sending') : t('submit')}
       </button>

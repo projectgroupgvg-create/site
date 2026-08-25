@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import ContactGraphic from './ContactGraphic';
 import { formEndpoint } from '@/lib/site';
 
@@ -6,6 +7,7 @@ const phoneRaw = '+380965549847';
 
 export default function ContactSection() {
   const t = useTranslations('Contact');
+  const tc = useTranslations('Consent');
 
   const items = [
     { icon: '✦', label: t('addrLabel'), value: t('addrValue') },
@@ -110,6 +112,16 @@ export default function ContactSection() {
               className="resize-y rounded-sm border-hair bg-[var(--wh)] px-3.5 py-3 text-[13px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
               style={{ borderColor: 'var(--b)' }}
             />
+            <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink3)]">
+              <input type="checkbox" name="consent" required className="mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
+              <span>
+                {tc('text')}{' '}
+                <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+                  {tc('linkText')}
+                </Link>
+              </span>
+            </label>
+
             <button
               type="submit"
               className="mt-1 rounded-sm bg-[var(--ink)] px-9 py-3.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)]"

@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { formEndpoint as endpoint } from '@/lib/site';
 
 type Practice = { num: string; title: string };
 
 export default function IntakeForm({ practices }: { practices: Practice[] }) {
   const t = useTranslations('Intake');
+  const tc = useTranslations('Consent');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -116,6 +118,16 @@ export default function IntakeForm({ practices }: { practices: Practice[] }) {
           style={{ borderColor: 'var(--b)' }}
         />
       </div>
+
+      <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink3)]">
+        <input type="checkbox" name="consent" required className="mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
+        <span>
+          {tc('text')}{' '}
+          <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+            {tc('linkText')}
+          </Link>
+        </span>
+      </label>
 
       <button
         type="submit"

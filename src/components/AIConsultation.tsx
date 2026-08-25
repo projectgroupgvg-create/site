@@ -14,6 +14,7 @@ const SENDER_LABEL: Record<Msg['role'], string> = {
 
 export default function AIConsultation() {
   const t = useTranslations('AI');
+  const tc = useTranslations('Consent');
   const locale = useLocale();
   const greeting = t('greeting');
   const topics = t.raw('topics') as string[];
@@ -24,6 +25,13 @@ export default function AIConsultation() {
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
+  // The AI collects a topic + factual summary + phone/contact preference,
+  // then forwards the whole transcript to the firm's inbox (see
+  // sendTranscript below) and, before that, sends every message to
+  // Anthropic's API — both are third-party data flows, so we gate the chat
+  // behind an explicit consent checkbox rather than treating the disclaimer
+  // text alone as sufficient (same reasoning applied to the other forms).
+  const [consentGiven, setConsentGiven] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   // Guards against sending the transcript more than once per conversation —
   // the backend can in principle flip `intakeComplete` again if the client
@@ -69,7 +77,7 @@ export default function AIConsultation() {
 
   async function send(text?: string) {
     const value = (text ?? input).trim();
-    if (!value || sending) return;
+    if (!value || sending || !consentGiven) return;
     setInput('');
     setSending(true);
     const userMsg: Msg = { role: 'user', text: value };
@@ -164,35 +172,54 @@ export default function AIConsultation() {
             </div>
 
             <div className="border-t-hair px-4.5 py-3.5" style={{ borderColor: 'var(--b)' }}>
-              <div className="flex">
-                <input
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && send()}
-                  placeholder={t('placeholder')}
-                  className="flex-1 rounded-l-sm border-hair border-r-0 bg-[var(--bg)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
-                  style={{ borderColor: 'var(--b)' }}
-                />
-                <button
-                  onClick={() => send()}
-                  disabled={sending}
-                  className="whitespace-nowrap rounded-r-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait"
-                >
-                  {sending ? t('sending') : t('send')}
-                </button>
-              </div>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {topics.map((topic, i) => (
-                  <button
-                    key={topic}
-                    onClick={() => send(topicPrompts[i])}
-                    className="rounded-sm border-hair px-2.5 py-1.5 text-[10px] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
-                    style={{ borderColor: 'var(--b)' }}
-                  >
-                    {topic}
-                  </button>
-                ))}
-              </div>
+              {consentGiven ? (
+                <>
+                  <div className="flex">
+                    <input
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && send()}
+                      placeholder={t('placeholder')}
+                      className="flex-1 rounded-l-sm border-hair border-r-0 bg-[var(--bg)] px-3.5 py-2.5 text-[12.5px] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+                      style={{ borderColor: 'var(--b)' }}
+                    />
+                    <button
+                      onClick={() => send()}
+                      disabled={sending}
+                      className="whitespace-nowrap rounded-r-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-wait"
+                    >
+                      {sending ? t('sending') : t('send')}
+                    </button>
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {topics.map((topic, i) => (
+                      <button
+                        key={topic}
+                        onClick={() => send(topicPrompts[i])}
+                        className="rounded-sm border-hair px-2.5 py-1.5 text-[10px] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+                        style={{ borderColor: 'var(--b)' }}
+                      >
+                        {topic}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
+                  <input
+                    type="checkbox"
+                    checked={consentGiven}
+                    onChange={(e) => setConsentGiven(e.target.checked)}
+                    className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                  />
+                  <span>
+                    {tc('text')}{' '}
+                    <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+                      {tc('linkText')}
+                    </Link>
+                  </span>
+                </label>
+              )}
             </div>
           </div>
           <p className="mt-3 text-[10.5px] leading-[1.6] text-[var(--ink3)]">{t('disclaimer')}</p>
