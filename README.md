@@ -5,7 +5,7 @@ Next.js 14 (App Router, TypeScript, Tailwind) сайт для Gangan & Partners
 `--bg:#e2e2e2 / --ink:#181818 / --wh:#f5f5f5`, шрифти Playfair Display +
 Inter, мінімалізм з 0.5px бордерами без тіней.
 
-**Живий сайт:** https://sss-gan2.vercel.app
+**Живий сайт:** https://gangan-partners.com (Vercel-домен-дублер: https://sss-gan2.vercel.app)
 **Репозиторій:** https://github.com/projectgroupgvg-create/site
 **Sanity Studio:** `/studio` на живому сайті (project ID `tc8tdzyv`)
 
@@ -78,9 +78,8 @@ git push
 Project Settings → Environment Variables (крім `SANITY_API_WRITE_TOKEN` —
 він потрібен лише локально для `npm run seed`).
 
-Рекомендується додати `NEXT_PUBLIC_SITE_URL` (наприклад,
-`https://sss-gan2.vercel.app`, або власний домен пізніше) — використовується
-для sitemap/canonical/OpenGraph-посилань.
+`NEXT_PUBLIC_SITE_URL` уже налаштований на `https://www.gangan-partners.com` —
+використовується для sitemap/canonical/OpenGraph-посилань.
 
 ## Структура
 
