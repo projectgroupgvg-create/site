@@ -223,12 +223,12 @@
     ]
   },
   "AI": {
-    "lbl": "Consultation IA",
-    "title": "Obtenez une réponse maintenant",
-    "sub": "Notre assistant IA vous fournit une première orientation juridique pour votre situation. Pour une analyse détaillée de votre dossier, réservez une consultation payante avec un avocat.",
-    "chatLabel": "Gangan AI — Assistant juridique",
-    "greeting": "Bonjour. Je suis l'assistant juridique de Gangan & Partners. Décrivez votre situation — je vous fournirai une première orientation juridique.",
-    "placeholder": "Décrivez votre situation...",
+    "lbl": "SECRÉTAIRE NUMÉRIQUE",
+    "title": "Contactez un avocat",
+    "sub": "Indiquez à notre secrétaire numérique l'objet de votre demande — il vous aidera à organiser rapidement un rendez-vous ou un appel avec un avocat. Discuter avec l'assistant ne constitue pas un conseil juridique et ne crée pas de relation avocat-client.",
+    "chatLabel": "Gangan AI — Secrétaire numérique",
+    "greeting": "Bonjour ! Je suis le secrétaire numérique de Gangan & Partners. Décrivez brièvement l'objet de votre demande — je vous aiderai à organiser un rendez-vous ou un appel avec un avocat.",
+    "placeholder": "Quel est l'objet de votre demande ?",
     "send": "Envoyer",
     "sending": "...",
     "error": "Erreur de connexion. Veuillez nous contacter directement.",
@@ -263,7 +263,8 @@
       "Mes actifs crypto ont été bloqués sur une plateforme d'échange",
       "On m'a accusé d'une violation AML",
       "J'ai été victime de cybercriminalité"
-    ]
+    ],
+    "disclaimer": "Le chat avec l'assistant IA a un caractère organisationnel : il recueille votre demande et aide à planifier un rendez-vous ou un appel. Ceci ne constitue pas un conseil juridique et ne crée pas de relation avocat-client."
   },
   "Blog": {
     "lbl": "Blog",

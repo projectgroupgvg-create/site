@@ -223,12 +223,12 @@
     ]
   },
   "AI": {
-    "lbl": "AI Consultation",
-    "title": "Get an answer now",
-    "sub": "Our AI assistant provides an initial legal orientation for your situation. For a detailed case analysis, book a paid consultation with a lawyer.",
-    "chatLabel": "Gangan AI — Legal Assistant",
-    "greeting": "Hello. I'm the legal assistant of Gangan & Partners. Describe your situation — I'll provide an initial legal orientation.",
-    "placeholder": "Describe your situation...",
+    "lbl": "DIGITAL SECRETARY",
+    "title": "Get in touch with a lawyer",
+    "sub": "Tell our digital secretary what your inquiry is about — it will help quickly arrange a meeting or phone call with a lawyer. Chatting with the assistant is not legal advice and does not create an attorney-client relationship.",
+    "chatLabel": "Gangan AI — Digital Secretary",
+    "greeting": "Hello! I'm the digital secretary of Gangan & Partners. Briefly tell me what your inquiry is about, and I'll help arrange a meeting or phone call with a lawyer.",
+    "placeholder": "What is your inquiry about?",
     "send": "Send",
     "sending": "...",
     "error": "Connection error. Please contact us directly.",
@@ -263,7 +263,8 @@
       "My crypto assets were frozen on an exchange",
       "I was accused of an AML violation",
       "I became a victim of cybercrime"
-    ]
+    ],
+    "disclaimer": "Chatting with the AI assistant is organizational in nature: it takes your inquiry and helps schedule a meeting or call. This is not legal advice and does not create an attorney-client relationship."
   },
   "Blog": {
     "lbl": "Blog",

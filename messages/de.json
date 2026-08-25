@@ -223,12 +223,12 @@
     ]
   },
   "AI": {
-    "lbl": "KI-Beratung",
-    "title": "Jetzt Antwort erhalten",
-    "sub": "Unser KI-Assistent gibt Ihnen eine erste rechtliche Orientierung zu Ihrer Situation. Für eine detaillierte Fallanalyse buchen Sie eine kostenpflichtige Beratung mit einem Anwalt.",
-    "chatLabel": "Gangan AI — Rechtsassistent",
-    "greeting": "Willkommen. Ich bin der Rechtsassistent von Gangan & Partners. Beschreiben Sie Ihre Situation — ich gebe Ihnen eine erste rechtliche Orientierung.",
-    "placeholder": "Beschreiben Sie Ihre Situation...",
+    "lbl": "DIGITALER SEKRETÄR",
+    "title": "Kontakt zu einem Anwalt aufnehmen",
+    "sub": "Teilen Sie unserem digitalen Sekretär mit, worum es bei Ihrem Anliegen geht — er hilft Ihnen, schnell ein Treffen oder einen Anruf mit einem Anwalt zu vereinbaren. Der Chat mit dem Assistenten ist keine Rechtsberatung und begründet kein Mandatsverhältnis.",
+    "chatLabel": "Gangan AI — Digitaler Sekretär",
+    "greeting": "Willkommen! Ich bin der digitale Sekretär von Gangan & Partners. Beschreiben Sie kurz, worum es bei Ihrem Anliegen geht — ich helfe Ihnen, ein Treffen oder einen Anruf mit einem Anwalt zu vereinbaren.",
+    "placeholder": "Worum geht es bei Ihrem Anliegen?",
     "send": "Senden",
     "sending": "...",
     "error": "Verbindungsfehler. Bitte kontaktieren Sie uns direkt.",
@@ -263,7 +263,8 @@
       "Meine Krypto-Vermögenswerte wurden auf einer Börse eingefroren",
       "Mir wurde ein AML-Verstoß vorgeworfen",
       "Ich wurde Opfer von Cyberkriminalität"
-    ]
+    ],
+    "disclaimer": "Der Chat mit dem KI-Assistenten dient organisatorischen Zwecken: Er nimmt Ihr Anliegen entgegen und hilft, ein Treffen oder einen Anruf zu vereinbaren. Dies ist keine Rechtsberatung und begründet kein Mandatsverhältnis."
   },
   "Blog": {
     "lbl": "Blog",

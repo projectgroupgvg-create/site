@@ -147,6 +147,7 @@ export default function AIConsultation() {
               </div>
             </div>
           </div>
+          <p className="mt-3 text-[10.5px] leading-[1.6] text-[var(--ink3)]">{t('disclaimer')}</p>
         </div>
       </div>
     </section>
