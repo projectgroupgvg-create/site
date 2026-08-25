@@ -2,8 +2,15 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { formEndpoint } from '@/lib/site';
 
-const endpoint = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT ?? '';
+// Formspree's free plan allows one form per project, so the newsletter
+// signup shares the same endpoint as the contact/intake/confidential forms
+// (all forward to gangan.partners@gmail.com) — `formType` in the payload
+// below is what tells them apart in the inbox. Dedicated
+// NEXT_PUBLIC_NEWSLETTER_ENDPOINT env var still overrides this if the firm
+// ever moves subscriptions to a real mailing-list tool (Mailchimp, Brevo…).
+const endpoint = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT ?? formEndpoint;
 
 export default function NewsletterSignup() {
   const t = useTranslations('Newsletter');
@@ -18,7 +25,7 @@ export default function NewsletterSignup() {
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, formType: 'newsletter-signup' }),
       });
       if (res.ok) {
         setStatus('success');
