@@ -12,6 +12,7 @@ import { buildAlternates, buildOpenGraph, localizedUrl } from '@/lib/metadata';
 import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import ShareButtons from '@/components/ShareButtons';
+import BannerWatermark from '@/components/BannerWatermark';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -100,17 +101,7 @@ export default async function BlogPostPage({
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
-          {/* Small, low-opacity monogram watermark in an unobtrusive corner —
-              a lightweight deterrent against the photo being lifted and
-              reused elsewhere without attribution. */}
-          <Image
-            src="/logo-transparent.png"
-            alt=""
-            width={200}
-            height={200}
-            aria-hidden="true"
-            className="pointer-events-none absolute bottom-3 right-3 z-10 h-10 w-10 select-none opacity-40 sm:h-12 sm:w-12"
-          />
+          <BannerWatermark />
           <div className="relative z-10">
             <Link
               href="/blog"

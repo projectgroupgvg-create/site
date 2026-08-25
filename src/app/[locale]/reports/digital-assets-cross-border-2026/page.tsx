@@ -7,6 +7,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ShareButtons from '@/components/ShareButtons';
+import BannerWatermark from '@/components/BannerWatermark';
 import {
   reportMeta,
   executiveBrief,
@@ -120,6 +121,7 @@ export default async function ReportPage() {
             dark ink text readable while the texture still shows through,
             same treatment as the Practices grid marble background. */}
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(250,247,242,0.92)] via-[rgba(250,247,242,0.8)] to-[rgba(250,247,242,0.55)]" />
+        <BannerWatermark />
         <div className="relative z-10 mx-auto max-w-[860px]">
           <Breadcrumbs
             items={[

@@ -4,6 +4,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 type Value = { title: string; desc: string };
 type Stat = { value: string; label: string };
 
@@ -56,6 +58,7 @@ export default async function AboutPage({
           style={{ backgroundImage: "url('/about-vg-monogram-banner.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
             {t('lbl')}

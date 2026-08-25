@@ -6,6 +6,8 @@ import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import { getTaxJurisdictions } from '@/lib/taxJurisdictions';
 import CryptoTaxCalculator from '@/components/CryptoTaxCalculator';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -54,6 +56,7 @@ export default async function CalculatorPage({
           style={{ backgroundImage: "url('/calculator-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
             {t('lbl')}

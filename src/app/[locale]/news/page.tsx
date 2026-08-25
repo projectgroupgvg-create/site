@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { getAllNews, type FallbackNewsItem } from '@/lib/news';
 import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
+import BannerWatermark from '@/components/BannerWatermark';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -59,6 +60,7 @@ export default async function NewsArchivePage({
             string, not bare "R G B"). This photo has genuinely dark areas, so
             a strong, reliably-applied scrim is needed for text readability. */}
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(250, 247, 242, 0.93)' }} />
+        <BannerWatermark />
 
         <div className="relative z-10">
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">

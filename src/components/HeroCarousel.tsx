@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import HeroVideo from './HeroVideo';
+import BannerWatermark from './BannerWatermark';
 
 export type HeroNewsSlide = {
   slug: string;
@@ -147,6 +148,7 @@ export default function HeroCarousel({
             style={{ backgroundImage: `url('${item.bg ?? newsBg}')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.72)] via-[rgba(10,8,6,0.48)] to-[rgba(10,8,6,0.52)]" />
+          <BannerWatermark />
 
           <div className="relative z-10 flex h-full flex-col justify-center px-6 sm:px-16">
             <Link

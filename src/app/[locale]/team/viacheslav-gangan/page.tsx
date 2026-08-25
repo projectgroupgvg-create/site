@@ -11,6 +11,8 @@ import { Link } from '@/i18n/navigation';
 import { getAllPosts, type FallbackPost } from '@/lib/blog';
 import { getTranslations } from 'next-intl/server';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 export function generateStaticParams() {
   return [{ locale: routing.defaultLocale }];
 }
@@ -102,6 +104,7 @@ export default async function GanganProfilePage() {
           style={{ backgroundImage: "url('/team-gangan-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">

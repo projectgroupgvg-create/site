@@ -15,6 +15,7 @@ import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import { buildServiceSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
+import BannerWatermark from '@/components/BannerWatermark';
 
 type PracticeContent = {
   num: string;
@@ -202,6 +203,7 @@ export default async function PracticePage({
               style={{ backgroundImage: `url('${headerPhoto}')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,8,6,0.78)] via-[rgba(10,8,6,0.42)] to-[rgba(10,8,6,0.5)]" />
+            <BannerWatermark />
             <div className="relative z-10">
               <Link
                 href={backHref}

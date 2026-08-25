@@ -9,6 +9,8 @@ import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Link } from '@/i18n/navigation';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 export function generateStaticParams() {
   return [{ locale: routing.defaultLocale }];
 }
@@ -83,6 +85,7 @@ export default async function IvannaGanganProfilePage() {
           style={{ backgroundImage: "url('/team-section-bg-v2.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">

@@ -9,6 +9,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { Link } from '@/i18n/navigation';
 import { reportMeta } from '@/data/reportDigitalAssets2026';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 export function generateStaticParams() {
   return [{ locale: routing.defaultLocale }];
 }
@@ -53,6 +55,7 @@ export default async function ReportsPage() {
           style={{ backgroundImage: "url('/reports-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: TITLE }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">Аналітика</div>

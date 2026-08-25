@@ -7,6 +7,8 @@ import { buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 export function generateStaticParams() {
   return [{ locale: routing.defaultLocale }];
 }
@@ -114,6 +116,7 @@ export default async function MediaPage() {
           style={{ backgroundImage: "url('/media-header-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.82)] via-[rgba(10,8,6,0.58)] to-[rgba(10,8,6,0.62)]" />
+        <BannerWatermark />
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Медіа' }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">Аналітика</div>

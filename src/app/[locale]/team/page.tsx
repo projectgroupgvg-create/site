@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing';
 import { buildAlternates, buildOpenGraph } from '@/lib/metadata';
 import { Link } from '@/i18n/navigation';
 
+import BannerWatermark from '@/components/BannerWatermark';
+
 type Member = { name: string; role: string; bio: string; facebook?: string; linkedin?: string };
 
 export function generateStaticParams() {
@@ -98,6 +100,7 @@ export default async function TeamPage({
             and atmospheric so light heading text stays readable. */}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,8,6,0.85)] via-[rgba(10,8,6,0.62)] to-[rgba(10,8,6,0.68)]" />
 
+        <BannerWatermark />
         <div className="relative z-10">
           {/* visually hidden — keeps a real page heading for SEO/accessibility
               without showing "Юристи Gangan & Partners" on the page */}
