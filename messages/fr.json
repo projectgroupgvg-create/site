@@ -845,5 +845,41 @@
     "label": "Partager",
     "copied": "Lien copié",
     "instagramHint": "Copier le lien pour Instagram"
+  },
+  "LegalInfo": {
+    "title": "Informations légales",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "La version faisant foi et complète de cette page est publiée en ukrainien à /uk/legal-information. Ce résumé en français n'a pas encore fait l'objet d'une traduction juridique complète ; en cas de divergence, le texte ukrainien prévaut.",
+    "sections": []
+  },
+  "CookiePolicy": {
+    "title": "Politique relative aux cookies",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "La version faisant foi et complète de cette politique est publiée en ukrainien à /uk/cookies. En cas de divergence, le texte ukrainien prévaut.",
+    "sections": []
+  },
+  "Terms": {
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "La version faisant foi et complète de ces conditions est publiée en ukrainien à /uk/terms. En cas de divergence, le texte ukrainien prévaut.",
+    "sections": []
+  },
+  "AiTerms": {
+    "title": "Conditions d'utilisation de l'assistant IA",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "Vous communiquez avec un système d'IA, pas avec un avocat. L'IA peut se tromper. N'envoyez pas de données sensibles ou de documents — utilisez le formulaire sécurisé à /confidential. La version faisant foi et complète est publiée en ukrainien à /uk/ai-terms.",
+    "sections": []
+  },
+  "PaymentsRefunds": {
+    "title": "Paiements et remboursements",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "Le site n'accepte actuellement pas de paiement en ligne. La version faisant foi et complète est publiée en ukrainien à /uk/payments-refunds.",
+    "sections": []
+  },
+  "ProfessionalConfidentiality": {
+    "title": "Confidentialité professionnelle",
+    "lastUpdated": "Dernière mise à jour : 25 août 2026",
+    "placeholderNote": "Nous protégeons le fait de la demande, le contenu des communications et les documents d'assistance juridique conformément à la loi et aux règles déontologiques. La version faisant foi et complète est publiée en ukrainien à /uk/professional-confidentiality.",
+    "sections": []
   }
 }

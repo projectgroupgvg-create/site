@@ -845,5 +845,41 @@
     "label": "Teilen",
     "copied": "Link kopiert",
     "instagramHint": "Link für Instagram kopieren"
+  },
+  "LegalInfo": {
+    "title": "Rechtliche Informationen",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Die maßgebliche, vollständige Fassung dieser Seite ist auf Ukrainisch unter /uk/legal-information veröffentlicht. Diese deutsche Zusammenfassung wurde noch keiner vollständigen juristischen Übersetzung unterzogen; bei Abweichungen gilt der ukrainische Text.",
+    "sections": []
+  },
+  "CookiePolicy": {
+    "title": "Cookie-Richtlinie",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Die maßgebliche, vollständige Fassung dieser Cookie-Richtlinie ist auf Ukrainisch unter /uk/cookies veröffentlicht. Bei Abweichungen gilt der ukrainische Text.",
+    "sections": []
+  },
+  "Terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Die maßgebliche, vollständige Fassung dieser Bedingungen ist auf Ukrainisch unter /uk/terms veröffentlicht. Bei Abweichungen gilt der ukrainische Text.",
+    "sections": []
+  },
+  "AiTerms": {
+    "title": "Nutzungsbedingungen des KI-Assistenten",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Sie sprechen mit einem KI-System, nicht mit einem Anwalt. Die KI kann Fehler machen. Senden Sie keine sensiblen Daten oder Dokumente — nutzen Sie dafür das sichere Formular unter /confidential. Die maßgebliche, vollständige Fassung ist auf Ukrainisch unter /uk/ai-terms veröffentlicht.",
+    "sections": []
+  },
+  "PaymentsRefunds": {
+    "title": "Zahlungen & Rückerstattungen",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Die Website akzeptiert derzeit keine Online-Zahlungen. Die maßgebliche, vollständige Fassung ist auf Ukrainisch unter /uk/payments-refunds veröffentlicht.",
+    "sections": []
+  },
+  "ProfessionalConfidentiality": {
+    "title": "Berufliche Vertraulichkeit",
+    "lastUpdated": "Zuletzt aktualisiert: 25. August 2026",
+    "placeholderNote": "Wir schützen die Tatsache einer Anfrage, den Inhalt der Kommunikation und Materialien der Rechtshilfe gemäß Gesetz und den Standesregeln. Die maßgebliche, vollständige Fassung ist auf Ukrainisch unter /uk/professional-confidentiality veröffentlicht.",
+    "sections": []
   }
 }

@@ -7,7 +7,23 @@ export default function Footer() {
   const tNewsletter = useTranslations('Newsletter');
   const tContact = useTranslations('Contact');
   const tPrivacy = useTranslations('Privacy');
+  const tLegalInfo = useTranslations('LegalInfo');
+  const tCookiePolicy = useTranslations('CookiePolicy');
+  const tTerms = useTranslations('Terms');
+  const tAiTerms = useTranslations('AiTerms');
+  const tPaymentsRefunds = useTranslations('PaymentsRefunds');
+  const tProfessionalConfidentiality = useTranslations('ProfessionalConfidentiality');
   const year = new Date().getFullYear();
+
+  const legalLinks = [
+    { href: '/legal-information', label: tLegalInfo('title') },
+    { href: '/privacy', label: tPrivacy('title') },
+    { href: '/cookies', label: tCookiePolicy('title') },
+    { href: '/terms', label: tTerms('title') },
+    { href: '/ai-terms', label: tAiTerms('title') },
+    { href: '/payments-refunds', label: tPaymentsRefunds('title') },
+    { href: '/professional-confidentiality', label: tProfessionalConfidentiality('title') },
+  ];
 
   return (
     <footer className="bg-[var(--ink)] px-6 py-9 sm:px-11">
@@ -40,10 +56,23 @@ export default function Footer() {
           <Link href="/#contacts" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
             {t('contacts')}
           </Link>
-          <Link href="/privacy" className="text-[10.5px] tracking-wide text-[rgba(245,245,245,0.28)] transition-colors hover:text-[rgba(245,245,245,0.65)]">
-            {tPrivacy('title')}
-          </Link>
         </div>
+      </div>
+
+      {/* Full 7-document legal package — legal information, privacy, cookies,
+          terms, AI terms, payments/refunds, professional confidentiality.
+          Kept as its own row (smaller, muted) so it doesn't compete visually
+          with the primary site navigation above. */}
+      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 border-t-hair border-[rgba(245,245,245,0.1)] pt-4">
+        {legalLinks.map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="text-[9.5px] tracking-wide text-[rgba(245,245,245,0.22)] transition-colors hover:text-[rgba(245,245,245,0.55)]"
+          >
+            {l.label}
+          </Link>
+        ))}
       </div>
 
       {/* Legal identification block — required on every page under Art. 7 of

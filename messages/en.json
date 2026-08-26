@@ -845,5 +845,41 @@
     "label": "Share",
     "copied": "Link copied",
     "instagramHint": "Copy link for Instagram"
+  },
+  "LegalInfo": {
+    "title": "Legal Information",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "The authoritative, full version of this page is published in Ukrainian at /uk/legal-information. This English summary has not yet been through full legal translation; where the two differ, the Ukrainian text prevails.",
+    "sections": []
+  },
+  "CookiePolicy": {
+    "title": "Cookie Policy",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "The authoritative, full version of this Cookie Policy is published in Ukrainian at /uk/cookies. This English summary has not yet been through full legal translation; where the two differ, the Ukrainian text prevails.",
+    "sections": []
+  },
+  "Terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "The authoritative, full version of these Terms is published in Ukrainian at /uk/terms. This English summary has not yet been through full legal translation; where the two differ, the Ukrainian text prevails.",
+    "sections": []
+  },
+  "AiTerms": {
+    "title": "AI Assistant Terms of Use",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "You are talking to an AI system, not a lawyer. The AI can make mistakes. Do not send sensitive data or documents — use the secure form at /confidential instead. A response is not individual legal assistance and does not mean the firm has accepted your case. The authoritative, full version of these Terms is published in Ukrainian at /uk/ai-terms.",
+    "sections": []
+  },
+  "PaymentsRefunds": {
+    "title": "Payments & Refunds",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "The site does not currently accept online payment — forms on the site are used only for inquiries and booking a consultation. The authoritative, full version of this policy is published in Ukrainian at /uk/payments-refunds.",
+    "sections": []
+  },
+  "ProfessionalConfidentiality": {
+    "title": "Professional Confidentiality",
+    "lastUpdated": "Last updated: August 25, 2026",
+    "placeholderNote": "We protect the fact of an inquiry, the content of communications, and legal-assistance materials in accordance with law and the Rules of Advocate Ethics. The authoritative, full version of this page is published in Ukrainian at /uk/professional-confidentiality.",
+    "sections": []
   }
 }

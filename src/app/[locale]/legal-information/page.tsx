@@ -1,6 +1,6 @@
 import { makeLegalPage } from '@/lib/legalPage';
 
-const page = makeLegalPage('Privacy', '/privacy');
+const page = makeLegalPage('LegalInfo', '/legal-information');
 
 export const generateStaticParams = page.generateStaticParams;
 export const generateMetadata = page.generateMetadata;
