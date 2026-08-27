@@ -525,20 +525,23 @@
     "lbl": "Team",
     "title": "Anwälte von Gangan & Partners",
     "sub": "Ein Team von Anwälten und Analysten mit Erfahrung im Straf-, Finanz- und Blockchain-Recht.",
+    "erauLabel": "Status im ukrainischen Anwaltsregister prüfen",
     "members": [
       {
         "name": "Vyacheslav Gangan",
         "role": "Geschäftsführender Partner · Strafrecht",
         "bio": "Leitet die Kanzlei und koordiniert die Verteidigung in den aufsehenerregendsten Strafverfahren. Über 15 Jahre Erfahrung im Strafrecht.",
         "facebook": "https://www.facebook.com/vaceslav.gangan/",
-        "linkedin": "https://www.linkedin.com/in/viacheslav-gangan-539619292/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOii34ONWScieKm6S5xn%2Bjg%3D%3D"
+        "linkedin": "https://www.linkedin.com/in/viacheslav-gangan-539619292/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOii34ONWScieKm6S5xn%2Bjg%3D%3D",
+        "erauLink": "https://erau.unba.org.ua/profile/39973"
       },
       {
         "name": "Ivanna Gangan",
         "role": "Rechtsanwältin · Familien- und Bodenrecht",
         "bio": "Bearbeitet Fälle zur Aufteilung des ehelichen Vermögens, Unterhaltsansprüche, Sorgerechtsregelungen und Scheidungen sowie Streitigkeiten über Grundeigentum, Pacht, Landanteile und Flächenzuweisung.",
         "facebook": "https://www.facebook.com/share/1EKA98jGDb/?mibextid=wwXIfr",
-        "linkedin": "https://www.linkedin.com/in/%D1%96%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0-%D0%B3%D0%B0%D0%BD%D0%B3%D0%B0%D0%BD-900a12430?trk=contact-info"
+        "linkedin": "https://www.linkedin.com/in/%D1%96%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0-%D0%B3%D0%B0%D0%BD%D0%B3%D0%B0%D0%BD-900a12430?trk=contact-info",
+        "erauLink": "https://erau.unba.org.ua/profile/96002"
       },
       {
         "name": "Mykyta Sypalo",

@@ -36,6 +36,10 @@ const knowsAbout = [
   'Спори про право власності на землю',
 ];
 
+const externalProfiles = [
+  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/96002' },
+];
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: TITLE,
@@ -60,7 +64,7 @@ export default async function IvannaGanganProfilePage() {
           jobTitle: 'Старший партнер, адвокат',
           description: 'Адвокат, що спеціалізується на сімейних і земельних спорах.',
           knowsAbout,
-          sameAs: [],
+          sameAs: externalProfiles.map((p) => p.url),
         })}
       />
       <JsonLd
@@ -166,6 +170,24 @@ export default async function IvannaGanganProfilePage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section className="border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
+            <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Зовнішні профілі</h2>
+            <div className="flex flex-wrap gap-3">
+              {externalProfiles.map((p) => (
+                <a
+                  key={p.label}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm border-hair px-4 py-2 text-[12px] text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"
+                  style={{ borderColor: 'var(--b)' }}
+                >
+                  {p.label} ↗
+                </a>
+              ))}
+            </div>
           </section>
         </div>
       </div>

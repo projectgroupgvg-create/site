@@ -8,7 +8,7 @@ import { Link } from '@/i18n/navigation';
 
 import BannerWatermark from '@/components/BannerWatermark';
 
-type Member = { name: string; role: string; bio: string; facebook?: string; linkedin?: string };
+type Member = { name: string; role: string; bio: string; facebook?: string; linkedin?: string; erauLink?: string };
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -155,9 +155,20 @@ export default async function TeamPage({
                 m.name
               )}
             </div>
-            <div className="mb-4 text-[11px] uppercase tracking-[0.08em] text-[var(--s3)]">
+            <div className="mb-1 text-[11px] uppercase tracking-[0.08em] text-[var(--s3)]">
               {m.role}
             </div>
+            {m.erauLink && (
+              <a
+                href={m.erauLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-4 inline-flex items-center gap-1 text-[10.5px] text-[var(--ink3)] underline decoration-[color:var(--b)] underline-offset-2 transition-colors hover:text-[var(--ink)]"
+              >
+                {t('erauLabel')} ↗
+              </a>
+            )}
+            {!m.erauLink && <div className="mb-4" />}
             {/* When a member has a dedicated profile page, its own "Про
                 адвоката" section already spells out the practice
                 description in full — repeating it here would just be

@@ -29,6 +29,7 @@ const DESCRIPTION =
   "В'ячеслав Ганган — адвокат і керуючий партнер АО «Ганган і Партнери» з понад 15-річним досвідом. Кримінальний захист, господарські спори, віртуальні активи та транскордонні провадження.";
 
 const externalProfiles = [
+  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/39973' },
   { label: 'OBOZ.UA', url: 'https://www.obozrevatel.com/ukr/person/gangan-vyacheslav-georgievich.htm' },
   { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Vyacheslav-Gangan' },
   { label: 'Google Scholar', url: 'https://scholar.google.com/citations?hl=uk&user=diaIF6MAAAAJ' },
