@@ -112,7 +112,7 @@ export default async function NewsItemPage({
             <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
               {typeLabel} · {item.date}
             </div>
-            <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
+            <h1 className="max-w-[1000px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
               {item.title}
             </h1>
           </div>
@@ -128,23 +128,27 @@ export default async function NewsItemPage({
           <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--s3)]">
             {typeLabel} · {item.date}
           </div>
-          <h1 className="max-w-[720px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
+          <h1 className="max-w-[1320px] font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.2] text-[var(--ink)]">
             {item.title}
           </h1>
         </div>
       )}
 
-      <article className="mx-auto max-w-[680px] px-6 py-16 sm:px-11">
+      {/* Widened to match the blog article template's max-w-[1320px], and
+          each paragraph gets a justified, first-line-indented treatment
+          (the same "абзацний відступ" style used on /privacy) instead of
+          the previous plain-left-aligned narrow column. */}
+      <article className="mx-auto max-w-[1320px] px-6 py-16 sm:px-11">
         <ShareButtons url={localizedUrl(locale, `/news/${slug}`)} title={item.title} />
 
         {item.source === 'fallback' && Array.isArray(item.body) ? (
           (item.body as string[]).map((p, i) => (
-            <p key={i} className="mb-5 text-[14.5px] leading-[1.9] text-[var(--ink2)]">
+            <p key={i} className="mb-5 indent-[1.75em] text-justify text-[14.5px] leading-[1.9] text-[var(--ink2)]">
               {p}
             </p>
           ))
         ) : item.body ? (
-          <div className="prose-blog text-[14.5px] leading-[1.9] text-[var(--ink2)]">
+          <div className="prose-blog indent-[1.75em] text-justify text-[14.5px] leading-[1.9] text-[var(--ink2)]">
             <PortableText value={item.body as Parameters<typeof PortableText>[0]['value']} />
           </div>
         ) : null}
