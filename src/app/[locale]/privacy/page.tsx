@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { buildAlternates } from '@/lib/metadata';
 
@@ -45,31 +45,31 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations('Privacy');
-  const sections = t.raw('sections') as Section[];
+  const messages = await getMessages({ locale });
+  const privacy = (messages as Record<string, unknown>).Privacy as {
+    title: string;
+    lastUpdated: string;
+    orgLine?: string;
+    placeholderNote?: string;
+    sections: Section[];
+  };
 
-  let orgLine: string | null = null;
-  try {
-    orgLine = t('orgLine');
-  } catch {
-    orgLine = null;
-  }
-  let placeholderNote: string | null = null;
-  try {
-    placeholderNote = t('placeholderNote');
-  } catch {
-    placeholderNote = null;
-  }
+  const title = privacy.title;
+  const lastUpdated = privacy.lastUpdated;
+  const sections = privacy.sections;
+  const orgLine: string | null = typeof privacy.orgLine === 'string' ? privacy.orgLine : null;
+  const placeholderNote: string | null =
+    typeof privacy.placeholderNote === 'string' ? privacy.placeholderNote : null;
 
   return (
     <main>
       <div className="border-b-hair bg-[var(--bg2)] px-6 py-16 sm:px-11" style={{ borderColor: 'var(--b)' }}>
         <div className="mx-auto max-w-[1320px]">
           <h1 className="mb-3 font-serif text-[clamp(24px,3vw,38px)] font-light leading-[1.1] text-[var(--ink)]">
-            {t('title')}
+            {title}
           </h1>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] uppercase tracking-[0.1em] text-[var(--ink3)]">
-            <span>{t('lastUpdated')}</span>
+            <span>{lastUpdated}</span>
             {orgLine && (
               <>
                 <span aria-hidden="true">·</span>
