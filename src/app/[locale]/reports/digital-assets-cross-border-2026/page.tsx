@@ -283,7 +283,7 @@ export default async function ReportPage() {
         <section id="sources" className="mb-14 scroll-mt-20 border-t-hair pt-10" style={{ borderColor: 'var(--b)' }}>
           <h2 className="mb-2 font-serif text-[24px] font-light text-[var(--ink)]">Офіційні джерела</h2>
           <p className="mb-5 text-[13px] leading-[1.7] text-[var(--ink3)]">
-            У звіті використані лише офіційні нормативні акти, реєстри, роз&apos;яснення та аналітичні матеріали державних органів і міжнародних організацій. Стан джерел перевірено станом на 30 липня 2026 року.
+            У звіті використані лише офіційні нормативні акти, реєстри, роз&apos;яснення та аналітичні матеріали державних органів і міжнародних організацій. Стан джерел перевірено станом на 25 серпня 2026 року.
           </p>
           <ol className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {sourceRegister.map((src) => (
