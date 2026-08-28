@@ -2512,6 +2512,10 @@
     "instagramHint": "Скопіювати посилання для Instagram",
     "facebookHint": "Скопіювати посилання для Facebook"
   },
+  "UkOnlyNotice": {
+    "message": "Цей розділ поки доступний лише українською мовою.",
+    "dismiss": "Закрити"
+  },
   "LegalInfo": {
     "title": "Юридична інформація",
     "lastUpdated": "Востаннє оновлено: 25 серпня 2026 року",

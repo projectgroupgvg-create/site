@@ -10,6 +10,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import QuickContactWidget from '@/components/QuickContactWidget';
+import UkOnlyNotice from '@/components/UkOnlyNotice';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
           <Footer />
           <CookieConsent />
           <QuickContactWidget />
+          <UkOnlyNotice />
         </NextIntlClientProvider>
       </body>
     </html>

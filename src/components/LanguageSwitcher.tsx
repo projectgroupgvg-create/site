@@ -74,8 +74,19 @@ export default function LanguageSwitcher() {
             // The uk-only pages above are, by definition, only missing in
             // the *other* 3 locales — switching back to uk always keeps the
             // current path.
-            const destination =
-              l === routing.defaultLocale ? pathname : (localizableFallback(pathname) ?? pathname);
+            if (l === routing.defaultLocale) {
+              router.replace(pathname, { locale: l });
+              return;
+            }
+            const fallback = localizableFallback(pathname);
+            // When a fallback kicks in, the visitor is being redirected away
+            // from the page they were actually trying to read (it doesn't
+            // exist in this locale) — flag it with a query param so
+            // UkOnlyNotice can explain why, instead of silently landing them
+            // somewhere else with no context.
+            const destination = fallback
+              ? `${fallback}${fallback.includes('?') ? '&' : '?'}notice=uk-only`
+              : pathname;
             router.replace(destination, { locale: l });
           }}
           className={`rounded-sm px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] transition-colors ${

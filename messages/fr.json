@@ -888,6 +888,10 @@
     "instagramHint": "Copier le lien pour Instagram",
     "facebookHint": "Copier le lien pour Facebook"
   },
+  "UkOnlyNotice": {
+    "message": "Cette section n'est actuellement disponible qu'en ukrainien.",
+    "dismiss": "Fermer"
+  },
   "LegalInfo": {
     "title": "Informations légales",
     "lastUpdated": "Dernière mise à jour : 25 août 2026",
