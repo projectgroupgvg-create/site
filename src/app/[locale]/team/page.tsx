@@ -83,6 +83,7 @@ const hidePhoneFor = new Set([
   'Микита Сипало', 'Mykyta Sypalo',
   'Андрій Чабан', 'Andrii Chaban',
   'Олександр Расторгуєв', 'Oleksandr Rastorguiev',
+  'Оксана Подолян', 'Oksana Podolian',
 ]);
 
 export default async function TeamPage({

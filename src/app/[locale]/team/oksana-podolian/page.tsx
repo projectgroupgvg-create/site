@@ -18,9 +18,9 @@ export const dynamicParams = false;
 
 const PATH = '/team/oksana-podolian';
 const NAME = 'Оксана Подолян';
-const TITLE = `${NAME} — адвокат`;
+const TITLE = `${NAME} — адвокат, асоційована партнерка`;
 const DESCRIPTION =
-  'Оксана Подолян — адвокат АО «Ганган і Партнери». Захист клієнтів у кримінальних справах, пов’язаних із легалізацією (відмиванням) доходів, ухиленням від сплати податків та службовими злочинами.';
+  'Оксана Подолян — адвокат, асоційована партнерка АО «Ганган і Партнери». Захист клієнтів у кримінальних справах, пов’язаних із легалізацією (відмиванням) доходів, ухиленням від сплати податків та службовими злочинами.';
 
 const keyPractices = [
   { label: 'Кримінальне право', slug: 'criminal-defense' },
@@ -60,7 +60,7 @@ export default async function OksanaPodolianProfilePage() {
           path: PATH,
           name: NAME,
           alternateNames: ['Oksana Podolian'],
-          jobTitle: 'Адвокат',
+          jobTitle: 'Адвокат, асоційована партнерка',
           description: 'Адвокат, що спеціалізується на захисті у справах про легалізацію доходів, податкові та службові злочини.',
           knowsAbout,
           sameAs: externalProfiles.map((p) => p.url),
@@ -92,7 +92,7 @@ export default async function OksanaPodolianProfilePage() {
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-            Адвокат
+            Адвокат · Асоційована партнерка
           </div>
           <h1 className="mb-3 font-serif text-[clamp(28px,3.4vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
             {NAME}
@@ -135,10 +135,10 @@ export default async function OksanaPodolianProfilePage() {
           <section className="mb-10">
             <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Про адвоката</h2>
             <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-              Оксана Подолян — адвокат адвокатського об&apos;єднання «Ганган і Партнери».
-              Спеціалізується на захисті клієнтів у кримінальних справах, пов&apos;язаних із
-              легалізацією (відмиванням) доходів, ухиленням від сплати податків та службовими
-              злочинами.
+              Оксана Подолян — адвокат, асоційована партнерка адвокатського об&apos;єднання
+              «Ганган і Партнери». Спеціалізується на захисті клієнтів у кримінальних справах,
+              пов&apos;язаних із легалізацією (відмиванням) доходів, ухиленням від сплати податків
+              та службовими злочинами.
             </p>
             <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
               Веде провадження за статтями про легалізацію (відмивання) майна, одержаного злочинним
