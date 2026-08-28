@@ -44,6 +44,11 @@
     "moreTitle": "Autres domaines",
     "ctaTitle": "Discuter de votre situation",
     "ctaBtn": "Prendre rendez-vous",
+    "virtualCurrencies": {
+      "num": "05",
+      "title": "Monnaies virtuelles",
+      "desc": "Défense pénale en matière d'actifs virtuels, recouvrement d'actifs, LCB-FT, sanctions, MiCA et enquêtes transfrontalières."
+    },
     "list": [
       {
         "num": "01",

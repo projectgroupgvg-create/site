@@ -44,6 +44,11 @@
     "moreTitle": "Other Practices",
     "ctaTitle": "Discuss your situation",
     "ctaBtn": "Book a Consultation",
+    "virtualCurrencies": {
+      "num": "05",
+      "title": "Virtual Currencies",
+      "desc": "Defending clients in criminal cases involving virtual assets, asset recovery, AML, sanctions, MiCA, and cross-border investigations."
+    },
     "list": [
       {
         "num": "01",

@@ -44,6 +44,11 @@
     "moreTitle": "Weitere Praxisbereiche",
     "ctaTitle": "Besprechen Sie Ihren Fall",
     "ctaBtn": "Beratungstermin vereinbaren",
+    "virtualCurrencies": {
+      "num": "05",
+      "title": "Virtuelle Währungen",
+      "desc": "Verteidigung in Strafsachen mit virtuellen Vermögenswerten, Vermögensrückführung, AML, Sanktionen, MiCA und grenzüberschreitende Ermittlungen."
+    },
     "list": [
       {
         "num": "01",

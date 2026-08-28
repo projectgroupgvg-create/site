@@ -69,26 +69,33 @@ export default function PracticesGrid() {
     cardImage: PRACTICE_CARD_IMAGES[slug],
   }));
 
-  // Ukrainian-only swap: the client wants the homepage grid to foreground
-  // virtual-currency work instead of Land Law, linking out to the existing
-  // /virtual-assets hub (a separate uk-only SEO pillar page, not a
-  // /practices/[slug] page — see project memory on uk-only pillar pages).
-  // Land Law's own page is untouched and still reachable directly; it's
-  // just no longer advertised in this grid. Other locales keep the original
-  // Land Law card since /virtual-assets has no en/de/fr translation.
-  if (locale === 'uk') {
-    const vc = t.raw('virtualCurrencies') as { num: string; title: string; desc: string };
-    const landIndex = cards.findIndex((c) => c.key === 'land-law');
-    if (landIndex !== -1) {
-      cards[landIndex] = {
-        key: 'virtual-currencies',
-        href: '/virtual-assets',
-        num: vc.num,
-        title: vc.title,
-        desc: vc.desc,
-        cardImage: '/practice-card-virtual-currencies.jpg',
-      };
-    }
+  // The client wants the homepage grid to foreground virtual-currency work
+  // instead of Land Law, in every locale. Land Law's own page is untouched
+  // and still reachable directly (via /practices/land-law and its "other
+  // practices" pill nav); it's just no longer advertised in this grid slot.
+  //
+  // Link target differs by locale: uk links to the deep /virtual-assets SEO
+  // pillar hub (MiCA, EU market entry, asset recovery — a separate uk-only
+  // page, see project notes on uk-only pillar pages). That page has no
+  // en/de/fr translation, and machine-translating a dense legal hub page
+  // wholesale carries the same accuracy risk already avoided for the legal
+  // document package — so en/de/fr instead link to /practices/crypto-fraud,
+  // a fully translated, real page covering the same subject (crypto fraud,
+  // asset recovery, blockchain investigations) from the criminal-defense
+  // angle. Previously this swap only ran for uk, leaving en/de/fr showing a
+  // half-styled Land Law card with no themed photo (visually broken next to
+  // its 5 siblings, which all got a themed-photo upgrade) — see chat.
+  const vc = t.raw('virtualCurrencies') as { num: string; title: string; desc: string };
+  const landIndex = cards.findIndex((c) => c.key === 'land-law');
+  if (landIndex !== -1) {
+    cards[landIndex] = {
+      key: 'virtual-currencies',
+      href: locale === 'uk' ? '/virtual-assets' : '/practices/crypto-fraud',
+      num: vc.num,
+      title: vc.title,
+      desc: vc.desc,
+      cardImage: '/practice-card-virtual-currencies.jpg',
+    };
   }
 
   return (
