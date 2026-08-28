@@ -53,12 +53,12 @@ export const fallbackTaxJurisdictions: TaxJurisdiction[] = [
     primaryCurrency: 'UAH',
     status: 'draft',
     statusNote: {
-      uk: "Профільний закон ще не набрав чинності. Законопроєкт №10225-д пройшов перше читання (вересень 2025), очікувана дата набрання чинності — 1 січня 2026. До ухвалення закону податкова служба застосовує загальні правила оподаткування інвестиційного доходу.",
-      en: 'The dedicated law has not yet entered into force. Draft Bill No. 10225-d passed its first reading (September 2025); the expected effective date is 1 January 2026. Until enacted, the tax authority applies general investment-income rules.',
-      de: 'Das entsprechende Gesetz ist noch nicht in Kraft. Der Gesetzentwurf Nr. 10225-d wurde in erster Lesung angenommen (September 2025); das geplante Inkrafttreten ist der 1. Januar 2026. Bis dahin wendet die Steuerbehörde allgemeine Regeln für Kapitaleinkünfte an.',
-      fr: "La loi dédiée n'est pas encore entrée en vigueur. Le projet de loi n°10225-d a été adopté en première lecture (septembre 2025) ; l'entrée en vigueur prévue est le 1er janvier 2026. En attendant, l'administration fiscale applique les règles générales sur les revenus d'investissement.",
+      uk: "Закон України № 2074-IX «Про віртуальні активи» ухвалений, але досі не набрав чинності. Законопроєкт №10225-д перебуває на розгляді у Верховній Раді (готується до другого читання). До ухвалення профільного закону податкова служба застосовує загальні правила оподаткування інвестиційного доходу.",
+      en: 'Law No. 2074-IX "On Virtual Assets" has been adopted but has not yet entered into force. Draft Bill No. 10225-d is still pending before Parliament (awaiting its second reading). Until the dedicated law is enacted, the tax authority applies general investment-income rules.',
+      de: 'Das Gesetz Nr. 2074-IX „Über virtuelle Vermögenswerte" wurde verabschiedet, ist aber noch nicht in Kraft getreten. Der Gesetzentwurf Nr. 10225-d liegt dem Parlament weiterhin zur zweiten Lesung vor. Bis zur Verabschiedung des einschlägigen Gesetzes wendet die Steuerbehörde allgemeine Regeln für Kapitaleinkünfte an.',
+      fr: "La loi n° 2074-IX « relative aux actifs virtuels » a été adoptée mais n'est pas encore entrée en vigueur. Le projet de loi n°10225-d est toujours en instance devant le Parlement (en attente de sa deuxième lecture). En attendant l'adoption de la loi dédiée, l'administration fiscale applique les règles générales sur les revenus d'investissement.",
     },
-    lastReviewed: '2026-06-20',
+    lastReviewed: '2026-08-28',
     sourceLabel: 'Верховна Рада України — законопроєкт №10225-д',
     sourceUrl: 'https://itd.rada.gov.ua/billinfo/Bills/Card/56271',
 
