@@ -50,6 +50,10 @@ const memberProfileSlugs: Record<string, string> = {
   'Ivanna Gangan': 'ivanna-gangan',
   'Микита Сипало': 'mykyta-sypalo',
   'Mykyta Sypalo': 'mykyta-sypalo',
+  'Олександр Расторгуєв': 'oleksandr-rastorguiev',
+  'Oleksandr Rastorguiev': 'oleksandr-rastorguiev',
+  'Андрій Чабан': 'andrii-chaban',
+  'Andrii Chaban': 'andrii-chaban',
 };
 
 // Real face photos for the team-grid avatar circles (replacing the
@@ -74,6 +78,7 @@ const hidePhoneFor = new Set([
   'Іванна Ганган', 'Ivanna Gangan',
   'Микита Сипало', 'Mykyta Sypalo',
   'Андрій Чабан', 'Andrii Chaban',
+  'Олександр Расторгуєв', 'Oleksandr Rastorguiev',
 ]);
 
 export default async function TeamPage({

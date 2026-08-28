@@ -22,7 +22,9 @@ const UK_ONLY_EXACT_PATHS = new Set([
   '/editorial-policy',
 ]);
 
-const UK_ONLY_TEAM_PROFILE_SLUGS = new Set(['viacheslav-gangan', 'ivanna-gangan', 'mykyta-sypalo']);
+const UK_ONLY_TEAM_PROFILE_SLUGS = new Set([
+  'viacheslav-gangan', 'ivanna-gangan', 'mykyta-sypalo', 'oleksandr-rastorguiev', 'andrii-chaban',
+]);
 
 // Mirrors ukOnlySlugs in practices/[slug]/page.tsx and sitemap.ts — practice
 // sub-pages whose rich content only exists in messages/uk.json today.
