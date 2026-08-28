@@ -16,23 +16,26 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-const PATH = '/team/oleksandr-rastorguiev';
-const NAME = 'Олександр Расторгуєв';
-const TITLE = `${NAME} — адвокат, асоційований партнер`;
+const PATH = '/team/oksana-podolian';
+const NAME = 'Оксана Подолян';
+const TITLE = `${NAME} — адвокат`;
 const DESCRIPTION =
-  'Олександр Расторгуєв — адвокат, асоційований партнер АО «Ганган і Партнери». Захист клієнтів у кримінальних провадженнях за посадовими правопорушеннями та злочинами, пов’язаними з корупцією.';
+  'Оксана Подолян — адвокат АО «Ганган і Партнери». Захист клієнтів у кримінальних справах, пов’язаних із легалізацією (відмиванням) доходів, ухиленням від сплати податків та службовими злочинами.';
 
-const keyPractices = [{ label: 'Кримінальне право', slug: 'criminal-defense' }];
+const keyPractices = [
+  { label: 'Кримінальне право', slug: 'criminal-defense' },
+  { label: 'Легалізація доходів / AML', slug: 'aml-compliance' },
+];
 
 const externalProfiles = [
-  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/48137' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/aleksander-rastorguiev-2b1b5464/' },
+  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/89876' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/oksana-podolian-bba235432' },
 ];
 
 const knowsAbout = [
-  'Посадові злочини',
-  'Корупційні правопорушення',
-  'Зловживання владою або службовим становищем',
+  'Легалізація (відмивання) доходів',
+  'Ухилення від сплати податків',
+  'Службові злочини',
   'Кримінальний захист',
 ];
 
@@ -45,7 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function OleksandrRastorguievProfilePage() {
+export default async function OksanaPodolianProfilePage() {
   const locale = routing.defaultLocale;
   setRequestLocale(locale);
 
@@ -56,9 +59,9 @@ export default async function OleksandrRastorguievProfilePage() {
           locale,
           path: PATH,
           name: NAME,
-          alternateNames: ['Oleksandr Rastorguiev'],
-          jobTitle: 'Адвокат, асоційований партнер',
-          description: 'Адвокат, що спеціалізується на захисті у справах про посадові та корупційні злочини.',
+          alternateNames: ['Oksana Podolian'],
+          jobTitle: 'Адвокат',
+          description: 'Адвокат, що спеціалізується на захисті у справах про легалізацію доходів, податкові та службові злочини.',
           knowsAbout,
           sameAs: externalProfiles.map((p) => p.url),
         })}
@@ -89,12 +92,12 @@ export default async function OleksandrRastorguievProfilePage() {
         <div className="relative z-10">
           <Breadcrumbs items={[{ name: 'Головна', href: '/' }, { name: 'Команда', href: '/team' }, { name: NAME }]} />
           <div className="mb-3 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-            Адвокат · Асоційований партнер
+            Адвокат
           </div>
           <h1 className="mb-3 font-serif text-[clamp(28px,3.4vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
             {NAME}
           </h1>
-          <p className="max-w-[560px] text-[14px] text-[var(--ink3)]">Oleksandr Rastorguiev</p>
+          <p className="max-w-[560px] text-[14px] text-[var(--ink3)]">Oksana Podolian</p>
         </div>
       </div>
 
@@ -103,7 +106,7 @@ export default async function OleksandrRastorguievProfilePage() {
           <div className="mb-6 overflow-hidden rounded-lg border-hair" style={{ borderColor: 'var(--b)' }}>
             <div className="relative aspect-square">
               <Image
-                src="/oleksandr-rastorguiev-portrait.jpg"
+                src="/oksana-podolian-portrait.jpg"
                 alt={NAME}
                 fill
                 sizes="(max-width: 1024px) 100vw, 320px"
@@ -132,22 +135,21 @@ export default async function OleksandrRastorguievProfilePage() {
           <section className="mb-10">
             <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Про адвоката</h2>
             <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-              Олександр Расторгуєв — адвокат, асоційований партнер адвокатського об&apos;єднання
-              «Ганган і Партнери». Спеціалізується на захисті клієнтів у кримінальних провадженнях,
-              пов&apos;язаних із посадовими правопорушеннями та злочинами у сфері корупції.
+              Оксана Подолян — адвокат адвокатського об&apos;єднання «Ганган і Партнери».
+              Спеціалізується на захисті клієнтів у кримінальних справах, пов&apos;язаних із
+              легалізацією (відмиванням) доходів, ухиленням від сплати податків та службовими
+              злочинами.
             </p>
             <p className="mb-4 text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-              Веде справи, що стосуються зловживання владою або службовим становищем, перевищення
-              службових повноважень, одержання неправомірної вигоди та інших посадових і корупційних
-              злочинів, включно з провадженнями, які розслідують Національне антикорупційне бюро
-              України (НАБУ), Спеціалізована антикорупційна прокуратура (САП) та органи Національної
-              поліції.
+              Веде провадження за статтями про легалізацію (відмивання) майна, одержаного злочинним
+              шляхом, ухилення від сплати податків, зборів (обов&apos;язкових платежів), а також
+              службові злочини, пов&apos;язані із зловживанням службовим становищем та перевищенням
+              повноважень.
             </p>
             <p className="text-justify text-[14px] leading-[1.85] text-[var(--ink2)]">
-              Забезпечує захист на всіх стадіях кримінального провадження — від повідомлення про
-              підозру та проведення обшуків до судового розгляду, — приділяючи особливу увагу
-              дотриманню процесуальних гарантій клієнта, оскарженню незаконних слідчих дій та
-              побудові доказової позиції захисту.
+              Забезпечує захист на всіх стадіях кримінального провадження, приділяючи особливу увагу
+              аналізу фінансових операцій, документальному обґрунтуванню джерел походження коштів та
+              побудові доказової позиції у справах із фінансовою складовою.
             </p>
           </section>
 

@@ -24,6 +24,7 @@ const UK_ONLY_EXACT_PATHS = new Set([
 
 const UK_ONLY_TEAM_PROFILE_SLUGS = new Set([
   'viacheslav-gangan', 'ivanna-gangan', 'mykyta-sypalo', 'oleksandr-rastorguiev', 'andrii-chaban',
+  'oksana-podolian',
 ]);
 
 // Mirrors ukOnlySlugs in practices/[slug]/page.tsx and sitemap.ts — practice

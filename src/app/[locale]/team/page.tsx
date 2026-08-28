@@ -54,6 +54,8 @@ const memberProfileSlugs: Record<string, string> = {
   'Oleksandr Rastorguiev': 'oleksandr-rastorguiev',
   'Андрій Чабан': 'andrii-chaban',
   'Andrii Chaban': 'andrii-chaban',
+  'Оксана Подолян': 'oksana-podolian',
+  'Oksana Podolian': 'oksana-podolian',
 };
 
 // Real face photos for the team-grid avatar circles (replacing the
@@ -69,6 +71,8 @@ const memberPhotos: Record<string, { src: string; position?: string }> = {
   'Oleksandr Rastorguiev': { src: '/oleksandr-rastorguiev-portrait.jpg', position: '50% 15%' },
   'Андрій Чабан': { src: '/andrii-chaban-portrait.jpg', position: '50% 20%' },
   'Andrii Chaban': { src: '/andrii-chaban-portrait.jpg', position: '50% 20%' },
+  'Оксана Подолян': { src: '/oksana-podolian-portrait.jpg', position: '50% 15%' },
+  'Oksana Podolian': { src: '/oksana-podolian-portrait.jpg', position: '50% 15%' },
 };
 
 // The shared firm phone number reads oddly under an assistant/junior/
