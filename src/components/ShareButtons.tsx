@@ -3,19 +3,25 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Instagram has no public web "share this URL" intent (unlike Facebook/
-// LinkedIn) — it's a mobile-app-first platform with no arbitrary-link
-// sharing endpoint. The standard workaround is a "copy link" action so the
-// user can paste it into an Instagram bio, story, or DM themselves.
+// Instagram has no public web "share this URL" intent (unlike LinkedIn) —
+// it's a mobile-app-first platform with no arbitrary-link sharing endpoint.
+// Facebook's classic `sharer.php?u=` link intent has become unreliable
+// site-independently: Meta has scaled back support for passing an arbitrary
+// URL into it, and it now frequently shows a generic "this page isn't
+// available" error even when the target page's Open Graph tags are valid
+// (confirmed via Facebook's own Sharing Debugger returning a clean 200 for
+// this site). Their recommended replacement is the JS SDK Share Dialog,
+// which requires registering a Facebook App ID — out of scope for now — so
+// both Instagram and Facebook use the same reliable "copy link" fallback:
+// the user pastes it into a normal Facebook/Instagram post themselves.
 export default function ShareButtons({ url, title }: { url: string; title: string }) {
   const t = useTranslations('Share');
   const [copied, setCopied] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);
-  const facebookHref = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
   const linkedinHref = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
 
-  async function handleCopyForInstagram() {
+  async function handleCopyLink() {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
@@ -32,19 +38,18 @@ export default function ShareButtons({ url, title }: { url: string; title: strin
         {t('label')}
       </span>
 
-      <a
-        href={facebookHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-        title={`Facebook — ${title}`}
+      <button
+        type="button"
+        onClick={handleCopyLink}
+        aria-label={t('facebookHint')}
+        title={t('facebookHint')}
         className="flex h-10 w-10 items-center justify-center rounded-sm border-hair text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"
         style={{ borderColor: 'var(--b)' }}
       >
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
           <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z" />
         </svg>
-      </a>
+      </button>
 
       <a
         href={linkedinHref}
@@ -62,7 +67,7 @@ export default function ShareButtons({ url, title }: { url: string; title: strin
 
       <button
         type="button"
-        onClick={handleCopyForInstagram}
+        onClick={handleCopyLink}
         aria-label={t('instagramHint')}
         title={t('instagramHint')}
         className="flex h-10 w-10 items-center justify-center rounded-sm border-hair text-[var(--ink2)] transition-colors hover:border-[color:var(--s3)] hover:text-[var(--ink)]"

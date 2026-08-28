@@ -885,7 +885,8 @@
   "Share": {
     "label": "Share",
     "copied": "Link copied",
-    "instagramHint": "Copy link for Instagram"
+    "instagramHint": "Copy link for Instagram",
+    "facebookHint": "Copy link for Facebook"
   },
   "LegalInfo": {
     "title": "Legal Information",

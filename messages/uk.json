@@ -2509,7 +2509,8 @@
   "Share": {
     "label": "Поділитися",
     "copied": "Посилання скопійовано",
-    "instagramHint": "Скопіювати посилання для Instagram"
+    "instagramHint": "Скопіювати посилання для Instagram",
+    "facebookHint": "Скопіювати посилання для Facebook"
   },
   "LegalInfo": {
     "title": "Юридична інформація",
