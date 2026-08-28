@@ -28,7 +28,16 @@ export default function NewsletterSignup() {
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, formType: 'newsletter-signup' }),
+        // `source` + `consentedAt` give the firm an explicit, page-level
+        // audit trail of where and when marketing consent was given,
+        // beyond Formspree's own submission timestamp — see cookie/consent
+        // audit notes (§9: "фіксувати дату і джерело згоди").
+        body: JSON.stringify({
+          email,
+          formType: 'newsletter-signup',
+          source: typeof window !== 'undefined' ? window.location.href : undefined,
+          consentedAt: new Date().toISOString(),
+        }),
       });
       if (res.ok) {
         setStatus('success');
@@ -77,6 +86,7 @@ export default function NewsletterSignup() {
           <Link href="/privacy" className="underline decoration-[rgba(245,245,245,0.3)] underline-offset-2 hover:text-[rgba(245,245,245,0.7)]">
             {tc('linkText')}
           </Link>
+          {' '}{t('unsubscribeNote')}
         </span>
       </label>
       {status === 'error' && (

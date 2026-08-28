@@ -148,6 +148,13 @@ export default async function NewsItemPage({
             <PortableText value={item.body as Parameters<typeof PortableText>[0]['value']} />
           </div>
         ) : null}
+
+        {/* Per-article informational-analytical disclaimer, mirrors the one
+            on blog articles — required per-publication, not just linked
+            from a general Terms-of-Use page. */}
+        <p className="mt-8 border-t-hair pt-6 text-[11.5px] italic leading-[1.7] text-[var(--ink3)]" style={{ borderColor: 'var(--b)' }}>
+          {t('disclaimer')}
+        </p>
       </article>
     </main>
   );

@@ -507,7 +507,8 @@
         "mainImage": "/blog-phishing-banner.jpg"
       }
     ],
-    "authorLabel": "Author:"
+    "authorLabel": "Author:",
+    "disclaimer": "This material is informational and analytical only, reflects a general overview of legislation and practice as of the publication date, and is not individual legal advice, a legal opinion, or a guarantee of any case outcome."
   },
   "News": {
     "lbl": "News",
@@ -528,7 +529,8 @@
         "label": "Deals"
       }
     ],
-    "fallbackNews": []
+    "fallbackNews": [],
+    "disclaimer": "This material is informational and analytical only, reflects a general overview of legislation and practice as of the publication date, and is not individual legal advice, a legal opinion, or a guarantee of any case outcome."
   },
   "Team": {
     "lbl": "Team",
@@ -686,7 +688,8 @@
     "submit": "Subscribe",
     "success": "Thank you! Check your inbox to confirm.",
     "error": "Couldn't subscribe. Please try again.",
-    "notConfigured": "Newsletter isn't connected yet."
+    "notConfigured": "Newsletter isn't connected yet.",
+    "unsubscribeNote": "You can unsubscribe at any time by emailing gangan.partners@gmail.com."
   },
   "Search": {
     "title": "Search",
@@ -745,7 +748,7 @@
     "contacts": "Contacts",
     "legalName": "Gangan & Partners Law Firm (Advokatske Ob'iednannia)",
     "edrpou": "EDRPOU code: 45878134",
-    "registryNote": "Bar registry: ЄРАУ (Ukrainian Bar Register) — details pending",
+    "registryNote": "Attorney records are available in the Unified Register of Advocates of Ukraine (ЄРАУ)",
     "complaintsLabel": "Complaints can be sent to"
   },
   "FAQ": {

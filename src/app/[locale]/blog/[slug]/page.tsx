@@ -164,6 +164,11 @@ export default async function BlogPostPage({
             Ганган В&apos;ячеслав — про автора →
           </Link>
         </div>
+
+        {/* Per-article informational-analytical disclaimer — required so
+            each publication is individually disclaimed, not just via a
+            general Terms-of-Use page the reader may never visit. */}
+        <p className="mt-4 text-[11.5px] italic leading-[1.7] text-[var(--ink3)]">{t('disclaimer')}</p>
       </article>
     </main>
   );

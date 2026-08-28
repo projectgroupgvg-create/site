@@ -1,8 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import NewsletterSignup from './NewsletterSignup';
 
 export default function Footer() {
+  const locale = useLocale();
   const t = useTranslations('Footer');
   const tNewsletter = useTranslations('Newsletter');
   const tContact = useTranslations('Contact');
@@ -23,6 +24,12 @@ export default function Footer() {
     { href: '/ai-terms', label: tAiTerms('title') },
     { href: '/payments-refunds', label: tPaymentsRefunds('title') },
     { href: '/professional-confidentiality', label: tProfessionalConfidentiality('title') },
+    // Editorial-policy content only exists in uk (generateStaticParams
+    // limited to defaultLocale, dynamicParams: false — see audit notes),
+    // so only surface the link on the uk site rather than 404 for en/de/fr
+    // visitors. It was previously an orphan page reachable only via
+    // sitemap.ts, unreachable by any click path from the site itself.
+    ...(locale === 'uk' ? [{ href: '/editorial-policy', label: 'Редакційна політика' }] : []),
   ];
 
   return (

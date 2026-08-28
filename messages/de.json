@@ -507,7 +507,8 @@
         "mainImage": "/blog-phishing-banner.jpg"
       }
     ],
-    "authorLabel": "Autor:"
+    "authorLabel": "Autor:",
+    "disclaimer": "Dieser Beitrag hat ausschließlich informativ-analytischen Charakter, gibt einen allgemeinen Überblick über Gesetzgebung und Praxis zum Zeitpunkt der Veröffentlichung wieder und stellt keine individuelle Rechtsberatung, kein Rechtsgutachten und keine Erfolgsgarantie in einer konkreten Sache dar."
   },
   "News": {
     "lbl": "Neuigkeiten",
@@ -528,7 +529,8 @@
         "label": "Mandate"
       }
     ],
-    "fallbackNews": []
+    "fallbackNews": [],
+    "disclaimer": "Dieser Beitrag hat ausschließlich informativ-analytischen Charakter, gibt einen allgemeinen Überblick über Gesetzgebung und Praxis zum Zeitpunkt der Veröffentlichung wieder und stellt keine individuelle Rechtsberatung, kein Rechtsgutachten und keine Erfolgsgarantie in einer konkreten Sache dar."
   },
   "Team": {
     "lbl": "Team",
@@ -686,7 +688,8 @@
     "submit": "Abonnieren",
     "success": "Vielen Dank! Bitte bestätigen Sie per E-Mail.",
     "error": "Anmeldung fehlgeschlagen. Bitte erneut versuchen.",
-    "notConfigured": "Der Newsletter ist noch nicht verbunden."
+    "notConfigured": "Der Newsletter ist noch nicht verbunden.",
+    "unsubscribeNote": "Sie können sich jederzeit abmelden, indem Sie eine E-Mail an gangan.partners@gmail.com senden."
   },
   "Search": {
     "title": "Suche",
@@ -745,7 +748,7 @@
     "contacts": "Kontakt",
     "legalName": "Anwaltskanzlei „Gangan & Partners\" (Advokatske Ob'jednannja)",
     "edrpou": "EDRPOU-Code: 45878134",
-    "registryNote": "Anwaltsregister: ЄРАУ (ukrainisches Anwaltsregister) — Angaben folgen",
+    "registryNote": "Angaben zu den Rechtsanwälten sind im Einheitlichen Register der Rechtsanwälte der Ukraine (ЄРАУ) verfügbar",
     "complaintsLabel": "Beschwerden können gesendet werden an"
   },
   "FAQ": {

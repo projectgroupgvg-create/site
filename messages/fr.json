@@ -507,7 +507,8 @@
         "mainImage": "/blog-phishing-banner.jpg"
       }
     ],
-    "authorLabel": "Auteur :"
+    "authorLabel": "Auteur :",
+    "disclaimer": "Ce contenu a un caractère purement informatif et analytique, reflète un aperçu général de la législation et de la pratique à la date de publication, et ne constitue ni un conseil juridique individuel, ni un avis juridique, ni une garantie de résultat dans une affaire donnée."
   },
   "News": {
     "lbl": "Actualités",
@@ -528,7 +529,8 @@
         "label": "Affaires"
       }
     ],
-    "fallbackNews": []
+    "fallbackNews": [],
+    "disclaimer": "Ce contenu a un caractère purement informatif et analytique, reflète un aperçu général de la législation et de la pratique à la date de publication, et ne constitue ni un conseil juridique individuel, ni un avis juridique, ni une garantie de résultat dans une affaire donnée."
   },
   "Team": {
     "lbl": "Équipe",
@@ -686,7 +688,8 @@
     "submit": "S'abonner",
     "success": "Merci ! Vérifiez votre boîte mail pour confirmer.",
     "error": "Échec de l'inscription. Veuillez réessayer.",
-    "notConfigured": "La newsletter n'est pas encore connectée."
+    "notConfigured": "La newsletter n'est pas encore connectée.",
+    "unsubscribeNote": "Vous pouvez vous désinscrire à tout moment en écrivant à gangan.partners@gmail.com."
   },
   "Search": {
     "title": "Rechercher",
@@ -745,7 +748,7 @@
     "contacts": "Contact",
     "legalName": "Cabinet d'avocats « Gangan & Partners » (Advokatske Ob'iednannia)",
     "edrpou": "Code EDRPOU : 45878134",
-    "registryNote": "Registre des avocats : ЄРАУ (registre ukrainien des avocats) — détails à venir",
+    "registryNote": "Les informations sur les avocats sont disponibles dans le Registre unifié des avocats d'Ukraine (ЄРАУ)",
     "complaintsLabel": "Les réclamations peuvent être envoyées à"
   },
   "FAQ": {
