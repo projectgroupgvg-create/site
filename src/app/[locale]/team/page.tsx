@@ -61,11 +61,21 @@ const memberPhotos: Record<string, { src: string; position?: string }> = {
   'Ivanna Gangan': { src: '/ivanna-gangan-portrait.jpg', position: '50% 15%' },
   'Микита Сипало': { src: '/mykyta-sypalo-portrait-v2.jpg', position: '50% 20%' },
   'Mykyta Sypalo': { src: '/mykyta-sypalo-portrait-v2.jpg', position: '50% 20%' },
+  // Rastorguiev's headshot was only visible inline in chat, not saved as an
+  // uploadable file in this session — no entry here yet, falls back to
+  // initials until a real image file is provided (see chat).
+  'Андрій Чабан': { src: '/andrii-chaban-portrait.jpg', position: '50% 20%' },
+  'Andrii Chaban': { src: '/andrii-chaban-portrait.jpg', position: '50% 20%' },
 };
 
-// The shared firm phone number reads oddly under an assistant/junior team
-// member's card — only show it for members it's explicitly meant for.
-const hidePhoneFor = new Set(['Іванна Ганган', 'Ivanna Gangan', 'Микита Сипало', 'Mykyta Sypalo']);
+// The shared firm phone number reads oddly under an assistant/junior/
+// external team member's card — only show it for members it's explicitly
+// meant for.
+const hidePhoneFor = new Set([
+  'Іванна Ганган', 'Ivanna Gangan',
+  'Микита Сипало', 'Mykyta Sypalo',
+  'Андрій Чабан', 'Andrii Chaban',
+]);
 
 export default async function TeamPage({
   params,
