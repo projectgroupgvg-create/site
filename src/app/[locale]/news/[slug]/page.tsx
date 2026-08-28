@@ -153,6 +153,19 @@ export default async function NewsItemPage({
           </div>
         ) : null}
 
+        {item.reportLink ? (
+          <p className="mb-5 indent-[1.75em] text-justify text-[14.5px] leading-[1.9] text-[var(--ink2)]">
+            З таким звітом можете ознайомитись{' '}
+            <Link
+              href={item.reportLink.href}
+              className="font-semibold text-[var(--ink)] underline decoration-[var(--s3)] underline-offset-2 transition-colors hover:text-[var(--s3)]"
+            >
+              {item.reportLink.label}
+            </Link>
+            .
+          </p>
+        ) : null}
+
         {/* Per-article informational-analytical disclaimer, mirrors the one
             on blog articles — required per-publication, not just linked
             from a general Terms-of-Use page. */}

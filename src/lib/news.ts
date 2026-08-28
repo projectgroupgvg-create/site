@@ -9,6 +9,7 @@ export type FallbackNewsItem = {
   excerpt: string;
   body: string[];
   mainImage?: string;
+  reportLink?: { href: string; label: string };
 };
 
 export type SanityNewsItem = {
@@ -30,6 +31,7 @@ export type NewsItem = {
   mainImage?: string | null;
   source: 'sanity' | 'fallback';
   body?: unknown;
+  reportLink?: { href: string; label: string };
 };
 
 function fromFallback(n: FallbackNewsItem): NewsItem {
@@ -42,6 +44,7 @@ function fromFallback(n: FallbackNewsItem): NewsItem {
     mainImage: n.mainImage ?? null,
     source: 'fallback',
     body: n.body,
+    reportLink: n.reportLink,
   };
 }
 
