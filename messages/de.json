@@ -265,9 +265,18 @@
       "Ich wurde Opfer von Cyberkriminalität"
     ],
     "disclaimer": "Der Chat mit dem KI-Assistenten dient organisatorischen Zwecken: Er nimmt Ihr Anliegen entgegen und hilft, ein Treffen oder einen Anruf zu vereinbaren. Dies ist keine Rechtsberatung und begründet kein Mandatsverhältnis.",
-    "consent1": "Ich bin volljährig. Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung meiner Daten ein, damit der digitale Sekretär funktioniert und eine kurze Zusammenfassung meiner Anfrage an das Team der Kanzlei weitergeleitet wird.",
-    "consent2": "Ich stimme zu, dass der Text meiner Nachrichten an Anthropic, PBC (USA) gesendet wird, um eine Antwort zu erzeugen. Ich bin über die grenzüberschreitende Datenübermittlung in die USA und die in der Datenschutzerklärung beschriebenen Risiken informiert.",
-    "consent3": "Ich bestätige, dass ich keine Passwörter, privaten Schlüssel, vollständigen Kartennummern, Dokumente, Beweise oder detaillierten Gesundheits-, Straf- oder Daten Dritter eingeben werde — dafür nutze ich einen anderen sicheren Kanal."
+    "consent1": "Ich bin volljährig. Mir ist bewusst, dass ich mit einer KI spreche, nicht mit einem Anwalt; die Antwort kann falsch sein und ist keine individuelle Rechtsberatung. Ich habe die Datenschutzerklärung gelesen und willige ein, dass der Text meiner Nachrichten an Anthropic, PBC (USA) gesendet wird, um eine Antwort zu erzeugen.",
+    "reviewTitle": "Bestätigen Sie Ihre Anfrage an den Anwalt",
+    "reviewHint": "Die KI hat eine kurze Zusammenfassung für das Team der Kanzlei erstellt — ohne Fallinhalte. Prüfen, bearbeiten oder löschen Sie sie vor dem Senden. Geben Sie keine Dokumente, Beweise, Passwörter, private Schlüssel oder andere sensible Daten an — nutzen Sie dafür das sichere Formular unter /confidential.",
+    "summaryPlaceholder": "Thema, Rechtsordnung, bevorzugte Kontaktart und -zeit",
+    "summaryEmpty": "der Mandant hat keine Zusammenfassung hinterlassen — direkte Rückfrage empfohlen.",
+    "consentFormspree": "Ich stimme zu, dass diese kurze Zusammenfassung über Formspree, Inc. (USA) an den Anwalt gesendet wird.",
+    "consentMarketing": "Ich möchte die Analysematerialien der Kanzlei per E-Mail erhalten (optional).",
+    "sendToLawyerBtn": "Anfrage an Anwalt senden",
+    "discardBtn": "Nicht senden",
+    "sendingHandoff": "Wird gesendet…",
+    "handoffSentTitle": "Anfrage gesendet",
+    "handoffSentBody": "Ein Anwalt wird sich in Kürze bei Ihnen melden."
   },
   "Blog": {
     "lbl": "Blog",

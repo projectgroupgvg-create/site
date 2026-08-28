@@ -265,9 +265,18 @@
       "I became a victim of cybercrime"
     ],
     "disclaimer": "Chatting with the AI assistant is organizational in nature: it takes your inquiry and helps schedule a meeting or call. This is not legal advice and does not create an attorney-client relationship.",
-    "consent1": "I am 18 or older. I have read the Privacy Policy and consent to processing of my data to operate the AI secretary and to forward a brief summary of my inquiry to the firm's team.",
-    "consent2": "I agree that the text of my messages will be sent to Anthropic, PBC (USA) to generate a response. I am informed of the cross-border transfer of data to the USA and the risks described in the Privacy Policy.",
-    "consent3": "I confirm I will not enter passwords, private keys, full card numbers, documents, evidence, or detailed health, criminal record, or third-party data — I will use another secure channel for that."
+    "consent1": "I am 18 or older. I understand I'm talking to an AI, not a lawyer; the reply may be wrong and is not individual legal assistance. I have read the Privacy Policy and consent to the text of my messages being sent to Anthropic, PBC (USA) to generate a response.",
+    "reviewTitle": "Confirm your inquiry to the lawyer",
+    "reviewHint": "The AI drafted a brief summary for the firm's team — with no case details. Review, edit, or delete it before sending. Do not include documents, evidence, passwords, private keys, or other sensitive data — use the secure form at /confidential for that.",
+    "summaryPlaceholder": "Topic, jurisdiction, preferred contact method and time",
+    "summaryEmpty": "the client left no summary — recommend following up directly.",
+    "consentFormspree": "I consent to this brief summary being sent to the lawyer via Formspree, Inc. (USA).",
+    "consentMarketing": "I would like to receive the firm's analytical materials by email (optional).",
+    "sendToLawyerBtn": "Send inquiry to lawyer",
+    "discardBtn": "Don't send",
+    "sendingHandoff": "Sending…",
+    "handoffSentTitle": "Inquiry sent",
+    "handoffSentBody": "A lawyer will contact you shortly."
   },
   "Blog": {
     "lbl": "Blog",

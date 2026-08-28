@@ -265,9 +265,18 @@
       "J'ai été victime de cybercriminalité"
     ],
     "disclaimer": "Le chat avec l'assistant IA a un caractère organisationnel : il recueille votre demande et aide à planifier un rendez-vous ou un appel. Ceci ne constitue pas un conseil juridique et ne crée pas de relation avocat-client.",
-    "consent1": "J'ai au moins 18 ans. J'ai lu la Politique de confidentialité et je consens au traitement de mes données pour le fonctionnement du secrétaire numérique et la transmission d'un bref résumé de ma demande à l'équipe du cabinet.",
-    "consent2": "J'accepte que le texte de mes messages soit transmis à Anthropic, PBC (États-Unis) pour générer une réponse. Je suis informé(e) du transfert transfrontalier de données vers les États-Unis et des risques décrits dans la Politique de confidentialité.",
-    "consent3": "Je confirme que je ne saisirai pas de mots de passe, de clés privées, de numéros de carte complets, de documents, de preuves ni de données détaillées de santé, de casier judiciaire ou de tiers — j'utiliserai un autre canal sécurisé pour cela."
+    "consent1": "J'ai au moins 18 ans. Je comprends que je communique avec une IA, pas avec un avocat ; la réponse peut être erronée et ne constitue pas une assistance juridique individuelle. J'ai lu la Politique de confidentialité et je consens à ce que le texte de mes messages soit transmis à Anthropic, PBC (États-Unis) pour générer une réponse.",
+    "reviewTitle": "Confirmez votre demande à l'avocat",
+    "reviewHint": "L'IA a préparé un bref résumé pour l'équipe du cabinet — sans détails de l'affaire. Vérifiez, modifiez ou supprimez-le avant l'envoi. N'incluez pas de documents, de preuves, de mots de passe, de clés privées ni d'autres données sensibles — utilisez le formulaire sécurisé à /confidential pour cela.",
+    "summaryPlaceholder": "Sujet, juridiction, mode et horaire de contact préférés",
+    "summaryEmpty": "le client n'a laissé aucun résumé — un suivi direct est recommandé.",
+    "consentFormspree": "Je consens à ce que ce bref résumé soit envoyé à l'avocat via Formspree, Inc. (États-Unis).",
+    "consentMarketing": "Je souhaite recevoir les analyses du cabinet par e-mail (facultatif).",
+    "sendToLawyerBtn": "Envoyer la demande à l'avocat",
+    "discardBtn": "Ne pas envoyer",
+    "sendingHandoff": "Envoi…",
+    "handoffSentTitle": "Demande envoyée",
+    "handoffSentBody": "Un avocat vous contactera prochainement."
   },
   "Blog": {
     "lbl": "Blog",

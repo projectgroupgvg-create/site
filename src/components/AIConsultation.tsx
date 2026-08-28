@@ -20,57 +20,34 @@ export default function AIConsultation() {
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
-  // Per the firm's data-protection counsel, a single generic checkbox isn't
-  // sufficient consent for this data flow. Three separate, all-required
-  // checkboxes: (1) privacy policy acknowledgment, (2) explicit awareness
-  // that message text goes to Anthropic in the US, (3) confirmation the
-  // client won't paste passwords/keys/documents/sensitive third-party data.
-  const [consent1, setConsent1] = useState(false);
-  const [consent2, setConsent2] = useState(false);
-  const [consent3, setConsent3] = useState(false);
-  const consentGiven = consent1 && consent2 && consent3;
+  // Single upfront checkbox: everyone chatting with the AI necessarily sends
+  // message text to Anthropic, so privacy-policy acknowledgment + that
+  // specific transfer are gated together here. The separate "don't paste
+  // sensitive data" warning is now passive copy (see the callout below the
+  // input) rather than an active checkbox — and consent to the *second*
+  // data flow (handing a summary to the firm via Formspree) is asked for
+  // separately, at the point that actually happens, in the review panel
+  // below.
+  const [consentAnthropic, setConsentAnthropic] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-  // Guards against sending the handoff notice more than once per
-  // conversation — the backend can in principle flip `intakeComplete` again
-  // if the client keeps chatting after the handoff message.
-  const summarySentRef = useRef(false);
+
+  // Once the model signals the intake is complete, its auto-drafted
+  // contactSummary lands here for the client to review/edit/discard —
+  // nothing is sent anywhere automatically. `null` = no pending handoff;
+  // an empty string is a valid (if unhelpful) editable draft.
+  const [pendingSummary, setPendingSummary] = useState<string | null>(null);
+  const [consentFormspree, setConsentFormspree] = useState(false);
+  const [consentMarketing, setConsentMarketing] = useState(false);
+  const [handoffSubmitting, setHandoffSubmitting] = useState(false);
+  const [handoffSent, setHandoffSent] = useState(false);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
-  }, [messages]);
-
-  // Fire-and-forget: notifies the firm's inbox that an intake finished, via
-  // the same Formspree endpoint used by the other forms. Deliberately does
-  // NOT forward the full conversation — counsel flagged that a complete
-  // transcript can carry attorney-client-privileged or special-category
-  // data that Formspree's and Anthropic's standard terms aren't cleared to
-  // receive. Only the topic + the contact method/time the client stated
-  // (extracted server-side into `contactSummary`, see route.ts) is sent;
-  // the full chat history is never persisted anywhere.
-  function sendHandoffNotice(contactSummary: string | null) {
-    if (!formEndpoint || summarySentRef.current) return;
-    summarySentRef.current = true;
-    const message = contactSummary
-      ? `Новий інтейк через AI-секретар. ${contactSummary}`
-      : 'Новий інтейк через AI-секретар завершено, але короткий підсумок не сформувався автоматично — клієнту рекомендовано звернутися через /intake або за телефоном.';
-    fetch(formEndpoint, {
-      method: 'POST',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        formType: 'ai-consult',
-        locale,
-        email: 'ai-widget@gangan.partners',
-        message,
-      }),
-    }).catch(() => {
-      // Best-effort only — don't surface a failure to the client, the
-      // conversation itself already succeeded on their end.
-    });
-  }
+  }, [messages, pendingSummary]);
 
   async function send(text?: string) {
     const value = (text ?? input).trim();
-    if (!value || sending || !consentGiven) return;
+    if (!value || sending || !consentAnthropic) return;
     setInput('');
     setSending(true);
     const userMsg: Msg = { role: 'user', text: value };
@@ -93,14 +70,51 @@ export default function AIConsultation() {
       if (!data?.reply) throw new Error('bad response');
       const assistantMsg: Msg = { role: 'assistant', text: data.reply };
       setMessages((m) => [...m, assistantMsg]);
-      if (data.intakeComplete) {
-        sendHandoffNotice(data.contactSummary ?? null);
+      // Only pick up a fresh draft if there isn't one already pending/sent —
+      // guards against the model re-flagging intakeComplete if the client
+      // keeps chatting after the handoff message.
+      if (data.intakeComplete && pendingSummary === null && !handoffSent) {
+        setPendingSummary(typeof data.contactSummary === 'string' ? data.contactSummary : '');
       }
     } catch {
       setMessages((m) => [...m, { role: 'assistant', text: t('error') }]);
     } finally {
       setSending(false);
     }
+  }
+
+  // Only fires on the client's own explicit click — never automatically.
+  // Sends the (possibly hand-edited) summary text the client has reviewed,
+  // never the underlying chat history.
+  async function sendToLawyer() {
+    if (!formEndpoint || pendingSummary === null || !consentFormspree || handoffSubmitting) return;
+    setHandoffSubmitting(true);
+    try {
+      await fetch(formEndpoint, {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'ai-consult',
+          locale,
+          email: 'ai-widget@gangan.partners',
+          message: `Новий інтейк через AI-секретар. ${pendingSummary.trim() || t('summaryEmpty')}`,
+          marketingOptIn: consentMarketing,
+        }),
+      });
+    } catch {
+      // Best-effort only — if this fails the client still saw their own
+      // conversation succeed; they can fall back to /intake or the phone
+      // number in the reply text.
+    } finally {
+      setHandoffSubmitting(false);
+      setHandoffSent(true);
+    }
+  }
+
+  function discardSummary() {
+    setPendingSummary(null);
+    setConsentFormspree(false);
+    setConsentMarketing(false);
   }
 
   return (
@@ -162,10 +176,78 @@ export default function AIConsultation() {
                   <span className="ldots" />
                 </div>
               )}
+
+              {/* Review/edit/confirm panel — appears once the model signals
+                  the intake is done, replaces the auto-send that used to
+                  happen silently. Nothing reaches Formspree until the
+                  client explicitly clicks "send to lawyer" below. */}
+              {pendingSummary !== null && !handoffSent && (
+                <div
+                  className="self-stretch rounded-sm border-hair bg-[var(--bgc)] p-3.5"
+                  style={{ borderColor: 'var(--s3)' }}
+                >
+                  <div className="mb-1.5 text-[8px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">
+                    {t('reviewTitle')}
+                  </div>
+                  <p className="mb-2.5 text-[11px] leading-[1.6] text-[var(--ink3)]">{t('reviewHint')}</p>
+                  <textarea
+                    value={pendingSummary}
+                    onChange={(e) => setPendingSummary(e.target.value)}
+                    placeholder={t('summaryPlaceholder')}
+                    rows={3}
+                    className="mb-3 w-full resize-y rounded-sm border-hair bg-[var(--wh)] px-3 py-2.5 text-[12.5px] leading-[1.6] text-[var(--ink)] outline-none placeholder:text-[var(--ink3)]"
+                    style={{ borderColor: 'var(--b)' }}
+                  />
+                  <label className="mb-2 flex items-start gap-2 text-[11px] leading-[1.55] text-[var(--ink2)]">
+                    <input
+                      type="checkbox"
+                      checked={consentFormspree}
+                      onChange={(e) => setConsentFormspree(e.target.checked)}
+                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    <span>{t('consentFormspree')}</span>
+                  </label>
+                  <label className="mb-3 flex items-start gap-2 text-[11px] leading-[1.55] text-[var(--ink2)]">
+                    <input
+                      type="checkbox"
+                      checked={consentMarketing}
+                      onChange={(e) => setConsentMarketing(e.target.checked)}
+                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    <span>{t('consentMarketing')}</span>
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={sendToLawyer}
+                      disabled={!consentFormspree || handoffSubmitting}
+                      className="rounded-sm bg-[var(--ink)] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--wh)] transition-colors hover:bg-[var(--ink-hover)] disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {handoffSubmitting ? t('sendingHandoff') : t('sendToLawyerBtn')}
+                    </button>
+                    <button
+                      onClick={discardSummary}
+                      disabled={handoffSubmitting}
+                      className="rounded-sm border-hair px-4 py-2.5 text-[10px] uppercase tracking-[0.1em] text-[var(--ink3)] transition-colors hover:text-[var(--ink)]"
+                      style={{ borderColor: 'var(--b)' }}
+                    >
+                      {t('discardBtn')}
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {handoffSent && (
+                <div className="self-stretch rounded-sm border-l-2 bg-[var(--bg2)] px-3.5 py-2.5 text-[12.5px] leading-[1.6] text-[var(--ink2)]" style={{ borderColor: 'var(--s3)' }}>
+                  <div className="mb-1 text-[8px] font-semibold uppercase tracking-[0.2em] text-[var(--s3)]">
+                    {t('handoffSentTitle')}
+                  </div>
+                  {t('handoffSentBody')}
+                </div>
+              )}
             </div>
 
             <div className="border-t-hair px-4.5 py-3.5" style={{ borderColor: 'var(--b)' }}>
-              {consentGiven ? (
+              {consentAnthropic ? (
                 <>
                   <div className="flex">
                     <input
@@ -198,40 +280,20 @@ export default function AIConsultation() {
                   </div>
                 </>
               ) : (
-                <div className="flex flex-col gap-2.5">
-                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
-                    <input
-                      type="checkbox"
-                      checked={consent1}
-                      onChange={(e) => setConsent1(e.target.checked)}
-                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
-                    />
-                    <span>
-                      {t('consent1')}{' '}
-                      <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
-                        {tc('linkText')}
-                      </Link>
-                    </span>
-                  </label>
-                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
-                    <input
-                      type="checkbox"
-                      checked={consent2}
-                      onChange={(e) => setConsent2(e.target.checked)}
-                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
-                    />
-                    <span>{t('consent2')}</span>
-                  </label>
-                  <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
-                    <input
-                      type="checkbox"
-                      checked={consent3}
-                      onChange={(e) => setConsent3(e.target.checked)}
-                      className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
-                    />
-                    <span>{t('consent3')}</span>
-                  </label>
-                </div>
+                <label className="flex items-start gap-2.5 text-[11.5px] leading-[1.6] text-[var(--ink2)]">
+                  <input
+                    type="checkbox"
+                    checked={consentAnthropic}
+                    onChange={(e) => setConsentAnthropic(e.target.checked)}
+                    className="mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                  />
+                  <span>
+                    {t('consent1')}{' '}
+                    <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+                      {tc('linkText')}
+                    </Link>
+                  </span>
+                </label>
               )}
             </div>
           </div>
