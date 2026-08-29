@@ -10,6 +10,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { Link } from '@/i18n/navigation';
 import { getAllPosts, type FallbackPost } from '@/lib/blog';
 import { getTranslations } from 'next-intl/server';
+import { AUTHOR_VIACHESLAV_GANGAN } from '@/data/authors';
 
 import BannerWatermark from '@/components/BannerWatermark';
 
@@ -28,9 +29,13 @@ const TITLE = `${NAME} — адвокат, керуючий партнер`;
 const DESCRIPTION =
   "В'ячеслав Ганган — адвокат і керуючий партнер АО «Ганган і Партнери» з понад 15-річним досвідом. Кримінальний захист, господарські спори, віртуальні активи та транскордонні провадження.";
 
+// Credentials (job title, expertise areas, ЄРАУ/media links) live in
+// src/data/authors.ts as a single source of truth, shared with the blog
+// article Person/author schema (buildArticleSchema) so the byline there
+// carries the same E-E-A-T signal as this profile page does.
 const externalProfiles = [
-  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/39973' },
-  { label: 'OBOZ.UA', url: 'https://www.obozrevatel.com/ukr/person/gangan-vyacheslav-georgievich.htm' },
+  { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: AUTHOR_VIACHESLAV_GANGAN.sameAs[0] },
+  { label: 'OBOZ.UA', url: AUTHOR_VIACHESLAV_GANGAN.sameAs[1] },
 ];
 
 // Links each headline practice to its real page on the site (TZ §4:
@@ -45,7 +50,7 @@ const keyPractices = [
   { label: 'Транскордонні провадження', slug: 'transnational-investigations' },
 ];
 
-const knowsAbout = ['Кримінальне право', 'Корпоративне право', 'Віртуальні активи', 'AML', 'Транскордонні провадження'];
+const knowsAbout = AUTHOR_VIACHESLAV_GANGAN.knowsAbout;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -75,10 +80,10 @@ export default async function GanganProfilePage() {
           path: PATH,
           name: NAME,
           alternateNames: ['Vyacheslav Gangan', 'Viacheslav Gangan'],
-          jobTitle: 'Адвокат, керуючий партнер',
+          jobTitle: AUTHOR_VIACHESLAV_GANGAN.jobTitle,
           description: 'Адвокат із понад 15-річним досвідом юридичної практики.',
           knowsAbout,
-          sameAs: externalProfiles.map((p) => p.url),
+          sameAs: AUTHOR_VIACHESLAV_GANGAN.sameAs,
         })}
       />
       <JsonLd

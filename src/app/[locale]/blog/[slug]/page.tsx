@@ -13,6 +13,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import ShareButtons from '@/components/ShareButtons';
 import BannerWatermark from '@/components/BannerWatermark';
+import { AUTHOR_VIACHESLAV_GANGAN } from '@/data/authors';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -74,7 +75,7 @@ export default async function BlogPostPage({
           description: post.excerpt,
           image: post.mainImage,
           datePublished: post.dateIso,
-          author: { name: "В'ячеслав Ганган", path: '/team/viacheslav-gangan' },
+          author: AUTHOR_VIACHESLAV_GANGAN,
         })}
       />
       <JsonLd

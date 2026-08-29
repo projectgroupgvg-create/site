@@ -42,7 +42,17 @@ export function buildArticleSchema({
   image?: string | null;
   // Links the article to its author's own profile page (ProfilePage/Person)
   // for Google's Article author signals — see TZ_Rozshyreni_profili_komandy.
-  author?: { name: string; path: string } | null;
+  // jobTitle/knowsAbout/sameAs are optional E-E-A-T signals (credentials,
+  // expertise areas, ЄРАУ registry link) mirrored from the author's own
+  // profile page schema, so the byline carries the same authority signal
+  // there as it does on the profile itself.
+  author?: {
+    name: string;
+    path: string;
+    jobTitle?: string;
+    knowsAbout?: string[];
+    sameAs?: string[];
+  } | null;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -59,6 +69,9 @@ export function buildArticleSchema({
             '@type': 'Person',
             name: author.name,
             url: localizedUrl(routing.defaultLocale, author.path),
+            ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+            ...(author.knowsAbout && author.knowsAbout.length > 0 ? { knowsAbout: author.knowsAbout } : {}),
+            ...(author.sameAs && author.sameAs.length > 0 ? { sameAs: author.sameAs } : {}),
           },
         }
       : {}),
