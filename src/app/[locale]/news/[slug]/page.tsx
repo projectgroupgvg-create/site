@@ -73,6 +73,7 @@ export default async function NewsItemPage({
           title: item.title,
           description: item.excerpt,
           image: item.mainImage,
+          datePublished: item.dateIso,
         })}
       />
       <JsonLd

@@ -5,6 +5,7 @@ export type FallbackNewsItem = {
   slug: string;
   newsType: string;
   date: string;
+  dateIso?: string;
   title: string;
   excerpt: string;
   body: string[];
@@ -27,6 +28,7 @@ export type NewsItem = {
   title: string;
   excerpt: string;
   date: string;
+  dateIso?: string;
   newsType: string;
   mainImage?: string | null;
   source: 'sanity' | 'fallback';
@@ -40,6 +42,7 @@ function fromFallback(n: FallbackNewsItem): NewsItem {
     title: n.title,
     excerpt: n.excerpt,
     date: n.date,
+    dateIso: n.dateIso,
     newsType: n.newsType,
     mainImage: n.mainImage ?? null,
     source: 'fallback',
@@ -59,6 +62,7 @@ function fromSanity(n: SanityNewsItem): NewsItem {
           year: 'numeric',
         })
       : '',
+    dateIso: n.publishedAt,
     newsType: n.newsType ?? 'firm-news',
     mainImage: n.mainImage ?? null,
     source: 'sanity',

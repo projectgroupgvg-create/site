@@ -6,6 +6,7 @@ export type FallbackPost = {
   category: string;
   mono: string;
   date: string;
+  dateIso?: string;
   title: string;
   excerpt: string;
   body: string[];
@@ -29,6 +30,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   date: string;
+  dateIso?: string;
   category: string;
   mono?: string;
   mainImage?: string | null;
@@ -42,6 +44,7 @@ function fromFallback(p: FallbackPost): BlogPost {
     title: p.title,
     excerpt: p.excerpt,
     date: p.date,
+    dateIso: p.dateIso,
     category: p.category,
     mono: p.mono,
     mainImage: p.mainImage ?? null,
@@ -61,6 +64,7 @@ function fromSanity(p: SanityPost): BlogPost {
           year: 'numeric',
         })
       : '',
+    dateIso: p.publishedAt,
     category: p.category ?? '',
     mainImage: p.mainImage ?? null,
     source: 'sanity',

@@ -73,6 +73,7 @@ export default async function BlogPostPage({
           title: post.title,
           description: post.excerpt,
           image: post.mainImage,
+          datePublished: post.dateIso,
           author: { name: "В'ячеслав Ганган", path: '/team/viacheslav-gangan' },
         })}
       />
