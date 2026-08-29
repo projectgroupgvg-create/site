@@ -31,8 +31,6 @@ const DESCRIPTION =
 const externalProfiles = [
   { label: 'Єдиний реєстр адвокатів України (ЄРАУ)', url: 'https://erau.unba.org.ua/profile/39973' },
   { label: 'OBOZ.UA', url: 'https://www.obozrevatel.com/ukr/person/gangan-vyacheslav-georgievich.htm' },
-  { label: 'ResearchGate', url: 'https://www.researchgate.net/profile/Vyacheslav-Gangan' },
-  { label: 'Google Scholar', url: 'https://scholar.google.com/citations?hl=uk&user=diaIF6MAAAAJ' },
 ];
 
 // Links each headline practice to its real page on the site (TZ §4:
