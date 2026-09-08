@@ -67,10 +67,15 @@ export default async function GanganProfilePage() {
 
   // TZ §4 "Профіль → статті: автоматична добірка 3-6 останніх матеріалів" —
   // pulled from the same source as the blog index, not hand-maintained, so
-  // it never drifts out of date as new posts are added.
+  // it never drifts out of date as new posts are added. Filtered to posts
+  // this profile's own authorKey wrote (undefined authorKey = Viacheslav,
+  // the default — see src/data/authors.ts's getAuthorByKey), so another
+  // partner's article never shows up under his bio.
   const blogT = await getTranslations('Blog');
   const fallbackPosts = blogT.raw('fallbackPosts') as FallbackPost[];
-  const latestArticles = (await getAllPosts(locale, fallbackPosts)).slice(0, 5);
+  const latestArticles = (await getAllPosts(locale, fallbackPosts))
+    .filter((p) => !p.authorKey || p.authorKey === 'viacheslav-gangan')
+    .slice(0, 5);
 
   return (
     <main>

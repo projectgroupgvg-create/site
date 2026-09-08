@@ -8,6 +8,8 @@ import { buildProfilePageSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Link } from '@/i18n/navigation';
+import { getAllPosts, type FallbackPost } from '@/lib/blog';
+import { getTranslations } from 'next-intl/server';
 
 import BannerWatermark from '@/components/BannerWatermark';
 
@@ -52,6 +54,16 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function IvannaGanganProfilePage() {
   const locale = routing.defaultLocale;
   setRequestLocale(locale);
+
+  // TZ §4 "Профіль → статті: автоматична добірка останніх матеріалів" —
+  // filtered to posts this profile's own authorKey wrote, so switching
+  // authorship on a post (see src/data/authors.ts) never shows it under the
+  // wrong partner's bio.
+  const blogT = await getTranslations('Blog');
+  const fallbackPosts = blogT.raw('fallbackPosts') as FallbackPost[];
+  const latestArticles = (await getAllPosts(locale, fallbackPosts))
+    .filter((p) => p.authorKey === 'ivanna-gangan')
+    .slice(0, 5);
 
   return (
     <main>
@@ -171,6 +183,28 @@ export default async function IvannaGanganProfilePage() {
               ))}
             </ul>
           </section>
+
+          {latestArticles.length > 0 && (
+            <section className="mb-10 border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
+              <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Останні статті</h2>
+              <ul className="space-y-2.5">
+                {latestArticles.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-[13.5px] text-[var(--ink2)] underline decoration-[var(--b)] underline-offset-2 hover:text-[var(--ink)]"
+                    >
+                      {post.title}
+                    </Link>
+                    <span className="ml-2 text-[11px] text-[var(--ink3)]">{post.date}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/blog" className="mt-3 inline-block text-[12px] font-semibold uppercase tracking-[0.12em] text-[var(--ink)] hover:text-[var(--s3)]">
+                Усі статті →
+              </Link>
+            </section>
+          )}
 
           <section className="border-t-hair pt-8" style={{ borderColor: 'var(--b)' }}>
             <h2 className="mb-3 font-serif text-[18px] font-semibold text-[var(--ink)]">Зовнішні профілі</h2>
