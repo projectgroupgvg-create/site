@@ -324,7 +324,6 @@
         "authorKey": "ivanna-gangan",
         "title": "Digitalising Agribusiness: Why Data Control Matters More Than a Convenient Interface",
         "excerpt": "An agribusiness may one day discover it cannot move its yield and machinery history to another platform. A review of four levels of legal risk in digitalisation: data control, the terms of the digital-platform provider agreement, the evidentiary strength of electronic documents, and EU requirements — the Data Act, the AI Act, the EUDR, and the GDPR.",
-        "mainImage": "/blog-agro-digitalization-banner.png",
         "body": [
           "Picture an agribusiness that has spent several years using a digital platform to manage its fields. It has accumulated yield history, soil condition data, fuel consumption records, machinery routes, and completed operations. When the business decides to switch to a different program, it discovers that only finished reports can be exported — the underlying accumulated data cannot be transferred, either for technical reasons or because of the platform's terms of use.",
           "This is a hypothetical example, but it illustrates the legal side of digitalisation. A business is not just paying for a convenient interface. It is gradually handing part of its production knowledge to an external system and making its daily operations dependent on that system's availability. That is precisely why questions about data, liability, and the ability to switch platforms should be asked before deployment begins, not after a dispute arises.",
