@@ -13,7 +13,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from '@/lib/jsonld';
 import JsonLd from '@/components/JsonLd';
 import ShareButtons from '@/components/ShareButtons';
 import BannerWatermark from '@/components/BannerWatermark';
-import { AUTHOR_VIACHESLAV_GANGAN } from '@/data/authors';
+import { getAuthorByKey } from '@/data/authors';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -64,6 +64,7 @@ export default async function BlogPostPage({
 
   const categoryLabel =
     categories.find((c) => c.slug === post.category)?.label ?? post.category;
+  const author = getAuthorByKey(post.authorKey);
 
   return (
     <main className="bg-white">
@@ -75,7 +76,7 @@ export default async function BlogPostPage({
           description: post.excerpt,
           image: post.mainImage,
           datePublished: post.dateIso,
-          author: AUTHOR_VIACHESLAV_GANGAN,
+          author,
         })}
       />
       <JsonLd
@@ -159,11 +160,11 @@ export default async function BlogPostPage({
         <div className="mt-10 border-t-hair pt-6 text-[12px] text-[var(--ink3)]" style={{ borderColor: 'var(--b)' }}>
           {t('authorLabel')}{' '}
           <Link
-            href="/team/viacheslav-gangan"
+            href={author.path}
             locale="uk"
             className="text-[var(--ink2)] underline decoration-[var(--b)] underline-offset-2 hover:text-[var(--ink)]"
           >
-            Ганган В&apos;ячеслав — про автора →
+            {author.name} — про автора →
           </Link>
         </div>
 

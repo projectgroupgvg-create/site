@@ -14,3 +14,24 @@ export const AUTHOR_VIACHESLAV_GANGAN = {
     'https://www.obozrevatel.com/ukr/person/gangan-vyacheslav-georgievich.htm',
   ],
 };
+
+export const AUTHOR_IVANNA_GANGAN = {
+  name: 'Іванна Ганган',
+  path: '/team/ivanna-gangan',
+  jobTitle: 'Адвокат, старший партнер',
+  knowsAbout: ['Сімейне право', 'Поділ майна подружжя', 'Земельне право', 'Спори про право власності на землю'],
+  sameAs: ['https://erau.unba.org.ua/profile/96002'],
+};
+
+// Lookup by the author's own /team/[slug] path segment, used by blog posts
+// that specify an `authorKey` (see FallbackPost) instead of always
+// defaulting to Viacheslav Gangan.
+export const AUTHORS_BY_KEY: Record<string, typeof AUTHOR_VIACHESLAV_GANGAN> = {
+  'viacheslav-gangan': AUTHOR_VIACHESLAV_GANGAN,
+  'ivanna-gangan': AUTHOR_IVANNA_GANGAN,
+};
+
+export function getAuthorByKey(key?: string) {
+  if (key && AUTHORS_BY_KEY[key]) return AUTHORS_BY_KEY[key];
+  return AUTHOR_VIACHESLAV_GANGAN;
+}

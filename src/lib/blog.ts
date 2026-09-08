@@ -11,6 +11,9 @@ export type FallbackPost = {
   excerpt: string;
   body: string[];
   mainImage?: string;
+  // Key into src/data/authors.ts's AUTHORS_BY_KEY (a team profile slug).
+  // Omitted = defaults to Viacheslav Gangan (see getAuthorByKey).
+  authorKey?: string;
 };
 
 export type SanityPost = {
@@ -36,6 +39,7 @@ export type BlogPost = {
   mainImage?: string | null;
   source: 'sanity' | 'fallback';
   body?: unknown;
+  authorKey?: string;
 };
 
 function fromFallback(p: FallbackPost): BlogPost {
@@ -50,6 +54,7 @@ function fromFallback(p: FallbackPost): BlogPost {
     mainImage: p.mainImage ?? null,
     source: 'fallback',
     body: p.body,
+    authorKey: p.authorKey,
   };
 }
 
