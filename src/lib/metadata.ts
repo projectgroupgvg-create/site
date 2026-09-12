@@ -5,7 +5,13 @@ import { siteUrl, siteName } from './site';
 // routing (default locale has no prefix, others do). Mirrors app/sitemap.ts.
 export function localizedPath(locale: string, path: string): string {
   const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-  return `${prefix}${path}` || '/';
+  // Treat root '/' like '' so non-default locales don't get a trailing
+  // slash (`/de/` instead of `/de`) — Next serves the homepage without a
+  // trailing slash, so a mismatched canonical/hreflang here made Google
+  // treat `/de` and `/de/` as unresolved duplicates (flagged in Search
+  // Console as "canonical not chosen by user" for en/de/fr homepages).
+  const normalizedPath = path === '/' ? '' : path;
+  return `${prefix}${normalizedPath}` || '/';
 }
 
 export function localizedUrl(locale: string, path: string): string {
