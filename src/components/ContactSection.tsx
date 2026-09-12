@@ -20,6 +20,12 @@ export default function ContactSection() {
       href: `https://wa.me/${phoneRaw.replace('+', '')}`,
     },
     { icon: 'TG', label: 'Telegram', value: '@gangan_law', href: 'https://t.me/gangan_law' },
+    {
+      icon: 'FB',
+      label: 'Facebook',
+      value: 'Gangan & Partners',
+      href: 'https://www.facebook.com/profile.php?id=100064838917036',
+    },
   ];
 
   return (

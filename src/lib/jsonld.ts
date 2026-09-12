@@ -22,6 +22,14 @@ export function buildLegalServiceSchema(locale: string) {
       addressCountry: contact.country,
     },
     areaServed: 'UA',
+    // Organization-level sameAs — helps Google's Knowledge Graph and
+    // Facebook's own domain/page-linking crawler associate this exact
+    // entity with the site, distinct from individual lawyers' sameAs in
+    // src/data/authors.ts. Only real, user-supplied profiles go here.
+    sameAs: [
+      'https://www.facebook.com/profile.php?id=100064838917036',
+      'https://t.me/gangan_law',
+    ],
   };
 }
 
