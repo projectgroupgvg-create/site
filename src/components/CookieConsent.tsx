@@ -34,7 +34,7 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-[12.5px] leading-[1.7] text-[var(--ink2)]">
           {t('message')}{' '}
-          <Link href="/privacy" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
+          <Link href="/cookies" className="underline decoration-[color:var(--b)] underline-offset-2 hover:text-[var(--ink)]">
             {t('learnMore')}
           </Link>
         </p>
