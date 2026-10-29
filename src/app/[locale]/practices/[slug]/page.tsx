@@ -212,7 +212,7 @@ export default async function PracticePage({
                 ← {backLabel}
               </Link>
               <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-                {practice.num} / {t('lbl')}
+                {t('lbl')}
               </div>
               <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
                 {h1}
@@ -228,7 +228,7 @@ export default async function PracticePage({
               ← {backLabel}
             </Link>
             <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.4em] text-[var(--s3)]">
-              {practice.num} / {t('lbl')}
+              {t('lbl')}
             </div>
             <h1 className="font-serif text-[clamp(26px,3.2vw,44px)] font-light leading-[1.1] text-[var(--ink)]">
               {h1}
@@ -246,7 +246,6 @@ export default async function PracticePage({
               className="whitespace-nowrap rounded-full border-hair px-4 py-2 text-[12px] text-[var(--ink2)] transition-colors hover:bg-[var(--bgc)] hover:text-[var(--ink)]"
               style={{ borderColor: 'var(--b)' }}
             >
-              <span className="mr-1.5 text-[var(--s3)]">{o.num}</span>
               {o.title}
             </Link>
           ))}

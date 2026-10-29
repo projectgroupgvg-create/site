@@ -140,9 +140,6 @@ export default function PracticesGrid() {
                   {/* thin title strip — the practice name, not baked into the
                       photo, so it stays crisp and locale-independent */}
                   <div className="relative z-10 flex items-center justify-between gap-3 bg-black px-6 py-4">
-                    <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
-                      {card.num}
-                    </span>
                     <span className="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[var(--ink)]">
                       {card.title}
                     </span>
@@ -175,10 +172,7 @@ export default function PracticesGrid() {
                 {Icon && (
                   <Icon className="pointer-events-none absolute -bottom-6 -right-6 h-[170px] w-[170px] opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.14]" />
                 )}
-                <div className="relative mb-6 flex items-start justify-between">
-                  <span className="text-[10px] font-semibold tracking-[0.24em] text-[var(--s3)]">
-                    {card.num}
-                  </span>
+                <div className="relative mb-6 flex items-start justify-end">
                   {Icon && <Icon className="h-9 w-9 text-[var(--ink3)]" />}
                 </div>
                 <div className="relative mb-4 font-serif text-[22px] font-semibold leading-[1.3] text-[var(--ink)]">
